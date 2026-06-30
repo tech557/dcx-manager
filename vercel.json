@@ -1,4 +1,5 @@
 {
   "name": "dcx-manager-gov",
-  "framework": "vite"
+  "framework": "vite",
+  "ignoreCommand": "bash scripts/release/vercel-ignore-build.sh"
 }
