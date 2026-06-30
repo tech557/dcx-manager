@@ -3,7 +3,7 @@ sprint: RG-R0b
 plan: cicd-release-governance
 date: 2026-07-01
 agent: Claude (claude-sonnet-5, Anthropic)
-status: partial — local repo steps complete; credentialed external steps pending
+status: partial — repo + remote + branches done; Vercel/domains/secrets still pending
 ---
 
 # RG-R0b — Repo + integration setup runbook
@@ -105,22 +105,47 @@ $ git branch -a
   staging
 ```
 
-## Steps NOT executed in this run — require PO credentials/account access
+## Step 5 — GitHub remote + push (2026-07-01, after PO created the repo)
+
+PO created `https://github.com/tech557/dcx-manager` (temporarily **public**, until a private connection
+is set up) and added the `MahmoudSamaha2` GitHub account (the credential cached in this environment) as a
+collaborator with write access, after an initial push attempt failed with `403 Permission ... denied to
+MahmoudSamaha2` (the repo was created under a different account, `tech557`, than the cached local git
+credential).
+
+```
+$ git remote add origin https://github.com/tech557/dcx-manager.git
+$ git push -u origin main
+To https://github.com/tech557/dcx-manager.git
+ * [new branch]      main -> main
+$ git push -u origin staging integration
+To https://github.com/tech557/dcx-manager.git
+ * [new branch]      staging -> staging
+ * [new branch]      integration -> integration
+$ git remote -v
+origin  https://github.com/tech557/dcx-manager.git (fetch)
+origin  https://github.com/tech557/dcx-manager.git (push)
+$ git branch -vv
+  integration 648dbf6 [origin/integration] chore: initial commit — bootstrap v0.3.5.0 baseline (RG-R0b)
+* main        e48adc7 [origin/main] feat(RG-R2): release registry + scripts
+  staging     648dbf6 [origin/staging] chore: initial commit — bootstrap v0.3.5.0 baseline (RG-R0b)
+```
+
+## Steps NOT executed in this run — still require PO credentials/account access
 
 | Step | Why blocked | What the PO must do |
 |---|---|---|
-| Create GitHub repo, `git remote add origin <url>`, push | No `gh` CLI installed in this environment; no GitHub credentials available to this agent | Install `gh` and run `gh auth login`, or create the repo via GitHub web UI; provide the remote URL, or run `git remote add origin <url> && git push -u origin main` |
-| Create `staging` / `integration` branches | Depends on the remote existing (OD-RG-08 branch model) | After remote + push, run `git branch staging && git branch integration && git push -u origin staging integration` (or do this once `gh`/remote is available — agent can run these once a remote exists) |
-| Link Vercel project to the GitHub repo | Requires Vercel account access/credentials and an existing GitHub remote to link to | Use Vercel dashboard or the Vercel MCP (`mcp__...__create_project` is not yet attempted — needs a GitHub remote first per Vercel's import flow) |
+| Link Vercel project to the GitHub repo | Requires Vercel account access/credentials | Use Vercel dashboard or the Vercel MCP to import `tech557/dcx-manager` |
 | Configure domains (`dcx.dotment.com`, `staging.dcx.dotment.com`) | Requires DNS access to `dotment.com` and a linked Vercel project | Add CNAME records → `cname.vercel-dns.com`; assign domains in Vercel project settings |
 | Add platform credentials as GitHub/Vercel secrets | Requires GitHub/Vercel account access | Add via GitHub repo Settings → Secrets, and Vercel project → Environment Variables; never commit secrets to the repo |
+| Move `tech557/dcx-manager` to private + set up a durable private-repo connection | PO stated public is temporary, "till we setup a private connection" | Make the repo private once a working private-auth path (SSH key / scoped PAT for the right account) is confirmed, so this doesn't depend on staying public |
 
 ## Acceptance criteria status
 
 | ID | Criterion | Status |
 |---|---|---|
-| AC-RG-0b-1 | Repo initialized + remote set | **PARTIAL** — repo initialized (`git log` shows 1 commit on `main`); remote NOT set (no GitHub repo created yet) |
-| AC-RG-0b-2 | `main`/`staging`/`integration` branches exist | **PARTIAL** — all three exist locally (`git branch -a`); not yet pushed (no remote) |
+| AC-RG-0b-1 | Repo initialized + remote set | **PASS** — `origin` → `https://github.com/tech557/dcx-manager.git`, `main` pushed |
+| AC-RG-0b-2 | `main`/`staging`/`integration` branches exist | **PASS** — all three exist locally and on `origin` (`git branch -vv` above) |
 | AC-RG-0b-3 | Vercel project linked, no auto-promotion | **BLOCKED** — awaiting PO/credentials |
 | AC-RG-0b-4 | Pre-commit secret scan clean; no secret/`.env`/`brandbook.pdf` in history | **PASS** — see Step 2a |
 | AC-RG-0b-5 | Domains configured | **BLOCKED** — awaiting PO/DNS access |
@@ -128,5 +153,9 @@ $ git branch -a
 
 ## Completion evidence (PO-confirmed)
 
-_To be appended once the PO completes the credentialed steps above (remote, branches, Vercel link,
-domains, secrets)._
+- Remote: `https://github.com/tech557/dcx-manager.git` (currently **public** — temporary, PO intends to
+  move to private once a private-auth connection is set up; this is a follow-up item, not a closed
+  decision).
+- Branches on origin: `main`, `staging`, `integration` (`git branch -vv` above).
+- Collaborator: `MahmoudSamaha2` granted write access by the PO (`tech557` account owner) on 2026-07-01.
+- Vercel project link, domains, and secrets remain open — see table above.

@@ -2,7 +2,7 @@
 
 > **Generated** by `scripts/build-po-actions.sh` (also run by `build-log-index.sh`). Do not hand-edit — flip the source log's `PO-Action:` header to `none` when an item is done. See `docs/agent-rules/log-format.md` §3.
 
-_Last generated: 2026-07-01 — open items: 30_
+_Last generated: 2026-07-01 — open items: 31_
 
 ## RS-R3-review — Output audit of RS-R3 + lint fix (OpenCode)
 Source: [`sessions/2026-06-29-claude/19-rs-r3-output-audit.md`](sessions/2026-06-29-claude/19-rs-r3-output-audit.md)
@@ -231,6 +231,15 @@ Source: [`sessions/2026-07-01-claude/003-cicd-release-governance-RG-R0b.md`](ses
 | Platform secrets (GitHub/Vercel env vars) | Requires account access I don't have | Add via GitHub repo Settings → Secrets and Vercel project → Environment Variables |
 | RG-R0b cannot close as Completed | 3 of 6 acceptance criteria are genuinely blocked on the above | Confirm whether to (a) leave RG-R0b open/Partial and proceed to RG-R1 (docs/tooling sprint, doesn't need the GitHub remote) in parallel, or (b) pause until GitHub/Vercel/DNS are set up |
 | `req:completion-gate` FAIL pattern repeats for docs-only sprints | Same as flagged in RG-R0a's log | No new action needed — already an open item from the RG-R0a log |
+
+## RG-R0b — GitHub remote added, main/staging/integration pushed
+Source: [`sessions/2026-07-01-claude/006-cicd-release-governance-RG-R0b-remote-push.md`](sessions/2026-07-01-claude/006-cicd-release-governance-RG-R0b-remote-push.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Repo is temporarily public | PO stated this is "till we setup a private connection" | Set up a durable private-repo auth path (SSH deploy key, or a scoped PAT issued from the `tech557` account itself rather than relying on the `MahmoudSamaha2` collaborator grant), then flip the repo back to private |
+| Vercel project link, domains, secrets | Needs Vercel account access and DNS access to `dotment.com` | As listed in the RG-R0b runbook's "Steps NOT executed" table |
+| RG-R0b still not fully Completed | 2 of 6 AC remain BLOCKED (Vercel, domains) | Decide whether to proceed to RG-R3 now (it only needs the GitHub remote, which is done) while RG-R0b stays open for the Vercel/DNS pieces, or wait |
 
 ## cicd-release-governance — Confirming Re-Audit
 Source: [`sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md`](sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md)

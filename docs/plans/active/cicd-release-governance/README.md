@@ -129,11 +129,15 @@ repo has no `.git`, no `docs/releases/`, no `scripts/release/`, no `.github/`, n
 - `.gitignore` written (repo root) — anchored (`/output/`, `/tmp/`, etc.) so it does NOT swallow
   `docs/plans/**/output/` plan deliverables, which the unanchored sprint-spec pattern would have.
 - Local branches `staging` and `integration` created alongside `main` (OD-RG-08: `integration`
-  confirmed). Not yet pushed — no remote exists.
-- **Still BLOCKED on PO credentials/account access** (not agent-executable): GitHub repo creation +
-  remote + push, Vercel project link + domains (`dcx.dotment.com`, `staging.dcx.dotment.com`), and
-  adding platform secrets. `gh` CLI is not installed in this environment. See runbook "Steps NOT executed"
-  table for the exact PO actions needed.
+  confirmed).
+- **Update (2026-07-01, later same day):** PO created `https://github.com/tech557/dcx-manager`
+  (temporarily **public**, until a private connection is set up) and added the `MahmoudSamaha2` GitHub
+  account (the credential cached in this environment) as a write collaborator. `origin` is now set;
+  `main`, `staging`, and `integration` are all pushed. **RG-R0b is now unblocked for RG-R3** (which
+  needed the GitHub remote).
+- **Still BLOCKED on PO credentials/account access:** Vercel project link + domains
+  (`dcx.dotment.com`, `staging.dcx.dotment.com`), adding platform secrets, and moving the repo back to
+  private once a durable private-auth connection exists. See runbook "Steps NOT executed" table.
 - `src/**` unchanged (shasum diff empty); existing source was committed as-is, not edited.
 
 **RG-R1 (2026-07-01, Completed)** — version model docs: `output/RG-R1-version-model.md`.
