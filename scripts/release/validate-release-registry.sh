@@ -36,7 +36,10 @@ awk -F',' '
       seen_version[version] = NR
     }
 
-    if (status == "verified" || status == "promoted-staging" || status == "promoted-prod") {
+    # Only check for env conflicts once a row actually targets an environment (approved_for set).
+    # A bare "verified" row with no approved_for yet is just a candidate build — many of those can
+    # coexist; they are not in conflict with each other (bug found via RG-R3 live CI, 2026-07-01).
+    if (approved_for != "" && (status == "verified" || status == "promoted-staging" || status == "promoted-prod")) {
       key = approved_for
       if (key in verified_commit && verified_commit[key] != commit_sha) {
         printf "CONFLICTING VERIFIED/APPROVED ROWS for env '\''%s'\'' (line %d): commit '\''%s'\'' vs earlier '\''%s'\'' (line %d)\n", \

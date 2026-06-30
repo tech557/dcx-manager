@@ -115,6 +115,16 @@ printf '"v0.9.9","source","zzz","main","s","","","","","","verified","prod","PO"
 validate_dup_code=$?
 assert_exit_nonzero "validator rejects a seeded duplicate version" "$validate_dup_code"
 
+# Regression test (RG-R3, 2026-07-01 live CI bug): two "verified" rows with NO approved_for yet are
+# two unapproved candidate builds, not a conflict — only rows that actually target an env (approved_for
+# set) can conflict with each other. The bug stamped two real version-assign commits and broke CI.
+CANDIDATES_CSV="$TMPDIR_CSV/candidates.csv"
+echo "version,change_class,commit_sha,branch,session_folder,clickup_task,deployment_id,preview_url,staging_url,production_url,status,approved_for,approved_by,approved_at,gates,notes" > "$CANDIDATES_CSV"
+printf '"v0.3.5.1","non-source","aaa111","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"\n"v0.3.5.2","non-source","bbb222","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"\n' >> "$CANDIDATES_CSV"
+"$TMP_REPO/scripts/release/validate-release-registry.sh" "$CANDIDATES_CSV" > /tmp/validate-candidates.log 2>&1
+validate_candidates_code=$?
+assert_exit_zero "validator does NOT flag two unapproved 'verified' candidates as conflicting" "$validate_candidates_code"
+
 rm -rf "$TMPDIR_CSV"
 
 echo ""
