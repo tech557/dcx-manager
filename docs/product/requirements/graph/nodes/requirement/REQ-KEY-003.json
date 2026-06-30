@@ -1,0 +1,21 @@
+{
+  "id": "REQ-KEY-003",
+  "type": "Requirement",
+  "statement": "Ctrl+V pastes copied builder items into a smart target.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "partially-implemented",
+  "chain_layer": "REQ->BHV->RSP",
+  "source_id": "CSG-KEY-003",
+  "provenance": {
+    "source": "requirements-recovery.md",
+    "source_path": "docs/plans/on-hold/frontend-polish-v0.3.5/output/requirements-recovery.md",
+    "source_anchor": "CSG-KEY-003",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.8,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  },
+  "decision_ref": "LDG-2026-06-29-PO-KBD"
+}

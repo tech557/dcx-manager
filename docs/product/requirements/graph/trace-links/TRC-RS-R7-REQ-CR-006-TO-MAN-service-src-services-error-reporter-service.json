@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-CR-006-TO-MAN-service-src-services-error-reporter-service",
+  "type": "TraceLink",
+  "source": "REQ-CR-006",
+  "target": "MAN-service-src-services-error-reporter-service",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"error-reporter.service\" matches \"Error report channel — Error reports can be sent through lightweight email/free integration. — Error reporter service, email/webhook integration, failed action capture.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

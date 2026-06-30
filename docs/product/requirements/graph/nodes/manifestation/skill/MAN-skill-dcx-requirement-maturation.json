@@ -1,0 +1,23 @@
+{
+  "id": "MAN-skill-dcx-requirement-maturation",
+  "type": "Manifestation",
+  "statement": "dcx-requirement-maturation skill: adds acceptance criteria, rules, conditions, exceptions, responsibilities, and expected manifestation categories to requirements.",
+  "scope": "agent-workflow",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "kind": "skill",
+  "current_paths": [
+    ".agents/skills/dcx-requirement-maturation/SKILL.md"
+  ],
+  "stale_state": "stale",
+  "stale_reason": "current_paths entry no longer exists on disk — path moved or deleted",
+  "lifecycle": "created",
+  "provenance": {
+    "source": "docs/plans/active/requirements-system/sprints/RS-R9-dogfood-self-trace.md",
+    "authoring_actor": "RS-R9 seed",
+    "confidence": 0.95,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  }
+}

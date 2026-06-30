@@ -1,0 +1,28 @@
+{
+  "id": "REQ-SC-003",
+  "statement": "Autosave debounce — Use a short debounce before saving after edits. Exact duration is implementation-level, — Affects autosave hook and save status UI.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "SC-003",
+  "source_category": "Persistence; Autosave & Recovery",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Backend save endpoint.",
+  "related_requirements": "",
+  "affected_modules": "src/services/builder.service.ts; src/services/versions.service.ts; autosave hooks; src/utils/export.helpers.ts; src/utils/import.helpers.ts; local cache",
+  "ux_impact": "User sees changes saved soon after editing.",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "SC-003",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

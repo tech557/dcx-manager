@@ -1,0 +1,14 @@
+{
+  "id": "TRC-RSP-GOV-TRACE-SECURITY-TO-EMC-GOV-TRACE-SECURITY",
+  "type": "TraceLink",
+  "source": "RSP-GOV-TRACE-SECURITY",
+  "target": "EMC-GOV-TRACE-SECURITY",
+  "relationship_type": "decomposes-into",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "inference_source": "RS-R9 seed (manual curation)",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

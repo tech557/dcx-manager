@@ -1,0 +1,28 @@
+{
+  "id": "REQ-RV-012",
+  "statement": "Empty vs intentional none — For fields where “none” is acceptable, the data model should distinguish empty/unanswered — Task schema, validation, UI controls, API mappers.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "RV-012",
+  "source_category": "Validation & Readiness Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "Missing data/specs rule",
+  "related_requirements": "Domain Model & API Contracts",
+  "affected_modules": "src/rules/validation.rules.ts; readiness checker; validation summary UI; TaskEditor validation hooks",
+  "ux_impact": "User sees a clear choice: fill it or",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RV-012",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

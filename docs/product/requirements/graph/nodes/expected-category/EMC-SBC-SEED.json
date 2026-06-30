@@ -1,0 +1,20 @@
+{
+  "id": "EMC-SBC-SEED",
+  "type": "ExpectedManifestationCategory",
+  "statement": "Shared Builder Card System expected manifestation category for ui-presentation responsibility.",
+  "scope": "frontend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "category": "component",
+  "chain_layer": "EMC",
+  "provenance": {
+    "source": "RS-R5 itemized dataset",
+    "source_path": "docs/plans/active/requirements-system/output/RS-R5-itemized-dataset.csv",
+    "source_anchor": "SBC",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.75,
+    "confirmation_status": "skill-derived",
+    "last_checked_date": "2026-06-29"
+  }
+}

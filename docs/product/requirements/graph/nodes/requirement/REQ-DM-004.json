@@ -1,0 +1,28 @@
+{
+  "id": "REQ-DM-004",
+  "statement": "Empty phases/actions while planning — Empty phases/actions may exist while planning, but they cannot pass “Ready” validation. — Validation layer, status transition logic, phase/action cards, Ready",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "DM-004",
+  "source_category": "Validation & Readiness Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Readiness & Validation category",
+  "related_requirements": "Domain Model & API Contracts",
+  "affected_modules": "src/rules/validation.rules.ts; readiness checker; validation summary UI; TaskEditor validation hooks",
+  "ux_impact": "User can draft structure first, but must complete",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "DM-004",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

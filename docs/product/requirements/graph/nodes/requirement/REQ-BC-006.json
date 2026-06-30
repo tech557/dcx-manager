@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-006",
+  "statement": "Task creation — User can create tasks inside an action in Kanban. — Task card, action container, TaskEditor, cmdCreateTask, task factory.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-006",
+  "source_category": "Builder State & Mutation Layer",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Task parent rule",
+  "related_requirements": "Builder UI Surfaces",
+  "affected_modules": "src/store/builderStore.ts; src/pages/builder/context/; src/pages/builder/hooks/useBuilderActions.ts; mutation commands",
+  "ux_impact": "User adds executable work under the correct action.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-006",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

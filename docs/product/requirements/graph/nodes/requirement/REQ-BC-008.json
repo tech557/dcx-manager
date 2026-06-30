@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-008",
+  "statement": "Timeline day task creation — User can create a task from inside a day in Timeline. The — DayGridCard, date helpers, task factory, timeline task creation",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-008",
+  "source_category": "Builder State & Mutation Layer",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Communication date / task date modes",
+  "related_requirements": "Builder UI Surfaces",
+  "affected_modules": "src/store/builderStore.ts; src/pages/builder/context/; src/pages/builder/hooks/useBuilderActions.ts; mutation commands",
+  "ux_impact": "User can quickly add scheduled tasks from the",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-008",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

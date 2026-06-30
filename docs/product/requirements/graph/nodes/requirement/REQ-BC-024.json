@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-024",
+  "statement": "Template DB scope — Template database for phase/action/task components is not MVP, but should be anticipated. — Future Supabase tables, template service, import engine compatibility.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-024",
+  "source_category": "Integration Contracts",
+  "priority": "Future",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Import engine",
+  "related_requirements": "Builder State & Mutation Layer",
+  "affected_modules": "src/services/clickup.service.ts; src/services/auth.service.ts; Supabase service/API contracts; docs/integrations/",
+  "ux_impact": "Later users can reuse common DCX structures.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-024",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

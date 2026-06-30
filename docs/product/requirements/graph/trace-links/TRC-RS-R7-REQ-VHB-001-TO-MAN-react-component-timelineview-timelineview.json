@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-VHB-001-TO-MAN-react-component-timelineview-timelineview",
+  "type": "TraceLink",
+  "source": "REQ-VHB-001",
+  "target": "MAN-react-component-src-builder-stage-views-timelineview",
+  "relationship_type": "supersedes",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"TimelineView\" matches \"View Helper Island cross-view bridge — The View Helper Island bridges Kanban and Timeline so users can plan across both without switching context manually. — In Timeline view it shows a Kanban-style helper (zoomable, visually similar to main Kanban); tasks with set communication dates are disabled; undated tasks can be dragged into a timeline day, and dropping onto a day links/assigns the task to that campaign day. In Kanban view it shows a weekly timeline helper; scheduled tasks appear by week/day; dragging a task from the helper into an action changes the task's phase/action while the date remains unless changed. Uses the shared sticky/resizable/minimizable popup shell.\" (score: 0.85)",
+    "Historical RS-R7 candidate superseded by canonical link TRC-RS-R7-REQ-VHB-001-TO-MAN-react-component-src-builder-stage-views-timelineview."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "original_source": "REQ-VHB-001",
+  "original_target": "MAN-react-component-timelineview-timelineview",
+  "replacement_trace_link": "TRC-RS-R7-REQ-VHB-001-TO-MAN-react-component-src-builder-stage-views-timelineview",
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

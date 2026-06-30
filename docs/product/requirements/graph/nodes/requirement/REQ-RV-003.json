@@ -1,0 +1,28 @@
+{
+  "id": "REQ-RV-003",
+  "statement": "Ready status lock — Once a version is marked Ready, it becomes locked/read-only and cannot be — Version status logic, route guard, edit permissions, card",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "RV-003",
+  "source_category": "Lifecycle & Version Status Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "Permissions & Access, Version Lifecycle",
+  "related_requirements": "Permissions & Access Control",
+  "affected_modules": "src/types/lifecycle.ts; src/rules/lifecycle.rules.ts; src/services/versions.service.ts; status transition handlers",
+  "ux_impact": "User sees Ready version as final/locked.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RV-003",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

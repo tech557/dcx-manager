@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VL-015",
+  "statement": "Superseded lock — Superseded versions are locked/read-only and cannot be edited. — Status-based edit guards, backend save rejection.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VL-015",
+  "source_category": "Lifecycle & Version Status Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Permissions & Roles",
+  "related_requirements": "Permissions & Access Control",
+  "affected_modules": "src/types/lifecycle.ts; src/rules/lifecycle.rules.ts; src/services/versions.service.ts; status transition handlers",
+  "ux_impact": "User can view but not alter inactive versions.",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VL-015",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

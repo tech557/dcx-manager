@@ -1,0 +1,28 @@
+{
+  "id": "REQ-CR-005",
+  "statement": "Meaningful change logs — Seed architecture for meaningful structure-change logs later. — Event/log adapter, mutation command names, optional future change_logs.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "CR-005",
+  "source_category": "Audit; Logs & Error Reporting",
+  "priority": "Seed Now / Future",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Named mutation commands",
+  "related_requirements": "Builder State & Mutation Layer",
+  "affected_modules": "src/services/logs.service.ts; src/services/error-reporter.service.ts; error boundary; report modal; activity/history UI",
+  "ux_impact": "Future admin/history tools become easier.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "CR-005",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "operations"
+}

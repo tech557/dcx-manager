@@ -1,0 +1,28 @@
+{
+  "id": "REQ-PR-012",
+  "statement": "Duplicate Ready version — Shared DCX users can duplicate Ready versions into new editable versions. — Version duplication endpoint/service, import engine, logs.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "PR-012",
+  "source_category": "Permissions & Access Control",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Ready lock, selective import",
+  "related_requirements": "Builder State & Mutation Layer",
+  "affected_modules": "src/rules/permissions.rules.ts; src/hooks/usePermissions.ts; route guards; backend policy/service enforcement",
+  "ux_impact": "User can continue work from a locked version",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "PR-012",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "security"
+}

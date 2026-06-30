@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-RV-006-TO-MAN-react-component-src-builder-cards-templates-phase-phasecard",
+  "type": "TraceLink",
+  "source": "REQ-RV-006",
+  "target": "MAN-react-component-src-builder-cards-templates-phase-phasecard",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"PhaseCard\" matches \"Empty phase rule — A phase can exist while planning, but a Ready version cannot contain — Phase validation, status transition checker, phase cards.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

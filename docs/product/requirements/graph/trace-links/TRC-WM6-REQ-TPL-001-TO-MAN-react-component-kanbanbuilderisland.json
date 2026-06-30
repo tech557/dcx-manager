@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM6-REQ-TPL-001-TO-MAN-react-component-kanbanbuilderisland",
+  "type": "TraceLink",
+  "source": "REQ-TPL-001",
+  "target": "MAN-react-component-src-builder-islands-kanbanbuilderisland-kanbanbuilderisland",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "inference_source": "WM-6 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "evidence_refs": [
+    "WM-6: TemplatePopup (previously dead code, never imported) wired into KanbanBuilderIsland — Template button with LayoutTemplate icon in the creator palette opens TemplatePopup via useToggle. Template gallery is seeded/inert in this build but the popup is now reachable from the UI (REQ-TPL-001 partial — gallery content is future work)."
+  ]
+}

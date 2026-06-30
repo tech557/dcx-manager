@@ -1,0 +1,18 @@
+{
+  "id": "TRC-WM1-MAN-test-src-hooks-theme-test-VERIFIES-REQ-FP-D05",
+  "type": "TraceLink",
+  "source": "MAN-test-src-hooks-theme-test",
+  "target": "REQ-FP-D05",
+  "relationship_type": "verifies",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "WM-1 test: src/hooks/theme.test.ts verifies dataset.theme and classList.dark updates for dark and light themes.",
+    "2026-06-30 gate: npm run test -- src/hooks/theme.test.ts passed."
+  ],
+  "inference_source": "WM-1 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

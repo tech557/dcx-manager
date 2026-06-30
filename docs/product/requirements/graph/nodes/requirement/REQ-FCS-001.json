@@ -1,0 +1,28 @@
+{
+  "id": "REQ-FCS-001",
+  "statement": "Focus Island as selection/filtering engine — Focus Island is a strategic selection/filtering engine, not a simple filter. It lets users find and concentrate on specific work across the whole plan while preserving hierarchy. — Supports focus modes by Week, Action, Task, and Task property/spec (sender, receiver, channel, task type, subtask, future structured fields). On selecting a focus option, the system finds all matching tasks, selects them, highlights with animation, expands any collapsed phase/action containing them, and preserves hierarchy context. Works in both Kanban and Timeline.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "FCS-001",
+  "source_category": "Builder UI Surfaces",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "SBC-001, IFX-001",
+  "related_requirements": "FCS-002",
+  "affected_modules": "src/pages/builder/islands/FocusIsland/; selection engine; stage filtering",
+  "ux_impact": "Powerful, context-aware focusing.",
+  "risk": "Medium-High",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "FCS-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

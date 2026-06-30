@@ -1,0 +1,17 @@
+{
+  "id": "TRC-OA1-REQ-FP-CMA-003-TO-MAN-hook-usescrolledge",
+  "type": "TraceLink",
+  "source": "REQ-FP-CMA-003",
+  "target": "MAN-hook-src-hooks-usescrolledge",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "OA-1: useScrollEdge is the shared primitive that drives gradient-fade overflow signals (top/bottom on PhaseCard action list; left/right on HorizontalTaskFlow task row), satisfying the spatial-awareness/auto-centre requirement for never clipping content without a cue."
+  ],
+  "inference_source": "OA-1 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

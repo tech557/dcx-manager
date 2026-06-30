@@ -1,0 +1,24 @@
+{
+  "id": "MAN-function-src-brand-styles-components",
+  "type": "Manifestation",
+  "statement": "Code manifestation: brand component-level CSS (src/brand/styles/components.css). Styles app-shell, app-nav, and the placeholder-screen (eyebrow, headings, paragraphs) using theme color and font-size tokens.",
+  "scope": "frontend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "function",
+  "current_paths": [
+    "src/brand/styles/components.css"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "CT-1 sprint execution (light-page legibility token fixes)",
+    "source_path": "src/brand/styles/components.css",
+    "source_anchor": "components",
+    "authoring_actor": "Claude (claude-opus-4-8)",
+    "inference_source": "reconciliation-engine",
+    "confidence": 0.8,
+    "confirmation_status": "code-discovered",
+    "last_checked_date": "2026-06-30"
+  }
+}

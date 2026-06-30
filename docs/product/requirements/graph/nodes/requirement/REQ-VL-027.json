@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VL-027",
+  "statement": "Created to In Progress automation — Created becomes In Progress automatically when first phase is added. — First phase mutation, status update, timestamp.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VL-027",
+  "source_category": "Lifecycle & Version Status Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Builder creation flow",
+  "related_requirements": "Builder State & Mutation Layer",
+  "affected_modules": "src/types/lifecycle.ts; src/rules/lifecycle.rules.ts; src/services/versions.service.ts; status transition handlers",
+  "ux_impact": "PM can trust the timing metric.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VL-027",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-PR-001",
+  "statement": "Company Google/Gmail authentication — Users must authenticate using company Google/Gmail authentication. — Auth provider, route guards, user session, backend user",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "PR-001",
+  "source_category": "Routing; Auth & Load Control",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Google auth setup",
+  "related_requirements": "Permissions & Access Control",
+  "affected_modules": "src/app/; src/router.tsx; src/components/auth/; src/services/access.service.ts; route/load guards",
+  "ux_impact": "User logs in with company account before opening",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "PR-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "security"
+}

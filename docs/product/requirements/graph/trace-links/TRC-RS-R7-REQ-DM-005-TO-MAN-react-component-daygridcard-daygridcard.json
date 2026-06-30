@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-005-TO-MAN-react-component-daygridcard-daygridcard",
+  "type": "TraceLink",
+  "source": "REQ-DM-005",
+  "target": "MAN-react-component-src-builder-stage-views-daygridcard",
+  "relationship_type": "supersedes",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"DayGridCard\" matches \"Day role — Day is not a primary saved entity. It is calculated from task — Timeline helpers, WeeklyView, MonthlyView, DayGridCard, date helpers.\" (score: 0.85)",
+    "Historical RS-R7 candidate superseded by canonical link TRC-RS-R7-REQ-DM-005-TO-MAN-react-component-src-builder-stage-views-daygridcard."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "original_source": "REQ-DM-005",
+  "original_target": "MAN-react-component-daygridcard-daygridcard",
+  "replacement_trace_link": "TRC-RS-R7-REQ-DM-005-TO-MAN-react-component-src-builder-stage-views-daygridcard",
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

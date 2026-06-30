@@ -1,0 +1,8 @@
+{
+  "name": "DCX Manager v0.1.1",
+  "description": "A high-tech dashboard with a Liquid Glass / Mission Control aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-SBC-001-TO-MAN-react-component-droptarget-droptarget",
+  "type": "TraceLink",
+  "source": "REQ-SBC-001",
+  "target": "MAN-react-component-src-builder-dropzones-droptarget",
+  "relationship_type": "supersedes",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"DropTarget\" matches \"Common card interaction layer — Phase, Action, and Task cards are strategic Builder components, not simple visual cards. They must share one consistent interaction layer so the whole Builder behaves predictably and can be visually redesigned without rewriting logic. — Provide reusable card primitives + typed card configuration covering: selection, multi-selection, expand/collapse, drag-and-drop, reorder, delete, contextual actions, locked/read-only state, readiness state, creation/selection highlight, parent/drop-target highlight, and motion feedback. Common behavior must not be duplicated per card type.\" (score: 0.85)",
+    "Historical RS-R7 candidate superseded by canonical link TRC-RS-R7-REQ-SBC-001-TO-MAN-react-component-src-builder-dropzones-droptarget."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "original_source": "REQ-SBC-001",
+  "original_target": "MAN-react-component-droptarget-droptarget",
+  "replacement_trace_link": "TRC-RS-R7-REQ-SBC-001-TO-MAN-react-component-src-builder-dropzones-droptarget",
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

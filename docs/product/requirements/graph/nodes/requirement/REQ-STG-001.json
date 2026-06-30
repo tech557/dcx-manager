@@ -1,0 +1,28 @@
+{
+  "id": "REQ-STG-001",
+  "statement": "Stage as first-class shared system — The Stage should be a first-class product component shared by all views, so Kanban, Timeline, Weekly, and Monthly are renderers inside one Stage rather than unrelated screens. — The Stage owns canvas boundaries, view switching, stage movement, week/month navigation, edge scrolling, off-stage dropzones, layout response to islands, transition feedback, and selected/focus context preservation. Kanban and Timeline are different renderers inside the same Stage concept.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "STG-001",
+  "source_category": "Stage System",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "",
+  "related_requirements": "STG-002, STG-003, VHB-001, FCS-001",
+  "affected_modules": "src/pages/builder/stage/StageManager.tsx; view renderers",
+  "ux_impact": "Coherent workspace across views.",
+  "risk": "Medium-High",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "STG-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

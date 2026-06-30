@@ -1,0 +1,18 @@
+{
+  "id": "RSP-GOV-TRACE-OPERATIONS",
+  "type": "SystemResponsibility",
+  "statement": "Trace governance operations responsibility: enforce traceability for all operations manifestations.",
+  "scope": "operations",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "responsibility_type": "operations",
+  "chain_layer": "RSP",
+  "provenance": {
+    "source": "docs/plans/active/requirements-system/sprints/RS-R9-dogfood-self-trace.md",
+    "authoring_actor": "RS-R9 seed",
+    "confidence": 0.9,
+    "confirmation_status": "skill-derived",
+    "last_checked_date": "2026-06-29"
+  }
+}

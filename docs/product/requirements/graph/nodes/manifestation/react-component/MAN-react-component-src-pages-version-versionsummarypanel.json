@@ -1,0 +1,18 @@
+{
+  "id": "MAN-react-component-src-pages-version-versionsummarypanel",
+  "type": "Manifestation",
+  "statement": "Code manifestation: VersionSummaryPanel (src/pages/version/VersionSummaryPanel.tsx) — created in HV-2.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "react-component",
+  "current_paths": ["src/pages/version/VersionSummaryPanel.tsx"],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "HV-2 sprint execution",
+    "authoring_actor": "Claude",
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

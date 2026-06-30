@@ -1,0 +1,484 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-UltraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-UltraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-RegularItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-ExtraBoldItalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-HeavyItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Black.woff") format("woff");
+  font-weight: 950;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-BlackItalic.woff") format("woff");
+  font-weight: 950;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Structural dimension tokens (CT-3): fluid clamp values — floor@1280px, anchor@1440px, cap@3840px. */
+  --dim-phase-collapsed: clamp(3.5rem, 5vw, 5.5rem);       /* 56px→72px@1440→88px */
+  --dim-phase-expanded: clamp(220px, 18.06vw, 340px);      /* 231px@1280→260px@1440→340px */
+  --dim-card-height-pct: 80%;                               /* Cards occupy 80% of stage height; 10% margin each side */
+  --dim-editor-width: clamp(18rem, 27.78vw, 32rem);        /* ~356px@1280→400px@1440→512px */
+  --dim-builder-header: clamp(56px, 4.44vw, 80px);         /* ~57px@1280→64px@1440→80px */
+  --dim-builder-footer: clamp(64px, 5.28vw, 96px);         /* ~68px@1280→76px@1440→96px */
+  --dim-selection-max-width: clamp(320px, 29.17vw, 560px); /* ~373px@1280→420px@1440→560px */
+
+  --text-4xs: 0.4375rem;
+  --text-3xs: 0.5rem;
+  --text-3xs-plus: 0.53125rem;
+  --text-2xs: 0.5625rem;
+  --text-2xs-plus: 0.59375rem;
+  --text-xs: 0.625rem;
+  --text-xs-plus: 0.65625rem;
+  --text-sm: 0.6875rem;
+  --text-md: 0.75rem;
+  --text-md-plus: 0.8125rem;
+  --text-base: 0.9375rem;
+  --theme-accent: #75E2FF;
+  --theme-accent-variant: #55c2df;
+  --theme-accent-deep: #006080;
+  /* Contrast-safe brand-blue for foreground/text on light surfaces (main-blue-on-light). */
+  --theme-accent-text: #006080;
+  --theme-accent-subtle: rgba(117, 226, 255, 0.08);
+  --theme-accent-soft: rgba(117, 226, 255, 0.12);
+  --theme-selected-glow: rgba(117, 226, 255, 0.15);
+  --theme-accent-bg: rgba(117, 226, 255, 0.2);
+  --theme-accent-medium: rgba(117, 226, 255, 0.3);
+  --theme-accent-strong: rgba(117, 226, 255, 0.5);
+  --theme-error: #FF7575;
+  --theme-error-alt: #FF6464;
+  --theme-error-bg: rgba(255, 117, 117, 0.12);
+  --theme-error-deep-bg: rgba(255, 117, 117, 0.16);
+  --theme-error-bg-alt: rgba(255, 100, 100, 0.2);
+  --theme-warning: #F8C458;
+  --theme-warning-bg: rgba(248, 196, 88, 0.2);
+  --theme-warning-glow: rgba(245, 158, 11, 0.35);
+  --theme-success: rgba(52, 211, 153, 1);
+  --theme-success-bg: rgba(16, 185, 129, 0.2);
+  --theme-success-glow: rgba(16, 185, 129, 0.35);
+  --theme-info: rgba(56, 189, 248, 0.7);
+  --theme-info-bg: rgba(56, 189, 248, 0.1);
+  --theme-surface-deep: #FAF9F6;
+  --theme-surface-void: #FDFDFB;
+  --theme-surface-deep-alt: #F7F7F8;
+  --theme-surface-dark: #E9ECEF;
+  --theme-dropdown-bg: #FDFDFB;
+  --theme-surface-alternate: #F1F3F5;
+  --theme-muted: rgba(21, 21, 22, 0.4);
+  --theme-divider: rgba(0, 0, 0, 0.08);
+  --theme-glass-bg: rgba(255, 255, 255, 0.85);
+  --theme-text-primary: #151516;
+  --theme-text-secondary: rgba(21, 21, 22, 0.82);
+  --theme-text-muted: rgba(21, 21, 22, 0.68);
+  --theme-border-subtle: rgba(0, 0, 0, 0.08);
+  --theme-component-border: rgba(255, 255, 255, 0.08);
+  --theme-component-border-muted: rgba(255, 255, 255, 0.06);
+  --theme-component-border-soft: rgba(255, 255, 255, 0.07);
+  --theme-component-border-strong: rgba(255, 255, 255, 0.1);
+  --theme-component-border-faint: rgba(255, 255, 255, 0.05);
+  --theme-component-border-light: rgba(0, 0, 0, 0.08);
+  --theme-component-fill-faint: rgba(255, 255, 255, 0.04);
+  --theme-component-fill-subtle: rgba(255, 255, 255, 0.05);
+  --theme-component-fill-soft: rgba(255, 255, 255, 0.07);
+  --theme-component-fill-light: rgba(255, 255, 255, 0.65);
+  --theme-component-fill-overlay: rgba(0, 0, 0, 0.3);
+  --theme-component-surface-nav: rgba(13, 13, 14, 0.72);
+  --theme-component-surface-pill: rgba(13, 13, 14, 0.86);
+  --theme-component-surface-header: rgba(13, 13, 14, 0.84);
+  --theme-component-surface-editor: rgba(13, 13, 14, 0.92);
+  --theme-component-surface-glass-dark: rgba(13, 13, 14, 0.45);
+  --theme-component-surface-deep: rgb(13, 13, 14);
+  --theme-component-surface-popup: rgb(21 21 22);
+  --theme-component-text-primary: rgb(247 247 248);
+  --theme-component-text-muted: rgba(247, 247, 248, 0.72);
+  --theme-component-text-subtle: rgba(247, 247, 248, 0.62);
+  --theme-component-text-soft: rgba(247, 247, 248, 0.66);
+  --theme-component-text-secondary: rgba(247, 247, 248, 0.78);
+  --theme-component-text-disabled: rgba(247, 247, 248, 0.56);
+  --theme-component-text-faint: rgba(247, 247, 248, 0.45);
+  --theme-component-shadow-soft: rgba(0, 0, 0, 0.2);
+  --theme-component-shadow-medium: rgba(0, 0, 0, 0.3);
+  --theme-component-shadow-strong: rgba(0, 0, 0, 0.35);
+  --theme-component-shadow-glow: rgba(0, 0, 0, 0.4);
+  --theme-component-shadow-light: rgba(0, 0, 0, 0.04);
+  --theme-component-inset-highlight: rgba(255, 255, 255, 0.04);
+  --theme-component-inset-highlight-soft: rgba(255, 255, 255, 0.05);
+  --theme-component-inset-highlight-strong: rgba(255, 255, 255, 0.25);
+  --theme-component-focus-accent: rgb(117, 226, 255);
+
+  /* HV-3: Missing surface/border tokens (fix transparent-card bug) */
+  --theme-surface-raised: rgba(0, 0, 0, 0.04);
+  --theme-surface-raised-hover: rgba(0, 0, 0, 0.07);
+  --theme-border: rgba(0, 0, 0, 0.10);
+
+  /* HV-3: Elevation presets */
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-island: 0 12px 40px rgba(0, 0, 0, 0.10);
+  --shadow-overlay: 0 20px 50px rgba(0, 0, 0, 0.16);
+  --glow-accent: 0 0 25px rgba(117, 226, 255, 0.12);
+
+  /* HV-3: Blur/duration vars */
+  --blur-light: 12px;
+  --blur-mid: 24px;
+  --blur-heavy: 40px;
+  --dur-fast: 150ms;
+  --dur-normal: 250ms;
+  --dur-slow: 450ms;
+
+  /* HV-3: Status token set */
+  --status-draft-bg: rgba(0, 0, 0, 0.06);
+  --status-draft-fg: rgba(21, 21, 22, 0.56);
+  --status-draft-border: rgba(0, 0, 0, 0.10);
+  --status-draft-dot: rgba(21, 21, 22, 0.40);
+  --status-inprogress-bg: rgba(248, 196, 88, 0.12);
+  --status-inprogress-fg: #B45309;
+  --status-inprogress-border: rgba(248, 196, 88, 0.28);
+  --status-inprogress-dot: #F59E0B;
+  --status-ready-bg: rgba(117, 226, 255, 0.10);
+  --status-ready-fg: #006080;
+  --status-ready-border: rgba(117, 226, 255, 0.25);
+  --status-ready-dot: #75E2FF;
+  --status-approved-bg: rgba(16, 185, 129, 0.10);
+  --status-approved-fg: #065F46;
+  --status-approved-border: rgba(16, 185, 129, 0.25);
+  --status-approved-dot: #10B981;
+  --status-superseded-bg: rgba(0, 0, 0, 0.05);
+  --status-superseded-fg: rgba(21, 21, 22, 0.40);
+  --status-superseded-border: rgba(0, 0, 0, 0.08);
+  --status-superseded-dot: rgba(21, 21, 22, 0.25);
+
+  font-family: "Gilroy";
+  color: var(--theme-text-primary);
+  background: var(--theme-surface-deep);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --background: oklch(0.98 0.004 91);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(0.992 0.003 91);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(0.992 0.003 91);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+[data-theme="dark"],
+.dark {
+  --theme-accent: #75E2FF;
+  --theme-accent-variant: #55c2df;
+  --theme-accent-deep: #006080;
+  /* On dark surfaces the bright brand-blue is already legible as foreground. */
+  --theme-accent-text: #75E2FF;
+  --theme-accent-subtle: rgba(117, 226, 255, 0.08);
+  --theme-accent-soft: rgba(117, 226, 255, 0.12);
+  --theme-selected-glow: rgba(117, 226, 255, 0.15);
+  --theme-accent-bg: rgba(117, 226, 255, 0.2);
+  --theme-accent-medium: rgba(117, 226, 255, 0.3);
+  --theme-accent-strong: rgba(117, 226, 255, 0.5);
+  --theme-error: #FF7575;
+  --theme-error-alt: #FF6464;
+  --theme-error-bg: rgba(255, 117, 117, 0.12);
+  --theme-error-deep-bg: #241113;
+  --theme-error-bg-alt: rgba(255, 100, 100, 0.2);
+  --theme-warning: #F8C458;
+  --theme-warning-bg: rgba(248, 196, 88, 0.2);
+  --theme-warning-glow: rgba(245, 158, 11, 0.35);
+  --theme-success: rgba(52, 211, 153, 1);
+  --theme-success-bg: rgba(16, 185, 129, 0.2);
+  --theme-success-glow: rgba(16, 185, 129, 0.35);
+  --theme-info: rgba(56, 189, 248, 0.7);
+  --theme-info-bg: rgba(56, 189, 248, 0.1);
+  --theme-surface-deep: #050506;
+  --theme-surface-void: #0a0a0d;
+  --theme-surface-deep-alt: #0e0f12;
+  --theme-surface-dark: #161617;
+  --theme-dropdown-bg: #121212;
+  --theme-surface-alternate: #0c0d0f;
+  --theme-muted: rgba(247, 247, 248, 0.4);
+  --theme-divider: rgba(255, 255, 255, 0.1);
+  --theme-glass-bg: rgba(13, 13, 14, 0.88);
+  --theme-text-primary: #F7F7F8;
+  --theme-text-secondary: rgba(247, 247, 248, 0.82);
+  --theme-text-muted: rgba(247, 247, 248, 0.72);
+  --theme-border-subtle: rgba(255, 255, 255, 0.08);
+  --theme-component-border: rgba(255, 255, 255, 0.08);
+  --theme-component-border-muted: rgba(255, 255, 255, 0.06);
+  --theme-component-border-soft: rgba(255, 255, 255, 0.07);
+  --theme-component-border-strong: rgba(255, 255, 255, 0.1);
+  --theme-component-border-faint: rgba(255, 255, 255, 0.05);
+  --theme-component-border-light: rgba(0, 0, 0, 0.08);
+  --theme-component-fill-faint: rgba(255, 255, 255, 0.04);
+  --theme-component-fill-subtle: rgba(255, 255, 255, 0.05);
+  --theme-component-fill-soft: rgba(255, 255, 255, 0.07);
+  --theme-component-fill-light: rgba(255, 255, 255, 0.65);
+  --theme-component-fill-overlay: rgba(0, 0, 0, 0.3);
+  --theme-component-surface-nav: rgba(13, 13, 14, 0.72);
+  --theme-component-surface-pill: rgba(13, 13, 14, 0.86);
+  --theme-component-surface-header: rgba(13, 13, 14, 0.84);
+  --theme-component-surface-editor: rgba(13, 13, 14, 0.92);
+  --theme-component-surface-glass-dark: rgba(13, 13, 14, 0.45);
+  --theme-component-surface-deep: rgb(13, 13, 14);
+  --theme-component-surface-popup: rgb(21 21 22);
+  --theme-component-text-primary: rgb(247 247 248);
+  --theme-component-text-muted: rgba(247, 247, 248, 0.72);
+  --theme-component-text-subtle: rgba(247, 247, 248, 0.62);
+  --theme-component-text-soft: rgba(247, 247, 248, 0.66);
+  --theme-component-text-secondary: rgba(247, 247, 248, 0.78);
+  --theme-component-text-disabled: rgba(247, 247, 248, 0.56);
+  --theme-component-text-faint: rgba(247, 247, 248, 0.45);
+  --theme-component-shadow-soft: rgba(0, 0, 0, 0.2);
+  --theme-component-shadow-medium: rgba(0, 0, 0, 0.3);
+  --theme-component-shadow-strong: rgba(0, 0, 0, 0.35);
+  --theme-component-shadow-glow: rgba(0, 0, 0, 0.4);
+  --theme-component-shadow-light: rgba(0, 0, 0, 0.04);
+  --theme-component-inset-highlight: rgba(255, 255, 255, 0.04);
+  --theme-component-inset-highlight-soft: rgba(255, 255, 255, 0.05);
+  --theme-component-inset-highlight-strong: rgba(255, 255, 255, 0.25);
+  --theme-component-focus-accent: rgb(117, 226, 255);
+
+  /* HV-3: Missing surface/border tokens (dark) */
+  --theme-surface-raised: rgba(255, 255, 255, 0.04);
+  --theme-surface-raised-hover: rgba(255, 255, 255, 0.07);
+  --theme-border: rgba(255, 255, 255, 0.10);
+
+  /* HV-3: Elevation presets (dark) */
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.30);
+  --shadow-island: 0 12px 40px rgba(0, 0, 0, 0.20);
+  --shadow-overlay: 0 20px 50px rgba(0, 0, 0, 0.30);
+  --glow-accent: 0 0 25px rgba(117, 226, 255, 0.12);
+
+  /* HV-3: Blur/duration vars (dark — same values) */
+  --blur-light: 12px;
+  --blur-mid: 24px;
+  --blur-heavy: 40px;
+  --dur-fast: 150ms;
+  --dur-normal: 250ms;
+  --dur-slow: 450ms;
+
+  /* HV-3: Status token set (dark) */
+  --status-draft-bg: rgba(255, 255, 255, 0.04);
+  --status-draft-fg: rgba(247, 247, 248, 0.56);
+  --status-draft-border: rgba(255, 255, 255, 0.08);
+  --status-draft-dot: rgba(247, 247, 248, 0.35);
+  --status-inprogress-bg: rgba(248, 196, 88, 0.12);
+  --status-inprogress-fg: #F8C458;
+  --status-inprogress-border: rgba(248, 196, 88, 0.28);
+  --status-inprogress-dot: #F8C458;
+  --status-ready-bg: rgba(117, 226, 255, 0.10);
+  --status-ready-fg: #75E2FF;
+  --status-ready-border: rgba(117, 226, 255, 0.25);
+  --status-ready-dot: #75E2FF;
+  --status-approved-bg: rgba(16, 185, 129, 0.10);
+  --status-approved-fg: #34D399;
+  --status-approved-border: rgba(16, 185, 129, 0.25);
+  --status-approved-dot: #34D399;
+  --status-superseded-bg: rgba(255, 255, 255, 0.04);
+  --status-superseded-fg: rgba(247, 247, 248, 0.35);
+  --status-superseded-border: rgba(255, 255, 255, 0.06);
+  --status-superseded-dot: rgba(247, 247, 248, 0.20);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}

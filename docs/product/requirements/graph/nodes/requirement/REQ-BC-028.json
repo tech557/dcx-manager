@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-028",
+  "statement": "Task cannot be orphaned — All creation/import flows must preserve the rule that tasks belong to actions. — Creation functions, import reconciler, validation, API schema.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-028",
+  "source_category": "Validation & Readiness Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Data Model hierarchy",
+  "related_requirements": "Domain Model & API Contracts",
+  "affected_modules": "src/rules/validation.rules.ts; readiness checker; validation summary UI; TaskEditor validation hooks",
+  "ux_impact": "User never ends with unsupported loose tasks.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-028",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

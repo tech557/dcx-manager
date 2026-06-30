@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-IFX-001-TO-MAN-react-component-select-select",
+  "type": "TraceLink",
+  "source": "REQ-IFX-001",
+  "target": "MAN-react-component-src-ui-forms-selects-select",
+  "relationship_type": "supersedes",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"Select\" matches \"Reusable interaction feedback & motion system — The app needs one reusable interaction-feedback system so visual quality is consistent and motion never owns business state. — Modular, reusable effects for: valid drop-target highlight, invalid-drop feedback, parent-container glow, selected-card highlight, newly-created-item highlight, focus highlight, collapsed-container expansion animation, drag feedback, save/sync feedback, locked/disabled feedback. Effects must be modular, not hardcoded per card/island. Motion must never own business state or block save/load.\" (score: 0.85)",
+    "Historical RS-R7 candidate superseded by canonical link TRC-RS-R7-REQ-IFX-001-TO-MAN-react-component-src-ui-forms-selects-select."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "original_source": "REQ-IFX-001",
+  "original_target": "MAN-react-component-select-select",
+  "replacement_trace_link": "TRC-RS-R7-REQ-IFX-001-TO-MAN-react-component-src-ui-forms-selects-select",
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

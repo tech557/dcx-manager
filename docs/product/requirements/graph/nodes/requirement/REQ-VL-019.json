@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VL-019",
+  "statement": "DCX status derived from versions — DCX status is derived from the highest/most meaningful version status, not manually — DCX status resolver, dashboard, project/DCX API response.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VL-019",
+  "source_category": "Lifecycle & Version Status Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Version statuses",
+  "related_requirements": "Domain Model & API Contracts",
+  "affected_modules": "src/types/lifecycle.ts; src/rules/lifecycle.rules.ts; src/services/versions.service.ts; status transition handlers",
+  "ux_impact": "PM sees one clear status for the whole",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VL-019",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

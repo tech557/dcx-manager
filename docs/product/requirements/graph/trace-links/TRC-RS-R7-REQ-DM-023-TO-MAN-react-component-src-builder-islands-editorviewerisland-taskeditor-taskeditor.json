@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-023-TO-MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-taskeditor",
+  "type": "TraceLink",
+  "source": "REQ-DM-023",
+  "target": "MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-taskeditor",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"TaskEditor\" matches \"Missing data and specs field model — For missing data and specs fields only, task is ready when each — TaskEditor fields, task type, validation, readiness checker, API\" (score: 0.85)",
+    "RS-R7 identity normalization redirected TRC-RS-R7-REQ-DM-023-TO-MAN-react-component-taskeditor-taskeditor to canonical manifestation identity."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "merged_from": [
+    "TRC-RS-R7-REQ-DM-023-TO-MAN-react-component-taskeditor-taskeditor"
+  ],
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

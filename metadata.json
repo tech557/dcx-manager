@@ -1,0 +1,8 @@
+{
+  "name": "DCX Manager v0.3.5",
+  "description": "DCX Manager campaign-planning workspace for building versions, phases, actions, tasks, timelines, readiness flows, and governed product requirements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CT1-REQ-FP-D01-TO-MAN-function-src-brand-styles-tokens",
+  "type": "TraceLink",
+  "source": "REQ-FP-D01",
+  "target": "MAN-function-src-brand-styles-tokens",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "CT-1 / L06: src/brand/styles/tokens.css defines the --text-* font-size tokens (consumed via the text-dcx-* utilities in theme.css) that make app-wide font sizes token-driven (REQ-FP-D01 'font-sizes must be responsive/token-driven')."
+  ],
+  "inference_source": "CT-1 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

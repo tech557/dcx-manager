@@ -1,0 +1,18 @@
+{
+  "id": "REQ-HOME-ANALYTICS",
+  "type": "Requirement",
+  "statement": "Home dashboard: # Active DCXs (status not Approved and not Superseded), # Total DCXs, # Versions. Supabase-sourced; mock contract in HV-1.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "frontend",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confidence": 1,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

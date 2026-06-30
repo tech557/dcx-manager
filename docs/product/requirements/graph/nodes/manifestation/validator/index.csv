@@ -1,0 +1,3 @@
+id,type,governance,maturity,delivery,scope,kind,statement
+MAN-validator-scripts-requirements-validators,Manifestation,proposed,logic-defined,not-assessed,data,validator,"Graph validators: structural validation of all graph nodes, trace links, and ledger entries. Enforces three-state lifecycle, progressive field requirements, relationship integrity."
+MAN-validator-scripts-requirements-verification,Manifestation,proposed,logic-defined,not-assessed,governance,validator,"Verification module: binds evidence to acceptance outcomes, tracks implemented vs verified states, detects staleness from code changes, produces verification reports."

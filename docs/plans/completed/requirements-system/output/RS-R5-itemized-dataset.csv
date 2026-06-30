@@ -1,0 +1,218 @@
+source_row,source_id,category,status,chain_layer,suggested_node_id,source_path,seed_action
+1,CR-001,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-CR-001,dcx-requirements-master.csv,Seed as REQ-
+2,VR-010,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-VR-010,dcx-requirements-master.csv,Seed as REQ-
+3,RV-019,Audit; Logs & Error Reporting,Confirmed,REQ->BHV,REQ-RV-019,dcx-requirements-master.csv,Seed as REQ-
+4,VR-009,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-VR-009,dcx-requirements-master.csv,Seed as REQ-
+5,CR-007,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-CR-007,dcx-requirements-master.csv,Seed as REQ-
+6,CR-006,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-CR-006,dcx-requirements-master.csv,Seed as REQ-
+7,VR-008,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-VR-008,dcx-requirements-master.csv,Seed as REQ-
+8,VR-007,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-VR-007,dcx-requirements-master.csv,Seed as REQ-
+9,CR-003,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-CR-003,dcx-requirements-master.csv,Seed as REQ-
+10,VL-029,Audit; Logs & Error Reporting,Confirmed,REQ->BHV->RSP,REQ-VL-029,dcx-requirements-master.csv,Seed as REQ-
+11,CR-004,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-CR-004,dcx-requirements-master.csv,Seed as REQ-
+12,CR-005,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-CR-005,dcx-requirements-master.csv,Seed as REQ-
+13,CR-002,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-CR-002,dcx-requirements-master.csv,Seed as REQ-
+14,CR-010,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-CR-010,dcx-requirements-master.csv,Seed as REQ-
+15,CR-009,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-CR-009,dcx-requirements-master.csv,Seed as REQ-
+16,CR-008,Audit; Logs & Error Reporting,Confirmed,REQ->RSP,REQ-CR-008,dcx-requirements-master.csv,Seed as REQ-
+17,DM-020,Builder State & Mutation Layer,Confirmed,REQ->BHV->RSP,REQ-DM-020,dcx-requirements-master.csv,Seed as REQ-
+18,BC-030,Builder State & Mutation Layer,Confirmed,REQ->BHV->RSP,REQ-BC-030,dcx-requirements-master.csv,Seed as REQ-
+19,BC-004,Builder State & Mutation Layer,Confirmed,REQ->BHV->RSP,REQ-BC-004,dcx-requirements-master.csv,Seed as REQ-
+20,BC-005,Builder State & Mutation Layer,Confirmed,REQ->BHV->RSP,REQ-BC-005,dcx-requirements-master.csv,Seed as REQ-
+21,BC-006,Builder State & Mutation Layer,Confirmed,REQ->BHV->RSP,REQ-BC-006,dcx-requirements-master.csv,Seed as REQ-
+22,RV-018,Builder State & Mutation Layer,Confirmed,REQ->BHV,REQ-RV-018,dcx-requirements-master.csv,Seed as REQ-
+23,BC-016,Builder State & Mutation Layer,Confirmed,REQ->BHV->RSP,REQ-BC-016,dcx-requirements-master.csv,Seed as REQ-
+24,BC-018,Builder State & Mutation Layer,Confirmed,REQ->BHV->RSP,REQ-BC-018,dcx-requirements-master.csv,Seed as REQ-
+25,BC-019,Builder State & Mutation Layer,Confirmed,REQ->BHV->RSP,REQ-BC-019,dcx-requirements-master.csv,Seed as REQ-
+26,BC-020,Builder State & Mutation Layer,Confirmed,REQ->BHV->RSP,REQ-BC-020,dcx-requirements-master.csv,Seed as REQ-
+27,RV-020,Builder State & Mutation Layer,Confirmed,REQ->BHV,REQ-RV-020,dcx-requirements-master.csv,Seed as REQ-
+28,BC-009,Builder State & Mutation Layer,Confirmed,REQ->BHV->RSP,REQ-BC-009,dcx-requirements-master.csv,Seed as REQ-
+29,RV-017,Builder State & Mutation Layer,Confirmed,REQ->BHV,REQ-RV-017,dcx-requirements-master.csv,Seed as REQ-
+30,BC-010,Builder State & Mutation Layer,Confirmed,REQ->BHV->RSP,REQ-BC-010,dcx-requirements-master.csv,Seed as REQ-
+31,BC-023,Builder State & Mutation Layer,Confirmed,REQ->BHV->RSP,REQ-BC-023,dcx-requirements-master.csv,Seed as REQ-
+32,RV-021,Builder State & Mutation Layer,Confirmed,REQ->BHV,REQ-RV-021,dcx-requirements-master.csv,Seed as REQ-
+33,BC-008,Builder State & Mutation Layer,Confirmed,REQ->BHV->RSP,REQ-BC-008,dcx-requirements-master.csv,Seed as REQ-
+34,BC-012,Builder UI Surfaces,Confirmed,REQ->BHV->RSP,REQ-BC-012,dcx-requirements-master.csv,Seed as REQ-
+35,UP-001,Builder UI Surfaces,Confirmed,REQ->RSP,REQ-UP-001,dcx-requirements-master.csv,Seed as REQ-
+36,BC-001,Builder UI Surfaces,Confirmed,REQ->BHV->RSP,REQ-BC-001,dcx-requirements-master.csv,Seed as REQ-
+37,BC-011,Builder UI Surfaces,Confirmed,REQ->BHV->RSP,REQ-BC-011,dcx-requirements-master.csv,Seed as REQ-
+38,BC-021,Builder UI Surfaces,Confirmed,REQ->BHV->RSP,REQ-BC-021,dcx-requirements-master.csv,Seed as REQ-
+39,UP-008,Builder UI Surfaces,Confirmed,REQ->RSP,REQ-UP-008,dcx-requirements-master.csv,Seed as REQ-
+40,UP-005,Builder UI Surfaces,Confirmed,REQ->RSP,REQ-UP-005,dcx-requirements-master.csv,Seed as REQ-
+41,UP-006,Builder UI Surfaces,Confirmed,REQ->RSP,REQ-UP-006,dcx-requirements-master.csv,Seed as REQ-
+42,UP-007,Builder UI Surfaces,Confirmed,REQ->RSP,REQ-UP-007,dcx-requirements-master.csv,Seed as REQ-
+43,BC-003,Builder UI Surfaces,Confirmed,REQ->BHV->RSP,REQ-BC-003,dcx-requirements-master.csv,Seed as REQ-
+44,BC-025,Builder UI Surfaces,Proposed,REQ->BHV->RSP,REQ-BC-025,dcx-requirements-master.csv,Seed as REQ- (confirmation_status: proposed)
+45,BC-007,Builder UI Surfaces,Confirmed,REQ->BHV->RSP,REQ-BC-007,dcx-requirements-master.csv,Seed as REQ-
+46,DM-022,Builder UI Surfaces,Confirmed,REQ->BHV->RSP,REQ-DM-022,dcx-requirements-master.csv,Seed as REQ-
+47,BC-013,Builder UI Surfaces,Confirmed,REQ->BHV->RSP,REQ-BC-013,dcx-requirements-master.csv,Seed as REQ-
+48,UP-020,Builder UI Surfaces,Confirmed,REQ->RSP,REQ-UP-020,dcx-requirements-master.csv,Seed as REQ-
+49,DM-019,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-019,dcx-requirements-master.csv,Seed as REQ-
+50,DM-018,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-018,dcx-requirements-master.csv,Seed as REQ-
+51,DM-024,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-024,dcx-requirements-master.csv,Seed as REQ-
+52,DM-001,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-001,dcx-requirements-master.csv,Seed as REQ-
+53,DM-002,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-002,dcx-requirements-master.csv,Seed as REQ-
+54,DM-013,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-013,dcx-requirements-master.csv,Seed as REQ-
+55,DM-014,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-014,dcx-requirements-master.csv,Seed as REQ-
+56,DM-012,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-012,dcx-requirements-master.csv,Seed as REQ-
+57,DM-015,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-015,dcx-requirements-master.csv,Seed as REQ-
+58,DM-016,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-016,dcx-requirements-master.csv,Seed as REQ-
+59,DM-011,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-011,dcx-requirements-master.csv,Seed as REQ-
+60,DM-010,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-010,dcx-requirements-master.csv,Seed as REQ-
+61,DM-003,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-003,dcx-requirements-master.csv,Seed as REQ-
+62,BC-017,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-BC-017,dcx-requirements-master.csv,Seed as REQ-
+63,DM-017,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-017,dcx-requirements-master.csv,Seed as REQ-
+64,DM-009,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-009,dcx-requirements-master.csv,Seed as REQ-
+65,DM-008,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-008,dcx-requirements-master.csv,Seed as REQ-
+66,DM-006,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-006,dcx-requirements-master.csv,Seed as REQ-
+67,DM-007,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-007,dcx-requirements-master.csv,Seed as REQ-
+68,DM-005,Domain Model & API Contracts,Confirmed,REQ->BHV->RSP,REQ-DM-005,dcx-requirements-master.csv,Seed as REQ-
+69,BC-027,Files & External References,Confirmed,REQ->BHV->RSP,REQ-BC-027,dcx-requirements-master.csv,Seed as REQ-
+70,FI-005,Files & External References,Confirmed,REQ->RSP,REQ-FI-005,dcx-requirements-master.csv,Seed as REQ-
+71,FI-002,Files & External References,Confirmed,REQ->RSP,REQ-FI-002,dcx-requirements-master.csv,Seed as REQ-
+72,FI-003,Files & External References,Confirmed,REQ->RSP,REQ-FI-003,dcx-requirements-master.csv,Seed as REQ-
+73,FI-006,Files & External References,Confirmed,REQ->RSP,REQ-FI-006,dcx-requirements-master.csv,Seed as REQ-
+74,BC-026,Files & External References,Confirmed,REQ->BHV->RSP,REQ-BC-026,dcx-requirements-master.csv,Seed as REQ-
+75,FI-007,Files & External References,Deferred,INT,INT-FI-007,dcx-requirements-master.csv,Seed as INT- (deferred Intent)
+76,FI-001,Files & External References,Confirmed,REQ->RSP,REQ-FI-001,dcx-requirements-master.csv,Seed as REQ-
+77,FI-004,Files & External References,Confirmed,REQ->RSP,REQ-FI-004,dcx-requirements-master.csv,Seed as REQ-
+78,VR-006,Integration Contracts,Confirmed,REQ->RSP,REQ-VR-006,dcx-requirements-master.csv,Seed as REQ-
+79,PR-005,Integration Contracts,Confirmed,REQ->RSP,REQ-PR-005,dcx-requirements-master.csv,Seed as REQ-
+80,BC-024,Integration Contracts,Confirmed,REQ->BHV->RSP,REQ-BC-024,dcx-requirements-master.csv,Seed as REQ-
+81,VL-008,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-008,dcx-requirements-master.csv,Seed as REQ-
+82,VL-009,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-009,dcx-requirements-master.csv,Seed as REQ-
+83,VL-012,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-012,dcx-requirements-master.csv,Seed as REQ-
+84,VL-031,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-031,dcx-requirements-master.csv,Seed as REQ-
+85,VL-019,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-019,dcx-requirements-master.csv,Seed as REQ-
+86,VL-020,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-020,dcx-requirements-master.csv,Seed as REQ-
+87,VL-021,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-021,dcx-requirements-master.csv,Seed as REQ-
+88,VL-022,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-022,dcx-requirements-master.csv,Seed as REQ-
+89,VL-023,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-023,dcx-requirements-master.csv,Seed as REQ-
+90,VL-024,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-024,dcx-requirements-master.csv,Seed as REQ-
+91,VL-025,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-025,dcx-requirements-master.csv,Seed as REQ-
+92,VL-004,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-004,dcx-requirements-master.csv,Seed as REQ-
+93,VL-030,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-030,dcx-requirements-master.csv,Seed as REQ-
+94,VL-028,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-028,dcx-requirements-master.csv,Seed as REQ-
+95,RV-016,Lifecycle & Version Status Rules,Confirmed,REQ->BHV,REQ-RV-016,dcx-requirements-master.csv,Seed as REQ-
+96,VL-016,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-016,dcx-requirements-master.csv,Seed as REQ-
+97,RV-004,Lifecycle & Version Status Rules,Confirmed,REQ->BHV,REQ-RV-004,dcx-requirements-master.csv,Seed as REQ-
+98,VL-005,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-005,dcx-requirements-master.csv,Seed as REQ-
+99,VL-007,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-007,dcx-requirements-master.csv,Seed as REQ-
+100,RV-003,Lifecycle & Version Status Rules,Confirmed,REQ->BHV,REQ-RV-003,dcx-requirements-master.csv,Seed as REQ-
+101,VL-010,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-010,dcx-requirements-master.csv,Seed as REQ-
+102,VL-015,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-015,dcx-requirements-master.csv,Seed as REQ-
+103,VL-001,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-001,dcx-requirements-master.csv,Seed as REQ-
+104,VL-002,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-002,dcx-requirements-master.csv,Seed as REQ-
+105,RV-005,Lifecycle & Version Status Rules,Proposed,REQ->BHV,REQ-RV-005,dcx-requirements-master.csv,Seed as REQ- (confirmation_status: proposed)
+106,VL-027,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-027,dcx-requirements-master.csv,Seed as REQ-
+107,VL-003,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-003,dcx-requirements-master.csv,Seed as REQ-
+108,VL-026,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-026,dcx-requirements-master.csv,Seed as REQ-
+109,VL-011,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-011,dcx-requirements-master.csv,Seed as REQ-
+110,VL-014,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-014,dcx-requirements-master.csv,Seed as REQ-
+111,VL-013,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-013,dcx-requirements-master.csv,Seed as REQ-
+112,VL-017,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-017,dcx-requirements-master.csv,Seed as REQ-
+113,VL-018,Lifecycle & Version Status Rules,Confirmed,REQ->BHV->RSP,REQ-VL-018,dcx-requirements-master.csv,Seed as REQ-
+114,PR-020,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-020,dcx-requirements-master.csv,Seed as REQ-
+115,PR-013,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-013,dcx-requirements-master.csv,Seed as REQ-
+116,PR-012,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-012,dcx-requirements-master.csv,Seed as REQ-
+117,PR-010,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-010,dcx-requirements-master.csv,Seed as REQ-
+118,PR-017,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-017,dcx-requirements-master.csv,Seed as REQ-
+119,PR-018,Permissions & Access Control,Deferred,INT,INT-PR-018,dcx-requirements-master.csv,Seed as INT- (deferred Intent)
+120,PR-011,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-011,dcx-requirements-master.csv,Seed as REQ-
+121,PR-007,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-007,dcx-requirements-master.csv,Seed as REQ-
+122,PR-009,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-009,dcx-requirements-master.csv,Seed as REQ-
+123,VR-011,Permissions & Access Control,Needs Decision,QST,QST-VR-011,dcx-requirements-master.csv,Seed as QST- (OpenQuestion; PO decision)
+124,PR-008,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-008,dcx-requirements-master.csv,Seed as REQ-
+125,PR-014,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-014,dcx-requirements-master.csv,Seed as REQ-
+126,PR-015,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-015,dcx-requirements-master.csv,Seed as REQ-
+127,PR-016,Permissions & Access Control,Deferred,INT,INT-PR-016,dcx-requirements-master.csv,Seed as INT- (deferred Intent)
+128,PR-019,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-019,dcx-requirements-master.csv,Seed as REQ-
+129,VR-005,Permissions & Access Control,Confirmed,REQ->RSP,REQ-VR-005,dcx-requirements-master.csv,Seed as REQ-
+130,PR-003,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-003,dcx-requirements-master.csv,Seed as REQ-
+131,PR-004,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-004,dcx-requirements-master.csv,Seed as REQ-
+132,PR-006,Permissions & Access Control,Confirmed,REQ->RSP,REQ-PR-006,dcx-requirements-master.csv,Seed as REQ-
+133,SC-003,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-003,dcx-requirements-master.csv,Seed as REQ-
+134,SC-002,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-002,dcx-requirements-master.csv,Seed as REQ-
+135,SC-001,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-001,dcx-requirements-master.csv,Seed as REQ-
+136,SC-013,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-013,dcx-requirements-master.csv,Seed as REQ-
+137,SC-009,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-009,dcx-requirements-master.csv,Seed as REQ-
+138,SC-014,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-014,dcx-requirements-master.csv,Seed as REQ-
+139,BC-015,Persistence; Autosave & Recovery,Confirmed,REQ->BHV->RSP,REQ-BC-015,dcx-requirements-master.csv,Seed as REQ-
+140,BC-014,Persistence; Autosave & Recovery,Confirmed,REQ->BHV->RSP,REQ-BC-014,dcx-requirements-master.csv,Seed as REQ-
+141,SC-010,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-010,dcx-requirements-master.csv,Seed as REQ-
+142,SC-011,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-011,dcx-requirements-master.csv,Seed as REQ-
+143,SC-008,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-008,dcx-requirements-master.csv,Seed as REQ-
+144,SC-004,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-004,dcx-requirements-master.csv,Seed as REQ-
+145,SC-012,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-012,dcx-requirements-master.csv,Seed as REQ-
+146,SC-007,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-007,dcx-requirements-master.csv,Seed as REQ-
+147,SC-006,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-006,dcx-requirements-master.csv,Seed as REQ-
+148,SC-005,Persistence; Autosave & Recovery,Confirmed,REQ->RSP,REQ-SC-005,dcx-requirements-master.csv,Seed as REQ-
+149,BC-031,Preferences; Session & Telemetry,Confirmed,REQ->BHV->RSP,REQ-BC-031,dcx-requirements-master.csv,Seed as REQ-
+150,UP-013,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-013,dcx-requirements-master.csv,Seed as REQ-
+151,UP-021,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-021,dcx-requirements-master.csv,Seed as REQ-
+152,UP-019,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-019,dcx-requirements-master.csv,Seed as REQ-
+153,UP-010,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-010,dcx-requirements-master.csv,Seed as REQ-
+154,UP-009,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-009,dcx-requirements-master.csv,Seed as REQ-
+155,UP-022,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-022,dcx-requirements-master.csv,Seed as REQ-
+156,UP-014,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-014,dcx-requirements-master.csv,Seed as REQ-
+157,UP-004,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-004,dcx-requirements-master.csv,Seed as REQ-
+158,UP-011,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-011,dcx-requirements-master.csv,Seed as REQ-
+159,UP-016,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-016,dcx-requirements-master.csv,Seed as REQ-
+160,UP-015,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-015,dcx-requirements-master.csv,Seed as REQ-
+161,UP-017,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-017,dcx-requirements-master.csv,Seed as REQ-
+162,UP-023,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-023,dcx-requirements-master.csv,Seed as REQ-
+163,UP-018,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-018,dcx-requirements-master.csv,Seed as REQ-
+164,UP-012,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-012,dcx-requirements-master.csv,Seed as REQ-
+165,DM-021,Preferences; Session & Telemetry,Confirmed,REQ->BHV->RSP,REQ-DM-021,dcx-requirements-master.csv,Seed as REQ-
+166,UP-002,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-002,dcx-requirements-master.csv,Seed as REQ-
+167,UP-003,Preferences; Session & Telemetry,Confirmed,REQ->RSP,REQ-UP-003,dcx-requirements-master.csv,Seed as REQ-
+168,BC-002,Preferences; Session & Telemetry,Confirmed,REQ->BHV->RSP,REQ-BC-002,dcx-requirements-master.csv,Seed as REQ-
+169,VR-004,Routing; Auth & Load Control,Confirmed,REQ->RSP,REQ-VR-004,dcx-requirements-master.csv,Seed as REQ-
+170,PR-001,Routing; Auth & Load Control,Confirmed,REQ->RSP,REQ-PR-001,dcx-requirements-master.csv,Seed as REQ-
+171,PR-002,Routing; Auth & Load Control,Confirmed,REQ->RSP,REQ-PR-002,dcx-requirements-master.csv,Seed as REQ-
+172,VR-002,Routing; Auth & Load Control,Confirmed,REQ->RSP,REQ-VR-002,dcx-requirements-master.csv,Seed as REQ-
+173,VR-001,Routing; Auth & Load Control,Confirmed,REQ->RSP,REQ-VR-001,dcx-requirements-master.csv,Seed as REQ-
+174,PR-021,Routing; Auth & Load Control,Confirmed,REQ->RSP,REQ-PR-021,dcx-requirements-master.csv,Seed as REQ-
+175,VR-003,Routing; Auth & Load Control,Confirmed,REQ->RSP,REQ-VR-003,dcx-requirements-master.csv,Seed as REQ-
+176,RV-015,Validation & Readiness Rules,Proposed,REQ->BHV,REQ-RV-015,dcx-requirements-master.csv,Seed as REQ- (confirmation_status: proposed)
+177,RV-013,Validation & Readiness Rules,Proposed,REQ->BHV,REQ-RV-013,dcx-requirements-master.csv,Seed as REQ- (confirmation_status: proposed)
+178,RV-014,Validation & Readiness Rules,Proposed,REQ->BHV,REQ-RV-014,dcx-requirements-master.csv,Seed as REQ- (confirmation_status: proposed)
+179,BC-022,Validation & Readiness Rules,Confirmed,REQ->BHV->RSP,REQ-BC-022,dcx-requirements-master.csv,Seed as REQ-
+180,RV-010,Validation & Readiness Rules,Confirmed,REQ->BHV,REQ-RV-010,dcx-requirements-master.csv,Seed as REQ-
+181,RV-011,Validation & Readiness Rules,Confirmed,REQ->BHV,REQ-RV-011,dcx-requirements-master.csv,Seed as REQ-
+182,RV-012,Validation & Readiness Rules,Confirmed,REQ->BHV,REQ-RV-012,dcx-requirements-master.csv,Seed as REQ-
+183,RV-008,Validation & Readiness Rules,Confirmed,REQ->BHV,REQ-RV-008,dcx-requirements-master.csv,Seed as REQ-
+184,BC-028,Validation & Readiness Rules,Confirmed,REQ->BHV->RSP,REQ-BC-028,dcx-requirements-master.csv,Seed as REQ-
+185,RV-001,Validation & Readiness Rules,Confirmed,REQ->BHV,REQ-RV-001,dcx-requirements-master.csv,Seed as REQ-
+186,VL-006,Validation & Readiness Rules,Confirmed,REQ->BHV->RSP,REQ-VL-006,dcx-requirements-master.csv,Seed as REQ-
+187,DM-004,Validation & Readiness Rules,Confirmed,REQ->BHV->RSP,REQ-DM-004,dcx-requirements-master.csv,Seed as REQ-
+188,RV-006,Validation & Readiness Rules,Confirmed,REQ->BHV,REQ-RV-006,dcx-requirements-master.csv,Seed as REQ-
+189,RV-007,Validation & Readiness Rules,Confirmed,REQ->BHV,REQ-RV-007,dcx-requirements-master.csv,Seed as REQ-
+190,BC-029,Validation & Readiness Rules,Confirmed,REQ->BHV->RSP,REQ-BC-029,dcx-requirements-master.csv,Seed as REQ-
+191,RV-009,Validation & Readiness Rules,Confirmed,REQ->BHV,REQ-RV-009,dcx-requirements-master.csv,Seed as REQ-
+192,RV-002,Validation & Readiness Rules,Confirmed,REQ->BHV,REQ-RV-002,dcx-requirements-master.csv,Seed as REQ-
+193,DM-023,Validation & Readiness Rules,Confirmed,REQ->BHV->RSP,REQ-DM-023,dcx-requirements-master.csv,Seed as REQ-
+194,SBC-001,Shared Builder Card System,Confirmed,REQ->BHV->RSP,REQ-SBC-001,dcx-requirements-master.csv,Seed as REQ-
+195,SBC-002,Shared Builder Card System,Confirmed,REQ->BHV->RSP,REQ-SBC-002,dcx-requirements-master.csv,Seed as REQ-
+196,SBC-003,Shared Builder Card System,Confirmed,REQ->BHV->RSP,REQ-SBC-003,dcx-requirements-master.csv,Seed as REQ-
+197,SBC-004,Shared Builder Card System,Confirmed,REQ->BHV->RSP,REQ-SBC-004,dcx-requirements-master.csv,Seed as REQ-
+198,SBC-005,Shared Builder Card System,Confirmed,REQ->BHV->RSP,REQ-SBC-005,dcx-requirements-master.csv,Seed as REQ-
+199,RDY-001,Validation & Readiness Rules,Confirmed,REQ->BHV,REQ-RDY-001,dcx-requirements-master.csv,Seed as REQ-
+200,RDY-003,Validation & Readiness Rules,Confirmed,REQ->BHV,REQ-RDY-003,dcx-requirements-master.csv,Seed as REQ-
+201,KBI-001,Builder UI Surfaces,Confirmed,REQ->BHV,REQ-KBI-001,dcx-requirements-master.csv,Seed as REQ-
+202,AIC-001,AI & Intelligence (Seed),Proposed,REQ->RSP,REQ-AIC-001,dcx-requirements-master.csv,Seed as REQ- (confirmation_status: proposed)
+203,AIM-001,Domain Model & API Contracts,Proposed,REQ->RSP,REQ-AIM-001,dcx-requirements-master.csv,Seed as REQ- (confirmation_status: proposed)
+204,IFX-001,Interaction & Motion System,Confirmed,REQ->RSP,REQ-IFX-001,dcx-requirements-master.csv,Seed as REQ-
+205,TPL-001,Templates & Reuse (Seed),Confirmed,REQ->RSP,REQ-TPL-001,dcx-requirements-master.csv,Seed as REQ-
+206,FCS-001,Builder UI Surfaces,Confirmed,REQ->BHV,REQ-FCS-001,dcx-requirements-master.csv,Seed as REQ-
+207,FCS-002,Builder UI Surfaces,Confirmed,REQ->BHV,REQ-FCS-002,dcx-requirements-master.csv,Seed as REQ-
+208,VHB-001,Builder UI Surfaces,Confirmed,REQ->RSP,REQ-VHB-001,dcx-requirements-master.csv,Seed as REQ-
+209,SPS-001,Interaction & Motion System,Confirmed,REQ->RSP,REQ-SPS-001,dcx-requirements-master.csv,Seed as REQ-
+210,EFP-001,Files & External References,Confirmed,REQ->RSP,REQ-EFP-001,dcx-requirements-master.csv,Seed as REQ-
+211,EVI-001,Builder UI Surfaces,Confirmed,REQ->RSP,REQ-EVI-001,dcx-requirements-master.csv,Seed as REQ-
+212,STG-001,Stage System,Confirmed,REQ->RSP,REQ-STG-001,dcx-requirements-master.csv,Seed as REQ-
+213,STG-002,Stage System,Confirmed,REQ->RSP,REQ-STG-002,dcx-requirements-master.csv,Seed as REQ-
+214,STG-004,Stage System,Confirmed,REQ->RSP,REQ-STG-004,dcx-requirements-master.csv,Seed as REQ-
+215,STG-005,Stage System,Confirmed,REQ->RSP,REQ-STG-005,dcx-requirements-master.csv,Seed as REQ-
+216,STG-003,Stage System,Confirmed,REQ->RSP,REQ-STG-003,dcx-requirements-master.csv,Seed as REQ-
+217,DZ-001,Stage System,Confirmed,REQ->RSP,REQ-DZ-001,dcx-requirements-master.csv,Seed as REQ-

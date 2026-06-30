@@ -1,0 +1,17 @@
+{
+  "id": "TRC-REQ-GOV-TRACE-001-DATA-TO-MAN-function-docs-product-requirements-graph-ledger-decision-ledger",
+  "type": "TraceLink",
+  "source": "REQ-GOV-TRACE-001-DATA",
+  "target": "MAN-function-docs-product-requirements-graph-ledger-decision-ledger",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 1,
+  "evidence_refs": [
+    "docs/product/requirements/graph/ledger/decision-ledger.jsonl"
+  ],
+  "inference_source": "PO rollout calibration-mode ruling",
+  "confirmation_status": "po-decided",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

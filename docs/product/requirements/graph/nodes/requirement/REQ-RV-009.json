@@ -1,0 +1,28 @@
+{
+  "id": "REQ-RV-009",
+  "statement": "Required task fields — If a task is added, all required task properties must be filled — TaskEditor, task validation, readiness checker, API payload.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "RV-009",
+  "source_category": "Validation & Readiness Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "Task data model",
+  "related_requirements": "Domain Model & API Contracts",
+  "affected_modules": "src/rules/validation.rules.ts; readiness checker; validation summary UI; TaskEditor validation hooks",
+  "ux_impact": "User can draft incomplete tasks, but must complete",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RV-009",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

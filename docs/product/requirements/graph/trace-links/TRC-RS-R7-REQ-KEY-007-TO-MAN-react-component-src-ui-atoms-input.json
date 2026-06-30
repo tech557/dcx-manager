@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-KEY-007-TO-MAN-react-component-src-ui-atoms-input",
+  "type": "TraceLink",
+  "source": "REQ-KEY-007",
+  "target": "MAN-react-component-src-ui-atoms-input",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"Input\" matches \"Keyboard shortcuts are guarded while typing into text inputs.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-030",
+  "statement": "Creation operations should map to named commands — Creation actions should eventually route through named commands like create phase/action/task rather — Future builderMutations.ts, useBuilderNodes, builderStore.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-030",
+  "source_category": "Builder State & Mutation Layer",
+  "priority": "Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Backend readiness plan",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/store/builderStore.ts; src/pages/builder/context/; src/pages/builder/hooks/useBuilderActions.ts; mutation commands",
+  "ux_impact": "No immediate UX impact, but improves backend readiness.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-030",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

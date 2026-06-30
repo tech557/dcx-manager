@@ -1,0 +1,22 @@
+{
+  "id": "EVD-ac-bc-seed-1782759014968",
+  "type": "Evidence",
+  "acceptance_outcome": "AC-BC-SEED",
+  "statement": "RS-R8 seeded evidence: Builder State & Mutation Layer acceptance outcome placeholder to be matured during RS-R8 evidence bi — partial evidence (missing edge-case coverage)",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "verified",
+  "validity": "current",
+  "evidence_refs": [
+    "partial-review:ac-bc-seed"
+  ],
+  "provenance": {
+    "source": "RS-R8 evidence binding sprint",
+    "source_path": "scripts/requirements/seed-evidence-rs-r8.ts",
+    "authoring_actor": "RS-R8 seed",
+    "confidence": 0.9,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "scope": "frontend"
+}

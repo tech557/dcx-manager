@@ -1,0 +1,25 @@
+{
+  "id": "REQ-SBT-COPY-001",
+  "type": "Requirement",
+  "statement": "Subtask copy & paste — A user can copy one or more Subtasks and paste them onto the same Task or another Task, duplicating the Subtask instances (definition reference, specs, and field values) without re-running Channel/ChannelComposition generation. This is distinct from REQ-SBC-DUP-001, which duplicates Phase/Action/Task shared builder cards; Subtasks are field-level instances inside a Task (see REQ-SBC-005), not shared builder cards, so card-level copy-paste does not cover them. Paste must go through normal validation and must not blindly overwrite existing subtasks without review.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "REQ->BHV->RSP",
+  "source_id": "PO-2026-06-30-SUBTASK-COPY",
+  "provenance": {
+    "source": "PO direction (session 2026-06-30-claude)",
+    "source_path": "docs/progress/sessions/2026-06-30-claude/001-p11-readiness-and-req-intake.md",
+    "source_anchor": "subtask-copy-paste",
+    "authoring_actor": "Claude (claude-opus-4-8) at PO direction",
+    "confidence": 0.9,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-30"
+  },
+  "related_ids": [
+    "REQ-SBC-DUP-001",
+    "REQ-KEY-003",
+    "REQ-SBC-005"
+  ]
+}

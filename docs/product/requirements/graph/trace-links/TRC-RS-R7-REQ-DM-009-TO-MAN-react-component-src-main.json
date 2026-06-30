@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-009-TO-MAN-react-component-src-main",
+  "type": "TraceLink",
+  "source": "REQ-DM-009",
+  "target": "MAN-react-component-src-main",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"main\" matches \"Task date modes — Task date is stored as a mode object: unset, linked, or fixed. — TaskDate type, api.ts, domain.ts, TaskEditor date controls, mappers.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

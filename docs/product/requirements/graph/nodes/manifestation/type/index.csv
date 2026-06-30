@@ -1,0 +1,10 @@
+id,type,governance,maturity,delivery,scope,kind,statement
+MAN-type-src-types-api,Manifestation,proposed,logic-defined,not-assessed,data,type,Code manifestation discovered by RS-R7 inventory: api (src/types/api.ts).
+MAN-type-src-types-builder-node-types,Manifestation,proposed,logic-defined,not-assessed,data,type,Code manifestation discovered by RS-R7 inventory: builder-node.types (src/types/builder-node.types.ts).
+MAN-type-src-types-card-types,Manifestation,proposed,logic-defined,not-assessed,data,type,Code manifestation discovered by RS-R7 inventory: card.types (src/types/card.types.ts).
+MAN-type-src-types-domain,Manifestation,proposed,logic-defined,not-assessed,data,type,Code manifestation discovered by RS-R7 inventory: domain (src/types/domain.ts).
+MAN-type-src-types-dropzone-types,Manifestation,proposed,logic-defined,not-assessed,data,type,Code manifestation discovered by RS-R7 inventory: dropzone.types (src/types/dropzone.types.ts).
+MAN-type-src-types-editor-types,Manifestation,proposed,logic-defined,not-assessed,data,type,Code manifestation discovered by RS-R7 inventory: editor.types (src/types/editor.types.ts).
+MAN-type-src-types-index,Manifestation,proposed,logic-defined,not-assessed,data,type,Code manifestation discovered by RS-R7 inventory: index (src/types/index.ts).
+MAN-type-src-types-lifecycle,Manifestation,proposed,logic-defined,not-assessed,data,type,Code manifestation discovered by RS-R7 inventory: lifecycle (src/types/lifecycle.ts).
+MAN-type-src-types-stage-types,Manifestation,proposed,logic-defined,not-assessed,data,type,Code manifestation discovered by RS-R7 inventory: stage.types (src/types/stage.types.ts).

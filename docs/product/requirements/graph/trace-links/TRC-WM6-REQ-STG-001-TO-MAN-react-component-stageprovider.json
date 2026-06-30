@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM6-REQ-STG-001-TO-MAN-react-component-stageprovider",
+  "type": "TraceLink",
+  "source": "REQ-STG-001",
+  "target": "MAN-react-component-src-builder-stage-stageprovider",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "inference_source": "WM-6 sprint execution — confirms mis-targeted RS-R6 seed link",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "evidence_refs": [
+    "WM-6 REQ-STG-001 correction: the existing TRC-REQ-STG-001-TO-RSP-STG link (skill-derived) targeted the seed abstraction RSP-STG-SEED rather than a concrete manifestation. Confirmed manifestation is StageProvider.tsx which owns: shared StageContext (selectedNodeIds, expandedNodeIds, focusedNodeId, isolatedNodeIds, isPresentationActive, view, activeWeek, position); all view renderers (Kanban/Weekly/Monthly) are children inside StageProvider; navigation, edge scroll, island layout response, and context preservation all live here. Affected_modules in the requirement referenced 'StageManager.tsx' (v0.1.x path) — current equivalent is StageProvider + StageCore."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "MAN-function-src-builder-cards-templates-phase-readiness-label",
+  "type": "Manifestation",
+  "statement": "Canonical human-readable phase readiness presentation labels: READINESS_LABEL map plus readinessAriaLabel (screen-reader text) and readinessTooltip (hover text) helpers, reused by the collapsed/expanded phase readiness markers and PhaseReadinessBadge (src/builder/cards/templates/phase/readiness-label.ts). Added in CC-4 readiness accessibility.",
+  "scope": "frontend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "function",
+  "current_paths": [
+    "src/builder/cards/templates/phase/readiness-label.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "docs/plans/active/frontend-polish-implementation-v0.3.5/sprints/CC-4.md",
+    "source_path": "src/builder/cards/templates/phase/readiness-label.ts",
+    "source_anchor": "readinessAriaLabel",
+    "authoring_actor": "Claude",
+    "inference_source": "sprint-implementation",
+    "confidence": 0.9,
+    "confirmation_status": "skill-derived",
+    "last_checked_date": "2026-06-30"
+  }
+}

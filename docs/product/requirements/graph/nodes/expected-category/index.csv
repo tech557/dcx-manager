@@ -1,0 +1,27 @@
+id,type,governance,maturity,delivery,scope,kind,statement
+EMC-AIC-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,product,,AI & Intelligence (Seed) expected manifestation category for service-integration responsibility.
+EMC-AIM-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,data,,Domain Model & API Contracts expected manifestation category for data responsibility.
+EMC-BC-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,frontend,,Builder State & Mutation Layer expected manifestation category for ui-presentation responsibility.
+EMC-CR-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,operations,,Audit; Logs & Error Reporting expected manifestation category for operations responsibility.
+EMC-DM-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,data,,Builder State & Mutation Layer expected manifestation category for data responsibility.
+EMC-DZ-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,frontend,,Stage System expected manifestation category for interaction responsibility.
+EMC-EFP-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,frontend,,Files & External References expected manifestation category for service-integration responsibility.
+EMC-EVI-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,frontend,,Builder UI Surfaces expected manifestation category for ui-presentation responsibility.
+EMC-FI-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,data,,Files & External References expected manifestation category for data responsibility.
+EMC-GOV-TRACE-BACKEND,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,backend,,Trace governance backend expected manifestation category: service.
+EMC-GOV-TRACE-DEVOPS,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,devops,,Trace governance devops expected manifestation category: script.
+EMC-GOV-TRACE-FRONTEND,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,frontend,,Trace governance frontend expected manifestation category: component.
+EMC-GOV-TRACE-OPERATIONS,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,operations,,Trace governance operations expected manifestation category: script.
+EMC-GOV-TRACE-SECURITY,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,security,,Trace governance security expected manifestation category: policy.
+EMC-GOV-TRACE-TESTQA,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,test-qa,,Trace governance test-qa expected manifestation category: unit-test.
+EMC-IFX-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,frontend,,Interaction & Motion System expected manifestation category for interaction responsibility.
+EMC-PR-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,security,,Integration Contracts expected manifestation category for security responsibility.
+EMC-SBC-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,frontend,,Shared Builder Card System expected manifestation category for ui-presentation responsibility.
+EMC-SC-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,data,,Persistence; Autosave & Recovery expected manifestation category for persistence responsibility.
+EMC-SPS-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,frontend,,Interaction & Motion System expected manifestation category for interaction responsibility.
+EMC-STG-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,frontend,,Stage System expected manifestation category for ui-presentation responsibility.
+EMC-TPL-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,product,,Templates & Reuse (Seed) expected manifestation category for service-integration responsibility.
+EMC-UP-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,frontend,,Builder UI Surfaces expected manifestation category for state responsibility.
+EMC-VHB-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,frontend,,Builder UI Surfaces expected manifestation category for ui-presentation responsibility.
+EMC-VL-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,product,,Audit; Logs & Error Reporting expected manifestation category for domain-logic responsibility.
+EMC-VR-SEED,ExpectedManifestationCategory,proposed,logic-defined,not-assessed,backend,,Audit; Logs & Error Reporting expected manifestation category for security responsibility.

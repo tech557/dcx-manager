@@ -1,0 +1,28 @@
+{
+  "id": "REQ-PR-004",
+  "statement": "Shared on one version = access to all versions — If a user is shared on one version, they have access to — Access resolver, version query permissions, backend policy.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "PR-004",
+  "source_category": "Permissions & Access Control",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "DCX/workspace access model",
+  "related_requirements": "",
+  "affected_modules": "src/rules/permissions.rules.ts; src/hooks/usePermissions.ts; route guards; backend policy/service enforcement",
+  "ux_impact": "User can compare/open all versions in same DCX.",
+  "risk": "Low",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "PR-004",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "security"
+}

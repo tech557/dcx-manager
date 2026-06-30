@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-018-TO-MAN-function-src-utils-node-helpers",
+  "type": "TraceLink",
+  "source": "REQ-DM-018",
+  "target": "MAN-function-src-utils-node-helpers",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"node.helpers\" matches \"Backend naming — Backend should use clean domain naming like actions[]; builder UI can map — api.ts, api-mappers.ts, node.helpers.ts, types/domain.ts.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

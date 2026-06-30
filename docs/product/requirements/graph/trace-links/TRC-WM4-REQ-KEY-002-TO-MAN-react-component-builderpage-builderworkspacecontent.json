@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM4-REQ-KEY-002-TO-MAN-react-component-builderpage-builderworkspacecontent",
+  "type": "TraceLink",
+  "source": "REQ-KEY-002",
+  "target": "MAN-react-component-builderpage-builderworkspacecontent",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "WM-4: BuilderWorkspaceContent keyboard handler (BuilderPage.tsx) — Ctrl/Cmd+C saves selectedNodeIds to cardClipboard ref when at least one node is selected. Guard: skips if e.target is INPUT/TEXTAREA/contenteditable (REQ-KEY-007 co-implemented)."
+  ],
+  "inference_source": "WM-4 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

@@ -1,0 +1,23 @@
+{
+  "id": "MAN-function-docs-product-requirements-graph-ledger-decision-ledger",
+  "type": "Manifestation",
+  "statement": "Decision ledger record preserving the PO calibration-mode ruling.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "data",
+  "kind": "documentation-view",
+  "current_paths": [
+    "docs/product/requirements/graph/ledger/decision-ledger.jsonl"
+  ],
+  "lifecycle": "modified",
+  "provenance": {
+    "source": "PO rollout calibration-mode ruling",
+    "source_path": "docs/product/requirements/graph/ledger/decision-ledger.jsonl",
+    "source_anchor": "LDG-2026-06-29-RS-CALIBRATION-MODE",
+    "authoring_actor": "Codex",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PRP-2026-06-30-trc-req-up-001-to-type-stage-types",
+  "type": "Proposal",
+  "action": "create-trace-link",
+  "actor": "opencode",
+  "date": "2026-06-30",
+  "reason": "Task-I backend contract tracing — Default Builder view state maps to ViewKind type and StageContext for view initialization",
+  "payload": {
+    "traceLink": {
+      "id": "TRC-TASK-I-REQ-UP-001-TO-MAN-type-src-types-stage-types",
+      "type": "TraceLink",
+      "source": "REQ-UP-001",
+      "target": "MAN-type-src-types-stage-types",
+      "relationship_type": "implements",
+      "coverage": "partial",
+      "confidence": 0.7,
+      "inference_source": "Task-I backend contract tracing 2026-06-30",
+      "confirmation_status": "agent-proposed",
+      "needs_confirmation": true,
+      "stale_state": "current",
+      "last_checked_date": "2026-06-30",
+      "match_reason": "Default Builder view state maps to ViewKind type and StageContext for view initialization"
+    }
+  }
+}

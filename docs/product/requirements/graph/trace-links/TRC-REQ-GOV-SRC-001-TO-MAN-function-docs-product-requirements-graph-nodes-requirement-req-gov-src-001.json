@@ -1,0 +1,17 @@
+{
+  "id": "TRC-REQ-GOV-SRC-001-TO-MAN-function-docs-product-requirements-graph-nodes-requirement-req-gov-src-001",
+  "type": "TraceLink",
+  "source": "REQ-GOV-SRC-001",
+  "target": "MAN-function-docs-product-requirements-graph-nodes-requirement-req-gov-src-001",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 1,
+  "evidence_refs": [
+    "docs/product/requirements/graph/nodes/requirement/REQ-GOV-SRC-001.json"
+  ],
+  "inference_source": "PO rollout calibration-mode ruling",
+  "confirmation_status": "po-decided",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

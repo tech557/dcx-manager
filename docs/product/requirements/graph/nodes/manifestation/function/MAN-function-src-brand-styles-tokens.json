@@ -1,0 +1,24 @@
+{
+  "id": "MAN-function-src-brand-styles-tokens",
+  "type": "Manifestation",
+  "statement": "Code manifestation: brand theme color + typography CSS custom-property tokens (src/brand/styles/tokens.css). Defines --theme-* color/surface/text tokens and --text-* font-size tokens for light (:root) and dark (.dark) themes.",
+  "scope": "frontend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "kind": "function",
+  "current_paths": [
+    "src/brand/styles/tokens.css"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "CT-1 sprint execution (brand light/dark token corrections)",
+    "source_path": "src/brand/styles/tokens.css",
+    "source_anchor": "tokens",
+    "authoring_actor": "Claude (claude-opus-4-8)",
+    "inference_source": "reconciliation-engine",
+    "confidence": 0.8,
+    "confirmation_status": "code-discovered",
+    "last_checked_date": "2026-06-30"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-BC-016-TO-MAN-react-component-src-ui-forms-selects-select",
+  "type": "TraceLink",
+  "source": "REQ-BC-016",
+  "target": "MAN-react-component-src-ui-forms-selects-select",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"Select\" matches \"Import mode — Import should support selective reconciliation rather than blind full replacement. — Import reconciliation engine, preview UI, mapper layer, validation\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

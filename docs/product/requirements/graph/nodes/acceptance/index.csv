@@ -1,0 +1,33 @@
+id,type,governance,maturity,delivery,scope,kind,statement
+AC-AIC-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,product,,AI & Intelligence (Seed) acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-AIM-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,data,,Domain Model & API Contracts acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-BC-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Builder State & Mutation Layer acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-CR-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,operations,,Audit; Logs & Error Reporting acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-DM-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,data,,Builder State & Mutation Layer acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-DZ-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Stage System acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-EFP-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Files & External References acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-EVI-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Builder UI Surfaces acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-FCS-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Builder UI Surfaces acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-FI-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,data,,Files & External References acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-FP-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Focus & Presentation (FP) acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-GOV-TRACE-BACKEND,AcceptanceOutcome,proposed,logic-defined,not-assessed,backend,,"Backend manifestations (services, endpoints, mappers) each have a trace link to an approved requirement or exemption."
+AC-GOV-TRACE-DEVOPS,AcceptanceOutcome,proposed,logic-defined,not-assessed,devops,,"DevOps manifestations (CI hooks, scripts, configs) each have a trace link to an approved requirement or exemption."
+AC-GOV-TRACE-FRONTEND,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,"Frontend manifestations (components, hooks, store actions) each have a trace link to an approved requirement or exemption."
+AC-GOV-TRACE-OPERATIONS,AcceptanceOutcome,proposed,logic-defined,not-assessed,operations,,"Operations manifestations (scripts, monitoring, alerting) each have a trace link to an approved requirement or exemption."
+AC-GOV-TRACE-SECURITY,AcceptanceOutcome,proposed,logic-defined,not-assessed,security,,"Security manifestations (guards, policies, security tests) each have a trace link to an approved requirement or exemption."
+AC-GOV-TRACE-TESTQA,AcceptanceOutcome,proposed,logic-defined,not-assessed,test-qa,,"Test/QA manifestations (test files, e2e suites, quality gates) each have a trace link to the acceptance outcome or requirement they verify."
+AC-IFX-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Interaction & Motion System acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-KBI-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Builder UI Surfaces acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-KEY-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Keyboard shortcuts (KEY) acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-PR-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,security,,Integration Contracts acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-RDY-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Validation & Readiness Rules acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-RV-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,product,,Audit; Logs & Error Reporting acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-SBC-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Shared Builder Card System acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-SC-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,data,,Persistence; Autosave & Recovery acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-SPS-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Interaction & Motion System acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-STG-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Stage System acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-TPL-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,product,,Templates & Reuse (Seed) acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-UP-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Builder UI Surfaces acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-VHB-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,frontend,,Builder UI Surfaces acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-VL-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,product,,Audit; Logs & Error Reporting acceptance outcome placeholder to be matured during RS-R8 evidence binding.
+AC-VR-SEED,AcceptanceOutcome,proposed,logic-defined,not-assessed,backend,,Audit; Logs & Error Reporting acceptance outcome placeholder to be matured during RS-R8 evidence binding.

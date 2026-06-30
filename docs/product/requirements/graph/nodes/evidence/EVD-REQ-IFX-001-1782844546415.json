@@ -1,0 +1,23 @@
+{
+  "id": "EVD-REQ-IFX-001-1782844546415",
+  "type": "Evidence",
+  "acceptance_outcome": "AC-IFX-SEED",
+  "statement": "TRC-REQ-IFX-001-TO-AC-IFX (RS-R6 seed): interaction-feedback system requires modular motion effects that do not own business state. Coverage: partial (seed — RS-R8 evidence binding pending). Inference source: RS-R6 seed migration, confidence 0.7.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "verified",
+  "validity": "current",
+  "evidence_refs": [
+    "docs/product/requirements/graph/trace-links/TRC-REQ-IFX-001-TO-AC-IFX.json"
+  ],
+  "provenance": {
+    "source": "TRC-REQ-IFX-001-TO-AC-IFX",
+    "source_path": "docs/product/requirements/graph/trace-links/TRC-REQ-IFX-001-TO-AC-IFX.json",
+    "authoring_actor": "opencode",
+    "inference_source": "delivery-backfill-sweep",
+    "confidence": 0.85,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  },
+  "scope": "frontend"
+}

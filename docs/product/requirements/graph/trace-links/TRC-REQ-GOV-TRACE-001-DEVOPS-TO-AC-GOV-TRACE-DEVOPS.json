@@ -1,0 +1,14 @@
+{
+  "id": "TRC-REQ-GOV-TRACE-001-DEVOPS-TO-AC-GOV-TRACE-DEVOPS",
+  "type": "TraceLink",
+  "source": "REQ-GOV-TRACE-001-DEVOPS",
+  "target": "AC-GOV-TRACE-DEVOPS",
+  "relationship_type": "validates",
+  "coverage": "complete",
+  "confidence": 0.85,
+  "inference_source": "RS-R9 seed (manual curation)",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

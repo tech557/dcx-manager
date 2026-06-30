@@ -1,0 +1,17 @@
+{
+  "id": "TRC-REQ-GOV-TRACE-001-AGENT-TO-MAN-function-docs-product-requirements-graph-generated-query-index",
+  "type": "TraceLink",
+  "source": "REQ-GOV-TRACE-001-AGENT",
+  "target": "MAN-function-docs-product-requirements-graph-generated-query-index",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "docs/product/requirements/graph/generated/query-index.json"
+  ],
+  "inference_source": "req:generate-views",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

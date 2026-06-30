@@ -1,0 +1,60 @@
+import type { ApiChannelComposition } from '@/types/api';
+
+export const MOCK_COMPOSITIONS: ApiChannelComposition[] = [
+  {
+    id: 'comp-email-std',
+    channelId: 'email',
+    name: 'Standard Email',
+    definitionIds: ['def-copy', 'def-design', 'def-approval'],
+    createdBy: 'system',
+    isUserDefined: false,
+  },
+  {
+    id: 'comp-email-short',
+    channelId: 'email',
+    name: 'Short-form Email',
+    definitionIds: ['def-copy', 'def-approval'],
+    createdBy: 'system',
+    isUserDefined: false,
+  },
+  {
+    id: 'comp-intranet-std',
+    channelId: 'intranet',
+    name: 'Standard Intranet Post',
+    definitionIds: ['def-copy', 'def-design', 'def-dev', 'def-approval'],
+    createdBy: 'system',
+    isUserDefined: false,
+  },
+  {
+    id: 'comp-meeting-std',
+    channelId: 'meeting',
+    name: 'Standard Meeting',
+    definitionIds: ['def-logistics', 'def-invite', 'def-slides'],
+    createdBy: 'system',
+    isUserDefined: false,
+  },
+  {
+    id: 'comp-sms-std',
+    channelId: 'sms',
+    name: 'Standard SMS',
+    definitionIds: ['def-copy', 'def-approval'],
+    createdBy: 'system',
+    isUserDefined: false,
+  },
+  {
+    id: 'comp-social-std',
+    channelId: 'social',
+    name: 'Standard Social Post',
+    definitionIds: ['def-copy', 'def-design', 'def-review', 'def-approval'],
+    createdBy: 'system',
+    isUserDefined: false,
+  },
+  {
+    id: 'comp-feedback-std',
+    channelId: 'feedback',
+    name: 'Standard Feedback Form',
+    definitionIds: ['def-dev', 'def-approval'],
+    createdBy: 'system',
+    isUserDefined: false,
+  },
+];

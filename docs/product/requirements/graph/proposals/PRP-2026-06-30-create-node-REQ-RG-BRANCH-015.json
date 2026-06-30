@@ -1,0 +1,28 @@
+{
+  "id": "PRP-2026-06-30-create-node-REQ-RG-BRANCH-015",
+  "type": "Proposal",
+  "action": "create-node",
+  "actor": "Claude (claude-opus-4-8)",
+  "date": "2026-06-30",
+  "reason": "CI/CD release-governance intake (OD-RG-07); plan docs/plans/drafted/cicd-release-governance; proposals pending PO sign-off",
+  "payload": {
+    "node": {
+      "id": "REQ-RG-BRANCH-015",
+      "type": "Requirement",
+      "statement": "Branches follow a fixed naming model tying git identity to the session (agent/<session>/<topic>, docs/<session>/<topic>), enforced mechanically.",
+      "scope": "devops",
+      "governance": "proposed",
+      "maturity": "logic-defined",
+      "delivery": "not-assessed",
+      "chain_layer": "REQ->RSP",
+      "provenance": {
+        "source": "docs/plans/drafted/cicd-release-governance/README.md",
+        "source_path": "docs/plans/drafted/cicd-release-governance/README.md",
+        "authoring_actor": "Claude (claude-opus-4-8) RG intake",
+        "confidence": 0.9,
+        "confirmation_status": "agent-proposed",
+        "last_checked_date": "2026-06-30"
+      }
+    }
+  }
+}

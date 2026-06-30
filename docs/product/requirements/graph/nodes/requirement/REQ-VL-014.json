@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VL-014",
+  "statement": "Manual supersede — A user can manually mark a Ready for Approvalversion as Superseded if — Status transition action, logs, version list filtering.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VL-014",
+  "source_category": "Lifecycle & Version Status Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Ready status",
+  "related_requirements": "",
+  "affected_modules": "src/types/lifecycle.ts; src/rules/lifecycle.rules.ts; src/services/versions.service.ts; status transition handlers",
+  "ux_impact": "PM can cleanly say “no” to a ready",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VL-014",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

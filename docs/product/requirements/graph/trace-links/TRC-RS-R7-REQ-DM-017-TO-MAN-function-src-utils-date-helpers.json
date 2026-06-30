@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-017-TO-MAN-function-src-utils-date-helpers",
+  "type": "TraceLink",
+  "source": "REQ-DM-017",
+  "target": "MAN-function-src-utils-date-helpers",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"date.helpers\" matches \"Stored vs calculated fields — Task dates are source of truth. Action/phase spans may be cached for — Backend DTOs, API mappers, date helpers, timeline views.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

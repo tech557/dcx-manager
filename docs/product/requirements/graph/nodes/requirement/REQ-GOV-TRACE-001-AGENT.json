@@ -1,0 +1,22 @@
+{
+  "id": "REQ-GOV-TRACE-001-AGENT",
+  "type": "Requirement",
+  "statement": "Agent plans and outputs must carry graph-ID grounding before implementation claims are accepted.",
+  "scope": "agent-workflow",
+  "governance": "locked",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "lock_owner": "PO",
+  "lock_date": "2026-06-29",
+  "ledger_ref": "LDG-2026-06-29-RS-R6-SEED-MIGRATION",
+  "chain_layer": "REQ->BHV->RSP",
+  "provenance": {
+    "source": "RS-R0b architecture",
+    "source_path": "docs/plans/active/requirements-system/output/RS-R0b-architecture.md",
+    "source_anchor": "REQ-GOV-TRACE-001-AGENT",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  }
+}

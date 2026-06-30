@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VL-017",
+  "statement": "Version creation source — Each version should store its creation source. — Version metadata: sourceType, sourceVersionId, sourceBackupId, future sourceTemplateId.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VL-017",
+  "source_category": "Lifecycle & Version Status Rules",
+  "priority": "MVP + Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Duplication/import/template logic",
+  "related_requirements": "Persistence, Autosave & Recovery",
+  "affected_modules": "src/types/lifecycle.ts; src/rules/lifecycle.rules.ts; src/services/versions.service.ts; status transition handlers",
+  "ux_impact": "Users/admins can understand where a version came from.",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VL-017",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

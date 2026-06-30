@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-BC-025-TO-MAN-react-component-src-builder-islands-kanbanbuilderisland-kanbanbuilderisland",
+  "type": "TraceLink",
+  "source": "REQ-BC-025",
+  "target": "MAN-react-component-src-builder-islands-kanbanbuilderisland-kanbanbuilderisland",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"KanbanBuilderIsland\" matches \"Save as template entry — Future “save as template” action should likely live in Kanban Builder Island — Kanban Builder Island, phase/action/task menus, template service later.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

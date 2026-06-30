@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VL-018",
+  "statement": "Source types — Source should support at least: created from scratch, duplicated from version, imported — API DTO, version model, mapper layer, activity logs.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VL-018",
+  "source_category": "Lifecycle & Version Status Rules",
+  "priority": "Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Templates & Reuse",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/types/lifecycle.ts; src/rules/lifecycle.rules.ts; src/services/versions.service.ts; status transition handlers",
+  "ux_impact": "No immediate UX burden, but supports traceability later.",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VL-018",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

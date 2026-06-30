@@ -1,0 +1,24 @@
+{
+  "id": "MAN-function-src-builder-islands-editorviewerisland-editor-node-helpers",
+  "type": "Manifestation",
+  "statement": "Pure helper functions and type definitions for editor node resolution: DayNode, EditorNode, createDayNode, findEditorNode, getInitialDraft (src/builder/islands/EditorViewerIsland/editor-node.helpers.ts). Extracted from useEditorState.ts during CC-1 file-size split.",
+  "scope": "frontend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "function",
+  "current_paths": [
+    "src/builder/islands/EditorViewerIsland/editor-node.helpers.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "CC-1 sprint execution",
+    "source_path": "src/builder/islands/EditorViewerIsland/editor-node.helpers.ts",
+    "source_anchor": "findEditorNode",
+    "authoring_actor": "Claude",
+    "inference_source": "sprint-implementation",
+    "confidence": 0.9,
+    "confirmation_status": "skill-derived",
+    "last_checked_date": "2026-06-30"
+  }
+}

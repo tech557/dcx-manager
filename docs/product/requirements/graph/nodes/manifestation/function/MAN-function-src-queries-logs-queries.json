@@ -1,0 +1,19 @@
+{
+  "id": "MAN-function-src-queries-logs-queries",
+  "type": "Manifestation",
+  "statement": "HV-1 implementation: MAN-function-src-queries-logs-queries",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "function",
+  "current_paths": [
+    "src/queries/logs.queries.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

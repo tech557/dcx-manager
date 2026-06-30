@@ -1,0 +1,23 @@
+{
+  "id": "MAN-test-src-requirements-tests--requirements-reconciliation-test",
+  "type": "Manifestation",
+  "statement": "Regression tests for requirements reconciliation candidate classification.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "data",
+  "kind": "test",
+  "current_paths": [
+    "src/requirements/__tests__/requirements.reconciliation.test.ts"
+  ],
+  "lifecycle": "modified",
+  "provenance": {
+    "source": "RS-R7 audit amendment",
+    "source_path": "src/requirements/__tests__/requirements.reconciliation.test.ts",
+    "source_anchor": "classifyCandidates",
+    "authoring_actor": "Codex",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  }
+}

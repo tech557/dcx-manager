@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-005",
+  "statement": "Action creation — User can create actions inside a phase in Kanban. — KanbanColumn, action container/card, cmdCreateAction.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-005",
+  "source_category": "Builder State & Mutation Layer",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Phase parent rule",
+  "related_requirements": "Builder UI Surfaces",
+  "affected_modules": "src/store/builderStore.ts; src/pages/builder/context/; src/pages/builder/hooks/useBuilderActions.ts; mutation commands",
+  "ux_impact": "User builds structure directly inside the right phase.",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-005",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

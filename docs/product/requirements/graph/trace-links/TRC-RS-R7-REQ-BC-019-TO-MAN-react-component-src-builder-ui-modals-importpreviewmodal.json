@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-BC-019-TO-MAN-react-component-src-builder-ui-modals-importpreviewmodal",
+  "type": "TraceLink",
+  "source": "REQ-BC-019",
+  "target": "MAN-react-component-src-builder-ui-modals-importpreviewmodal",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"ImportPreviewModal\" matches \"New ID behavior — If imported data contains new IDs, confirm that new items will be — Import preview modal, add operation mapping.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

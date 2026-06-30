@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CC5-REQ-DZ-001-TO-MAN-function-effects-registry",
+  "type": "TraceLink",
+  "source": "REQ-DZ-001",
+  "target": "MAN-function-src-ui-motion-effects-registry",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "CC-5: reducedEffectsRegistry.dropTargetGlow (boxShadow only, no scale) and .invalidDrop (opacity pulse, no x-shake) give the dropzone feedback system a reduced-motion branch. DropTarget.tsx uses EffectLayer which auto-selects the variant via useReducedMotion."
+  ],
+  "inference_source": "CC-5 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

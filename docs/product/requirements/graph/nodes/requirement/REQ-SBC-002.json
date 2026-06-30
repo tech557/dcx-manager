@@ -1,0 +1,28 @@
+{
+  "id": "REQ-SBC-002",
+  "statement": "Card-specific movement rules — Each card type moves differently and that movement is part of its meaning. The shared system must allow per-card movement rules rather than forcing identical behavior. — Phase cards move horizontally across the Kanban stage. Action cards move vertically inside a phase and horizontally between phases. Task cards move inside actions, between actions, and across dates in Timeline. Movement rules are card-type configuration, not shell logic.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "SBC-002",
+  "source_category": "Shared Builder Card System",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "SBC-001",
+  "related_requirements": "DZ-001, STG-002",
+  "affected_modules": "src/pages/builder/cards/; src/pages/builder/kanban/; src/pages/builder/timeline/",
+  "ux_impact": "Movement matches the mental model of each object.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "SBC-002",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

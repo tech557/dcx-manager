@@ -1,0 +1,28 @@
+{
+  "id": "REQ-DM-009",
+  "statement": "Task date modes — Task date is stored as a mode object: unset, linked, or fixed. — TaskDate type, api.ts, domain.ts, TaskEditor date controls, mappers.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "DM-009",
+  "source_category": "Domain Model & API Contracts",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Date helper centralization",
+  "related_requirements": "Builder UI Surfaces",
+  "affected_modules": "src/types/; src/services/api-mappers.ts; src/utils/date.helpers.ts; src/utils/node.helpers.ts; DTO/domain/builder mapping",
+  "ux_impact": "User can choose linked or custom dates without",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "DM-009",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

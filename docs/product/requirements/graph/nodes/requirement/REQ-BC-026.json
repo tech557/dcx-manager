@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-026",
+  "statement": "Files support creation — Approved files/docs support the ICS while building but do not define the — File Manager Island, Project Metadata/File Island, local file",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-026",
+  "source_category": "Files & External References",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Files & File Manager category",
+  "related_requirements": "Builder UI Surfaces",
+  "affected_modules": "src/pages/builder/islands/metadata/ or file manager; file metadata DTOs; file service; Drive link handling",
+  "ux_impact": "User can use approved docs while building top-down",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-026",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

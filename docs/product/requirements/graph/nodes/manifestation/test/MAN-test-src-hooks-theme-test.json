@@ -1,0 +1,21 @@
+{
+  "id": "MAN-test-src-hooks-theme-test",
+  "type": "Manifestation",
+  "statement": "Theme preference unit tests: verifies document theme application and version-scoped local preference persistence.",
+  "scope": "test-qa",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "test",
+  "current_paths": [
+    "src/hooks/theme.test.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "docs/plans/active/frontend-polish-implementation-v0.3.5/sprints/WM-1.md",
+    "authoring_actor": "Codex",
+    "confidence": 0.95,
+    "confirmation_status": "skill-derived",
+    "last_checked_date": "2026-06-30"
+  }
+}

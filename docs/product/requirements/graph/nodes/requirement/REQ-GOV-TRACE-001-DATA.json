@@ -1,0 +1,22 @@
+{
+  "id": "REQ-GOV-TRACE-001-DATA",
+  "type": "Requirement",
+  "statement": "Data-specific derivation of trace governance: graph records must preserve provenance and validate relationships.",
+  "scope": "data",
+  "governance": "locked",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "lock_owner": "PO",
+  "lock_date": "2026-06-29",
+  "ledger_ref": "LDG-2026-06-29-RS-R6-SEED-MIGRATION",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "source": "RS-R0b architecture",
+    "source_path": "docs/plans/active/requirements-system/output/RS-R0b-architecture.md",
+    "source_anchor": "REQ-GOV-TRACE-001-DATA",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  }
+}

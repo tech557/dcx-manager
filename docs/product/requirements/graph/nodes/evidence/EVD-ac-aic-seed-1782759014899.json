@@ -1,0 +1,22 @@
+{
+  "id": "EVD-ac-aic-seed-1782759014899",
+  "type": "Evidence",
+  "acceptance_outcome": "AC-AIC-SEED",
+  "statement": "RS-R8 seeded evidence: AI & Intelligence (Seed) acceptance outcome placeholder to be matured during RS-R8 evidence binding. — partial evidence (missing edge-case coverage)",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "verified",
+  "validity": "current",
+  "evidence_refs": [
+    "partial-review:ac-aic-seed"
+  ],
+  "provenance": {
+    "source": "RS-R8 evidence binding sprint",
+    "source_path": "scripts/requirements/seed-evidence-rs-r8.ts",
+    "authoring_actor": "RS-R8 seed",
+    "confidence": 0.9,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "scope": "product"
+}

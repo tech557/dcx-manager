@@ -1,0 +1,28 @@
+{
+  "id": "REQ-PR-011",
+  "statement": "Ready version permission — No normal shared user can edit a Ready version. — Status-based edit guard, disabled controls, backend save rejection.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "PR-011",
+  "source_category": "Permissions & Access Control",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Readiness & Validation Rules",
+  "related_requirements": "Lifecycle & Version Status Rules",
+  "affected_modules": "src/rules/permissions.rules.ts; src/hooks/usePermissions.ts; route guards; backend policy/service enforcement",
+  "ux_impact": "User sees Ready version as protected.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "PR-011",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "security"
+}

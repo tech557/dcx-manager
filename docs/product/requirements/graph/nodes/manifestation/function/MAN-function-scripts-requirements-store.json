@@ -1,0 +1,21 @@
+{
+  "id": "MAN-function-scripts-requirements-store",
+  "type": "Manifestation",
+  "statement": "Graph store module: loads, writes, and organizes graph nodes (typed subfolders), trace links, and the append-only JSONL ledger.",
+  "scope": "data",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "kind": "function",
+  "current_paths": [
+    "scripts/requirements/store.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "docs/plans/active/requirements-system/sprints/RS-R9-dogfood-self-trace.md",
+    "authoring_actor": "RS-R9 seed",
+    "confidence": 0.95,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  }
+}

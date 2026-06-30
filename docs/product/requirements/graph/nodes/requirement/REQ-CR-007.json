@@ -1,0 +1,28 @@
+{
+  "id": "REQ-CR-007",
+  "statement": "Error report payload — Error reports include readable failed payload/context when relevant. — Payload formatter, error boundary/report modal, API error handler.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "CR-007",
+  "source_category": "Audit; Logs & Error Reporting",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Save/import/error flows",
+  "related_requirements": "Persistence, Autosave & Recovery",
+  "affected_modules": "src/services/logs.service.ts; src/services/error-reporter.service.ts; error boundary; report modal; activity/history UI",
+  "ux_impact": "Faster issue diagnosis.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "CR-007",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "operations"
+}

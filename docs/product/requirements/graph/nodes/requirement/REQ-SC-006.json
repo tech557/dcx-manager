@@ -1,0 +1,28 @@
+{
+  "id": "REQ-SC-006",
+  "statement": "Save failure behavior — If save fails, keep the user’s current work visible. Mark it as — Affects useBuilderNodes.ts, save error state, retry/manual save behavior,",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "SC-006",
+  "source_category": "Persistence; Autosave & Recovery",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Save status UI, local cache.",
+  "related_requirements": "",
+  "affected_modules": "src/services/builder.service.ts; src/services/versions.service.ts; autosave hooks; src/utils/export.helpers.ts; src/utils/import.helpers.ts; local cache",
+  "ux_impact": "User keeps working draft visible and understands save",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "SC-006",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

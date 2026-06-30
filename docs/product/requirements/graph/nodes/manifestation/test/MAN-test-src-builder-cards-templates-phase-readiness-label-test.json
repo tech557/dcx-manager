@@ -1,0 +1,24 @@
+{
+  "id": "MAN-test-src-builder-cards-templates-phase-readiness-label-test",
+  "type": "Manifestation",
+  "statement": "Unit tests for the phase readiness presentation labels: asserts a label exists for every ReadinessState and that readinessAriaLabel / readinessTooltip expose the readiness state plus the checklist affordance (src/builder/cards/templates/phase/readiness-label.test.ts). Added in CC-4 readiness accessibility.",
+  "scope": "test-qa",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "test",
+  "current_paths": [
+    "src/builder/cards/templates/phase/readiness-label.test.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "docs/plans/active/frontend-polish-implementation-v0.3.5/sprints/CC-4.md",
+    "source_path": "src/builder/cards/templates/phase/readiness-label.test.ts",
+    "source_anchor": "readiness-label",
+    "authoring_actor": "Claude",
+    "inference_source": "sprint-implementation",
+    "confidence": 0.95,
+    "confirmation_status": "skill-derived",
+    "last_checked_date": "2026-06-30"
+  }
+}

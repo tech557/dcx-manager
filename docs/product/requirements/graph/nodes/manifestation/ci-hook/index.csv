@@ -1,0 +1,2 @@
+id,type,governance,maturity,delivery,scope,kind,statement
+MAN-ci-hook-package-json-req-scripts,Manifestation,proposed,logic-defined,not-assessed,devops,ci-hook,"npm package.json req:* script entries: validate, propose, apply-after-signoff, generate-views, query, trace, justify, reconcile, refresh-code-index, completion-gate."

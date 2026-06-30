@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-FCS-002-TO-MAN-react-component-src-ui-forms-selects-select",
+  "type": "TraceLink",
+  "source": "REQ-FCS-002",
+  "target": "MAN-react-component-src-ui-forms-selects-select",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"Select\" matches \"Focus isolation (visual hide only) — Users should be able to isolate selected work by hiding everything else from view, without ever deleting data. — Focus Isolation Mode hides all non-selected tasks from the current view. An action with no visible selected tasks is hidden; a phase with no visible selected tasks is hidden. This is visual filtering only — no data is deleted. Works in Kanban and Timeline.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

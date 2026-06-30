@@ -1,0 +1,21 @@
+{
+  "id": "REQ-FP-CMA-002",
+  "type": "Requirement",
+  "statement": "SMART default: active phase(s) expanded, the rest collapsed columns. Scales to 7–8 phases without a wall of scroll.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "REQ->BHV->RSP",
+  "provenance": {
+    "source": "docs/plans/on-hold/frontend-polish-v0.3.5/output/core-interaction-model.md",
+    "source_path": "docs/plans/on-hold/frontend-polish-v0.3.5/output/core-interaction-model.md",
+    "authoring_actor": "RS-R9 seed",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  },
+  "source_category": "core-interaction-model PO alignments",
+  "priority": "MVP",
+  "status": "Confirmed"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-PR-019-TO-MAN-service-src-services-mock-store",
+  "type": "TraceLink",
+  "source": "REQ-PR-019",
+  "target": "MAN-service-src-services-mock-store",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"store\" matches \"UI state permission — Permissions should guard real data actions, not local UI behavior like island — Island hooks, builder store, local UI state.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

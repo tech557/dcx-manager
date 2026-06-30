@@ -1,0 +1,79 @@
+{
+  "_generated_at": "2026-06-30T22:04:54.109622+00:00",
+  "_note": "Non-authoritative snapshot. Do not edit manually. Regenerate: bash scripts/agent/build-current-state.sh",
+  "repository_version": "v0.3.5",
+  "package_version": "0.3.5",
+  "metadata_version": "v0.3.5",
+  "active_plans": [],
+  "latest_log": {
+    "date": "2026-07-01",
+    "agent": "Codex",
+    "folder": "2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md",
+    "status": "Completed"
+  },
+  "open_questions_count": 0,
+  "available_scripts": [
+    "dev",
+    "build",
+    "typecheck",
+    "lint",
+    "validate:architecture",
+    "scan:semgrep",
+    "test",
+    "test:watch",
+    "test:e2e",
+    "test:e2e:ui",
+    "inspect:react",
+    "verify:frontend",
+    "generate:code-index",
+    "req:validate",
+    "req:propose",
+    "req:apply-after-signoff",
+    "req:generate-views",
+    "req:query",
+    "req:trace",
+    "req:justify",
+    "req:reconcile",
+    "req:refresh-code-index",
+    "req:completion-gate",
+    "req:seed-rs-r6",
+    "req:persist-rs-r7",
+    "req:normalize-rs-r7-identities",
+    "storybook",
+    "build-storybook",
+    "req:folder-index",
+    "req:seed-evidence-rs-r8",
+    "req:seed-rs-r9"
+  ],
+  "mcp_configured": [
+    "eslint",
+    "storybook",
+    "shadcn",
+    "playwright",
+    "semgrep",
+    "sonarqube"
+  ],
+  "mcp_operational": [
+    "eslint",
+    "shadcn",
+    "playwright"
+  ],
+  "mcp_awaiting_external_setup": [
+    "storybook",
+    "semgrep",
+    "sonarqube"
+  ],
+  "code_index_stale": true,
+  "code_index_age_minutes": 778,
+  "git_branch": "unknown",
+  "uncommitted_changes": 0,
+  "documentation_contradictions": [],
+  "validation_scripts": [
+    "scripts/agent/verify-plan-state.sh",
+    "scripts/agent/verify-version-state.sh",
+    "scripts/agent/verify-log-claims.sh <log>",
+    "scripts/agent/verify-tooling-state.sh",
+    "scripts/agent/verify-frontend.sh",
+    "scripts/agent/code-query.sh help"
+  ]
+}

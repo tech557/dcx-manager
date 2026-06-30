@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-014",
+  "statement": "Import location — Import should exist for offline updates/recovery but live quietly inside Project Metadata — Project Metadata Island, import modal, backup import utility.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-014",
+  "source_category": "Persistence; Autosave & Recovery",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Save & Continuity",
+  "related_requirements": "Builder UI Surfaces",
+  "affected_modules": "src/services/builder.service.ts; src/services/versions.service.ts; autosave hooks; src/utils/export.helpers.ts; src/utils/import.helpers.ts; local cache",
+  "ux_impact": "User can recover/update when needed without cluttering main",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-014",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

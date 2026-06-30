@@ -1,0 +1,30 @@
+{
+  "id": "REQ-RV-005",
+  "statement": "Ready as final MVP state \u2014 For MVP, Ready is the final locked state unless a later approval/review \u2014 Version status enum, status transitions, UI labels.",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "RV-005",
+  "source_category": "Lifecycle & Version Status Rules",
+  "priority": "MVP",
+  "status": "Proposed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "Version Lifecycle",
+  "related_requirements": "Validation & Readiness Rules",
+  "affected_modules": "src/types/lifecycle.ts; src/rules/lifecycle.rules.ts; src/services/versions.service.ts; status transition handlers",
+  "ux_impact": "User understands Ready as \u201ccomplete and locked.\u201d",
+  "risk": "Low",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RV-005",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.75,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product",
+  "decision_ref": "LDG-2026-06-29-PO-C03",
+  "po_note": "C-03 ruling: Ready is NOT terminal; a post-Ready state exists (see QST-LIFECYCLE-POST-READY). Remains proposed until that state is defined."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-024-TO-MAN-function-src-builder-stage-views-timeline-helpers",
+  "type": "TraceLink",
+  "source": "REQ-DM-024",
+  "target": "MAN-function-src-builder-stage-views-timeline-helpers",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"timeline.helpers\" matches \"Centralized date logic — Date calculations should live in shared helpers, not scattered across cards/islands/timeline components. — date.helpers.ts, timelineHelpers.ts, TaskEditor date controls.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-021-TO-MAN-store-action-src-store-builderstore",
+  "type": "TraceLink",
+  "source": "REQ-DM-021",
+  "target": "MAN-store-action-src-store-builderstore",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"builderStore\" matches \"UI state exclusion — Selection, hover, expanded cards, island state, active popover, active file preview, and — Builder store, island hooks, local storage if needed,\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

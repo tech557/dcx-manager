@@ -1,0 +1,24 @@
+{
+  "id": "MAN-function-src-utils-composition-helpers",
+  "type": "Manifestation",
+  "statement": "Code manifestation discovered by RS-R7 inventory: composition.helpers (src/utils/composition.helpers.ts).",
+  "scope": "frontend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "kind": "function",
+  "current_paths": [
+    "src/utils/composition.helpers.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "RS-R7 code manifestation inventory",
+    "source_path": "src/utils/composition.helpers.ts",
+    "source_anchor": "composition.helpers",
+    "authoring_actor": "Codex",
+    "inference_source": "reconciliation-engine",
+    "confidence": 0.8,
+    "confirmation_status": "code-discovered",
+    "last_checked_date": "2026-06-29"
+  }
+}

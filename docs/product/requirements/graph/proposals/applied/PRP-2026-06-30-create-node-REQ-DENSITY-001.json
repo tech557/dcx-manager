@@ -1,0 +1,38 @@
+{
+  "id": "PRP-2026-06-30-create-node-REQ-DENSITY-001",
+  "type": "Proposal",
+  "action": "create-node",
+  "actor": "Claude-at-PO-direction",
+  "date": "2026-06-30",
+  "reason": "PO 2026-06-30 lock card density model (3 phases / 3 actions / 3-4 tasks)",
+  "payload": {
+    "node": {
+      "id": "REQ-DENSITY-001",
+      "type": "Requirement",
+      "statement": "Builder card density model — across the desktop viewport range (REQ-RESP-001), the Builder must comfortably fit, without premature overflow/scroll: (a) ~3 expanded phase columns in the stage (per core.md §21 1440 density); (b) ~3 collapsed action cards within an expanded phase card's action area; (c) ~3–4 collapsed task tiles within an action card's task row. Overflow beyond these targets is SIGNALED (OA-1 gradient fades) but the default density must be MET by compact card spacing — without breaking consistent spacing / visual rhythm across Phase/Action/Task card types. Known gap (PO-observed 2026-06-30): 3 collapsed action cards do NOT currently fit comfortably in a phase → drives a compact action-card design (sprint CC-7).",
+      "scope": "frontend",
+      "governance": "approved",
+      "maturity": "logic-defined",
+      "delivery": "not-assessed",
+      "chain_layer": "REQ->BHV->RSP",
+      "source_id": "PO-2026-06-30-DENSITY",
+      "provenance": {
+        "source": "PO direction (session 2026-06-30-claude)",
+        "source_path": "docs/progress/sessions/2026-06-30-claude/024-review-oa1-density-compact-action.md",
+        "source_anchor": "density-3-phases-3-actions-3to4-tasks",
+        "authoring_actor": "Claude (claude-opus-4-8) at PO direction",
+        "confidence": 0.9,
+        "confirmation_status": "po-decided",
+        "last_checked_date": "2026-06-30"
+      },
+      "related_ids": [
+        "REQ-SBC-001",
+        "REQ-SBC-003",
+        "REQ-SBC-004",
+        "REQ-SBC-005",
+        "REQ-RESP-001",
+        "REQ-FP-CMA-002"
+      ]
+    }
+  }
+}

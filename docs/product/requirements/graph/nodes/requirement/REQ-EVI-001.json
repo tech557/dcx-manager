@@ -1,0 +1,28 @@
+{
+  "id": "REQ-EVI-001",
+  "statement": "Editor/Viewer Island (stage-pushing deep editor) \u2014 The current Task Editor should become a general Editor/Viewer Island \u2014 the controlled deep-editing surface for complex object forms \u2014 that pushes the stage rather than overlapping it. \u2014 MVP use: Task Editor. Future use: phase details, action details, AI metadata, strategy fields, advanced object forms. It is NOT a floating popup: it pushes/reduces the main stage width instead of overlapping the canvas. While open, the stage stays usable, cards stay selectable, the user can navigate the reduced stage, and the opened object stays selected/highlighted. Not resizable, but may contain smaller internal popups. On close/switch/leave with unsaved changes, the app must ask to save, discard, or cancel.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "source_id": "EVI-001",
+  "source_category": "Builder UI Surfaces",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "SR-001, STG-003",
+  "related_requirements": "SBC-005, RV-002",
+  "affected_modules": "src/pages/builder/islands/EditorIsland/; StageManager layout contract",
+  "ux_impact": "Deep editing without losing canvas context.",
+  "risk": "Medium-High",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "EVI-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

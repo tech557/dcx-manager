@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CC1-REQ-EVI-001-TO-MAN-hook-useeditorsessionmanager",
+  "type": "TraceLink",
+  "source": "REQ-EVI-001",
+  "target": "MAN-hook-src-builder-islands-editorviewerisland-useeditorsessionmanager",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.9,
+  "evidence_refs": [
+    "CC-1: extracted from useEditorState.ts during file-size split; sub-module of the Editor/Viewer Island state implementation."
+  ],
+  "inference_source": "CC-1 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

@@ -1,0 +1,14 @@
+{
+  "id": "TRC-REQ-GOV-TRACE-001-DATA-TO-MAN-validator-scripts-requirements-validators",
+  "type": "TraceLink",
+  "source": "REQ-GOV-TRACE-001-DATA",
+  "target": "MAN-validator-scripts-requirements-validators",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "inference_source": "RS-R9 seed (manual curation)",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

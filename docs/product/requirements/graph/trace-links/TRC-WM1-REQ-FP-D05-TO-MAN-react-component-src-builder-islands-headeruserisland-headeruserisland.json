@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM1-REQ-FP-D05-TO-MAN-react-component-src-builder-islands-headeruserisland-headeruserisland",
+  "type": "TraceLink",
+  "source": "REQ-FP-D05",
+  "target": "MAN-react-component-src-builder-islands-headeruserisland-headeruserisland",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "WM-1 implementation: HeaderUserIsland toggles theme mode through the header theme button and passes the version-scoped theme preference scope into useTheme."
+  ],
+  "inference_source": "WM-1 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

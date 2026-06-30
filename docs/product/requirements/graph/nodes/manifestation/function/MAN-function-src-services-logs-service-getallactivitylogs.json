@@ -1,0 +1,19 @@
+{
+  "id": "MAN-function-src-services-logs-service-getallactivitylogs",
+  "type": "Manifestation",
+  "statement": "HV-1 implementation: MAN-function-src-services-logs-service-getallactivitylogs",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "function",
+  "current_paths": [
+    "src/services/logs.service.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

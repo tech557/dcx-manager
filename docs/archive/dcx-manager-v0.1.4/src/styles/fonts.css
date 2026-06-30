@@ -1,0 +1,161 @@
+/* Gilroy Font Family - Self Hosted */
+
+/* 100 - Thin */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-ThinItalic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 200 - UltraLight */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-UltraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-UltraLightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 300 - Light */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 400 - Regular */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 500 - Medium */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 600 - Semibold */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-SemiboldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 700 - Bold */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 800 - Extrabold */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-Extrabold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-ExtraboldItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 900 - Heavy */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-Heavy.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-HeavyItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 900 - Black */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://internal-comm.com/assets/fonts/gilroy/Gilroy-BlackItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}

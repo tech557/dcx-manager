@@ -1,0 +1,34 @@
+{
+  "id": "QST-VR-011",
+  "statement": "Read access vs edit access \u2014 Not decided yet: once a user has DCX access, can they edit \u2014 Permission service; Builder read-only mode; version status locks;",
+  "governance": "archived",
+  "maturity": "intent-captured",
+  "delivery": "not-assessed",
+  "source_id": "VR-011",
+  "source_category": "Permissions & Access Control",
+  "priority": "Needs Decision",
+  "status": "Needs Decision",
+  "chain_layer": "QST",
+  "dependencies": "ACCESS-003; Version Lifecycle decisions",
+  "related_requirements": "Lifecycle & Version Status Rules",
+  "affected_modules": "src/rules/permissions.rules.ts; src/hooks/usePermissions.ts; route guards; backend policy/service enforcement",
+  "ux_impact": "Determines whether shared users are viewers or editors",
+  "risk": "Medium-high",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VR-011",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.75,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "OpenQuestion",
+  "open_questions": [
+    "Recommended direction: all shared users can read; assigned/editor users can edit."
+  ],
+  "resolution": "DCX access implies edit rights, except where version-status locks prevent editing.",
+  "resolved_by": "PO",
+  "resolution_date": "2026-06-29",
+  "decision_ref": "LDG-2026-06-29-PO-VR011"
+}

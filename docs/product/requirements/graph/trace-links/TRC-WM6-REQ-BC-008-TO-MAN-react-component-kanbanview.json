@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM6-REQ-BC-008-TO-MAN-react-component-kanbanview",
+  "type": "TraceLink",
+  "source": "REQ-BC-008",
+  "target": "MAN-react-component-src-builder-stage-views-kanbanview",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.9,
+  "inference_source": "WM-6 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "evidence_refs": [
+    "WM-6 K08: Removed items-start from kanban-board div — default flexbox cross-axis is stretch, so phase columns fill the container height (h-full max-h-full min-h-0). PhaseCard action list already has overflow-y-auto h-full inside flex-1 min-h-0 wrappers. Combined: dense phase columns now scroll internally rather than growing beyond viewport."
+  ]
+}

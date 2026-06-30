@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-EVI-001-TO-MAN-react-component-taskeditor-taskeditor",
+  "type": "TraceLink",
+  "source": "REQ-EVI-001",
+  "target": "MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-taskeditor",
+  "relationship_type": "supersedes",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"TaskEditor\" matches \"Editor/Viewer Island (stage-pushing deep editor) — The current Task Editor should become a general Editor/Viewer Island — the controlled deep-editing surface for complex object forms — that pushes the stage rather than overlapping it. — MVP use: Task Editor. Future use: phase details, action details, AI metadata, strategy fields, advanced object forms. It is NOT a floating popup: it pushes/reduces the main stage width instead of overlapping the canvas. While open, the stage stays usable, cards stay selectable, the user can navigate the reduced stage, and the opened object stays selected/highlighted. Not resizable, but may contain smaller internal popups. On close/switch/leave with unsaved changes, the app must ask to save, discard, or cancel.\" (score: 0.85)",
+    "Historical RS-R7 candidate superseded by canonical link TRC-RS-R7-REQ-EVI-001-TO-MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-taskeditor."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "original_source": "REQ-EVI-001",
+  "original_target": "MAN-react-component-taskeditor-taskeditor",
+  "replacement_trace_link": "TRC-RS-R7-REQ-EVI-001-TO-MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-taskeditor",
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

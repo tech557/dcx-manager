@@ -1,0 +1,4 @@
+id,type,governance,maturity,delivery,scope,kind,statement
+MAN-skill-dcx-manifestation-reconcile,Manifestation,proposed,logic-defined,not-assessed,agent-workflow,skill,"dcx-manifestation-reconcile skill: reconciles code manifestations against requirements, runs change-triggered checks, and produces coverage reports."
+MAN-skill-dcx-requirement-intake,Manifestation,proposed,logic-defined,not-assessed,agent-workflow,skill,dcx-requirement-intake skill: captures product intent from PO messages and creates candidate requirement nodes via governed workflow.
+MAN-skill-dcx-requirement-maturation,Manifestation,proposed,logic-defined,not-assessed,agent-workflow,skill,"dcx-requirement-maturation skill: adds acceptance criteria, rules, conditions, exceptions, responsibilities, and expected manifestation categories to requirements."

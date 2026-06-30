@@ -1,0 +1,20 @@
+{
+  "id": "REQ-VER-STRUCTURE-SUMMARY",
+  "type": "Requirement",
+  "statement": "The version control component shows counts of phases, actions, and tasks (read via the builder-tree query as data-only, no builder UI/store import); hovering a count shows a popup listing those items. This is new vs v0.1.4 and carries the 'what's inside' weight under D-5 Option B.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "ui-presentation",
+  "provenance": {
+    "source": "HV-2 sprint execution — proposed and applied 2026-06-30",
+    "authoring_actor": "Claude",
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  },
+  "supersedes": [],
+  "trace": {
+    "data_source": "useBuilderTreeQuery / builder.service.ts — outside src/builder/**, data-only"
+  }
+}

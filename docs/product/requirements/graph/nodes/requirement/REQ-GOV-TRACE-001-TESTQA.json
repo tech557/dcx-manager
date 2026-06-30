@@ -1,0 +1,21 @@
+{
+  "id": "REQ-GOV-TRACE-001-TESTQA",
+  "type": "Requirement",
+  "statement": "Test/QA-specific derivation of trace governance: every test suite, test case, or quality gate must trace to the acceptance outcome or requirement it verifies, or carry an explicit exemption.",
+  "scope": "test-qa",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "REQ->BHV->RSP",
+  "provenance": {
+    "source": "docs/plans/active/requirements-system/sprints/RS-R9-dogfood-self-trace.md",
+    "source_path": "docs/plans/active/requirements-system/sprints/RS-R9-dogfood-self-trace.md",
+    "authoring_actor": "RS-R9 seed",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  },
+  "lock_owner": "PO",
+  "lock_date": "2026-06-29",
+  "ledger_ref": "LDG-2026-06-29-RS-R6-SEED-MIGRATION"
+}

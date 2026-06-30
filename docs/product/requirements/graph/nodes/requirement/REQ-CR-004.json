@@ -1,0 +1,28 @@
+{
+  "id": "REQ-CR-004",
+  "statement": "Log visibility in MVP — Latest logs are shown from DB but manually synced/loaded, not real-time. — Project Metadata Island / Version History area, manual",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "CR-004",
+  "source_category": "Audit; Logs & Error Reporting",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Supabase activity logs",
+  "related_requirements": "Builder UI Surfaces",
+  "affected_modules": "src/services/logs.service.ts; src/services/error-reporter.service.ts; error boundary; report modal; activity/history UI",
+  "ux_impact": "User can inspect latest lifecycle history when needed.",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "CR-004",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "operations"
+}

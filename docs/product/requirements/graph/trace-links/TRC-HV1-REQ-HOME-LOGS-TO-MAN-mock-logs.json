@@ -1,0 +1,16 @@
+{
+  "id": "TRC-HV1-REQ-HOME-LOGS-TO-MAN-mock-logs",
+  "type": "TraceLink",
+  "source": "REQ-HOME-LOGS",
+  "target": "MAN-service-src-services-mock-logs-mock-enriched",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 1.0,
+  "evidence_refs": [
+    "HV-1 implementation 2026-06-30"
+  ],
+  "inference_source": "HV-1 implementation 2026-06-30",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "needs_confirmation": false
+}

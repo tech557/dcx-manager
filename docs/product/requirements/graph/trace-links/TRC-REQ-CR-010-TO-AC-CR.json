@@ -1,0 +1,14 @@
+{
+  "id": "TRC-REQ-CR-010-TO-AC-CR",
+  "type": "TraceLink",
+  "source": "REQ-CR-010",
+  "target": "AC-CR-SEED",
+  "relationship_type": "validates",
+  "coverage": "partial",
+  "confidence": 0.7,
+  "inference_source": "RS-R6 seed migration",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-STG-005",
+  "statement": "Timeline movement & off-stage date dropzones — Timeline planning must support dragging tasks to dates outside the visible range without forcing the user to cancel and restart. — Timeline movement: next/previous week or month moves the stage in a controlled way; dragging a task toward a date outside the visible range exposes edge navigation or valid outside-date dropzones; dropping on a valid date updates the task's date context.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "STG-005",
+  "source_category": "Stage System",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "STG-001, DZ-001, DM-009",
+  "related_requirements": "BC-008",
+  "affected_modules": "src/pages/builder/timeline/; stage movement; dropzone engine",
+  "ux_impact": "Fluid timeline scheduling.",
+  "risk": "Medium-High",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "STG-005",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

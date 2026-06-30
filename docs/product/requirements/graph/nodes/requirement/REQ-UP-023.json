@@ -1,0 +1,28 @@
+{
+  "id": "REQ-UP-023",
+  "statement": "Behavior tools not MVP — MVP should seed behavior tracking readiness but not integrate a full behavior — Optional analytics adapter interface, no required provider in",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "UP-023",
+  "source_category": "Preferences; Session & Telemetry",
+  "priority": "MVP / Future",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Future analytics decision",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/hooks/usePreferences.ts; local storage preference helpers; session restore; analytics/event adapter",
+  "ux_impact": "No immediate user-facing burden.",
+  "risk": "Low",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "UP-023",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

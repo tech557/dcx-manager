@@ -1,0 +1,28 @@
+{
+  "id": "REQ-AIM-001",
+  "statement": "Flexible AI/context metadata fields (seed) — The data model should seed future AI support by allowing hidden/flexible context fields on key entities, without polluting core structured fields. — Allow optional context fields (e.g. strategy_context, generation_context, ai_context, metadata, source_context) on DCX, Version, Phase, Action, Task, Subtask. These are additive, never replace core fields, and are for future AI context, generation source, proposal/strategy links, reasoning, and template/objective mapping.",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "AIM-001",
+  "source_category": "Domain Model & API Contracts",
+  "priority": "Seed Now / Future",
+  "status": "Proposed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "DM-001",
+  "related_requirements": "AIC-001",
+  "affected_modules": "src/types/domain.ts; src/types/api.ts; api-mappers.ts",
+  "ux_impact": "No MVP UX; enables future AI features.",
+  "risk": "Low-Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "AIM-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.75,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

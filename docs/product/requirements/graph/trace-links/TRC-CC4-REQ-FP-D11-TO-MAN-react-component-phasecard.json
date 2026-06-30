@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CC4-REQ-FP-D11-TO-MAN-react-component-phasecard",
+  "type": "TraceLink",
+  "source": "REQ-FP-D11",
+  "target": "MAN-react-component-src-builder-cards-templates-phase-phasecard",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.9,
+  "evidence_refs": [
+    "CC-4: collapsed phase readiness marker button now exposes readiness via title (tooltip/hover) + aria-label (screen reader) using readinessTooltip/readinessAriaLabel; data-testid=\"phase-readiness-collapsed\". Expanded marker mirrors the same a11y text (data-testid=\"phase-readiness-expanded\")."
+  ],
+  "inference_source": "CC-4 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-DM-020",
+  "statement": "Builder nodes — BuilderNode[] / PhaseNode is a render model for the builder stage, not — builder-node.types.ts, useBuilderNodes.ts, node.helpers.ts.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "DM-020",
+  "source_category": "Builder State & Mutation Layer",
+  "priority": "MVP + Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Mapper layer",
+  "related_requirements": "Domain Model & API Contracts",
+  "affected_modules": "src/store/builderStore.ts; src/pages/builder/context/; src/pages/builder/hooks/useBuilderActions.ts; mutation commands",
+  "ux_impact": "Allows visual/stage changes without backend changes.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "DM-020",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

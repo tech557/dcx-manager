@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM1-REQ-UP-010-TO-MAN-hook-src-hooks-usetheme",
+  "type": "TraceLink",
+  "source": "REQ-UP-010",
+  "target": "MAN-hook-src-hooks-usetheme",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "WM-1 implementation: src/hooks/useTheme.ts reads/writes theme mode with a PreferenceScope key of userId + dcxId + versionId."
+  ],
+  "inference_source": "WM-1 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

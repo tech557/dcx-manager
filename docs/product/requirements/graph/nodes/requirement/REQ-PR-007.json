@@ -1,0 +1,28 @@
+{
+  "id": "REQ-PR-007",
+  "statement": "Remove prefilled users — Prefilled users from project payload cannot be removed by normal users. — Workspace user editor, protected user flag, backend validation.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "PR-007",
+  "source_category": "Permissions & Access Control",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Project payload users",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/rules/permissions.rules.ts; src/hooks/usePermissions.ts; route guards; backend policy/service enforcement",
+  "ux_impact": "Core team remains attached to the DCX.",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "PR-007",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "security"
+}

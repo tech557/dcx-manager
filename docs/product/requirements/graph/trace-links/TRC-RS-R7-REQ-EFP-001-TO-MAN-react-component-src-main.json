@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-EFP-001-TO-MAN-react-component-src-main",
+  "type": "TraceLink",
+  "source": "REQ-EFP-001",
+  "target": "MAN-react-component-src-main",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"main\" matches \"Embedded Google Docs/file preview — Version-level Drive/Docs links should be previewable inside the Builder using the shared popup shell, so users can reference approved docs without leaving the canvas. — Attempt to render the document via iframe/embed where supported, inside the shared sticky popup shell. If embedding fails (permissions, link format, browser restrictions), show a fallback to open externally. Rules: do not store file content, do not parse file content as product data in MVP, do not mutate Builder data from preview, Google Drive permissions remain outside the app.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

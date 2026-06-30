@@ -1,0 +1,36 @@
+{
+  "id": "PRP-2026-06-30-create-node-REQ-PRESENT-001",
+  "type": "Proposal",
+  "action": "create-node",
+  "actor": "Claude-at-PO-direction",
+  "date": "2026-06-30",
+  "reason": "PO 2026-06-30: focus/present should expand descendants + centre (current expands ancestors)",
+  "payload": {
+    "node": {
+      "id": "REQ-PRESENT-001",
+      "type": "Requirement",
+      "statement": "Focus/presentation drill-in — focusing or presenting a builder object expands the object's DESCENDANT subtree (children + grandchildren: a phase expands its actions and their tasks; an action expands its tasks) and centres it in the stage (per REQ-FP-CMA-003). This corrects the current behavior where StageProvider.enterPresentationMode (and useStageExpansion) expand only the target's ANCESTORS and collapse the subtree — the opposite of the intended drill-in. Keep it minimal: expand descendants + centre; do NOT add ancestor/unrelated-collapse complexity. Implemented/fixed in WM-5.",
+      "scope": "frontend",
+      "governance": "approved",
+      "maturity": "logic-defined",
+      "delivery": "not-assessed",
+      "chain_layer": "REQ->BHV->RSP",
+      "source_id": "PO-2026-06-30-PRESENT",
+      "provenance": {
+        "source": "PO direction (session 2026-06-30-claude)",
+        "source_path": "docs/progress/sessions/2026-06-30-claude/026-lock-present-req-cc-opt-polish.md",
+        "source_anchor": "focus-presentation-expand-descendants-centre",
+        "authoring_actor": "Claude (claude-opus-4-8) at PO direction",
+        "confidence": 0.9,
+        "confirmation_status": "po-decided",
+        "last_checked_date": "2026-06-30"
+      },
+      "related_ids": [
+        "REQ-FP-CMA-003",
+        "REQ-FCS-001",
+        "REQ-SBC-002",
+        "REQ-EVI-001"
+      ]
+    }
+  }
+}

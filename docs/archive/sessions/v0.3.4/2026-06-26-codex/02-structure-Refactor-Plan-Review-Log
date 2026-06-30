@@ -1,0 +1,42 @@
+# Structure-Refactor Plan Review Log
+
+## Summary
+
+Create `02-PLAN-src-structure-refactor-review.md` in today’s Codex session folder. Record that version `v0.3.2` matches the plan, but the drafted plan should not be activated until Claude addresses the structural and backend-readiness issues below.
+
+## Feedback to Record
+
+- Adopt a capability-first structure: infrastructure remains top-level, while builder-only forms, modals, and components live in meaningful nested `src/builder/` folders.
+- Do not move all builder-specific components into `src/ui/`. Reserve `ui` for domain-neutral atoms, surfaces, and motion primitives.
+- Do not make “empty `src/components/`” a success metric. Success means every folder has one clear purpose and ownership boundary.
+- Preserve useful nesting. Organize stage views by capability such as `kanban/`, `timeline/`, calendar-oriented views, and `shared/`.
+- Avoid oversized “universal” atoms with unrelated optional props. Use a small visual primitive plus semantic wrappers such as status, readiness, and lock badges.
+- Do not merge hooks merely to reduce file count; merge only when responsibilities and lifecycle genuinely match.
+- Remove the obsolete `DRAFT-PENDING-RESEARCH/` sprint copies before plan activation.
+- Replace P3’s unresolved “pick one after reading” choices with explicit implementation decisions.
+
+## Structure Automation
+
+- Add an automated `docs/references/source-structure.csv` covering folders and files.
+- Include: path, kind, purpose, capability owner, architectural layer, public entrypoint, key exports, line count, and allowed dependency direction.
+- Generate it alongside the Markdown manifest from one script.
+- Require regeneration after structural changes and verify that committed outputs are current.
+- Make agents read the compact CSV during startup before broad source discovery.
+- Fix `build-log-index.sh`: it currently omits the log filename from indexed paths, causing every run to append duplicate historical rows.
+
+## Backend Readiness Corrections
+
+- Keep API DTOs and domain models independent; domain types should not extend transport DTOs.
+- Preserve typed mappers as the boundary between mock/API data and domain data.
+- Define typed endpoint contracts and mock handlers for every supported endpoint.
+- Route services through a transport interface configured to use mocks only.
+- Do not implement real fetch, authentication, or backend connectivity in this plan.
+- Centralize transport error handling instead of adding repetitive `try/catch` blocks to every service.
+- Prove readiness with contract tests, mapper tests, mock persistence tests, and a test showing that transport replacement does not affect consumers.
+- Change the success statement from “swap eight service files” to “replace the configured transport while service consumers remain unchanged.”
+
+## Log Completion
+
+- Mark the review as a completed user-initiated planning task.
+- State that no source code or drafted plan files were changed.
+- Run the corrected log-index automation after writing the review.

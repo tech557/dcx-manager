@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-SC-002-TO-MAN-function-src-utils-node-helpers",
+  "type": "TraceLink",
+  "source": "REQ-SC-002",
+  "target": "MAN-function-src-utils-node-helpers",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"node.helpers\" matches \"Autosave strategy — MVP uses full-tree debounced save. Code should still seed named mutation commands — Affects useBuilderNodes.ts, node.helpers.ts, future builderMutations.ts, API save payloads.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

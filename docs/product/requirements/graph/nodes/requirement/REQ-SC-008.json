@@ -1,0 +1,28 @@
+{
+  "id": "REQ-SC-008",
+  "statement": "Local cache — Use local user cache to protect unsaved work during disconnection, accidental close, — Affects browser storage layer, version/user-specific draft key, restore",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "SC-008",
+  "source_category": "Persistence; Autosave & Recovery",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Source-of-truth decision.",
+  "related_requirements": "",
+  "affected_modules": "src/services/builder.service.ts; src/services/versions.service.ts; autosave hooks; src/utils/export.helpers.ts; src/utils/import.helpers.ts; local cache",
+  "ux_impact": "User has safety if connection fails or browser",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "SC-008",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VR-007",
+  "statement": "Lightweight alert/reporting system — Create a lightweight error reporting system for blocking failures and user-reported issues. — Error boundary; reporting service; email integration; error UI;",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VR-007",
+  "source_category": "Audit; Logs & Error Reporting",
+  "priority": "MVP + Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "LOAD-001; ERROR-002; ERROR-003",
+  "related_requirements": "Routing, Auth & Load Control",
+  "affected_modules": "src/services/logs.service.ts; src/services/error-reporter.service.ts; error boundary; report modal; activity/history UI",
+  "ux_impact": "When something breaks, user can report it instead",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VR-007",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "backend"
+}

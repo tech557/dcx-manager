@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-010",
+  "statement": "Minimal timeline task data — Timeline quick-create can add minimal task data first, then user completes details — Task factory, minimal task defaults, TaskEditor, validation badges.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-010",
+  "source_category": "Builder State & Mutation Layer",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Readiness validation",
+  "related_requirements": "Validation & Readiness Rules",
+  "affected_modules": "src/store/builderStore.ts; src/pages/builder/context/; src/pages/builder/hooks/useBuilderActions.ts; mutation commands",
+  "ux_impact": "User can capture the task quickly and configure",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-010",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "MAN-react-component-src-main",
+  "type": "Manifestation",
+  "statement": "Code manifestation discovered by RS-R7 inventory: main (src/main.tsx).",
+  "scope": "frontend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "kind": "react-component",
+  "current_paths": [
+    "src/main.tsx"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "RS-R7 code manifestation inventory",
+    "source_path": "src/main.tsx",
+    "source_anchor": "main",
+    "authoring_actor": "Codex",
+    "inference_source": "reconciliation-engine",
+    "confidence": 0.8,
+    "confirmation_status": "code-discovered",
+    "last_checked_date": "2026-06-29"
+  }
+}

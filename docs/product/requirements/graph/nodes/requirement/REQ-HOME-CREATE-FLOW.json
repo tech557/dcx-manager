@@ -1,0 +1,18 @@
+{
+  "id": "REQ-HOME-CREATE-FLOW",
+  "type": "Requirement",
+  "statement": "New Version popup: auto-assigns version number, assigns team members without job titles, optionally attaches reference documents during creation.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "scope": "frontend",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confidence": 1,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

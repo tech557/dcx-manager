@@ -1,0 +1,28 @@
+{
+  "id": "REQ-FI-006",
+  "statement": "File access follows version access — Anyone who can access the version can see the version’s file links. — Access guard, version file query, file link display.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "FI-006",
+  "source_category": "Files & External References",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Permissions & Roles",
+  "related_requirements": "Permissions & Access Control",
+  "affected_modules": "src/pages/builder/islands/metadata/ or file manager; file metadata DTOs; file service; Drive link handling",
+  "ux_impact": "Shared DCX users can open the same reference",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "FI-006",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

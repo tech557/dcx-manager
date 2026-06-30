@@ -1,0 +1,28 @@
+{
+  "id": "REQ-SPS-001",
+  "statement": "Reusable sticky resizable popup shell — A single reusable popup shell should serve all floating helper surfaces so they look and behave consistently and never disturb the stage layout. — Reusable sticky, resizable, minimizable popup shell shared by AI Chat, View Helper Island, Google Docs/file preview, advanced Focus filter, and future template browser. It floats over the stage and does not resize the stage. Supports minimize, resize, sticky positioning, branded header, close behavior, and optional saved size/position as a user workspace preference.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "SPS-001",
+  "source_category": "Interaction & Motion System",
+  "priority": "MVP + Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "",
+  "related_requirements": "AIC-001, VHB-001, EVI-001, EFP-001, UP-009",
+  "affected_modules": "shared popup shell component; src/components/ui/",
+  "ux_impact": "Consistent floating surfaces.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "SPS-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

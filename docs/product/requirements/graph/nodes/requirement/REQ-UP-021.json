@@ -1,0 +1,28 @@
+{
+  "id": "REQ-UP-021",
+  "statement": "Locked version restore behavior — If a version is Ready/Approved/Superseded, restore view/island layout but do not restore — Version status guard, editor restore logic.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "UP-021",
+  "source_category": "Preferences; Session & Telemetry",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Version Lifecycle, Ready lock",
+  "related_requirements": "Lifecycle & Version Status Rules",
+  "affected_modules": "src/hooks/usePreferences.ts; local storage preference helpers; session restore; analytics/event adapter",
+  "ux_impact": "User sees locked version safely.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "UP-021",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

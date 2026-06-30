@@ -1,0 +1,28 @@
+{
+  "id": "REQ-SC-009",
+  "statement": "Close warning — Warn user before closing/navigating away when unsaved changes exist. — Affects route guards / beforeunload, dirty state tracking.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "SC-009",
+  "source_category": "Persistence; Autosave & Recovery",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Dirty/unsaved state.",
+  "related_requirements": "",
+  "affected_modules": "src/services/builder.service.ts; src/services/versions.service.ts; autosave hooks; src/utils/export.helpers.ts; src/utils/import.helpers.ts; local cache",
+  "ux_impact": "User gets protection without feeling locked in.",
+  "risk": "Low",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "SC-009",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

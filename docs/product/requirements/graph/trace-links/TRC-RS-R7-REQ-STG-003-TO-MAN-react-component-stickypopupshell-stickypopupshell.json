@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-STG-003-TO-MAN-react-component-stickypopupshell-stickypopupshell",
+  "type": "TraceLink",
+  "source": "REQ-STG-003",
+  "target": "MAN-react-component-stickypopupshell-stickypopupshell",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"StickyPopupShell\" matches \"Stage + island layout contract — Different surfaces affect the Stage differently, and this must be explicit so future components do not break the canvas. — Explicit layout contract: Editor/Viewer Island reduces/pushes the stage (no overlay); sticky popup shell floats above the stage (no resize); Focus Island filters/isolates visible data (no mutation); View Helper popup floats above the stage and bridges opposite-view logic. Future components must declare which contract they follow.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

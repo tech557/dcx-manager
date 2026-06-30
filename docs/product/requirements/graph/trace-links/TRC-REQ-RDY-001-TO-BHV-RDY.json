@@ -1,0 +1,14 @@
+{
+  "id": "TRC-REQ-RDY-001-TO-BHV-RDY",
+  "type": "TraceLink",
+  "source": "REQ-RDY-001",
+  "target": "BHV-RDY-SEED",
+  "relationship_type": "decomposes-into",
+  "coverage": "partial",
+  "confidence": 0.8,
+  "inference_source": "RS-R6 seed migration",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

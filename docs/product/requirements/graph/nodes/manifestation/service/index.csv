@@ -1,0 +1,24 @@
+id,type,governance,maturity,delivery,scope,kind,statement
+MAN-service-src-services-access-service,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: access.service (src/services/access.service.ts).
+MAN-service-src-services-ai-service,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: ai.service (src/services/ai.service.ts).
+MAN-service-src-services-api-client,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: api-client (src/services/api-client.ts).
+MAN-service-src-services-api-mappers,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: api-mappers (src/services/api-mappers.ts).
+MAN-service-src-services-builder-service,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: builder.service (src/services/builder.service.ts).
+MAN-service-src-services-channels-service,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: channels.service (src/services/channels.service.ts).
+MAN-service-src-services-clickup-service,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: clickup.service (src/services/clickup.service.ts).
+MAN-service-src-services-error-reporter-service,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: error-reporter.service (src/services/error-reporter.service.ts).
+MAN-service-src-services-files-service,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: files.service (src/services/files.service.ts).
+MAN-service-src-services-logs-service,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: logs.service (src/services/logs.service.ts).
+MAN-service-src-services-mock-access-mock,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: access.mock (src/services/mock/access.mock.ts).
+MAN-service-src-services-mock-builder-mock,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: builder.mock (src/services/mock/builder.mock.ts).
+MAN-service-src-services-mock-channels-mock,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: channels.mock (src/services/mock/channels.mock.ts).
+MAN-service-src-services-mock-dispatch,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: mock-dispatch (src/services/mock-dispatch.ts).
+MAN-service-src-services-mock-logs-mock-enriched,Manifestation,approved,logic-defined,implemented,frontend,service,HV-1 implementation: MAN-service-src-services-mock-logs-mock-enriched
+MAN-service-src-services-mock-logs-mock,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: logs.mock (src/services/mock/logs.mock.ts).
+MAN-service-src-services-mock-store,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: store (src/services/mock/store.ts).
+MAN-service-src-services-mock-subtasks-mock,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: subtasks.mock (src/services/mock/subtasks.mock.ts).
+MAN-service-src-services-mock-versions-mock-enriched,Manifestation,approved,logic-defined,implemented,frontend,service,HV-1 implementation: MAN-service-src-services-mock-versions-mock-enriched
+MAN-service-src-services-mock-versions-mock,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: versions.mock (src/services/mock/versions.mock.ts).
+MAN-service-src-services-service-utils,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: service-utils (src/services/service-utils.ts).
+MAN-service-src-services-subtask-definitions-service,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: subtask-definitions.service (src/services/subtask-definitions.service.ts).
+MAN-service-src-services-versions-service,Manifestation,proposed,logic-defined,not-assessed,backend,service,Code manifestation discovered by RS-R7 inventory: versions.service (src/services/versions.service.ts).

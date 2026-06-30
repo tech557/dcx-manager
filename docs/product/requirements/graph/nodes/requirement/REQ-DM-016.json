@@ -1,0 +1,28 @@
+{
+  "id": "REQ-DM-016",
+  "statement": "Phase date span — Phase start/end dates are calculated from the earliest/latest task/action dates inside the — Phase cards, timeline, date helpers, mapper layer.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "DM-016",
+  "source_category": "Domain Model & API Contracts",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Action/task dates",
+  "related_requirements": "Builder UI Surfaces",
+  "affected_modules": "src/types/; src/services/api-mappers.ts; src/utils/date.helpers.ts; src/utils/node.helpers.ts; DTO/domain/builder mapping",
+  "ux_impact": "User sees phase duration based on actual plan.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "DM-016",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

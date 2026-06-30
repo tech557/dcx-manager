@@ -1,0 +1,28 @@
+{
+  "id": "REQ-UP-001",
+  "statement": "Default Builder view — Default Builder view is Kanban. — Builder view state, StageManager, KanbanStage, TimelineStage, view switcher.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "UP-001",
+  "source_category": "Builder UI Surfaces",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Builder Creation Workflow",
+  "related_requirements": "Preferences, Session & Telemetry",
+  "affected_modules": "src/pages/builder/stage/; src/pages/builder/cards/; src/pages/builder/islands/; src/pages/builder/kanban/; src/pages/builder/timeline/",
+  "ux_impact": "New versions open in the clearest planning view.",
+  "risk": "Low",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "UP-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

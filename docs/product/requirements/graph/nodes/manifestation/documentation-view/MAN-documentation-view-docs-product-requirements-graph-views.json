@@ -1,0 +1,21 @@
+{
+  "id": "MAN-documentation-view-docs-product-requirements-graph-views",
+  "type": "Manifestation",
+  "statement": "Generated graph views: human-readable Markdown/CSV summary views of the requirements graph.",
+  "scope": "governance",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "kind": "documentation-view",
+  "current_paths": [
+    "docs/product/requirements/graph/views/"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "docs/plans/active/requirements-system/sprints/RS-R9-dogfood-self-trace.md",
+    "authoring_actor": "RS-R9 seed",
+    "confidence": 0.95,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  }
+}

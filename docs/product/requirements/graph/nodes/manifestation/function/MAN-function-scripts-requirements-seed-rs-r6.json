@@ -1,0 +1,23 @@
+{
+  "id": "MAN-function-scripts-requirements-seed-rs-r6",
+  "type": "Manifestation",
+  "statement": "RS-R6 deterministic seed script for canonical requirements graph data.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "data",
+  "kind": "function",
+  "current_paths": [
+    "scripts/requirements/seed-rs-r6.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "RS-R6 implementation",
+    "source_path": "scripts/requirements/seed-rs-r6.ts",
+    "source_anchor": "seed-rs-r6",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  }
+}

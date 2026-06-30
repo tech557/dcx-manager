@@ -1,0 +1,28 @@
+{
+  "id": "REQ-TPL-001",
+  "statement": "Contextual object template popup (seed) — Phase, Action, and Task cards should support a contextual template popup so users can later load object-relevant templates without a full template database in MVP. — Holding/clicking an object opens a contextual popup loading templates relevant to that object type, supporting categories, search, loading state, empty state, and object-aware results. Future apply: phase templates add/merge actions+tasks; action templates add/merge tasks; task templates fill fields/specs/subtasks. Template application must not blindly overwrite without review.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "partially-implemented",
+  "source_id": "TPL-001",
+  "source_category": "Templates & Reuse (Seed)",
+  "priority": "Seed Now / Future",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "RV-020, BC-024",
+  "related_requirements": "SPS-001",
+  "affected_modules": "template popup component; src/services/ (future template service); import/merge engine",
+  "ux_impact": "Future reuse of common structures.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "TPL-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

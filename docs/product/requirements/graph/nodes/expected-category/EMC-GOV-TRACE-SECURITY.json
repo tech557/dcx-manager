@@ -1,0 +1,18 @@
+{
+  "id": "EMC-GOV-TRACE-SECURITY",
+  "type": "ExpectedManifestationCategory",
+  "statement": "Trace governance security expected manifestation category: policy.",
+  "scope": "security",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "category": "policy",
+  "chain_layer": "EMC",
+  "provenance": {
+    "source": "docs/plans/active/requirements-system/sprints/RS-R9-dogfood-self-trace.md",
+    "authoring_actor": "RS-R9 seed",
+    "confidence": 0.9,
+    "confirmation_status": "skill-derived",
+    "last_checked_date": "2026-06-29"
+  }
+}

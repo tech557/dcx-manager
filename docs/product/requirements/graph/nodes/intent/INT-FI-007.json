@@ -1,0 +1,27 @@
+{
+  "id": "INT-FI-007",
+  "statement": "Upload support — Supabase/storage file uploads are not MVP unless needed later. — Future storage service, file upload UI, Supabase Storage.",
+  "governance": "draft",
+  "maturity": "intent-captured",
+  "delivery": "not-assessed",
+  "source_id": "FI-007",
+  "source_category": "Files & External References",
+  "priority": "Future",
+  "status": "Deferred",
+  "chain_layer": "INT",
+  "dependencies": "File storage decision",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/pages/builder/islands/metadata/ or file manager; file metadata DTOs; file service; Drive link handling",
+  "ux_impact": "Future users may upload files directly if needed.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "FI-007",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.75,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Intent"
+}

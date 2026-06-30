@@ -1,0 +1,19 @@
+{
+  "id": "BHV-KBI-SEED",
+  "type": "BehaviorRule",
+  "statement": "Builder UI Surfaces behavior rules derived from RS-R5 KBI- family requirements.",
+  "scope": "frontend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "BHV",
+  "provenance": {
+    "source": "RS-R5 itemized dataset",
+    "source_path": "docs/plans/active/requirements-system/output/RS-R5-itemized-dataset.csv",
+    "source_anchor": "KBI",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.8,
+    "confirmation_status": "skill-derived",
+    "last_checked_date": "2026-06-29"
+  }
+}

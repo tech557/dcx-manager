@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-010-TO-MAN-react-component-timelineview-timelineview",
+  "type": "TraceLink",
+  "source": "REQ-DM-010",
+  "target": "MAN-react-component-src-builder-stage-views-timelineview",
+  "relationship_type": "supersedes",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"TimelineView\" matches \"Linked task date — Linked task date stores relative position from communication date, not the final — Date resolver, mapper layer, timeline views, validation.\" (score: 0.85)",
+    "Historical RS-R7 candidate superseded by canonical link TRC-RS-R7-REQ-DM-010-TO-MAN-react-component-src-builder-stage-views-timelineview."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "original_source": "REQ-DM-010",
+  "original_target": "MAN-react-component-timelineview-timelineview",
+  "replacement_trace_link": "TRC-RS-R7-REQ-DM-010-TO-MAN-react-component-src-builder-stage-views-timelineview",
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

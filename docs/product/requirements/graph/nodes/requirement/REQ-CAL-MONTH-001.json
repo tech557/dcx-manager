@@ -1,0 +1,28 @@
+{
+  "id": "REQ-CAL-MONTH-001",
+  "type": "Requirement",
+  "statement": "Monthly calendar view layout & interaction — In the Builder's monthly Timeline view: (a) NO vertical scroll — all month day cards fit in one compact 7-column grid on screen (refer to v0.1.4 docs/archive/dcx-manager-v0.1.4/src/pages/builder/timeline/MonthlyView.tsx for the clean monthly grid); (b) day cards are compact (more compact than weekly); (c) the task-card EXPANDED state is DISABLED in monthly — tasks render only as small compact cards; (d) editing a task is via long-click on the small task card, which opens the Task Editor; (e) opening the editor must NOT push the day cards off-screen — the day grid shrinks further so the whole month stays visible while the editor is open. Current MonthlyView uses overflow-y-auto (vertical scroll) — this requirement supersedes that.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "partially-implemented",
+  "chain_layer": "REQ->BHV->RSP",
+  "source_id": "PO-2026-06-30-CAL-MONTH",
+  "provenance": {
+    "source": "PO direction (session 2026-06-30-claude)",
+    "source_path": "docs/progress/sessions/2026-06-30-claude/023-audit-cc2-lock-calendar-reqs.md",
+    "source_anchor": "month-view-no-vscroll-compact-grid-longclick-editor-shrinks-grid",
+    "authoring_actor": "Claude (claude-opus-4-8) at PO direction",
+    "confidence": 0.95,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-30"
+  },
+  "related_ids": [
+    "REQ-DM-022",
+    "REQ-STG-001",
+    "REQ-RESP-001",
+    "REQ-EVI-001",
+    "REQ-SBC-005",
+    "REQ-FP-D01"
+  ]
+}

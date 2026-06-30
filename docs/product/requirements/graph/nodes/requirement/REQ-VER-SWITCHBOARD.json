@@ -1,0 +1,18 @@
+{
+  "id": "REQ-VER-SWITCHBOARD",
+  "type": "Requirement",
+  "statement": "The Version page lists all sibling campaign versions with status; selecting one switches the version control component's context to that version, allowing inspection of each sibling's docs, crew, and structure without leaving the page.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "interaction",
+  "provenance": {
+    "source": "HV-2 sprint execution — proposed and applied 2026-06-30",
+    "authoring_actor": "Claude",
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  },
+  "supersedes": [],
+  "related": ["REQ-VER-ROOM"]
+}

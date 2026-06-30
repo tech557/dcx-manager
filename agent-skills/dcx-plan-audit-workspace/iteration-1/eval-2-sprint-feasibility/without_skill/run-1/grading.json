@@ -1,0 +1,42 @@
+{
+  "eval_id": 2,
+  "run": "without_skill",
+  "expectations": [
+    {
+      "text": "Audit checks whether 'npm run validate:architecture' exists by reading package.json \u2014 not by assuming",
+      "passed": true,
+      "evidence": "Confirmed: 'validate:architecture: depcruise src --config .dependency-cruiser.cjs' read from package.json"
+    },
+    {
+      "text": "Audit checks whether scripts/agent/code-query.sh exists using a file system check (ls or find)",
+      "passed": true,
+      "evidence": "code-query.sh confirmed present; arg parsing verified"
+    },
+    {
+      "text": "Audit assesses whether code-query.sh supports the subcommands called in the sprint (component, consumers, or similar)",
+      "passed": false,
+      "evidence": "Found the wrong arg order bug. Did NOT identify that code-query.sh has no all-components listing mode (requires a NAME argument) \u2014 only the with-skill run caught that second issue"
+    },
+    {
+      "text": "Verdict is specific to FE2-R1 (not a verdict on the entire plan)",
+      "passed": true,
+      "evidence": "Review scoped to FE2-R1 dep-cruiser and code-index steps specifically"
+    },
+    {
+      "text": "Audit file is written to disk (docs/plans/drafted/frontend-discovery-v2/audit/ or the workspace output path)",
+      "passed": true,
+      "evidence": "File saved to workspace output path"
+    },
+    {
+      "text": "Audit does not flag architectural design decisions as issues \u2014 stays within sprint feasibility scope",
+      "passed": true,
+      "evidence": "Stayed within command executability scope"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.8333
+  }
+}

@@ -1,0 +1,65 @@
+rules:
+  - id: no-direct-setnodes
+    patterns:
+      - pattern: setNodes(...)
+    message: "DCX: Call mutations via useBuilderActions(), never setNodes directly from cards/islands/stage."
+    languages: [typescript]
+    severity: ERROR
+    paths:
+      include:
+        - "src/builder/**"
+
+  - id: no-service-in-builder
+    patterns:
+      - pattern-regex: "from\\s+['\"]@/services/"
+    message: "DCX: Builder cards, islands, and stage must not import from src/services/. Use useBuilderActions()."
+    languages: [typescript]
+    severity: ERROR
+    paths:
+      include:
+        - "src/builder/cards/**"
+        - "src/builder/islands/**"
+        - "src/builder/stage/**"
+
+  - id: no-hardcoded-hex
+    patterns:
+      - pattern-regex: "#[0-9a-fA-F]{3,6}"
+    message: "DCX: Hardcoded hex color found. Use brand tokens from src/brand/tokens.ts."
+    languages: [typescript]
+    severity: WARNING
+    paths:
+      include:
+        - "src/**"
+      exclude:
+        - "src/brand/**"
+
+  - id: no-readiness-in-templates
+    patterns:
+      - pattern-regex: "from\\s+['\"]@/rules/"
+    message: "DCX: Card templates must not import from src/rules/. Readiness arrives via behavior.readiness (useCardBehavior)."
+    languages: [typescript]
+    severity: ERROR
+    paths:
+      include:
+        - "src/builder/cards/templates/**"
+
+  - id: no-window-dispatch
+    patterns:
+      - pattern: window.dispatchEvent(...)
+    message: "DCX: window.dispatchEvent is forbidden for component-to-component communication. Use StageProvider context or builderStore."
+    languages: [typescript]
+    severity: ERROR
+    paths:
+      include:
+        - "src/**"
+
+  - id: no-nodes-find-without-helpers
+    patterns:
+      - pattern: $NODES.find($FN => $FN.$FIELD === $ID)
+    message: "DCX: Direct nodes.find() may miss nested Actions and Tasks. Use findTask/findAction from src/utils/node.helpers.ts."
+    languages: [typescript]
+    severity: WARNING
+    paths:
+      include:
+        - "src/builder/**"
+        - "src/actions/**"

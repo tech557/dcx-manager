@@ -1,0 +1,28 @@
+{
+  "id": "REQ-UP-008",
+  "statement": "View-limited islands — Some islands should only be enabled in specific views. — Island registry, view capability map, disabled/hidden rules.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "UP-008",
+  "source_category": "Builder UI Surfaces",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "View architecture",
+  "related_requirements": "Preferences, Session & Telemetry",
+  "affected_modules": "src/pages/builder/stage/; src/pages/builder/cards/; src/pages/builder/islands/; src/pages/builder/kanban/; src/pages/builder/timeline/",
+  "ux_impact": "Cleaner UI, less confusion.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "UP-008",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

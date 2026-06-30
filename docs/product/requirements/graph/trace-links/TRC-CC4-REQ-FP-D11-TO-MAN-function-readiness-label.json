@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CC4-REQ-FP-D11-TO-MAN-function-readiness-label",
+  "type": "TraceLink",
+  "source": "REQ-FP-D11",
+  "target": "MAN-function-src-builder-cards-templates-phase-readiness-label",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.9,
+  "evidence_refs": [
+    "CC-4: readiness-label.ts defines the canonical READINESS_LABEL map and readinessAriaLabel (aria-label) + readinessTooltip (hover) text used by the collapsed phase readiness marker — the single source for the D-11 tooltip + aria-label requirement."
+  ],
+  "inference_source": "CC-4 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

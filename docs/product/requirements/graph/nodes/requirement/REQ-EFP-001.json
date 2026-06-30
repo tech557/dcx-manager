@@ -1,0 +1,28 @@
+{
+  "id": "REQ-EFP-001",
+  "statement": "Embedded Google Docs/file preview — Version-level Drive/Docs links should be previewable inside the Builder using the shared popup shell, so users can reference approved docs without leaving the canvas. — Attempt to render the document via iframe/embed where supported, inside the shared sticky popup shell. If embedding fails (permissions, link format, browser restrictions), show a fallback to open externally. Rules: do not store file content, do not parse file content as product data in MVP, do not mutate Builder data from preview, Google Drive permissions remain outside the app.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "EFP-001",
+  "source_category": "Files & External References",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "SPS-001, FI-003",
+  "related_requirements": "FI-006",
+  "affected_modules": "file preview component; shared popup shell; Drive link handling",
+  "ux_impact": "Reference docs without leaving the Builder.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "EFP-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

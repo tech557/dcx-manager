@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-022",
+  "statement": "Validation after import — Imported structure must be validated before applying or before allowing Ready. — Import validator, schema validation, readiness validation, error reporting.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-022",
+  "source_category": "Validation & Readiness Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Data model, readiness validation",
+  "related_requirements": "Builder State & Mutation Layer",
+  "affected_modules": "src/rules/validation.rules.ts; readiness checker; validation summary UI; TaskEditor validation hooks",
+  "ux_impact": "User gets safe recovery without corrupting the Builder.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-022",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

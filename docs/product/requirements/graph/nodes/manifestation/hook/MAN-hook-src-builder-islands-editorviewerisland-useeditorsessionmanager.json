@@ -1,0 +1,24 @@
+{
+  "id": "MAN-hook-src-builder-islands-editorviewerisland-useeditorsessionmanager",
+  "type": "Manifestation",
+  "statement": "Editor session lifecycle hook: useEditorSessionManager — sessionToDiscard state and handleCloseSession/confirmDiscardSession/cancelDiscardSession (src/builder/islands/EditorViewerIsland/useEditorSessionManager.ts). Extracted from useEditorState.ts during CC-1 file-size split.",
+  "scope": "frontend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "hook",
+  "current_paths": [
+    "src/builder/islands/EditorViewerIsland/useEditorSessionManager.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "CC-1 sprint execution",
+    "source_path": "src/builder/islands/EditorViewerIsland/useEditorSessionManager.ts",
+    "source_anchor": "useEditorSessionManager",
+    "authoring_actor": "Claude",
+    "inference_source": "sprint-implementation",
+    "confidence": 0.9,
+    "confirmation_status": "skill-derived",
+    "last_checked_date": "2026-06-30"
+  }
+}

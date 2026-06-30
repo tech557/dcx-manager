@@ -1,0 +1,18 @@
+{
+  "id": "TRC-WM1-REQ-FP-D05-TO-MAN-react-component-src-builder-builderpage",
+  "type": "TraceLink",
+  "source": "REQ-FP-D05",
+  "target": "MAN-react-component-src-builder-builderpage",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.9,
+  "evidence_refs": [
+    "WM-1: BuilderPage header row keeps layout hitbox transparent so the HeaderUserIsland theme toggle is pointer-clickable.",
+    "2026-06-30 Playwright proof: normal click toggled desktop light and mobile dark, then reload preserved each scoped theme value."
+  ],
+  "inference_source": "WM-1 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

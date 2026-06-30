@@ -1,0 +1,20 @@
+{
+  "id": "REQ-VER-LAUNCH",
+  "type": "Requirement",
+  "statement": "The version control component launches the full Builder via route navigation (/builder/:id) through a prominent branded launch component (more than a button); no builder visual or src/builder/** import on the Version page (core.md §13, D-5 Option B).",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "interaction",
+  "provenance": {
+    "source": "HV-2 sprint execution — proposed and applied 2026-06-30",
+    "authoring_actor": "Claude",
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  },
+  "supersedes": [],
+  "trace": {
+    "decision": "D-5 — Option B: no builder visual; branded launch component; Option A (live preview) deferred"
+  }
+}

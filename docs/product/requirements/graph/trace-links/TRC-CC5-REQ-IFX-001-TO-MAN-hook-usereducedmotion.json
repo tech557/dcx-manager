@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CC5-REQ-IFX-001-TO-MAN-hook-usereducedmotion",
+  "type": "TraceLink",
+  "source": "REQ-IFX-001",
+  "target": "MAN-hook-src-hooks-usereducedmotion",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "CC-5: useReducedMotion reads window.matchMedia('(prefers-reduced-motion: reduce)') reactively. EffectLayer calls it to select reducedEffectsRegistry vs effectsRegistry — the motion system now respects user preference system-wide."
+  ],
+  "inference_source": "CC-5 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

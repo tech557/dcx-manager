@@ -1,0 +1,25 @@
+{
+  "id": "PRP-2026-06-30-trc-req-rv-010-to-type-editor-types",
+  "type": "Proposal",
+  "action": "create-trace-link",
+  "actor": "opencode",
+  "date": "2026-06-30",
+  "reason": "Task-I backend contract tracing — Missing data field rule in TaskEditor maps to EditorDraftData for field-level draft state",
+  "payload": {
+    "traceLink": {
+      "id": "TRC-TASK-I-REQ-RV-010-TO-MAN-type-src-types-editor-types",
+      "type": "TraceLink",
+      "source": "REQ-RV-010",
+      "target": "MAN-type-src-types-editor-types",
+      "relationship_type": "implements",
+      "coverage": "partial",
+      "confidence": 0.7,
+      "inference_source": "Task-I backend contract tracing 2026-06-30",
+      "confirmation_status": "agent-proposed",
+      "needs_confirmation": true,
+      "stale_state": "current",
+      "last_checked_date": "2026-06-30",
+      "match_reason": "Missing data field rule in TaskEditor maps to EditorDraftData for field-level draft state"
+    }
+  }
+}

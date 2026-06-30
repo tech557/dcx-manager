@@ -1,0 +1,28 @@
+{
+  "id": "REQ-RV-018",
+  "statement": "Task field import selection — If importing tasks, user can choose which task fields to bring. — Task import mapper, field-selection UI, task schema.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "RV-018",
+  "source_category": "Builder State & Mutation Layer",
+  "priority": "MVP / Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "Task data model",
+  "related_requirements": "Domain Model & API Contracts",
+  "affected_modules": "src/store/builderStore.ts; src/pages/builder/context/; src/pages/builder/hooks/useBuilderActions.ts; mutation commands",
+  "ux_impact": "User can avoid carrying outdated details into a",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RV-018",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

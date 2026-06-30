@@ -1,0 +1,28 @@
+{
+  "id": "REQ-DM-015",
+  "statement": "Action date span — Action start/end dates are calculated from the earliest/latest task dates inside the — date.helpers.ts, timelineHelpers.ts, action cards, mappers.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "DM-015",
+  "source_category": "Domain Model & API Contracts",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Task dates",
+  "related_requirements": "Builder UI Surfaces",
+  "affected_modules": "src/types/; src/services/api-mappers.ts; src/utils/date.helpers.ts; src/utils/node.helpers.ts; DTO/domain/builder mapping",
+  "ux_impact": "User sees action span automatically update as tasks",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "DM-015",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

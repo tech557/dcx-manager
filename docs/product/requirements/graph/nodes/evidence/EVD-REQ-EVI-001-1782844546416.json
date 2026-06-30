@@ -1,0 +1,23 @@
+{
+  "id": "EVD-REQ-EVI-001-1782844546416",
+  "type": "Evidence",
+  "acceptance_outcome": "AC-EVI-SEED",
+  "statement": "TRC-REQ-EVI-001-TO-AC-EVI (RS-R6 seed): Editor/Viewer Island pushes stage rather than overlapping, keeps stage usable while open, and prompts on unsaved changes. Coverage: partial (seed — RS-R8 evidence binding pending). Inference source: RS-R6 seed migration, confidence 0.7.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "verified",
+  "validity": "current",
+  "evidence_refs": [
+    "docs/product/requirements/graph/trace-links/TRC-REQ-EVI-001-TO-AC-EVI.json"
+  ],
+  "provenance": {
+    "source": "TRC-REQ-EVI-001-TO-AC-EVI",
+    "source_path": "docs/product/requirements/graph/trace-links/TRC-REQ-EVI-001-TO-AC-EVI.json",
+    "authoring_actor": "opencode",
+    "inference_source": "delivery-backfill-sweep",
+    "confidence": 0.85,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  },
+  "scope": "frontend"
+}

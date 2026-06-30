@@ -1,0 +1,25 @@
+{
+  "id": "EVD-cc4-readiness-a11y-1782833731000",
+  "type": "Evidence",
+  "acceptance_outcome": "AC-RDY-SEED",
+  "statement": "CC-4 browser a11y proof: collapsed phase readiness marker exposes readiness via title (hover tooltip) + aria-label (screen reader) and is keyboard-focusable. Verified live in DOM at /builder/v-1 Kanban 1440x900 — collapsed marker (phase-1, state blocked) had title 'Readiness: Blocked — click to view checklist', aria-label 'Phase readiness: Blocked. Open readiness checklist.', sr-only 'Readiness: Blocked', tabIndex 0, and document.activeElement === marker after focus(); expanded markers (7) carried identical text from the shared readiness-label.ts helpers; no console errors; collapse renders the compact vertical rail without column overflow.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "verified",
+  "validity": "current",
+  "evidence_refs": [
+    "docs/plans/active/frontend-polish-implementation-v0.3.5/output/evidence/CC-4-readiness-a11y/README.md",
+    "docs/plans/active/frontend-polish-implementation-v0.3.5/output/evidence/CC-4-readiness-a11y/builder-kanban-collapsed-phase-readiness-focus-1440.png",
+    "2026-06-30 gate: npm run test -- src/builder/cards/templates/phase/readiness-label.test.ts passed (3 tests)."
+  ],
+  "provenance": {
+    "source": "docs/plans/active/frontend-polish-implementation-v0.3.5/sprints/CC-4.md",
+    "source_path": "docs/plans/active/frontend-polish-implementation-v0.3.5/output/evidence/CC-4-readiness-a11y/README.md",
+    "authoring_actor": "Claude",
+    "inference_source": "sprint-implementation",
+    "confidence": 0.92,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  },
+  "scope": "frontend"
+}

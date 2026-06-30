@@ -1,0 +1,42 @@
+{
+  "eval_id": 3,
+  "run": "with_skill",
+  "expectations": [
+    {
+      "text": "Verdict is NOT READY",
+      "passed": true,
+      "evidence": "Frontmatter: verdict: NOT READY"
+    },
+    {
+      "text": "Audit correctly identifies that the lack of sprint files is intentional \u2014 documented in the README as 'DO NOT EXECUTE' \u2014 not treated as a bug or omission",
+      "passed": true,
+      "evidence": "Verdict reason: 'This is not a defect in the plan; it is the correct state for a plan that is waiting on upstream data.' Explicitly distinguishes broken vs. intentional stub."
+    },
+    {
+      "text": "Audit names all 3 dependency plans: ux-discovery-v2, frontend-discovery-v2, backend-discovery-v2",
+      "passed": true,
+      "evidence": "Agent confirmed: 'All three dependency plans \u2014 ux-discovery-v2, frontend-discovery-v2, and backend-discovery-v2 \u2014 have empty output/ directories'"
+    },
+    {
+      "text": "Audit states the activation condition: sprint files can be written only after all discovery outputs are available",
+      "passed": true,
+      "evidence": "Blocking issue: 'All nine output files (UX2-R1/R2/R3, FE2-R1/R2/R3, BE2-R1/R2/R3) before sprints can be drafted'"
+    },
+    {
+      "text": "Audit reads the prior art (expired/src-structure-refactor) and notes inherited decisions still valid",
+      "passed": true,
+      "evidence": "Agent: 'All six decisions from the expired plan are re-stated and declared still valid. Before/After metrics table uses TBD slots correctly'"
+    },
+    {
+      "text": "Audit file is written to docs/plans/drafted/folder-structure-v2/audit/ or the workspace output path",
+      "passed": true,
+      "evidence": "Files written to docs/plans/drafted/folder-structure-v2/audit/2026-06-26-codex.md and workspace eval path"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

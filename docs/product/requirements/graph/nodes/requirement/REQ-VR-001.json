@@ -1,0 +1,30 @@
+{
+  "id": "REQ-VR-001",
+  "statement": "Version link destination — A version link opens the Builder directly, not a Version Room first. — Routing layer; Builder route; BuilderPage; version data query;",
+  "governance": "superseded",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VR-001",
+  "source_category": "Routing; Auth & Load Control",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "LOAD-001; ACCESS-003",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/app/; src/router.tsx; src/components/auth/; src/services/access.service.ts; route/load guards",
+  "ux_impact": "ClickUp/task link opens a loading state, then the",
+  "risk": "Low",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VR-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "backend",
+  "superseded_by": "REQ-VER-ROOM",
+  "reason": "D-1 resolved (PO 2026-06-30): version card navigates to Version page room before builder; REQ-VR-001 superseded per HV-1 Step 0 requirement"
+}

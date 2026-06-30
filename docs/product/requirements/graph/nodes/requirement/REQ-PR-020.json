@@ -1,0 +1,28 @@
+{
+  "id": "REQ-PR-020",
+  "statement": "Permission enforcement location — Frontend should hide/disable invalid actions, but backend must enforce access and Ready — Route guards, API middleware/policies, service error handling.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "PR-020",
+  "source_category": "Permissions & Access Control",
+  "priority": "MVP + Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "API/backend contract",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/rules/permissions.rules.ts; src/hooks/usePermissions.ts; route guards; backend policy/service enforcement",
+  "ux_impact": "User gets clear UI, while backend protects data.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "PR-020",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "security"
+}

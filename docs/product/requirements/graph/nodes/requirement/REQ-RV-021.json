@@ -1,0 +1,28 @@
+{
+  "id": "REQ-RV-021",
+  "statement": "Template source compatibility — The same import structure should support both Ready-version duplication and future template — Import engine, DTO design, mapper functions, validation after",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "RV-021",
+  "source_category": "Builder State & Mutation Layer",
+  "priority": "Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "Modular import engine",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/store/builderStore.ts; src/pages/builder/context/; src/pages/builder/hooks/useBuilderActions.ts; mutation commands",
+  "ux_impact": "User experiences reuse consistently across versions and templates.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RV-021",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "REQ-HOME-SHELL",
+  "type": "Requirement",
+  "statement": "Home uses a single compact island/shell, not the builder multi-island system; strict islands remain builder-only. No src/builder/ island imports on Home.",
+  "governance": "archived",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "frontend",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confidence": 1,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

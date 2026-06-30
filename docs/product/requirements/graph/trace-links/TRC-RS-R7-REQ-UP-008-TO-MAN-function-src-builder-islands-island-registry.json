@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-UP-008-TO-MAN-function-src-builder-islands-island-registry",
+  "type": "TraceLink",
+  "source": "REQ-UP-008",
+  "target": "MAN-function-src-builder-islands-island-registry",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"island.registry\" matches \"View-limited islands — Some islands should only be enabled in specific views. — Island registry, view capability map, disabled/hidden rules.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

@@ -1,0 +1,18 @@
+{
+  "id": "REQ-HOME-BRAND",
+  "type": "Requirement",
+  "statement": "Home shows a brand block: favicon + product name at the top of the page.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "frontend",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confidence": 1,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

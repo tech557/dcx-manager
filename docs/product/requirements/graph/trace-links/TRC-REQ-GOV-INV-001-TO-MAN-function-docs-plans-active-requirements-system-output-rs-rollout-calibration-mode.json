@@ -1,0 +1,17 @@
+{
+  "id": "TRC-REQ-GOV-INV-001-TO-MAN-function-docs-plans-active-requirements-system-output-rs-rollout-calibration-mode",
+  "type": "TraceLink",
+  "source": "REQ-GOV-INV-001",
+  "target": "MAN-function-docs-plans-active-requirements-system-output-rs-rollout-calibration-mode",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 1,
+  "evidence_refs": [
+    "docs/plans/active/requirements-system/output/RS-rollout-calibration-mode.md"
+  ],
+  "inference_source": "PO rollout calibration-mode ruling",
+  "confirmation_status": "po-decided",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

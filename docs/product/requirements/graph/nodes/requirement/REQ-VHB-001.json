@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VHB-001",
+  "statement": "View Helper Island cross-view bridge — The View Helper Island bridges Kanban and Timeline so users can plan across both without switching context manually. — In Timeline view it shows a Kanban-style helper (zoomable, visually similar to main Kanban); tasks with set communication dates are disabled; undated tasks can be dragged into a timeline day, and dropping onto a day links/assigns the task to that campaign day. In Kanban view it shows a weekly timeline helper; scheduled tasks appear by week/day; dragging a task from the helper into an action changes the task's phase/action while the date remains unless changed. Uses the shared sticky/resizable/minimizable popup shell.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VHB-001",
+  "source_category": "Builder UI Surfaces",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "SPS-001, DZ-001",
+  "related_requirements": "STG-001",
+  "affected_modules": "src/pages/builder/islands/ViewHelperIsland/; shared popup shell; dropzone engine",
+  "ux_impact": "Plan across views without losing context.",
+  "risk": "Medium-High",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VHB-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

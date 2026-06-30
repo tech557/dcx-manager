@@ -1,0 +1,18 @@
+{
+  "id": "REQ-HOME-VERSION-LIST",
+  "type": "Requirement",
+  "statement": "Home shows a version list (cards or bento layout) with proper version data; clicking a card navigates to /version/:id per REQ-VER-ROOM.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "scope": "frontend",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confidence": 1,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

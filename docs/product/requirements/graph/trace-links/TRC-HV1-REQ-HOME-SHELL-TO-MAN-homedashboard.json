@@ -1,0 +1,16 @@
+{
+  "id": "TRC-HV1-REQ-HOME-SHELL-TO-MAN-homedashboard",
+  "type": "TraceLink",
+  "source": "REQ-HOME-SHELL",
+  "target": "MAN-react-component-src-pages-home-homedashboard",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 1.0,
+  "evidence_refs": [
+    "HV-1 implementation 2026-06-30"
+  ],
+  "inference_source": "HV-1 implementation 2026-06-30",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "needs_confirmation": false
+}

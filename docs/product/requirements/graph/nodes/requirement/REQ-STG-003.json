@@ -1,0 +1,28 @@
+{
+  "id": "REQ-STG-003",
+  "statement": "Stage + island layout contract — Different surfaces affect the Stage differently, and this must be explicit so future components do not break the canvas. — Explicit layout contract: Editor/Viewer Island reduces/pushes the stage (no overlay); sticky popup shell floats above the stage (no resize); Focus Island filters/isolates visible data (no mutation); View Helper popup floats above the stage and bridges opposite-view logic. Future components must declare which contract they follow.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "STG-003",
+  "source_category": "Stage System",
+  "priority": "MVP + Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "STG-001, EVI-001, SPS-001, FCS-001, VHB-001",
+  "related_requirements": "UP-005, UP-020",
+  "affected_modules": "src/pages/builder/stage/StageManager.tsx; island layout contract",
+  "ux_impact": "Predictable layout as features grow.",
+  "risk": "Medium-High",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "STG-003",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

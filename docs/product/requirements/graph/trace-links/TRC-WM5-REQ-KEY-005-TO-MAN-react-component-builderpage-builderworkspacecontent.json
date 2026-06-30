@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM5-REQ-KEY-005-TO-MAN-react-component-builderpage-builderworkspacecontent",
+  "type": "TraceLink",
+  "source": "REQ-KEY-005",
+  "target": "MAN-react-component-builderpage-builderworkspacecontent",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "WM-5: Escape in BuilderWorkspaceContent keyboard handler — calls setSelectedNodeIds([]) when selection is non-empty. Guard: skips if isTypingTarget."
+  ],
+  "inference_source": "WM-5 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

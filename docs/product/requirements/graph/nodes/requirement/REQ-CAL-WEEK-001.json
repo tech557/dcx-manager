@@ -1,0 +1,26 @@
+{
+  "id": "REQ-CAL-WEEK-001",
+  "type": "Requirement",
+  "statement": "Weekly calendar view layout — In the Builder's weekly Timeline view, the stage fits exactly 5 expanded weekday cards (Mon–Fri) + 2 collapsed weekend day cards (Sat, Sun) within the visible stage, with NO horizontal scroll across the desktop viewport range (per REQ-RESP-001, 14in→85in). Weekdays render expanded; weekend days render collapsed/compact. Day cards follow the unified ~80%-height/10%-margin model (CC-2). Replaces phase columns in this view per REQ-STG-001.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "REQ->BHV->RSP",
+  "source_id": "PO-2026-06-30-CAL-WEEK",
+  "provenance": {
+    "source": "PO direction (session 2026-06-30-claude)",
+    "source_path": "docs/progress/sessions/2026-06-30-claude/023-audit-cc2-lock-calendar-reqs.md",
+    "source_anchor": "week-view-5-expanded-2-collapsed-weekend",
+    "authoring_actor": "Claude (claude-opus-4-8) at PO direction",
+    "confidence": 0.95,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-30"
+  },
+  "related_ids": [
+    "REQ-DM-022",
+    "REQ-STG-001",
+    "REQ-RESP-001",
+    "REQ-SBC-005"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "MAN-type-src-types-card-types",
+  "type": "Manifestation",
+  "statement": "Code manifestation discovered by RS-R7 inventory: card.types (src/types/card.types.ts).",
+  "scope": "data",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "kind": "type",
+  "current_paths": [
+    "src/types/card.types.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "RS-R7 code manifestation inventory",
+    "source_path": "src/types/card.types.ts",
+    "source_anchor": "card.types",
+    "authoring_actor": "Codex",
+    "inference_source": "reconciliation-engine",
+    "confidence": 0.8,
+    "confirmation_status": "code-discovered",
+    "last_checked_date": "2026-06-29"
+  }
+}

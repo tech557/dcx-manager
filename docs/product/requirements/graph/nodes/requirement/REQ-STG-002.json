@@ -1,0 +1,28 @@
+{
+  "id": "REQ-STG-002",
+  "statement": "Context-preserving view switching — Switching views should not feel like a hard reset; the workspace should keep useful context so users do not lose their place. — View switching preserves useful context where possible: selected task, focus state, expanded containers, and stage position. Transitions provide feedback rather than reloading the workspace.",
+  "governance": "archived",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "STG-002",
+  "source_category": "Stage System",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "STG-001",
+  "related_requirements": "UP-002, FCS-001",
+  "affected_modules": "src/pages/builder/stage/; view renderers; preference layer",
+  "ux_impact": "Smooth, continuous view changes.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "STG-002",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "PRP-2026-06-30-create-node-REQ-HOME-BRAND",
+  "type": "Proposal",
+  "action": "create-node",
+  "actor": "Claude (claude-sonnet-4-6)",
+  "date": "2026-06-30",
+  "reason": "HV-1 Step 0: home-spec §H candidate; PO sign-off D-6/D-7 2026-06-30",
+  "payload": {
+    "node": {
+      "id": "REQ-HOME-BRAND",
+      "type": "Requirement",
+      "statement": "Home shows a brand block: favicon + product name at the top of the page.",
+      "governance": "approved",
+      "maturity": "logic-defined",
+      "delivery": "not-assessed",
+      "scope": "frontend",
+      "priority": "MVP",
+      "status": "Confirmed",
+      "chain_layer": "REQ->RSP",
+      "provenance": {
+        "authoring_actor": "Claude (claude-sonnet-4-6)",
+        "confidence": 1,
+        "confirmation_status": "confirmed",
+        "last_checked_date": "2026-06-30"
+      }
+    }
+  }
+}

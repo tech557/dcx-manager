@@ -1,0 +1,14 @@
+{
+  "id": "TRC-REQ-GOV-TRACE-001-FRONTEND-TO-AC-GOV-TRACE-FRONTEND",
+  "type": "TraceLink",
+  "source": "REQ-GOV-TRACE-001-FRONTEND",
+  "target": "AC-GOV-TRACE-FRONTEND",
+  "relationship_type": "validates",
+  "coverage": "complete",
+  "confidence": 0.85,
+  "inference_source": "RS-R9 seed (manual curation)",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

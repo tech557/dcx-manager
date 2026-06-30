@@ -1,0 +1,28 @@
+{
+  "id": "REQ-UP-003",
+  "statement": "New version view state — A new version should open with default Kanban unless that specific user/version — Builder route/init logic, local preference lookup.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "UP-003",
+  "source_category": "Preferences; Session & Telemetry",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Default Builder view",
+  "related_requirements": "Builder UI Surfaces",
+  "affected_modules": "src/hooks/usePreferences.ts; local storage preference helpers; session restore; analytics/event adapter",
+  "ux_impact": "User gets a clean predictable start for new",
+  "risk": "Low",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "UP-003",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

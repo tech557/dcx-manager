@@ -1,0 +1,28 @@
+{
+  "id": "REQ-UP-007",
+  "statement": "View-specific islands — Islands with different meaning/actions per view should store state separately per view. — Island config, view-specific preference keys.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "UP-007",
+  "source_category": "Builder UI Surfaces",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Island state model",
+  "related_requirements": "Preferences, Session & Telemetry",
+  "affected_modules": "src/pages/builder/stage/; src/pages/builder/cards/; src/pages/builder/islands/; src/pages/builder/kanban/; src/pages/builder/timeline/",
+  "ux_impact": "User does not see irrelevant panels after switching",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "UP-007",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

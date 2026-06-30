@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM6-REQ-CAL-WEEK-001-TO-MAN-hook-useweeklyview",
+  "type": "TraceLink",
+  "source": "REQ-CAL-WEEK-001",
+  "target": "MAN-hook-src-builder-stage-views-useweeklyview",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.9,
+  "inference_source": "WM-6 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "evidence_refs": [
+    "WM-6 (confirmed pre-existing): useWeeklyView initializes each visited week by expanding enabledDayIds = days where isEnabled=true (workdays Sun–Thu); weekend days (Fri dayIndex=5, Sat dayIndex=6) have isEnabled=false per timeline.helpers and remain collapsed. Produces 5 expanded workday cards + 2 collapsed weekend cards with no horizontal scroll."
+  ]
+}

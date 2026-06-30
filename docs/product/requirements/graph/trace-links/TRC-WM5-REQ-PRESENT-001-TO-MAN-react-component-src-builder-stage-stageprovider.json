@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM5-REQ-PRESENT-001-TO-MAN-react-component-src-builder-stage-stageprovider",
+  "type": "TraceLink",
+  "source": "REQ-PRESENT-001",
+  "target": "MAN-react-component-src-builder-stage-stageprovider",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "WM-5: enterPresentationMode rewritten — now expands descendants (children + grandchildren) not ancestors. Phase presentation: expands all its actions + their tasks. Action presentation: expands its tasks. Task presentation: self only. Sets expandedNodeIds = [selectedId, ...descendants] then scrolls card into view. Corrects prior bug where only ancestors were expanded, collapsing the subtree."
+  ],
+  "inference_source": "WM-5 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

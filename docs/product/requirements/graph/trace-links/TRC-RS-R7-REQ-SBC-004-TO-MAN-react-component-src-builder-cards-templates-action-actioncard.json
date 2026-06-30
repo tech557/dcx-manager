@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-SBC-004-TO-MAN-react-component-src-builder-cards-templates-action-actioncard",
+  "type": "TraceLink",
+  "source": "REQ-SBC-004",
+  "target": "MAN-react-component-src-builder-cards-templates-action-actioncard",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"ActionCard\" matches \"Action Card as simpler structural component — The Action Card should rely on the shared card system without becoming overdesigned. It is a structural grouping, not an intelligence surface. — Action Card supports selection, expand/collapse, drag/drop, reorder inside phase, move between phases, delete, task count, empty-action warning, readiness state, and locked state. No heatmap/visual-intelligence layer now.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VR-006",
+  "statement": "Prefilled workspace users from project payload — The project payload should come with prefilled users. Users can be added, — Project payload contract; user/collaborator model; sharing UI; access",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VR-006",
+  "source_category": "Integration Contracts",
+  "priority": "MVP + Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "ACCESS-003",
+  "related_requirements": "Permissions & Access Control",
+  "affected_modules": "src/services/clickup.service.ts; src/services/auth.service.ts; Supabase service/API contracts; docs/integrations/",
+  "ux_impact": "The workspace starts with the expected project users",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VR-006",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "backend"
+}

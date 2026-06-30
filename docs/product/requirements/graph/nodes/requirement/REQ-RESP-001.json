@@ -1,0 +1,26 @@
+{
+  "id": "REQ-RESP-001",
+  "type": "Requirement",
+  "statement": "Responsive layout across screen sizes (NOT fixed at one width). (a) The Builder must scale fluidly across desktop-class screens from a 14-inch MacBook (~1280–1512px) up to an 85-inch TV (4K, ~3840px): the frozen three-row structure and island roles (core.md §10) are preserved, but dimensions, spacing, and typography scale via responsive units (clamp/min-max/rem/%), honoring the §21 density discipline (≤260px repeating card columns) at the small end. The Builder is NOT required on mobile/tablet (desktop-and-bigger only). (b) The Home and Version pages must additionally be fully responsive on mobile and tablet. The CT-2 structural-dimension tokens (--dim-*) are the substrate to make fluid. This corrects the discovery's fixed-1440 interpretation; the original intent — and REQ-FP-D12's own note 'aligns with D-01 responsive direction' — was responsiveness. Does NOT change layout structure (§10) or the density discipline (§21); it makes sizing fluid within them.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "REQ->BHV->RSP",
+  "source_id": "PO-2026-06-30-RESPONSIVE",
+  "provenance": {
+    "source": "PO direction (session 2026-06-30-claude)",
+    "source_path": "docs/progress/sessions/2026-06-30-claude/020-responsiveness-requirement-and-sprint.md",
+    "source_anchor": "responsive-14in-to-85in-home-version-mobile-tablet",
+    "authoring_actor": "Claude (claude-opus-4-8) at PO direction",
+    "confidence": 0.95,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-30"
+  },
+  "related_ids": [
+    "REQ-FP-D01",
+    "REQ-FP-D12",
+    "REQ-STG-001",
+    "REQ-UP-008"
+  ]
+}

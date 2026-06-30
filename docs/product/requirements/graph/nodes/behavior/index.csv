@@ -1,0 +1,9 @@
+id,type,governance,maturity,delivery,scope,kind,statement
+BHV-BC-SEED,BehaviorRule,proposed,logic-defined,not-assessed,frontend,,Builder State & Mutation Layer behavior rules derived from RS-R5 BC- family requirements.
+BHV-DM-SEED,BehaviorRule,proposed,logic-defined,not-assessed,data,,Builder State & Mutation Layer behavior rules derived from RS-R5 DM- family requirements.
+BHV-FCS-SEED,BehaviorRule,proposed,logic-defined,not-assessed,frontend,,Builder UI Surfaces behavior rules derived from RS-R5 FCS- family requirements.
+BHV-KBI-SEED,BehaviorRule,proposed,logic-defined,not-assessed,frontend,,Builder UI Surfaces behavior rules derived from RS-R5 KBI- family requirements.
+BHV-RDY-SEED,BehaviorRule,proposed,logic-defined,not-assessed,frontend,,Validation & Readiness Rules behavior rules derived from RS-R5 RDY- family requirements.
+BHV-RV-SEED,BehaviorRule,proposed,logic-defined,not-assessed,product,,Audit; Logs & Error Reporting behavior rules derived from RS-R5 RV- family requirements.
+BHV-SBC-SEED,BehaviorRule,proposed,logic-defined,not-assessed,frontend,,Shared Builder Card System behavior rules derived from RS-R5 SBC- family requirements.
+BHV-VL-SEED,BehaviorRule,proposed,logic-defined,not-assessed,product,,Audit; Logs & Error Reporting behavior rules derived from RS-R5 VL- family requirements.

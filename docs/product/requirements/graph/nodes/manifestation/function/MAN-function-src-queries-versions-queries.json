@@ -1,0 +1,24 @@
+{
+  "id": "MAN-function-src-queries-versions-queries",
+  "type": "Manifestation",
+  "statement": "Code manifestation discovered by RS-R7 inventory: versions.queries (src/queries/versions.queries.ts).",
+  "scope": "frontend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "kind": "function",
+  "current_paths": [
+    "src/queries/versions.queries.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "RS-R7 code manifestation inventory",
+    "source_path": "src/queries/versions.queries.ts",
+    "source_anchor": "versions.queries",
+    "authoring_actor": "Codex",
+    "inference_source": "reconciliation-engine",
+    "confidence": 0.8,
+    "confirmation_status": "code-discovered",
+    "last_checked_date": "2026-06-29"
+  }
+}

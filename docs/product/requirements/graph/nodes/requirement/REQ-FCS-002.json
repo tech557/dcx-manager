@@ -1,0 +1,28 @@
+{
+  "id": "REQ-FCS-002",
+  "statement": "Focus isolation (visual hide only) — Users should be able to isolate selected work by hiding everything else from view, without ever deleting data. — Focus Isolation Mode hides all non-selected tasks from the current view. An action with no visible selected tasks is hidden; a phase with no visible selected tasks is hidden. This is visual filtering only — no data is deleted. Works in Kanban and Timeline.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "FCS-002",
+  "source_category": "Builder UI Surfaces",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "FCS-001",
+  "related_requirements": "",
+  "affected_modules": "src/pages/builder/islands/FocusIsland/; stage visibility layer",
+  "ux_impact": "Distraction-free focus on relevant work.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "FCS-002",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

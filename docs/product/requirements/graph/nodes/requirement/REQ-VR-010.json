@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VR-010",
+  "statement": "User-triggered and critical automatic alerts — Support both user-triggered reporting and automatic alerts for critical failures, while keeping — Alert routing service; error boundary; save/load error handlers;",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VR-010",
+  "source_category": "Audit; Logs & Error Reporting",
+  "priority": "MVP + Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "ERROR-001; ERROR-002; ERROR-003",
+  "related_requirements": "Routing, Auth & Load Control",
+  "affected_modules": "src/services/logs.service.ts; src/services/error-reporter.service.ts; error boundary; report modal; activity/history UI",
+  "ux_impact": "Critical failures can reach admins even if the",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VR-010",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "backend"
+}

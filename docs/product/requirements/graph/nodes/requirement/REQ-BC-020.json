@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-020",
+  "statement": "Missing ID behavior — If existing IDs are missing from the imported file, alert the user — Import diff engine, delete operation mapping, confirmation modal.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-020",
+  "source_category": "Builder State & Mutation Layer",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Stable IDs, import mode",
+  "related_requirements": "Persistence, Autosave & Recovery",
+  "affected_modules": "src/store/builderStore.ts; src/pages/builder/context/; src/pages/builder/hooks/useBuilderActions.ts; mutation commands",
+  "ux_impact": "User is protected from accidental deletion.",
+  "risk": "Medium-high",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-020",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

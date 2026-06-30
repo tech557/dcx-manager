@@ -1,0 +1,28 @@
+{
+  "id": "REQ-SC-014",
+  "statement": "Future collaboration seed — Do not build real-time collaboration in MVP, but seed future readiness through — Affects data fields like updatedBy, updatedAt, logs, future",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "SC-014",
+  "source_category": "Persistence; Autosave & Recovery",
+  "priority": "Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Access model, activity logs, mutation commands.",
+  "related_requirements": "Audit, Logs & Error Reporting",
+  "affected_modules": "src/services/builder.service.ts; src/services/versions.service.ts; autosave hooks; src/utils/export.helpers.ts; src/utils/import.helpers.ts; local cache",
+  "ux_impact": "Team can work with one active owner now",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "SC-014",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-AIC-001",
+  "statement": "AI Chat Builder surface (seed) — AI Chat is seeded as a future Builder capability, not a full AI runtime in MVP. It gives users a branded, in-canvas assistant entry point that will later help generate and structure DCX content. — AI entry point lives in the Kanban Builder Island. Clicking opens a branded sticky popup (resizable, minimizable, sticky on canvas) using the shared popup shell. Future capabilities: read proposal, extract phases/actions/tasks, break tasks into subtasks, assign channels, complete structure from objectives/templates/strategy metadata. AI output must never directly mutate Builder data; it must go through review/preview/apply + normal validation.",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "AIC-001",
+  "source_category": "AI & Intelligence (Seed)",
+  "priority": "Seed Now / Future",
+  "status": "Proposed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "KBI-001, SPS-001, AIM-001",
+  "related_requirements": "BC-016",
+  "affected_modules": "src/pages/builder/islands/ (AI Chat); src/services/ (future ai.service); review/preview/apply pipeline",
+  "ux_impact": "Future in-canvas AI assistance.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "AIC-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.75,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

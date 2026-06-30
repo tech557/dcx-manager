@@ -1,0 +1,18 @@
+{
+  "id": "INT-FP-DECISION-SESSION-001",
+  "type": "Intent",
+  "statement": "2026-06-29 frontend-polish PO decision session: resolved D-01..D-12, 4 core-model alignments, and recovered requirement families from CSV + v0.1.4 codebase.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "INT",
+  "provenance": {
+    "source": "docs/plans/active/requirements-system/sprints/RS-R9-dogfood-self-trace.md",
+    "source_path": "docs/plans/on-hold/frontend-polish-v0.3.5/output/decision-register.md",
+    "authoring_actor": "RS-R9 seed",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  }
+}

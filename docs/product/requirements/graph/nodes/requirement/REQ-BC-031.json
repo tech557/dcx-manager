@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-031",
+  "statement": "Creation behavior events — Creation actions should be trackable later as meaningful behavior events, not as — Event adapter, analytics event names, no required MVP",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-031",
+  "source_category": "Preferences; Session & Telemetry",
+  "priority": "Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "UI behavior tracking",
+  "related_requirements": "Audit, Logs & Error Reporting",
+  "affected_modules": "src/hooks/usePreferences.ts; local storage preference helpers; session restore; analytics/event adapter",
+  "ux_impact": "Future team can learn whether users build top-down,",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-031",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

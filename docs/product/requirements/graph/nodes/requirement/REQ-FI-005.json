@@ -1,0 +1,28 @@
+{
+  "id": "REQ-FI-005",
+  "statement": "Active file viewing state — Opened file, active preview, selected file, tab state, zoom, and similar viewer — File Manager Island, local UI preferences, no backend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "FI-005",
+  "source_category": "Files & External References",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "UI Preferences category",
+  "related_requirements": "Preferences, Session & Telemetry",
+  "affected_modules": "src/pages/builder/islands/metadata/ or file manager; file metadata DTOs; file service; Drive link handling",
+  "ux_impact": "User can browse files privately while building.",
+  "risk": "Low",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "FI-005",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

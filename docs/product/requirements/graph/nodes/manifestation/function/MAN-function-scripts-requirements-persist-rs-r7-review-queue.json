@@ -1,0 +1,23 @@
+{
+  "id": "MAN-function-scripts-requirements-persist-rs-r7-review-queue",
+  "type": "Manifestation",
+  "statement": "RS-R7 persist script that writes code-discovered MAN nodes and durable candidate review links.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "data",
+  "kind": "function",
+  "current_paths": [
+    "scripts/requirements/persist-rs-r7-review-queue.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "RS-R7 persist pass",
+    "source_path": "scripts/requirements/persist-rs-r7-review-queue.ts",
+    "source_anchor": "persist-rs-r7-review-queue",
+    "authoring_actor": "Codex",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  }
+}

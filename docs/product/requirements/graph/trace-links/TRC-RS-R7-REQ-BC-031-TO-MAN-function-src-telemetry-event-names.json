@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-BC-031-TO-MAN-function-src-telemetry-event-names",
+  "type": "TraceLink",
+  "source": "REQ-BC-031",
+  "target": "MAN-function-src-telemetry-event-names",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"event-names\" matches \"Creation behavior events — Creation actions should be trackable later as meaningful behavior events, not as — Event adapter, analytics event names, no required MVP\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

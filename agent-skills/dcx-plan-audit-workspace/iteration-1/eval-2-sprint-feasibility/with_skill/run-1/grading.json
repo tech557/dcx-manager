@@ -1,0 +1,42 @@
+{
+  "eval_id": 2,
+  "run": "with_skill",
+  "expectations": [
+    {
+      "text": "Audit checks whether 'npm run validate:architecture' exists by reading package.json \u2014 not by assuming",
+      "passed": true,
+      "evidence": "Agent confirmed: 'npm run validate:architecture maps directly to depcruise src --config .dependency-cruiser.cjs in package.json'"
+    },
+    {
+      "text": "Audit checks whether scripts/agent/code-query.sh exists using a file system check (ls or find)",
+      "passed": true,
+      "evidence": "Agent confirmed code-query.sh exists and analysed its argument parsing (checked $1 flag handling)"
+    },
+    {
+      "text": "Audit assesses whether code-query.sh supports the subcommands called in the sprint (component, consumers, or similar)",
+      "passed": true,
+      "evidence": "Found 2 issues: (1) wrong arg order \u2014 --json must be $1; (2) code-query.sh component requires a NAME argument, has no all-components listing mode \u2014 acceptance criterion is unexecutable"
+    },
+    {
+      "text": "Verdict is specific to FE2-R1 (not a verdict on the entire plan)",
+      "passed": true,
+      "evidence": "Audit frontmatter: audit-of: frontend-discovery-v2, verdict: NEEDS REVISION \u2014 focused on FE2-R1's step 4 while explicitly marking dep-cruiser (step 2) and file-size checks (step 3) as fine"
+    },
+    {
+      "text": "Audit file is written to disk (docs/plans/drafted/frontend-discovery-v2/audit/ or the workspace output path)",
+      "passed": true,
+      "evidence": "Files written to docs/plans/drafted/frontend-discovery-v2/audit/2026-06-26-codex.md and workspace eval path"
+    },
+    {
+      "text": "Audit does not flag architectural design decisions as issues \u2014 stays within sprint feasibility scope",
+      "passed": true,
+      "evidence": "No architectural critique found. Issues are purely about command executability: arg order, missing listing mode, Python no-op"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

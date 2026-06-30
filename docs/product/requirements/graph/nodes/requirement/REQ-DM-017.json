@@ -1,0 +1,28 @@
+{
+  "id": "REQ-DM-017",
+  "statement": "Stored vs calculated fields — Task dates are source of truth. Action/phase spans may be cached for — Backend DTOs, API mappers, date helpers, timeline views.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "DM-017",
+  "source_category": "Domain Model & API Contracts",
+  "priority": "MVP + Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Date model",
+  "related_requirements": "Persistence, Autosave & Recovery",
+  "affected_modules": "src/types/; src/services/api-mappers.ts; src/utils/date.helpers.ts; src/utils/node.helpers.ts; DTO/domain/builder mapping",
+  "ux_impact": "UI remains fast without confusing the user.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "DM-017",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-CR-010",
+  "statement": "Avoid noisy writes — Do not write logs for every UI interaction or autosave. — Event filtering, lifecycle-only DB writes.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "CR-010",
+  "source_category": "Audit; Logs & Error Reporting",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Supabase cost control",
+  "related_requirements": "Persistence, Autosave & Recovery",
+  "affected_modules": "src/services/logs.service.ts; src/services/error-reporter.service.ts; error boundary; report modal; activity/history UI",
+  "ux_impact": "Cleaner app and lower backend usage.",
+  "risk": "Low",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "CR-010",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "operations"
+}

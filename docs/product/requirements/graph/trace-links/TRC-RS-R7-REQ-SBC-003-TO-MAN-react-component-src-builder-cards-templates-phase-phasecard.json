@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-SBC-003-TO-MAN-react-component-src-builder-cards-templates-phase-phasecard",
+  "type": "TraceLink",
+  "source": "REQ-SBC-003",
+  "target": "MAN-react-component-src-builder-cards-templates-phase-phasecard",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"PhaseCard\" matches \"Phase Card as strategic visual container — The Phase Card is the highest-value visual container. Beyond holding actions/tasks, it should communicate where the work and focus of a phase concentrates, especially when collapsed, seeding future workload/communication-flow views without a full analytics engine. — Phase Card supports expanded/collapsed states, phase-level task/action density, readiness/blocker indicators, visual emphasis where most work exists, subtle background/light-intensity signals, and a seam for future heatmap and communication-flow indicators.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

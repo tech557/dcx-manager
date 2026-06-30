@@ -1,0 +1,47 @@
+{
+  "eval_id": 1,
+  "run": "without_skill",
+  "expectations": [
+    {
+      "text": "Audit file is written to the plan folder (docs/plans/drafted/ux-discovery-v2/audit/) \u2014 not just printed to stdout",
+      "passed": false,
+      "evidence": "Agent saved to workspace output path only. No indication it wrote to docs/plans/drafted/ux-discovery-v2/audit/"
+    },
+    {
+      "text": "Output contains YAML frontmatter with a 'verdict' field set to READY, NEEDS REVISION, or NOT READY",
+      "passed": false,
+      "evidence": "Output starts with '# Plan Audit: ux-discovery-v2 / Date: 2026-06-26 | Auditor: Claude Code' \u2014 plain Markdown header, no YAML frontmatter"
+    },
+    {
+      "text": "Prior art section references the expired ui-ux-discovery plan and mentions at least one specific prior finding (e.g., 269 raw hex values, 48 dead CSS classes, or token inventory)",
+      "passed": false,
+      "evidence": "Prior art files confirmed to exist, but no specific prior findings (269 hex, 48 dead classes, etc.) cited in the output"
+    },
+    {
+      "text": "Gate coverage table or section is present and correctly marks all 3 discovery sprints as N/A for code-modifying gates",
+      "passed": false,
+      "evidence": "No gate coverage section found. Output uses a 'What was checked' table focused on structural completeness, not code-gate compliance"
+    },
+    {
+      "text": "Session start compliance is assessed \u2014 output mentions whether each sprint has a build-current-state.sh step",
+      "passed": false,
+      "evidence": "No mention of session start steps, build-current-state.sh, or verify-tooling-state.sh. The two issues with UX2-R2 and UX2-R3 missing these were not caught"
+    },
+    {
+      "text": "Any scripts referenced in the sprint files are verified against the actual scripts/agent/ directory contents (not assumed to exist)",
+      "passed": true,
+      "evidence": "All scripts (build-current-state.sh, verify-tooling-state.sh, code-query.sh with hardcoded-tokens and duplicate-controls modes) confirmed present"
+    },
+    {
+      "text": "Blocking issues section is present \u2014 either lists specific issues with evidence and fix, or explicitly states zero blocking issues with a reason",
+      "passed": true,
+      "evidence": "Found 1 real blocking issue: wrong path in UX2-R1 (missing 'plan/' segment in src-structure-refactor reference). Specific file and fix cited."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 5,
+    "total": 7,
+    "pass_rate": 0.2857
+  }
+}

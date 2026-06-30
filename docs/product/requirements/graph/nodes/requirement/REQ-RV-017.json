@@ -1,0 +1,28 @@
+{
+  "id": "REQ-RV-017",
+  "statement": "Selective import on duplication — When duplicating/importing, user can customize what to bring: phases, actions, tasks, and — Import engine, duplication UI, mapper layer, validation after",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "RV-017",
+  "source_category": "Builder State & Mutation Layer",
+  "priority": "MVP / Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "Template/reuse logic",
+  "related_requirements": "Persistence, Autosave & Recovery",
+  "affected_modules": "src/store/builderStore.ts; src/pages/builder/context/; src/pages/builder/hooks/useBuilderActions.ts; mutation commands",
+  "ux_impact": "User can reuse only useful parts instead of",
+  "risk": "Medium-high",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RV-017",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

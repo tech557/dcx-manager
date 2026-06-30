@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM1-REQ-UP-009-TO-MAN-hook-src-hooks-usetheme",
+  "type": "TraceLink",
+  "source": "REQ-UP-009",
+  "target": "MAN-hook-src-hooks-usetheme",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "WM-1 implementation: src/hooks/useTheme.ts persists theme mode through src/utils/preference.helpers.ts, which writes only browser localStorage."
+  ],
+  "inference_source": "WM-1 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

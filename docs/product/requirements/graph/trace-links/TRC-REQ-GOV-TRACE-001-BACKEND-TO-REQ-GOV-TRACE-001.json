@@ -1,0 +1,14 @@
+{
+  "id": "TRC-REQ-GOV-TRACE-001-BACKEND-TO-REQ-GOV-TRACE-001",
+  "type": "TraceLink",
+  "source": "REQ-GOV-TRACE-001-BACKEND",
+  "target": "REQ-GOV-TRACE-001",
+  "relationship_type": "derives-from",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "inference_source": "RS-R9 seed (manual curation)",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

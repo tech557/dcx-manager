@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM4-REQ-KEY-007-TO-MAN-react-component-builderpage-builderworkspacecontent",
+  "type": "TraceLink",
+  "source": "REQ-KEY-007",
+  "target": "MAN-react-component-builderpage-builderworkspacecontent",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "WM-4: isTypingTarget() guard in BuilderWorkspaceContent keyboard handler — returns true for INPUT/TEXTAREA/contenteditable targets. Ctrl+C and Ctrl+V shortcuts skip early when isTypingTarget is true. Ctrl+S retains its existing early-return behaviour (preventDefault runs before the guard for save, which is intentional)."
+  ],
+  "inference_source": "WM-4 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

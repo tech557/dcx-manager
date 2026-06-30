@@ -1,0 +1,28 @@
+{
+  "id": "REQ-IFX-001",
+  "statement": "Reusable interaction feedback & motion system — The app needs one reusable interaction-feedback system so visual quality is consistent and motion never owns business state. — Modular, reusable effects for: valid drop-target highlight, invalid-drop feedback, parent-container glow, selected-card highlight, newly-created-item highlight, focus highlight, collapsed-container expansion animation, drag feedback, save/sync feedback, locked/disabled feedback. Effects must be modular, not hardcoded per card/island. Motion must never own business state or block save/load.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "source_id": "IFX-001",
+  "source_category": "Interaction & Motion System",
+  "priority": "MVP + Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "SBC-001",
+  "related_requirements": "KBI-001, DZ-001, SR-001",
+  "affected_modules": "shared motion/feedback utilities; src/styles/tokens.ts; card/island consumers",
+  "ux_impact": "Polished, consistent interaction feedback.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "IFX-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

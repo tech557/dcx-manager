@@ -1,0 +1,75 @@
+## USER - backend discovery final resolution check
+Agent: Codex
+Model: GPT-5
+Provider: OpenAI
+Date: 2026-06-27
+Status: Completed
+
+Intent: Check Claude's final resolution of the backend-discovery-v2 audit blocker.
+Trigger: user request: "ok can u check the final resoultion from claude"
+Requirements covered: N/A - planning/audit review, no product requirement changed.
+
+## Session Environment
+
+`bash scripts/agent/build-current-state.sh` output recorded:
+- Repository version: `v0.3.2`
+- Package version: `0.2.0`
+- Metadata version: `v0.3.3`
+- Active plans: none
+- MCP operational list: `eslint`
+- MCP awaiting list: `storybook`, `shadcn`, `semgrep`, `sonarqube`
+- Code index: stale, age 1475 minutes
+- Git branch: `unknown`
+- Documentation contradiction: `docs/VERSION.md=v0.3.2 vs metadata.json=v0.3.3`
+
+`bash scripts/agent/verify-tooling-state.sh` output recorded:
+- npm scripts available: `typecheck`, `lint`, `test`, `build`, `validate:architecture`, `test:e2e`, `verify:frontend`, `generate:code-index`, `inspect:react`
+- `verify.sh`: PASS (`verify passed`)
+- dependency-cruiser: available
+- semgrep CLI: BLOCKED / not installed (`brew install semgrep`)
+- Playwright test runner: available
+- e2e tests: no tests written
+- Storybook: BLOCKED / not installed
+- code-index: stale, age 1475 minutes
+- MCP active: `eslint`
+- MCP awaiting setup: `storybook`, `shadcn`, `semgrep`, `sonarqube`
+
+Skills invoked:
+- `.agents/skills/dcx-plan-audit.md` - resolved and followed.
+
+Files created:
+- `docs/plans/drafted/backend-discovery-v2/audit/2026-06-27-codex.md` - fresh final-resolution audit
+- `docs/progress/sessions/2026-06-27-codex/01-backend-discovery-final-resolution-check.md` - session log
+
+Files edited:
+- None
+
+Files deleted: None
+
+Churn - work reversed:
+  None.
+
+Preserve-semantic check:
+  No source code changed. Backend service, mapper, query, action, and type boundaries were not modified.
+
+Open decisions used:
+  None
+
+Acceptance criteria:
+  PASS - Read backend-discovery-v2 README
+  PASS - Read all backend sprint files
+  PASS - Read relevant expired backend prior art
+  PASS - Checked Claude's revised BE2-R3 mapper-boundary script against current service/query/mapper files
+  PASS - Wrote fresh audit verdict
+
+Gates:
+  typecheck: N/A (no code changed)
+  dev: N/A (no code changed)
+  verify.sh: PASS as part of `verify-tooling-state.sh`
+  browser manual check: N/A (docs-only plan review)
+
+Consumer updates required:
+  None
+
+Open issues / follow-ups:
+  Backend discovery v2 remains NEEDS REVISION. The final resolution fixed the old mapper false-blocker, but introduced a broad shared-mapper shortcut that can falsely mark every service as mapper-covered.

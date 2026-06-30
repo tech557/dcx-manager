@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-BC-003-TO-MAN-react-component-kanbanview-kanbanview",
+  "type": "TraceLink",
+  "source": "REQ-BC-003",
+  "target": "MAN-react-component-src-builder-stage-views-kanbanview",
+  "relationship_type": "supersedes",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"KanbanView\" matches \"Kanban creation scope — User can create phases, actions, and tasks in Kanban. — BuilderKanbanView, HorizontalBoard, KanbanColumn, phase/action/task cards, builderMutations.\" (score: 0.85)",
+    "Historical RS-R7 candidate superseded by canonical link TRC-RS-R7-REQ-BC-003-TO-MAN-react-component-src-builder-stage-views-kanbanview."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "original_source": "REQ-BC-003",
+  "original_target": "MAN-react-component-kanbanview-kanbanview",
+  "replacement_trace_link": "TRC-RS-R7-REQ-BC-003-TO-MAN-react-component-src-builder-stage-views-kanbanview",
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

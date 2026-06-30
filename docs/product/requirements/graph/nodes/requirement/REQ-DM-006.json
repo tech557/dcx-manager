@@ -1,0 +1,28 @@
+{
+  "id": "REQ-DM-006",
+  "statement": "Version communication date — Version has a communication date, but it can also be To Be — Version creation form, version type, builder loader, date",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "DM-006",
+  "source_category": "Domain Model & API Contracts",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Version lifecycle/status",
+  "related_requirements": "Lifecycle & Version Status Rules",
+  "affected_modules": "src/types/; src/services/api-mappers.ts; src/utils/date.helpers.ts; src/utils/node.helpers.ts; DTO/domain/builder mapping",
+  "ux_impact": "User can start planning earlier without fake dates.",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "DM-006",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

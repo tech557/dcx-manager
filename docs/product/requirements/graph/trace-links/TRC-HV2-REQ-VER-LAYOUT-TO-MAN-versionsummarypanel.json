@@ -1,0 +1,14 @@
+{
+  "id": "TRC-HV2-REQ-VER-LAYOUT-TO-MAN-versionsummarypanel",
+  "type": "TraceLink",
+  "source": "REQ-VER-LAYOUT",
+  "target": "MAN-react-component-src-pages-version-versionsummarypanel",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.9,
+  "evidence_refs": ["HV-2 implementation 2026-06-30"],
+  "inference_source": "HV-2 implementation 2026-06-30",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "needs_confirmation": false
+}

@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-RV-007-TO-MAN-react-component-actioncard-actioncard",
+  "type": "TraceLink",
+  "source": "REQ-RV-007",
+  "target": "MAN-react-component-src-builder-cards-templates-action-actioncard",
+  "relationship_type": "supersedes",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"ActionCard\" matches \"Empty action rule — An action can exist while planning, but a Ready version cannot contain — Action validation, action card state, status transition checker.\" (score: 0.85)",
+    "Historical RS-R7 candidate superseded by canonical link TRC-RS-R7-REQ-RV-007-TO-MAN-react-component-src-builder-cards-templates-action-actioncard."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "original_source": "REQ-RV-007",
+  "original_target": "MAN-react-component-actioncard-actioncard",
+  "replacement_trace_link": "TRC-RS-R7-REQ-RV-007-TO-MAN-react-component-src-builder-cards-templates-action-actioncard",
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

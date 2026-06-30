@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM4-REQ-KEY-003-TO-MAN-react-component-builderpage-builderworkspacecontent",
+  "type": "TraceLink",
+  "source": "REQ-KEY-003",
+  "target": "MAN-react-component-builderpage-builderworkspacecontent",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "WM-4: BuilderWorkspaceContent keyboard handler — Ctrl/Cmd+V iterates cardClipboard and calls builderActionsHook.duplicateNode({ nodeId }) for each. Smart target: duplicateNode places each node in its original parent (phase→stage, action→parent phase, task→parent action). Guard: skips if e.target is INPUT/TEXTAREA/contenteditable."
+  ],
+  "inference_source": "WM-4 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

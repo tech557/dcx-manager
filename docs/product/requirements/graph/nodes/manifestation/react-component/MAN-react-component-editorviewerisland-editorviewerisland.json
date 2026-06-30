@@ -1,0 +1,36 @@
+{
+  "id": "MAN-react-component-editorviewerisland-editorviewerisland",
+  "type": "Manifestation",
+  "statement": "Code manifestation discovered by RS-R7 inventory: EditorViewerIsland (src/builder/islands/EditorViewerIsland/EditorViewerIsland.tsx).",
+  "scope": "frontend",
+  "governance": "superseded",
+  "maturity": "logic-defined",
+  "delivery": "deprecated",
+  "kind": "react-component",
+  "current_paths": [
+    "src/builder/islands/EditorViewerIsland/EditorViewerIsland.tsx"
+  ],
+  "lifecycle": "replaced",
+  "provenance": {
+    "source": "RS-R7 code manifestation inventory",
+    "source_path": "src/builder/islands/EditorViewerIsland/EditorViewerIsland.tsx",
+    "source_anchor": "EditorViewerIsland",
+    "authoring_actor": "Codex",
+    "inference_source": "reconciliation-engine",
+    "confidence": 0.8,
+    "confirmation_status": "code-discovered",
+    "last_checked_date": "2026-06-29"
+  },
+  "superseded_by": "MAN-react-component-src-builder-islands-editorviewerisland-editorviewerisland",
+  "aliases": [
+    "MAN-react-component-editorviewerisland-editorviewerisland"
+  ],
+  "reason": "RS-R7 identity normalization: duplicate manifestation identity for MAN-react-component-src-builder-islands-editorviewerisland-editorviewerisland.",
+  "identity_normalization": {
+    "date": "2026-06-29",
+    "ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION",
+    "canonical": false,
+    "canonical_manifestation": "MAN-react-component-src-builder-islands-editorviewerisland-editorviewerisland"
+  },
+  "stale_state": "stale"
+}

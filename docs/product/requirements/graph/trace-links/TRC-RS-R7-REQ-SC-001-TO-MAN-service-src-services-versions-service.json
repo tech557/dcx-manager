@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-SC-001-TO-MAN-service-src-services-versions-service",
+  "type": "TraceLink",
+  "source": "REQ-SC-001",
+  "target": "MAN-service-src-services-versions-service",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"versions.service\" matches \"Source of truth — Backend/database is the official version truth. Local state/cache is only a temporary — Affects versions.service.ts, builder queries, useBuilderNodes.ts, version loading, autosave\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

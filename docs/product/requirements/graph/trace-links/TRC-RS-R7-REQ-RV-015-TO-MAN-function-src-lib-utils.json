@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-RV-015-TO-MAN-function-src-lib-utils",
+  "type": "TraceLink",
+  "source": "REQ-RV-015",
+  "target": "MAN-function-src-lib-utils",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"utils\" matches \"Validation source — Readiness validation should be centralized in a validation helper/service, not scattered across — utils/validate.ts, readiness checker, status transition service, tests.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

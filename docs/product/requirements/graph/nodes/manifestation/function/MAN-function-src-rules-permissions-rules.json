@@ -1,0 +1,24 @@
+{
+  "id": "MAN-function-src-rules-permissions-rules",
+  "type": "Manifestation",
+  "statement": "Code manifestation discovered by RS-R7 inventory: permissions.rules (src/rules/permissions.rules.ts).",
+  "scope": "security",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "kind": "function",
+  "current_paths": [
+    "src/rules/permissions.rules.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "RS-R7 code manifestation inventory",
+    "source_path": "src/rules/permissions.rules.ts",
+    "source_anchor": "permissions.rules",
+    "authoring_actor": "Codex",
+    "inference_source": "reconciliation-engine",
+    "confidence": 0.8,
+    "confirmation_status": "code-discovered",
+    "last_checked_date": "2026-06-29"
+  }
+}

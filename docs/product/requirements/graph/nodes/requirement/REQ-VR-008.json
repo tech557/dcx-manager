@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VR-008",
+  "statement": "MVP error report destination — For MVP, error reports can be sent by email using a free/simple — Email/reporting integration; backend endpoint or server action for",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VR-008",
+  "source_category": "Audit; Logs & Error Reporting",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "ERROR-001; ERROR-004",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/services/logs.service.ts; src/services/error-reporter.service.ts; error boundary; report modal; activity/history UI",
+  "ux_impact": "Admins receive reports in a familiar channel.",
+  "risk": "Low",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VR-008",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "backend"
+}

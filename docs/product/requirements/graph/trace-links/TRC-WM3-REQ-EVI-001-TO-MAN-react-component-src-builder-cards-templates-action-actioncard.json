@@ -1,0 +1,18 @@
+{
+  "id": "TRC-WM3-REQ-EVI-001-TO-MAN-react-component-src-builder-cards-templates-action-actioncard",
+  "type": "TraceLink",
+  "source": "REQ-EVI-001",
+  "target": "MAN-react-component-src-builder-cards-templates-action-actioncard",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "WM-3: ActionCard now passes onLongPress={() => setFocusedNodeId(action.id)} to CardShell, wiring the 400ms long-press path that opens EditorViewerIsland with action context (E02 acceptance criterion)."
+  ],
+  "inference_source": "WM-3 implementation 2026-06-30",
+  "confirmation_status": "retracted",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "stale",
+  "needs_confirmation": false,
+  "retraction_note": "PO rolled back ActionCard onLongPress post-WM-3 (2026-06-30). Editor is task-only in this version. E02 scope retracted; REQ-EVI-001 coverage remains via TaskCard (E01) only."
+}

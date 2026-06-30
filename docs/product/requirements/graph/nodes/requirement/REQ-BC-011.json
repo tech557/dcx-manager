@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-011",
+  "statement": "Full task configuration location — Full task configuration happens in the Editor Island / TaskEditor. — TaskEditor, Editor Island, task card edit actions, validation.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-011",
+  "source_category": "Builder UI Surfaces",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Task data model",
+  "related_requirements": "Validation & Readiness Rules",
+  "affected_modules": "src/pages/builder/stage/; src/pages/builder/cards/; src/pages/builder/islands/; src/pages/builder/kanban/; src/pages/builder/timeline/",
+  "ux_impact": "User has one place to complete task details.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-011",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

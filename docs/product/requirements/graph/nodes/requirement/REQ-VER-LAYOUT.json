@@ -1,0 +1,18 @@
+{
+  "id": "REQ-VER-LAYOUT",
+  "type": "Requirement",
+  "statement": "The Version page is a fixed full-viewport shell (100vh x 100vw, no page scroll) on desktop, matching Home. Mobile and tablet viewports stack and scroll internally. The page is fully responsive (mobile + tablet + desktop).",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "ui-presentation",
+  "provenance": {
+    "source": "HV-2 sprint execution — proposed and applied 2026-06-30",
+    "authoring_actor": "Claude",
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  },
+  "supersedes": [],
+  "related": ["REQ-RESP-001", "REQ-HOME-LAYOUT"]
+}

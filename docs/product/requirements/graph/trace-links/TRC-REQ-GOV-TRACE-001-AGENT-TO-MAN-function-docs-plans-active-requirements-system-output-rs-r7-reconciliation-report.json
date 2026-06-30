@@ -1,0 +1,17 @@
+{
+  "id": "TRC-REQ-GOV-TRACE-001-AGENT-TO-MAN-function-docs-plans-active-requirements-system-output-rs-r7-reconciliation-report",
+  "type": "TraceLink",
+  "source": "REQ-GOV-TRACE-001-AGENT",
+  "target": "MAN-function-docs-plans-active-requirements-system-output-rs-r7-reconciliation-report",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "docs/plans/active/requirements-system/output/RS-R7-reconciliation-report.md"
+  ],
+  "inference_source": "RS-R7 audit amendment",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

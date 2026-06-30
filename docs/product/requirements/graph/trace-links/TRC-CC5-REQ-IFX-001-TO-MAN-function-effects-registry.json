@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CC5-REQ-IFX-001-TO-MAN-function-effects-registry",
+  "type": "TraceLink",
+  "source": "REQ-IFX-001",
+  "target": "MAN-function-src-ui-motion-effects-registry",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "CC-5: effects.registry.ts now exports reducedEffectsRegistry — a full parallel set of motion props for every EffectName. Reduced variants eliminate scale/rotate/translate; use ≤100ms opacity fades or instant transitions. invalidDrop uses opacity pulse instead of x-shake."
+  ],
+  "inference_source": "CC-5 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

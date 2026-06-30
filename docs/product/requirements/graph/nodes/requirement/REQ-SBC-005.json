@@ -1,0 +1,28 @@
+{
+  "id": "REQ-SBC-005",
+  "statement": "Task Card as field-status surface — The Task Card is a complex, high-investment component. It should communicate at a glance whether each key property is ready, unset, filled, or marked not needed, and allow quick inspection/correction without always opening the full Editor. — Task Card shows compact field indicators for: date/communication-date status, missing data, specs, sender, receiver, channel, subtasks, and future structured properties. Clicking an indicator opens a controlled popup showing field name, current value, readiness state, 'Unset' if not ready, or the selected value. Double-clicking the popup switches it to edit mode.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "SBC-005",
+  "source_category": "Shared Builder Card System",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "SBC-001, DQ-001, RDY-003",
+  "related_requirements": "SR-002, EVI-001",
+  "affected_modules": "src/pages/builder/cards/task/; field indicator popups; src/pages/builder/tooltips/",
+  "ux_impact": "Fast field inspection and correction inline.",
+  "risk": "Medium-High",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "SBC-005",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

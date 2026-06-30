@@ -1,0 +1,28 @@
+{
+  "id": "REQ-FI-003",
+  "statement": "File storage type — MVP stores file links/references, mostly Google Drive links, not uploaded file content. — File metadata schema: name, URL, source, createdBy, versionId.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "FI-003",
+  "source_category": "Files & External References",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Google Drive/link availability",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/pages/builder/islands/metadata/ or file manager; file metadata DTOs; file service; Drive link handling",
+  "ux_impact": "User can open approved docs without the app",
+  "risk": "Low",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "FI-003",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

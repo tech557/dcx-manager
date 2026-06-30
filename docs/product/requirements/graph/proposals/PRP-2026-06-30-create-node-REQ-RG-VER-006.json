@@ -1,0 +1,28 @@
+{
+  "id": "PRP-2026-06-30-create-node-REQ-RG-VER-006",
+  "type": "Proposal",
+  "action": "create-node",
+  "actor": "Claude (claude-opus-4-8)",
+  "date": "2026-06-30",
+  "reason": "CI/CD release-governance intake (OD-RG-07); plan docs/plans/drafted/cicd-release-governance; proposals pending PO sign-off",
+  "payload": {
+    "node": {
+      "id": "REQ-RG-VER-006",
+      "type": "Requirement",
+      "statement": "The project uses a 4-part version vMajor.Stage.Iteration.Revision; bootstrap v0.3.5.0 carries the existing version as-is.",
+      "scope": "governance",
+      "governance": "proposed",
+      "maturity": "logic-defined",
+      "delivery": "not-assessed",
+      "chain_layer": "REQ->RSP",
+      "provenance": {
+        "source": "docs/plans/drafted/cicd-release-governance/README.md",
+        "source_path": "docs/plans/drafted/cicd-release-governance/README.md",
+        "authoring_actor": "Claude (claude-opus-4-8) RG intake",
+        "confidence": 0.9,
+        "confirmation_status": "agent-proposed",
+        "last_checked_date": "2026-06-30"
+      }
+    }
+  }
+}

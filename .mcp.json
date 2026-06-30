@@ -1,0 +1,38 @@
+{
+  "mcpServers": {
+    "eslint": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@eslint/mcp@latest"]
+    },
+    "storybook": {
+      "type": "http",
+      "url": "http://localhost:6006/mcp",
+      "disabled": true,
+      "notes": "CONFIGURED BUT BLOCKED: Storybook packages are installed and @storybook/addon-mcp is enabled in .storybook/main.ts, but runtime smoke failed in this checkout. npm run storybook currently prompts about port 6006/undefined, and CI mode errors with 'expected options to have a port'. Do not claim Storybook MCP until Storybook starts and http://localhost:6006/mcp responds."
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn", "mcp"],
+      "notes": "Local shadcn package is installed and components.json resolves. Search and reuse approved shadcn/ui components. Always check src/ui/ (the DCX design system) before sourcing from shadcn."
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["node_modules/@playwright/mcp/cli.js", "--headless", "--isolated"],
+      "notes": "Local @playwright/mcp package and Chromium browser binary are installed. Use for browser navigation, screenshots, accessibility snapshots, and interaction verification."
+    },
+    "semgrep": {
+      "command": "npx",
+      "args": ["-y", "semgrep-mcp"],
+      "disabled": true,
+      "notes": "INSTALLED BUT BLOCKED: Semgrep CLI is installed in the user Python environment and npm run scan:semgrep uses scripts/agent/run-semgrep.sh, but semgrep-core currently exits unexpectedly even on one-file scans. Keep MCP disabled until the CLI gate passes."
+    },
+    "sonarqube": {
+      "command": "npx",
+      "args": ["-y", "@sonarsource/mcp-server-sonarqube"],
+      "disabled": true,
+      "notes": "SETUP REQUIRED: Requires running SonarQube server and SONAR_TOKEN + SONAR_HOST_URL environment variables. Do not enable without confirmed external service. Use for repository-wide duplication and quality-gate findings."
+    }
+  }
+}

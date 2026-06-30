@@ -1,0 +1,5 @@
+id,type,governance,maturity,delivery,scope,kind,statement
+INT-FI-007,Intent,draft,intent-captured,not-assessed,,,"Upload support — Supabase/storage file uploads are not MVP unless needed later. — Future storage service, file upload UI, Supabase Storage."
+INT-FP-DECISION-SESSION-001,Intent,approved,logic-defined,not-assessed,frontend,,"2026-06-29 frontend-polish PO decision session: resolved D-01..D-12, 4 core-model alignments, and recovered requirement families from CSV + v0.1.4 codebase."
+INT-PR-016,Intent,draft,intent-captured,not-assessed,,,"Super user override — Super users can override normal DCX rules when defined later. — Permission resolver, backend role flag, admin tools."
+INT-PR-018,Intent,draft,intent-captured,not-assessed,,,"Assigned editor model — Future version may restrict editing to assigned/editor users, while shared users retain — Assignment fields, permission checker, task/version ownership."

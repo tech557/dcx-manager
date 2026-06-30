@@ -1,0 +1,42 @@
+{
+  "eval_id": 3,
+  "run": "without_skill",
+  "expectations": [
+    {
+      "text": "Verdict is NOT READY",
+      "passed": true,
+      "evidence": "Verdict: NOT READY \u2014 do not activate"
+    },
+    {
+      "text": "Audit correctly identifies that the lack of sprint files is intentional \u2014 documented in the README as 'DO NOT EXECUTE' \u2014 not treated as a bug or omission",
+      "passed": true,
+      "evidence": "Output: 'The plan explicitly states DRAFT \u2014 DO NOT EXECUTE SPRINTS YET and the conditions it sets for activation have not been met.' Correctly treats it as an activation-gate issue, not a defect."
+    },
+    {
+      "text": "Audit names all 3 dependency plans: ux-discovery-v2, frontend-discovery-v2, backend-discovery-v2",
+      "passed": true,
+      "evidence": "Table with Required output column listing UX2-R1 through BE2-R3 output files, implying all three plans. Plans named explicitly in the path to activation section."
+    },
+    {
+      "text": "Audit states the activation condition: sprint files can be written only after all discovery outputs are available",
+      "passed": true,
+      "evidence": "Path to activation: 'run the three discovery plans (they can go in parallel), confirm all 9 output files are produced, then draft sprints P1\u2013P4'"
+    },
+    {
+      "text": "Audit reads the prior art (expired/src-structure-refactor) and notes inherited decisions still valid",
+      "passed": false,
+      "evidence": "Agent read docs/plans/expired/src-structure-refactor/plan/README.md but output only says 'Inherited decisions from src-structure-refactor are correctly documented (6 decisions)' without citing specific decisions \u2014 does not confirm still valid"
+    },
+    {
+      "text": "Audit file is written to docs/plans/drafted/folder-structure-v2/audit/ or the workspace output path",
+      "passed": true,
+      "evidence": "File saved to workspace output path"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.8333
+  }
+}

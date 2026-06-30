@@ -1,0 +1,14 @@
+{
+  "id": "TRC-REQ-FI-006-TO-AC-FI",
+  "type": "TraceLink",
+  "source": "REQ-FI-006",
+  "target": "AC-FI-SEED",
+  "relationship_type": "validates",
+  "coverage": "partial",
+  "confidence": 0.7,
+  "inference_source": "RS-R6 seed migration",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

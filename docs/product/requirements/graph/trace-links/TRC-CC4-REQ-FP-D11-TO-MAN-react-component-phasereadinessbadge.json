@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CC4-REQ-FP-D11-TO-MAN-react-component-phasereadinessbadge",
+  "type": "TraceLink",
+  "source": "REQ-FP-D11",
+  "target": "MAN-react-component-src-builder-cards-templates-phase-phasereadinessbadge",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "CC-4: PhaseReadinessBadge keeps the visible readiness indicator and carries an sr-only label sourced from the shared READINESS_LABEL map so the marker exposes readiness to screen readers."
+  ],
+  "inference_source": "CC-4 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

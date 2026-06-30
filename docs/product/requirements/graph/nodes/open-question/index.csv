@@ -1,0 +1,3 @@
+id,type,governance,maturity,delivery,scope,kind,statement
+QST-LIFECYCLE-POST-READY,OpenQuestion,archived,intent-captured,not-assessed,product,,C-03 ruled 'Ready' is not the terminal lifecycle state. What is the state AFTER Ready for MVP? It must NOT use the forbidden values 'Ready for Review' / 'Rejected' / 'Placed' (core.md §14).
+QST-VR-011,OpenQuestion,archived,intent-captured,not-assessed,,,"Read access vs edit access — Not decided yet: once a user has DCX access, can they edit — Permission service; Builder read-only mode; version status locks;"

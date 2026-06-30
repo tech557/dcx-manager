@@ -1,0 +1,25 @@
+{
+  "id": "MAN-function-docs-plans-active-requirements-system-readme",
+  "type": "Manifestation",
+  "statement": "Requirements-system README carry-forward for RS-R6.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "agent-workflow",
+  "kind": "documentation-view",
+  "current_paths": [
+    "docs/plans/active/requirements-system/README.md"
+  ],
+  "stale_state": "stale",
+  "stale_reason": "current_paths entry no longer exists on disk — path moved or deleted",
+  "lifecycle": "modified",
+  "provenance": {
+    "source": "RS-R6 implementation",
+    "source_path": "docs/plans/active/requirements-system/README.md",
+    "source_anchor": "RS-R6-carry-forward",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-DM-021",
+  "statement": "UI state exclusion — Selection, hover, expanded cards, island state, active popover, active file preview, and — Builder store, island hooks, local storage if needed,",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "DM-021",
+  "source_category": "Preferences; Session & Telemetry",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Save/cost-control decisions",
+  "related_requirements": "Builder State & Mutation Layer",
+  "affected_modules": "src/hooks/usePreferences.ts; local storage preference helpers; session restore; analytics/event adapter",
+  "ux_impact": "User can personalize/operate UI without affecting shared version.",
+  "risk": "Low",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "DM-021",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

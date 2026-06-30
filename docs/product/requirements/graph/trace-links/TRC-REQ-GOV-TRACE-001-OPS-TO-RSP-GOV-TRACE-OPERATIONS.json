@@ -1,0 +1,14 @@
+{
+  "id": "TRC-REQ-GOV-TRACE-001-OPS-TO-RSP-GOV-TRACE-OPERATIONS",
+  "type": "TraceLink",
+  "source": "REQ-GOV-TRACE-001-OPS",
+  "target": "RSP-GOV-TRACE-OPERATIONS",
+  "relationship_type": "decomposes-into",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "inference_source": "RS-R9 seed (manual curation)",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

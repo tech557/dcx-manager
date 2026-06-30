@@ -1,0 +1,14 @@
+{
+  "id": "TRC-REQ-GOV-TRACE-001-DATA-TO-MAN-function---package",
+  "type": "TraceLink",
+  "source": "REQ-GOV-TRACE-001-DATA",
+  "target": "MAN-function---package",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "inference_source": "RS-R6 self-trace",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

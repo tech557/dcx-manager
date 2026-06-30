@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-SC-005-TO-MAN-react-component-src-stories-header",
+  "type": "TraceLink",
+  "source": "REQ-SC-005",
+  "target": "MAN-react-component-src-stories-header",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"Header\" matches \"Save status UI — Show save status clearly in the Builder, preferably through User Island / — Affects User Island, Builder Header, save state returned\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

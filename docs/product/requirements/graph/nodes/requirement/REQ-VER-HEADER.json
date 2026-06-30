@@ -1,0 +1,20 @@
+{
+  "id": "REQ-VER-HEADER",
+  "type": "Requirement",
+  "statement": "The Version page header shows client name, project name, product type (read from metadata/ClickUp task custom field for now; dedicated endpoint deferred to backend decision), and the derived campaign status.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "ui-presentation",
+  "provenance": {
+    "source": "HV-2 sprint execution — proposed and applied 2026-06-30",
+    "authoring_actor": "Claude",
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  },
+  "supersedes": [],
+  "trace": {
+    "decision": "D-4 — product type read from ClickUp task custom field; dedicated endpoint deferred to backend"
+  }
+}

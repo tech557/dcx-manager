@@ -1,0 +1,21 @@
+{
+  "id": "REQ-RG-PLAT-018",
+  "type": "Requirement",
+  "statement": "GitHub, Vercel, Supabase, ClickUp, and Google Apps Script each own a defined mechanical responsibility in the release workflow.",
+  "scope": "devops",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "source": "docs/plans/drafted/cicd-release-governance/README.md",
+    "source_path": "docs/plans/drafted/cicd-release-governance/README.md",
+    "authoring_actor": "Claude (claude-opus-4-8) RG intake",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-30"
+  },
+  "lock_owner": "PO",
+  "lock_date": "2026-06-30",
+  "ledger_ref": "LDG-2026-06-30-create-node-REQ-RG-PLAT-018"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-BC-009-TO-MAN-react-component-select-select",
+  "type": "TraceLink",
+  "source": "REQ-BC-009",
+  "target": "MAN-react-component-src-ui-forms-selects-select",
+  "relationship_type": "supersedes",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"Select\" matches \"Timeline task parent selection — A timeline-created task must be nested under an existing phase/action or create — Timeline quick-create UI, parent selector, quick phase/action creation,\" (score: 0.85)",
+    "Historical RS-R7 candidate superseded by canonical link TRC-RS-R7-REQ-BC-009-TO-MAN-react-component-src-ui-forms-selects-select."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "original_source": "REQ-BC-009",
+  "original_target": "MAN-react-component-select-select",
+  "replacement_trace_link": "TRC-RS-R7-REQ-BC-009-TO-MAN-react-component-src-ui-forms-selects-select",
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

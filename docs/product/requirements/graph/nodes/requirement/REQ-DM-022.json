@@ -1,0 +1,28 @@
+{
+  "id": "REQ-DM-022",
+  "statement": "Timeline/day views — Timeline, weekly, monthly, and day views are generated from task dates. They — Timeline views, day cards, date helpers.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "DM-022",
+  "source_category": "Builder UI Surfaces",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Task date model",
+  "related_requirements": "Domain Model & API Contracts",
+  "affected_modules": "src/pages/builder/stage/; src/pages/builder/cards/; src/pages/builder/islands/; src/pages/builder/kanban/; src/pages/builder/timeline/",
+  "ux_impact": "User can switch views without creating backend complexity.",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "DM-022",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

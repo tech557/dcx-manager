@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-023",
+  "statement": "Template system readiness — Import/reuse logic should be modular because later users will save/import phase, action, — Import/export engine, future template DTOs, Kanban Builder Island.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-023",
+  "source_category": "Builder State & Mutation Layer",
+  "priority": "Seed Now / Future",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Templates & Reuse category",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/store/builderStore.ts; src/pages/builder/context/; src/pages/builder/hooks/useBuilderActions.ts; mutation commands",
+  "ux_impact": "Future template feature can reuse the same mechanics.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-023",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

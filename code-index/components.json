@@ -1,0 +1,4471 @@
+{
+  "BuilderLoadingShell": {
+    "definedIn": "src/builder/BuilderLoadingShell.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "error",
+        "type": "string | null | undefined",
+        "required": false
+      },
+      {
+        "name": "onRetry",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "BuilderBg",
+      "style",
+      "h2",
+      "p",
+      "button"
+    ]
+  },
+  "BuilderPage": {
+    "definedIn": "src/builder/BuilderPage.tsx",
+    "exportType": "named",
+    "props": [],
+    "childComponentsUsed": [
+      "BuilderLoadingShell",
+      "motion.div",
+      "StageProvider",
+      "BuilderWorkspaceContent"
+    ]
+  },
+  "BuilderWorkspaceContent": {
+    "definedIn": "src/builder/BuilderPage.tsx",
+    "exportType": "local",
+    "props": [
+      {
+        "name": "versionId",
+        "type": "string",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "BuilderBg",
+      "MetadataIsland",
+      "aside",
+      "EditorViewerIsland",
+      "main",
+      "StageCore",
+      "FocusIsland",
+      "SelectionIsland",
+      "KanbanBuilderIsland",
+      "TimelineBuilderIsland",
+      "ViewHelperIsland"
+    ]
+  },
+  "RootLayout": {
+    "definedIn": "src/pages/RootLayout.tsx",
+    "exportType": "named",
+    "props": [],
+    "childComponentsUsed": [
+      "main",
+      "nav",
+      "Link",
+      "Outlet"
+    ]
+  },
+  "Button": {
+    "definedIn": "src/ui/shadcn/button.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "variant",
+        "type": "\"default\" | \"ghost\" | \"link\" | \"outline\" | \"secondary\" | \"destructive\" | null | undefined",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"default\" | \"xs\" | \"sm\" | \"lg\" | \"icon\" | \"icon-xs\" | \"icon-sm\" | \"icon-lg\" | null | undefined",
+        "required": false
+      },
+      {
+        "name": "asChild",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "Comp"
+    ]
+  },
+  "Header": {
+    "definedIn": "src/stories/Header.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "user",
+        "type": "User | undefined",
+        "required": false
+      },
+      {
+        "name": "onLogin",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onLogout",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onCreateAccount",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "header",
+      "div",
+      "svg",
+      "g",
+      "path",
+      "h1",
+      "span",
+      "b",
+      "Button"
+    ]
+  },
+  "Page": {
+    "definedIn": "src/stories/Page.tsx",
+    "exportType": "named",
+    "props": [],
+    "childComponentsUsed": [
+      "article",
+      "Header",
+      "section",
+      "h2",
+      "p",
+      "a",
+      "strong",
+      "ul",
+      "li",
+      "div",
+      "span",
+      "svg",
+      "g",
+      "path"
+    ]
+  },
+  "DividerLine": {
+    "definedIn": "src/ui/DividerLine.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "orientation",
+        "type": "\"horizontal\" | \"vertical\" | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div"
+    ]
+  },
+  "PopoverShell": {
+    "definedIn": "src/ui/PopoverShell.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": true
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "width",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div"
+    ]
+  },
+  "StickyPopupShell": {
+    "definedIn": "src/ui/StickyPopupShell.tsx",
+    "exportType": "default",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "onMinimize",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "isMinimized",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "title",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "button",
+      "Minimize2",
+      "X"
+    ]
+  },
+  "CardShell": {
+    "definedIn": "src/builder/cards/CardShell.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "kind",
+        "type": "CardKind",
+        "required": true
+      },
+      {
+        "name": "data",
+        "type": "CardData",
+        "required": true
+      },
+      {
+        "name": "selected",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "locked",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "highlight",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onSelect",
+        "type": "((id: string, multi: boolean) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onLongPress",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onClick",
+        "type": "((event: React.MouseEvent<HTMLElement, MouseEvent>) => void) | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "EffectLayer",
+      "article",
+      "CardShellContent"
+    ]
+  },
+  "CardShellContent": {
+    "definedIn": "src/builder/cards/CardShellContent.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "kind",
+        "type": "CardKind",
+        "required": true
+      },
+      {
+        "name": "dataId",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "isExpanded",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "glassBorderClass",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "surfaceClass",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "showCorners",
+        "type": "\"selected\" | \"hover\" | \"none\"",
+        "required": true
+      },
+      {
+        "name": "noBackground",
+        "type": "boolean",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "GlassSurface",
+      "div",
+      "span"
+    ]
+  },
+  "DropTarget": {
+    "definedIn": "src/builder/dropzones/DropTarget.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "zone",
+        "type": "Dropzone",
+        "required": true
+      },
+      {
+        "name": "versionId",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "EffectLayer",
+      "div"
+    ]
+  },
+  "BuilderIslandShell": {
+    "definedIn": "src/builder/islands/BuilderIslandShell.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "isExpanded",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onToggle",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "collapsedIcon",
+        "type": "React.ReactNode",
+        "required": true
+      },
+      {
+        "name": "collapsedWidth",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "collapsedHeight",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "expandedWidth",
+        "type": "string | number | undefined",
+        "required": false
+      },
+      {
+        "name": "expandedHeight",
+        "type": "string | number | undefined",
+        "required": false
+      },
+      {
+        "name": "shape",
+        "type": "\"pill\" | \"panel\" | undefined",
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "style",
+        "type": "React.CSSProperties | undefined",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": false
+      },
+      {
+        "name": "position",
+        "type": "\"bottom-bar\" | \"side\" | \"overlay\" | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "motion.div",
+      "AnimatePresence"
+    ]
+  },
+  "HeaderBrandIsland": {
+    "definedIn": "src/builder/islands/HeaderBrandIsland.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "onClick",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "motion.button",
+      "div",
+      "span",
+      "h1"
+    ]
+  },
+  "StageCore": {
+    "definedIn": "src/builder/stage/StageCore.tsx",
+    "exportType": "named",
+    "props": [],
+    "childComponentsUsed": [
+      "section",
+      "div",
+      "AnimatePresence",
+      "motion.div",
+      "Renderer",
+      "StageEdgeNavigation"
+    ]
+  },
+  "StageEdgeNavigation": {
+    "definedIn": "src/builder/stage/StageEdgeNavigation.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "direction",
+        "type": "\"left\" | \"right\"",
+        "required": true
+      },
+      {
+        "name": "view",
+        "type": "\"kanban\" | \"timeline\" | \"weekly\" | \"monthly\"",
+        "required": true
+      },
+      {
+        "name": "isDragging",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "isHovered",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onDragEnter",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "onDragLeave",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "Icon",
+      "span"
+    ]
+  },
+  "StageProvider": {
+    "definedIn": "src/builder/stage/StageProvider.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "nodes",
+        "type": "BuilderNode[]",
+        "required": true
+      },
+      {
+        "name": "initialView",
+        "type": "ViewKind | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "StageContextObject.Provider"
+    ]
+  },
+  "HomePage": {
+    "definedIn": "src/pages/home/HomePage.tsx",
+    "exportType": "named",
+    "props": [],
+    "childComponentsUsed": [
+      "section",
+      "p",
+      "h1"
+    ]
+  },
+  "VersionPage": {
+    "definedIn": "src/pages/version/VersionPage.tsx",
+    "exportType": "named",
+    "props": [],
+    "childComponentsUsed": [
+      "section",
+      "p",
+      "h1",
+      "Link"
+    ]
+  },
+  "Badge": {
+    "definedIn": "src/ui/atoms/Badge.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": true
+      },
+      {
+        "name": "variant",
+        "type": "\"default\" | \"status\" | \"readiness\" | \"lock\" | undefined",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"xs\" | \"sm\" | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "span"
+    ]
+  },
+  "Chip": {
+    "definedIn": "src/ui/atoms/Chip.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "icon",
+        "type": "React.ReactNode",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "\"default\" | \"accent\" | \"ghost\" | undefined",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"sm\" | \"md\" | undefined",
+        "required": false
+      },
+      {
+        "name": "isActive",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "isDisabled",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "draggable",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "activeIcon",
+        "type": "React.ReactNode",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "ariaLabel",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "as",
+        "type": "\"button\" | \"span\" | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "span",
+      "button"
+    ]
+  },
+  "ToggleGroup": {
+    "definedIn": "src/ui/atoms/ToggleGroup.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "items",
+        "type": "ToggleGroupItem<T>[]",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "T",
+        "required": true
+      },
+      {
+        "name": "onChange",
+        "type": "(value: T) => void",
+        "required": true
+      },
+      {
+        "name": "size",
+        "type": "\"sm\" | \"md\" | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "ariaLabel",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "button",
+      "span"
+    ]
+  },
+  "LoginRedirect": {
+    "definedIn": "src/ui/auth/LoginRedirect.tsx",
+    "exportType": "named",
+    "props": [],
+    "childComponentsUsed": [
+      "section",
+      "p",
+      "h1"
+    ]
+  },
+  "NoAccessScreen": {
+    "definedIn": "src/ui/auth/NoAccessScreen.tsx",
+    "exportType": "named",
+    "props": [],
+    "childComponentsUsed": [
+      "section",
+      "p",
+      "h1"
+    ]
+  },
+  "RouteGuard": {
+    "definedIn": "src/ui/auth/RouteGuard.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "dcxId",
+        "type": "string",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "section",
+      "p",
+      "h1",
+      "LoginRedirect",
+      "NoAccessScreen"
+    ]
+  },
+  "BuilderBg": {
+    "definedIn": "src/ui/BuilderBg/BuilderBg.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "selectedNodeIds",
+        "type": "string[] | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "LightRays"
+    ]
+  },
+  "LightRays": {
+    "definedIn": "src/ui/BuilderBg/LightRays.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "raysOrigin",
+        "type": "\"top-center\" | \"top-left\" | \"top-right\" | undefined",
+        "required": false
+      },
+      {
+        "name": "raysColor",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "raysSpeed",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "lightSpread",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "rayLength",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "pulsating",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "fadeDistance",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "saturation",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "followMouse",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "mouseInfluence",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "noiseAmount",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "distortion",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "selectedNodeIds",
+        "type": "string[] | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "canvas"
+    ]
+  },
+  "EffectLayer": {
+    "definedIn": "src/ui/motion/EffectLayer.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "effect",
+        "type": "EffectName",
+        "required": true
+      },
+      {
+        "name": "active",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "motion.div"
+    ]
+  },
+  "GlassSurface": {
+    "definedIn": "src/ui/surfaces/GlassSurface.tsx",
+    "exportType": "default",
+    "props": [
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": false
+      },
+      {
+        "name": "width",
+        "type": "string | number | undefined",
+        "required": false
+      },
+      {
+        "name": "height",
+        "type": "string | number | undefined",
+        "required": false
+      },
+      {
+        "name": "borderRadius",
+        "type": "string | number | undefined",
+        "required": false
+      },
+      {
+        "name": "radius",
+        "type": "\"sm\" | \"md\" | \"lg\" | undefined",
+        "required": false
+      },
+      {
+        "name": "intensity",
+        "type": "\"low\" | \"medium\" | \"high\" | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "backdropClassName",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "opacity",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "noBackground",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "\"card\" | \"island\" | \"popup\" | \"popover\" | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div"
+    ]
+  },
+  "AIChatPopup": {
+    "definedIn": "src/builder/islands/AIChatPopup/AIChatPopup.tsx",
+    "exportType": "default",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "preferenceScope",
+        "type": "PreferenceScope | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "StickyPopupShell",
+      "div",
+      "p",
+      "button",
+      "label",
+      "input",
+      "span",
+      "ReviewModal"
+    ]
+  },
+  "ActionEditorSection": {
+    "definedIn": "src/builder/islands/EditorViewerIsland/ActionEditorSection.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "draftData",
+        "type": "ActionCardData",
+        "required": true
+      },
+      {
+        "name": "updateDraftField",
+        "type": "(field: string, value: unknown) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "Input"
+    ]
+  },
+  "DayEditorSection": {
+    "definedIn": "src/builder/islands/EditorViewerIsland/DayEditorSection.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "draftData",
+        "type": "{ id: string; label: string; dateString: string; notes?: string | undefined; }",
+        "required": true
+      },
+      {
+        "name": "updateDraftField",
+        "type": "(field: string, value: unknown) => void",
+        "required": true
+      },
+      {
+        "name": "tasks",
+        "type": "TaskCardData[]",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "label",
+      "Calendar",
+      "span",
+      "Input",
+      "p"
+    ]
+  },
+  "DiscardSessionModal": {
+    "definedIn": "src/builder/islands/EditorViewerIsland/DiscardSessionModal.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "sessionToDiscard",
+        "type": "unknown",
+        "required": true
+      },
+      {
+        "name": "confirmDiscardSession",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "cancelDiscardSession",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "AlertTriangle",
+      "h4",
+      "p",
+      "button"
+    ]
+  },
+  "EditorHeader": {
+    "definedIn": "src/builder/islands/EditorViewerIsland/EditorHeader.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "activeNode",
+        "type": "BuilderNode | { id: string; kind: \"day\"; parentId: null; data: { id: string; label: string; dateString: string; kind: \"day\"; }; }",
+        "required": true
+      },
+      {
+        "name": "displayName",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "isLocked",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "readinessFeedback",
+        "type": "ReadinessResult | null",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "onOpenReadinessModal",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "activeTab",
+        "type": "\"info\" | \"channel\" | \"specs\" | \"subtasks\" | undefined",
+        "required": false
+      },
+      {
+        "name": "setActiveTab",
+        "type": "((tab: \"info\" | \"channel\" | \"specs\" | \"subtasks\") => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "sectionTabs",
+        "type": "{ id: \"info\" | \"channel\" | \"specs\" | \"subtasks\"; label: string; title: string; isPassed: boolean; }[] | undefined",
+        "required": false
+      },
+      {
+        "name": "onDisplayNameChange",
+        "type": "((newVal: string) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "draftData",
+        "type": "EditorDraftData | undefined",
+        "required": false
+      },
+      {
+        "name": "updateDraftField",
+        "type": "((field: string, value: unknown) => void) | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "header",
+      "div",
+      "p",
+      "Input",
+      "span",
+      "h3",
+      "button",
+      "ReadyMark",
+      "AlertMark",
+      "InlineChannelCompositionSelector",
+      "MenuSectionButton",
+      "X",
+      "AlertTriangle"
+    ]
+  },
+  "EditorSessionPill": {
+    "definedIn": "src/builder/islands/EditorViewerIsland/EditorSessionPill.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "session",
+        "type": "EditorSession",
+        "required": true
+      },
+      {
+        "name": "kind",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "(id: string) => void",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "(id: string) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "button",
+      "span",
+      "X"
+    ]
+  },
+  "EditorViewerIsland": {
+    "definedIn": "src/builder/islands/EditorViewerIsland/EditorViewerIsland.tsx",
+    "exportType": "named",
+    "props": [],
+    "childComponentsUsed": [
+      "div",
+      "EditorSessionPill",
+      "BuilderIslandShell",
+      "button",
+      "Sliders",
+      "EditorHeader",
+      "section",
+      "fieldset",
+      "PhaseEditorSection",
+      "ActionEditorSection",
+      "TaskEditor",
+      "footer",
+      "Save",
+      "UnsavedChangesModal",
+      "ReadinessCheckModal",
+      "DiscardSessionModal"
+    ]
+  },
+  "PhaseEditorSection": {
+    "definedIn": "src/builder/islands/EditorViewerIsland/PhaseEditorSection.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "draftData",
+        "type": "PhaseNodeData",
+        "required": true
+      },
+      {
+        "name": "updateDraftField",
+        "type": "(field: string, value: unknown) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "span",
+      "div",
+      "label",
+      "ToggleGroup"
+    ]
+  },
+  "UnsavedChangesModal": {
+    "definedIn": "src/builder/islands/EditorViewerIsland/UnsavedChangesModal.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "pendingAction",
+        "type": "PendingAction | null",
+        "required": true
+      },
+      {
+        "name": "handleProceedPending",
+        "type": "(shouldSave: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "handleCancelPending",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "AlertTriangle",
+      "h4",
+      "p",
+      "button"
+    ]
+  },
+  "FocusIsland": {
+    "definedIn": "src/builder/islands/FocusIsland/FocusIsland.tsx",
+    "exportType": "named",
+    "props": [],
+    "childComponentsUsed": [
+      "div",
+      "BuilderIslandShell",
+      "IslandToggleButton",
+      "span",
+      "WeekOption",
+      "PropertyOption",
+      "button"
+    ]
+  },
+  "HeaderUserActionsMenu": {
+    "definedIn": "src/builder/islands/HeaderUserIsland/HeaderUserActionsMenu.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "onExport",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onImport",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "motion.div",
+      "div",
+      "p",
+      "Sparkles",
+      "button",
+      "Upload",
+      "Download",
+      "span",
+      "FileType"
+    ]
+  },
+  "HeaderUserIsland": {
+    "definedIn": "src/builder/islands/HeaderUserIsland/HeaderUserIsland.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "onExport",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onImport",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "motion.div",
+      "button",
+      "Sun",
+      "Moon",
+      "div",
+      "Save",
+      "span",
+      "ChevronDown",
+      "AnimatePresence",
+      "HeaderUserActionsMenu",
+      "Link",
+      "X"
+    ]
+  },
+  "KanbanBuilderIsland": {
+    "definedIn": "src/builder/islands/KanbanBuilderIsland/KanbanBuilderIsland.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "versionId",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "phases",
+        "type": "PhaseNode[]",
+        "required": true
+      },
+      {
+        "name": "onPaletteDragStart",
+        "type": "(kind: BuilderNodeKind) => void",
+        "required": true
+      },
+      {
+        "name": "onPaletteDragEnd",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "motion.aside",
+      "div",
+      "IslandToggleButton",
+      "AnimatePresence",
+      "motion.div",
+      "span",
+      "InlineIslandButton",
+      "StickyPopupShell",
+      "TaskCreationFlow"
+    ]
+  },
+  "CampaignDetailsGroup": {
+    "definedIn": "src/builder/islands/MetadataIsland/CampaignDetailsGroup.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "projectLabel",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "versionName",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "isLocked",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "span"
+    ]
+  },
+  "MetadataDetailsContent": {
+    "definedIn": "src/builder/islands/MetadataIsland/MetadataDetailsContent.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "versionName",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "type": "VersionStatus",
+        "required": true
+      },
+      {
+        "name": "communicatedDate",
+        "type": "string | null",
+        "required": true
+      },
+      {
+        "name": "teamCount",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "filesCount",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "currentView",
+        "type": "ViewKind",
+        "required": true
+      },
+      {
+        "name": "isLocked",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "isDuplicating",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "errorText",
+        "type": "string | null",
+        "required": true
+      },
+      {
+        "name": "onStatusChange",
+        "type": "(status: VersionStatus) => void",
+        "required": true
+      },
+      {
+        "name": "onDateChange",
+        "type": "(date: string) => void",
+        "required": true
+      },
+      {
+        "name": "onViewChange",
+        "type": "(view: ViewKind) => void",
+        "required": true
+      },
+      {
+        "name": "onDuplicate",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "onFilesClick",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "CampaignDetailsGroup",
+      "DividerLine",
+      "div",
+      "StatusDropdownBadge",
+      "CommunicationDateField",
+      "Users",
+      "span",
+      "button",
+      "Paperclip",
+      "ViewTabSwitcher",
+      "Chip",
+      "Copy",
+      "AlertCircle"
+    ]
+  },
+  "MetadataFilesPopup": {
+    "definedIn": "src/builder/islands/MetadataIsland/MetadataFilesPopup.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "attachments",
+        "type": "ApiFileAttachment[]",
+        "required": true
+      },
+      {
+        "name": "sessions",
+        "type": "FileSession[]",
+        "required": true
+      },
+      {
+        "name": "closeFile",
+        "type": "(id: string) => void",
+        "required": true
+      },
+      {
+        "name": "minimizeFile",
+        "type": "(id: string) => void",
+        "required": true
+      },
+      {
+        "name": "restoreFile",
+        "type": "(id: string) => void",
+        "required": true
+      },
+      {
+        "name": "handleFileChange",
+        "type": "(e: React.ChangeEvent<HTMLInputElement, Element>) => void",
+        "required": true
+      },
+      {
+        "name": "handleRemotePreview",
+        "type": "(url: string, title: string) => Promise<void>",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "Paperclip",
+      "h3",
+      "button",
+      "X",
+      "p",
+      "FileText",
+      "Link2",
+      "span",
+      "label",
+      "Upload",
+      "input",
+      "StickyPopupShell",
+      "iframe",
+      "img",
+      "a"
+    ]
+  },
+  "MetadataIsland": {
+    "definedIn": "src/builder/islands/MetadataIsland/MetadataIsland.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "versionId",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "currentView",
+        "type": "ViewKind",
+        "required": true
+      },
+      {
+        "name": "onViewChange",
+        "type": "(view: ViewKind) => void",
+        "required": true
+      },
+      {
+        "name": "isLocked",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onExport",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "header",
+      "HeaderBrandIsland",
+      "motion.div",
+      "MetadataDetailsContent",
+      "HeaderUserIsland",
+      "MetadataModalsContainer",
+      "MetadataFilesPopup"
+    ]
+  },
+  "MetadataModalsContainer": {
+    "definedIn": "src/builder/islands/MetadataIsland/MetadataModalsContainer.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "versionId",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "versionData",
+        "type": "Version | undefined",
+        "required": true
+      },
+      {
+        "name": "siblings",
+        "type": "Version[]",
+        "required": true
+      },
+      {
+        "name": "domainTree",
+        "type": "BuilderDomainTree | undefined",
+        "required": true
+      },
+      {
+        "name": "isApprovalModalOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "setIsApprovalModalOpen",
+        "type": "(open: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "handleConfirmApproval",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "isImportOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "setIsImportOpen",
+        "type": "(open: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "importFlow",
+        "type": "{ importedNodes: BuilderNode[] | null; diff: ImportDiffGroup | null; applyImport: () => void; loadFromFile: (file: File) => Promise<void>; clear: () => void; confirmDeletes: boolean; setConfirmDeletes: (v: boolean) => void; decisions: Record<string, ImportDecision>; setDecision: (id: string, decision: ImportDecision) => void; }",
+        "required": true
+      },
+      {
+        "name": "setErrorText",
+        "type": "(text: string | null) => void",
+        "required": true
+      },
+      {
+        "name": "isValidationOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "setIsValidationOpen",
+        "type": "(open: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "validationIssues",
+        "type": "string[]",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "ApprovalConfirmModal",
+      "ImportPreviewModal",
+      "ValidationSummary"
+    ]
+  },
+  "StatusDropdownBadge": {
+    "definedIn": "src/builder/islands/MetadataIsland/StatusDropdownBadge.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "status",
+        "type": "VersionStatus",
+        "required": true
+      },
+      {
+        "name": "isLocked",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onStatusChange",
+        "type": "(status: VersionStatus) => void",
+        "required": true
+      },
+      {
+        "name": "styleMode",
+        "type": "\"default\" | \"minimalist\" | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "span",
+      "button",
+      "Lock",
+      "Pencil",
+      "ChevronDown",
+      "AnimatePresence",
+      "motion.div",
+      "Check",
+      "p"
+    ]
+  },
+  "ViewTabSwitcher": {
+    "definedIn": "src/builder/islands/MetadataIsland/ViewTabSwitcher.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "currentView",
+        "type": "ViewKind",
+        "required": true
+      },
+      {
+        "name": "onViewChange",
+        "type": "(view: ViewKind) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "nav",
+      "ToggleGroup"
+    ]
+  },
+  "ReviewModal": {
+    "definedIn": "src/builder/islands/PreviewReviewModal/ReviewModal.tsx",
+    "exportType": "default",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "nodes",
+        "type": "BuilderNode[]",
+        "required": true
+      },
+      {
+        "name": "onApply",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "StickyPopupShell",
+      "div",
+      "p",
+      "button"
+    ]
+  },
+  "DeleteConfirmation": {
+    "definedIn": "src/builder/islands/SelectionIsland/DeleteConfirmation.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "onConfirm",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "onCancel",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "count",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "GlassSurface",
+      "Trash2",
+      "span",
+      "button"
+    ]
+  },
+  "SelectionButtons": {
+    "definedIn": "src/builder/islands/SelectionIsland/SelectionButtons.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "hasSelection",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "allTargetedAreExpanded",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "allTargetedAreCollapsed",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "handleExpandAllSelected",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "handleCollapseAllSelected",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "handleDuplicateSelected",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "handleDeleteSelected",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "handleClearSelection",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "button",
+      "Maximize2",
+      "Minimize2",
+      "Copy",
+      "Trash",
+      "X"
+    ]
+  },
+  "SelectionIsland": {
+    "definedIn": "src/builder/islands/SelectionIsland/SelectionIsland.tsx",
+    "exportType": "named",
+    "props": [],
+    "childComponentsUsed": [
+      "BuilderIslandShell",
+      "div",
+      "SelectionLabel",
+      "DeleteConfirmation",
+      "SelectionButtons"
+    ]
+  },
+  "SelectionLabel": {
+    "definedIn": "src/builder/islands/SelectionIsland/SelectionLabel.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "hasSelection",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "selectedNodeIds",
+        "type": "string[]",
+        "required": true
+      },
+      {
+        "name": "nodes",
+        "type": "BuilderNode[]",
+        "required": true
+      },
+      {
+        "name": "view",
+        "type": "string",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "span",
+      "button"
+    ]
+  },
+  "CreateCompositionForm": {
+    "definedIn": "src/builder/islands/TaskCreationFlow/CreateCompositionForm.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "channelId",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "definitions",
+        "type": "ApiSubtaskDefinition[]",
+        "required": true
+      },
+      {
+        "name": "onCancel",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "onCreated",
+        "type": "(composition: ApiChannelComposition) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "form",
+      "input",
+      "div",
+      "label",
+      "button"
+    ]
+  },
+  "Step1SelectChannel": {
+    "definedIn": "src/builder/islands/TaskCreationFlow/Step1_SelectChannel.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "channels",
+        "type": "ApiChannel[]",
+        "required": true
+      },
+      {
+        "name": "isLoading",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "(channel: ApiChannel) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "button",
+      "span"
+    ]
+  },
+  "Step2SelectComposition": {
+    "definedIn": "src/builder/islands/TaskCreationFlow/Step2_SelectComposition.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "channel",
+        "type": "ApiChannel",
+        "required": true
+      },
+      {
+        "name": "compositions",
+        "type": "ApiChannelComposition[]",
+        "required": true
+      },
+      {
+        "name": "isLoading",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onBack",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "onCreateNew",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "(composition: ApiChannelComposition) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "button",
+      "span"
+    ]
+  },
+  "Step3ReviewSubtasks": {
+    "definedIn": "src/builder/islands/TaskCreationFlow/Step3_ReviewSubtasks.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "channel",
+        "type": "ApiChannel",
+        "required": true
+      },
+      {
+        "name": "composition",
+        "type": "ApiChannelComposition",
+        "required": true
+      },
+      {
+        "name": "subtasks",
+        "type": "Subtask[]",
+        "required": true
+      },
+      {
+        "name": "onBack",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "onConfirm",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "button",
+      "span"
+    ]
+  },
+  "TaskCreationFlow": {
+    "definedIn": "src/builder/islands/TaskCreationFlow/TaskCreationFlow.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "actionId",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "actionName",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "date",
+        "type": "ApiTaskDate | undefined",
+        "required": false
+      },
+      {
+        "name": "onCancel",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "onCreated",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "CreateCompositionForm",
+      "Step1SelectChannel",
+      "Step2SelectComposition",
+      "Step3ReviewSubtasks",
+      "div",
+      "button"
+    ]
+  },
+  "TemplatePopup": {
+    "definedIn": "src/builder/islands/TemplatePopup/TemplatePopup.tsx",
+    "exportType": "default",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "preferenceScope",
+        "type": "PreferenceScope | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "StickyPopupShell",
+      "div",
+      "p",
+      "button",
+      "label",
+      "input",
+      "span",
+      "ReviewModal"
+    ]
+  },
+  "TimelineBuilderIsland": {
+    "definedIn": "src/builder/islands/TimelineBuilderIsland/TimelineBuilderIsland.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "versionId",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "button",
+      "ChevronLeft",
+      "span",
+      "ChevronRight",
+      "Calendar",
+      "LayoutGrid",
+      "CalendarPlus",
+      "Check"
+    ]
+  },
+  "ViewContextTaskItem": {
+    "definedIn": "src/builder/islands/ViewHelperIsland/ViewContextTaskItem.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "taskNode",
+        "type": "TaskNode",
+        "required": true
+      },
+      {
+        "name": "actionName",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "phaseName",
+        "type": "string",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "ChannelPill",
+      "span"
+    ]
+  },
+  "ViewContextTaskList": {
+    "definedIn": "src/builder/islands/ViewHelperIsland/ViewContextTaskList.tsx",
+    "exportType": "named",
+    "props": [],
+    "childComponentsUsed": [
+      "div",
+      "AlertCircle",
+      "p",
+      "CheckCircle2",
+      "span",
+      "ViewContextTaskItem"
+    ]
+  },
+  "ViewHelperIsland": {
+    "definedIn": "src/builder/islands/ViewHelperIsland/ViewHelperIsland.tsx",
+    "exportType": "named",
+    "props": [],
+    "childComponentsUsed": [
+      "div",
+      "AnimatePresence",
+      "motion.button",
+      "Columns",
+      "motion.div",
+      "Layers",
+      "span",
+      "button",
+      "X",
+      "ViewContextTaskList",
+      "Sparkles"
+    ]
+  },
+  "ActionDropZone": {
+    "definedIn": "src/builder/stage/views/ActionDropZone.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "index",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "phaseId",
+        "type": "string",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div"
+    ]
+  },
+  "DayGridCard": {
+    "definedIn": "src/builder/stage/views/DayGridCard.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "dayLabel",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "dateString",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "isEnabled",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "isWeekend",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "isAnchorDay",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "tasks",
+        "type": "TaskCardData[]",
+        "required": true
+      },
+      {
+        "name": "dayIndex",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "weekIndex",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "anchorDateStr",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "actionsList",
+        "type": "ActionCardData[]",
+        "required": true
+      },
+      {
+        "name": "isMonthly",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "DayGridCardCollapsed",
+      "div",
+      "span",
+      "PhaseReadinessBadge",
+      "button",
+      "EyeOff",
+      "Plus",
+      "TaskCard",
+      "DayGridCardEmpty",
+      "DayTaskCreator"
+    ]
+  },
+  "DayGridCardCollapsed": {
+    "definedIn": "src/builder/stage/views/DayGridCardCollapsed.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "readinessState",
+        "type": "ReadinessState | undefined",
+        "required": false
+      },
+      {
+        "name": "dayNum",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "dateString",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "dayLabel",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "isEnabled",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "isWeekend",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "isAnchorDay",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "tasksCount",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "formattedDateParts",
+        "type": "{ dayName: string; monthName: string; dateNum: number; full: string; } | null",
+        "required": true
+      },
+      {
+        "name": "isDragOver",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "handleDragStart",
+        "type": "(e: React.DragEvent<HTMLDivElement>) => void",
+        "required": true
+      },
+      {
+        "name": "handleDragOver",
+        "type": "(e: React.DragEvent<HTMLDivElement>) => void",
+        "required": true
+      },
+      {
+        "name": "handleDragLeave",
+        "type": "(e: React.DragEvent<HTMLDivElement>) => void",
+        "required": true
+      },
+      {
+        "name": "handleDrop",
+        "type": "(e: React.DragEvent<HTMLDivElement>) => void",
+        "required": true
+      },
+      {
+        "name": "onExpand",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "isSelected",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onClick",
+        "type": "(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void",
+        "required": true
+      },
+      {
+        "name": "onDoubleClick",
+        "type": "(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "PhaseReadinessBadge",
+      "button",
+      "Eye",
+      "span"
+    ]
+  },
+  "DayGridCardEmpty": {
+    "definedIn": "src/builder/stage/views/DayGridCardEmpty.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "isMonthly",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "isEnabled",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "isWeekend",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "handleOpenAdd",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "span",
+      "Calendar",
+      "button",
+      "Plus"
+    ]
+  },
+  "DayTaskCreator": {
+    "definedIn": "src/builder/stage/views/DayTaskCreator.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "actionsList",
+        "type": "ActionCardData[]",
+        "required": true
+      },
+      {
+        "name": "weekIndex",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "dayOffset",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "span",
+      "button",
+      "X",
+      "label",
+      "FolderKanban",
+      "select",
+      "option",
+      "Step1SelectChannel",
+      "CreateCompositionForm",
+      "Step2SelectComposition"
+    ]
+  },
+  "KanbanHiddenDropzones": {
+    "definedIn": "src/builder/stage/views/KanbanHiddenDropzones.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "stageZone",
+        "type": "Dropzone | null | undefined",
+        "required": true
+      },
+      {
+        "name": "versionId",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "phaseNodes",
+        "type": "BuilderNode[]",
+        "required": true
+      },
+      {
+        "name": "phaseZones",
+        "type": "Dropzone[]",
+        "required": true
+      },
+      {
+        "name": "actionZones",
+        "type": "Dropzone[]",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "DropTarget"
+    ]
+  },
+  "KanbanView": {
+    "definedIn": "src/builder/stage/views/KanbanView.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "KanbanHiddenDropzones",
+      "Rows3",
+      "h3",
+      "p",
+      "button",
+      "Plus",
+      "span",
+      "PhaseDropZone",
+      "Fragment",
+      "section",
+      "PhaseCard"
+    ]
+  },
+  "MatrixTimelineHeader": {
+    "definedIn": "src/builder/stage/views/MatrixTimelineHeader.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "activeWeek",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "totalWeeks",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "setActiveWeek",
+        "type": "(week: number) => void",
+        "required": true
+      },
+      {
+        "name": "prevWeek",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "nextWeek",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "ListTodo",
+      "h3",
+      "p",
+      "button",
+      "ChevronLeft",
+      "ChevronRight"
+    ]
+  },
+  "MatrixTimelineView": {
+    "definedIn": "src/builder/stage/views/MatrixTimelineView.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "MatrixTimelineHeader",
+      "AlertCircle",
+      "h4",
+      "p",
+      "TimelineCustomEdgeSensors",
+      "span",
+      "TimelineHourCell"
+    ]
+  },
+  "MonthlyView": {
+    "definedIn": "src/builder/stage/views/MonthlyView.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "span",
+      "DayGridCard"
+    ]
+  },
+  "PhaseDropZone": {
+    "definedIn": "src/builder/stage/views/PhaseDropZone.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "index",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "hoveredPhaseId",
+        "type": "string | null | undefined",
+        "required": false
+      },
+      {
+        "name": "hoverDirection",
+        "type": "\"left\" | \"right\" | null | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "Layers",
+      "span"
+    ]
+  },
+  "SmokeStage": {
+    "definedIn": "src/builder/stage/views/SmokeStage.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "mode",
+        "type": "\"kanban\" | \"timeline\" | \"weekly\" | \"monthly\"",
+        "required": true
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "span",
+      "PhaseCard",
+      "ActionCard",
+      "TaskCard"
+    ]
+  },
+  "TaskDropZone": {
+    "definedIn": "src/builder/stage/views/TaskDropZone.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "index",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "actionId",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "isSmall",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div"
+    ]
+  },
+  "TaskGridMarker": {
+    "definedIn": "src/builder/stage/views/TaskGridMarker.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "task",
+        "type": "TaskCardData",
+        "required": true
+      },
+      {
+        "name": "onClick",
+        "type": "((e: React.MouseEvent<Element, MouseEvent>) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "article",
+      "div",
+      "h6",
+      "span",
+      "p",
+      "Calendar"
+    ]
+  },
+  "TimelineCustomEdgeSensors": {
+    "definedIn": "src/builder/stage/views/TimelineCustomEdgeSensors.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "activeWeek",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "totalWeeks",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "setActiveWeek",
+        "type": "React.Dispatch<React.SetStateAction<number>>",
+        "required": true
+      },
+      {
+        "name": "isDraggingOverLeft",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "setIsDraggingOverLeft",
+        "type": "(val: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "isDraggingOverRight",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "setIsDraggingOverRight",
+        "type": "(val: boolean) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div"
+    ]
+  },
+  "TimelineHourCell": {
+    "definedIn": "src/builder/stage/views/TimelineHourCell.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "day",
+        "type": "DayData",
+        "required": true
+      },
+      {
+        "name": "actionId",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "activeWeek",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "cellTasks",
+        "type": "TaskCardData[]",
+        "required": true
+      },
+      {
+        "name": "onCellDrop",
+        "type": "(e: React.DragEvent<Element>, targetActionId: string, dayIndex: number, isEnabled: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "onSaveMinimalTask",
+        "type": "(name: string, actionId: string, dayIndex: number) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "TaskGridMarker",
+      "form",
+      "input",
+      "button",
+      "Plus"
+    ]
+  },
+  "TimelineView": {
+    "definedIn": "src/builder/stage/views/TimelineView.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "WeeklyView",
+      "MonthlyView",
+      "MatrixTimelineView"
+    ]
+  },
+  "WeeklyView": {
+    "definedIn": "src/builder/stage/views/WeeklyView.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "DayGridCard"
+    ]
+  },
+  "InlineIslandButton": {
+    "definedIn": "src/builder/ui/buttons/InlineIslandButton.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "id",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "isActive",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "isDisabled",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "isAi",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "icon",
+        "type": "LucideIcon | undefined",
+        "required": false
+      },
+      {
+        "name": "onClick",
+        "type": "((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "draggable",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onDragStart",
+        "type": "((event: React.DragEvent<HTMLButtonElement>) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onDragEnd",
+        "type": "((event: React.DragEvent<HTMLButtonElement>) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "title",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "motion.div",
+      "Chip",
+      "Icon"
+    ]
+  },
+  "IslandToggleButton": {
+    "definedIn": "src/builder/ui/buttons/IslandToggleButton.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "id",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "isActive",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onClick",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "icon",
+        "type": "LucideIcon",
+        "required": true
+      },
+      {
+        "name": "activeIcon",
+        "type": "LucideIcon | undefined",
+        "required": false
+      },
+      {
+        "name": "title",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "ariaLabel",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "motion.div",
+      "Chip",
+      "motion.span",
+      "DisplayIcon"
+    ]
+  },
+  "MenuSectionButton": {
+    "definedIn": "src/builder/ui/buttons/MenuSections.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "isActive",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "isPassed",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onClick",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "Chip",
+      "span"
+    ]
+  },
+  "AlertMark": {
+    "definedIn": "src/builder/ui/feedback/AlertMark.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "AlertTriangle"
+    ]
+  },
+  "ReadyMark": {
+    "definedIn": "src/builder/ui/feedback/ReadyMark.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "CheckCircle2"
+    ]
+  },
+  "ValidationSummary": {
+    "definedIn": "src/builder/ui/feedback/ValidationSummary.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "issues",
+        "type": "string[]",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "onFocusIssue",
+        "type": "((path: string) => void) | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "h3",
+      "button",
+      "X",
+      "ul",
+      "li"
+    ]
+  },
+  "ApprovalConfirmModal": {
+    "definedIn": "src/builder/ui/modals/ApprovalConfirmModal.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "onConfirm",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "version",
+        "type": "Version",
+        "required": true
+      },
+      {
+        "name": "siblings",
+        "type": "Version[]",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "AlertTriangle",
+      "h4",
+      "p",
+      "strong",
+      "span",
+      "button",
+      "Check",
+      "X"
+    ]
+  },
+  "ImportPreviewModal": {
+    "definedIn": "src/builder/ui/modals/ImportPreviewModal.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "importedNodes",
+        "type": "BuilderNode[] | null",
+        "required": true
+      },
+      {
+        "name": "diff",
+        "type": "ImportDiffGroup | null",
+        "required": true
+      },
+      {
+        "name": "onApply",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "onFileLoad",
+        "type": "(file: File) => Promise<void>",
+        "required": true
+      },
+      {
+        "name": "confirmDeletes",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "setConfirmDeletes",
+        "type": "(v: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "decisions",
+        "type": "Record<string, ImportDecision> | undefined",
+        "required": false
+      },
+      {
+        "name": "setDecision",
+        "type": "((id: string, decision: ImportDecision) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "labelForId",
+        "type": "((id: string) => string) | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "h3",
+      "label",
+      "input",
+      "p",
+      "strong",
+      "section",
+      "h4",
+      "ul",
+      "li",
+      "select",
+      "option",
+      "button"
+    ]
+  },
+  "CalendarGrid": {
+    "definedIn": "src/ui/forms/date/CalendarGrid.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "currentDate",
+        "type": "Date",
+        "required": true
+      },
+      {
+        "name": "isDark",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "ApiTaskDate",
+        "required": true
+      },
+      {
+        "name": "anchorDateStr",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onCurrentDateChange",
+        "type": "(date: Date) => void",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "(date: string) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "span",
+      "button",
+      "ChevronLeft",
+      "ChevronRight"
+    ]
+  },
+  "CommunicationDateField": {
+    "definedIn": "src/ui/forms/date/CommunicationDateField.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "value",
+        "type": "ApiTaskDate",
+        "required": true
+      },
+      {
+        "name": "onChange",
+        "type": "(value: ApiTaskDate) => void",
+        "required": true
+      },
+      {
+        "name": "anchorDateStr",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "showLinkMode",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "triggerStyle",
+        "type": "\"default\" | \"minimalist\" | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "Link2",
+      "CalendarDays",
+      "HelpCircle",
+      "button",
+      "span",
+      "div",
+      "DatePickerPopup"
+    ]
+  },
+  "DatePickerPopup": {
+    "definedIn": "src/ui/forms/date/DatePickerPopup.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "value",
+        "type": "ApiTaskDate",
+        "required": true
+      },
+      {
+        "name": "onChange",
+        "type": "(value: ApiTaskDate) => void",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "anchorDateStr",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "showLinkMode",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "EffectLayer",
+      "PopoverShell",
+      "CalendarGrid",
+      "LinkedDateGrid",
+      "DatePickerToggle"
+    ]
+  },
+  "DatePickerToggle": {
+    "definedIn": "src/ui/forms/date/DatePickerToggle.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "mode",
+        "type": "\"link\" | \"custom\"",
+        "required": true
+      },
+      {
+        "name": "onModeChange",
+        "type": "(mode: \"link\" | \"custom\") => void",
+        "required": true
+      },
+      {
+        "name": "showLinkMode",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "CalendarDays",
+      "button",
+      "Icon"
+    ]
+  },
+  "LinkedDateGrid": {
+    "definedIn": "src/ui/forms/date/LinkedDateGrid.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "value",
+        "type": "ApiTaskDate",
+        "required": true
+      },
+      {
+        "name": "anchorDateStr",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "selectedWeek",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "totalWeeks",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "isDark",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onWeekChange",
+        "type": "(week: number) => void",
+        "required": true
+      },
+      {
+        "name": "onTotalWeeksChange",
+        "type": "(weeks: number) => void",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "(week: number, day: number) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "span",
+      "button",
+      "Trash2",
+      "Plus"
+    ]
+  },
+  "ListInputLines": {
+    "definedIn": "src/ui/forms/inputs/ListInputLines.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "items",
+        "type": "string[]",
+        "required": true
+      },
+      {
+        "name": "onChange",
+        "type": "(items: string[]) => void",
+        "required": true
+      },
+      {
+        "name": "placeholder",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "label",
+      "Input",
+      "button",
+      "Plus",
+      "span",
+      "Trash2"
+    ]
+  },
+  "SpecsInput": {
+    "definedIn": "src/ui/forms/inputs/SpecsInput.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "metricLabel",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "metricValue",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onLabelChange",
+        "type": "(label: string) => void",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(value: string) => void",
+        "required": true
+      },
+      {
+        "name": "placeholderLabel",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "placeholderValue",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "title",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "span",
+      "HelpCircle",
+      "Input"
+    ]
+  },
+  "CompletionStateSelect": {
+    "definedIn": "src/ui/forms/selects/CompletionStateSelect.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "ApiFieldCompletionState | undefined",
+        "required": false
+      },
+      {
+        "name": "onChange",
+        "type": "(val: ApiFieldCompletionState) => void",
+        "required": true
+      },
+      {
+        "name": "placeholder",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "span",
+      "button",
+      "Circle",
+      "CheckCircle2",
+      "HelpCircle",
+      "textarea"
+    ]
+  },
+  "Select": {
+    "definedIn": "src/ui/forms/selects/Select.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string | null",
+        "required": true
+      },
+      {
+        "name": "options",
+        "type": "SelectOption[]",
+        "required": true
+      },
+      {
+        "name": "onChange",
+        "type": "(newValue: string) => void",
+        "required": true
+      },
+      {
+        "name": "onQuickAdd",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "quickAddLabel",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "placeholder",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "button",
+      "span",
+      "ChevronDown",
+      "Plus"
+    ]
+  },
+  "ActionCard": {
+    "definedIn": "src/builder/cards/templates/action/ActionCard.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "action",
+        "type": "ActionCardData",
+        "required": true
+      },
+      {
+        "name": "selected",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "locked",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onSelect",
+        "type": "((id: string, isMulti: boolean) => void) | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "CardShell",
+      "header",
+      "div",
+      "input",
+      "button",
+      "Eye",
+      "EyeOff",
+      "ReadyMark",
+      "AlertMark",
+      "ActionTaskList",
+      "ReadinessCheckModal"
+    ]
+  },
+  "ActionTaskList": {
+    "definedIn": "src/builder/cards/templates/action/ActionTaskList.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "action",
+        "type": "ActionCardData",
+        "required": true
+      },
+      {
+        "name": "locked",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "isExpanded",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "(id: string, isMulti: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "selectedNodeIds",
+        "type": "string[]",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "HorizontalTaskFlow",
+      "TaskBentoGrid"
+    ]
+  },
+  "HorizontalTaskFlow": {
+    "definedIn": "src/builder/cards/templates/phase/HorizontalTaskFlow.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "tasks",
+        "type": "TaskCardData[]",
+        "required": true
+      },
+      {
+        "name": "actionId",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "selectedNodeIds",
+        "type": "string[] | undefined",
+        "required": false
+      },
+      {
+        "name": "onTaskClick",
+        "type": "((taskId: string, e: React.MouseEvent<Element, MouseEvent>) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "TaskDropZone",
+      "Fragment",
+      "TaskCard"
+    ]
+  },
+  "PhaseCard": {
+    "definedIn": "src/builder/cards/templates/phase/PhaseCard.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "phase",
+        "type": "PhaseNodeData",
+        "required": true
+      },
+      {
+        "name": "selected",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "locked",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onSelect",
+        "type": "((id: string, isMulti: boolean) => void) | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "CardShell",
+      "div",
+      "span",
+      "button",
+      "PhaseReadinessBadge",
+      "ReadinessCheckModal",
+      "header",
+      "input",
+      "Eye",
+      "EyeOff",
+      "ActionDropZone",
+      "React.Fragment",
+      "ActionCard"
+    ]
+  },
+  "PhaseReadinessBadge": {
+    "definedIn": "src/builder/cards/templates/phase/PhaseReadinessBadge.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "state",
+        "type": "ReadinessState",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "Badge",
+      "CheckCircle2",
+      "AlertTriangle",
+      "AlertCircle",
+      "span"
+    ]
+  },
+  "TaskBentoGrid": {
+    "definedIn": "src/builder/cards/templates/phase/TaskBentoGrid.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "tasks",
+        "type": "TaskCardData[]",
+        "required": true
+      },
+      {
+        "name": "actionId",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "locked",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "selectedNodeIds",
+        "type": "string[]",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "(id: string, isMulti: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "TaskDropZone",
+      "Fragment",
+      "TaskCard"
+    ]
+  },
+  "TaskCard": {
+    "definedIn": "src/builder/cards/templates/task/TaskCard.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "task",
+        "type": "TaskCardData",
+        "required": true
+      },
+      {
+        "name": "selected",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "locked",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onSelect",
+        "type": "((id: string, isMulti: boolean) => void) | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "CardShell",
+      "Calendar",
+      "Link2",
+      "span",
+      "TaskReadOnlyPopup",
+      "input",
+      "TaskProperties"
+    ]
+  },
+  "TaskReadOnlyPopup": {
+    "definedIn": "src/builder/cards/templates/task/TaskReadOnlyPopup.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "task",
+        "type": "TaskCardData",
+        "required": true
+      },
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "readiness",
+        "type": "{ state: ReadinessState; reasons: string[]; }",
+        "required": true
+      },
+      {
+        "name": "resolvedDate",
+        "type": "string | null",
+        "required": true
+      },
+      {
+        "name": "anchorRef",
+        "type": "React.RefObject<HTMLElement | null>",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "GlassSurface",
+      "ChannelPill",
+      "h3",
+      "button",
+      "X",
+      "dl",
+      "dt",
+      "dd"
+    ]
+  },
+  "RoutingDirectorySection": {
+    "definedIn": "src/builder/islands/EditorViewerIsland/TaskEditor/RoutingDirectorySection.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "draftData",
+        "type": "TaskCardData",
+        "required": true
+      },
+      {
+        "name": "updateDraftField",
+        "type": "(field: string, value: unknown) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "Icon",
+      "button",
+      "p",
+      "span",
+      "Table",
+      "EffectLayer",
+      "X",
+      "input",
+      "Check",
+      "RegistryDirectoryModal"
+    ]
+  },
+  "TaskEditor": {
+    "definedIn": "src/builder/islands/EditorViewerIsland/TaskEditor/TaskEditor.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "draftData",
+        "type": "TaskCardData",
+        "required": true
+      },
+      {
+        "name": "updateDraftField",
+        "type": "(field: string, value: unknown) => void",
+        "required": true
+      },
+      {
+        "name": "anchorDateStr",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "activeTab",
+        "type": "\"info\" | \"channel\" | \"specs\" | \"subtasks\"",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "TaskSection1",
+      "TaskSection3",
+      "TaskSection4"
+    ]
+  },
+  "TaskSection1": {
+    "definedIn": "src/builder/islands/EditorViewerIsland/TaskEditor/TaskSection1.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "draftData",
+        "type": "TaskCardData",
+        "required": true
+      },
+      {
+        "name": "updateDraftField",
+        "type": "(field: string, value: unknown) => void",
+        "required": true
+      },
+      {
+        "name": "anchorDateStr",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "CommunicationDateField",
+      "Input",
+      "RoutingDirectorySection"
+    ]
+  },
+  "TaskSection3": {
+    "definedIn": "src/builder/islands/EditorViewerIsland/TaskEditor/TaskSection3.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "draftData",
+        "type": "TaskCardData",
+        "required": true
+      },
+      {
+        "name": "updateDraftField",
+        "type": "(field: string, value: unknown) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "p",
+      "button",
+      "span",
+      "SpecsInput",
+      "ListInputLines"
+    ]
+  },
+  "TaskSection4": {
+    "definedIn": "src/builder/islands/EditorViewerIsland/TaskEditor/TaskSection4.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "draftData",
+        "type": "TaskCardData",
+        "required": true
+      },
+      {
+        "name": "updateDraftField",
+        "type": "(field: string, value: unknown) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "QuickSubtaskForm"
+    ]
+  },
+  "ChannelCompositionFields": {
+    "definedIn": "src/builder/ui/forms/channel/ChannelCompositionFields.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "channelId",
+        "type": "string | null",
+        "required": true
+      },
+      {
+        "name": "compositionId",
+        "type": "string | null",
+        "required": true
+      },
+      {
+        "name": "channels",
+        "type": "ApiChannel[]",
+        "required": true
+      },
+      {
+        "name": "compositions",
+        "type": "ApiChannelComposition[]",
+        "required": true
+      },
+      {
+        "name": "onChannelChange",
+        "type": "(channelId: string) => void",
+        "required": true
+      },
+      {
+        "name": "onCompositionChange",
+        "type": "(compositionId: string) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "label",
+      "Select"
+    ]
+  },
+  "ChannelCompositionSelect": {
+    "definedIn": "src/builder/ui/forms/channel/ChannelCompositionSelect.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "channelId",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "selectedCompositionId",
+        "type": "string | null",
+        "required": true
+      },
+      {
+        "name": "taskId",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onChange",
+        "type": "(compositionId: string | null, subtasks?: Subtask[] | undefined) => void",
+        "required": true
+      },
+      {
+        "name": "currentSubtasks",
+        "type": "Subtask[]",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "span",
+      "Loader2",
+      "button",
+      "Check",
+      "p",
+      "Plus",
+      "form",
+      "input",
+      "Save"
+    ]
+  },
+  "CompositionLibraryModal": {
+    "definedIn": "src/builder/ui/forms/channel/CompositionLibraryModal.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "items",
+        "type": "CompositionLibraryItem[]",
+        "required": true
+      },
+      {
+        "name": "searchQuery",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "channelId",
+        "type": "string | null",
+        "required": true
+      },
+      {
+        "name": "compositionId",
+        "type": "string | null",
+        "required": true
+      },
+      {
+        "name": "onSearchChange",
+        "type": "(query: string) => void",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "(item: CompositionLibraryItem) => void",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "h4",
+      "BookOpen",
+      "p",
+      "button",
+      "X",
+      "Search",
+      "input",
+      "span",
+      "Icon",
+      "HelpCircle"
+    ]
+  },
+  "InlineChannelCompositionSelector": {
+    "definedIn": "src/builder/ui/forms/channel/InlineChannelCompositionSelector.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "channelId",
+        "type": "string | null",
+        "required": true
+      },
+      {
+        "name": "compositionId",
+        "type": "string | null",
+        "required": true
+      },
+      {
+        "name": "onChannelChange",
+        "type": "(newChannelId: string) => void",
+        "required": true
+      },
+      {
+        "name": "onCompositionChange",
+        "type": "(newCompositionId: string | null) => void",
+        "required": true
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "button",
+      "span",
+      "ChevronDown",
+      "X",
+      "ChannelCompositionFields",
+      "BookOpen",
+      "Layers",
+      "CompositionLibraryModal"
+    ]
+  },
+  "RegistryDirectoryModal": {
+    "definedIn": "src/builder/ui/forms/channel/RegistryDirectoryModal.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "segmentsList",
+        "type": "SelectOption[]",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "h4",
+      "button",
+      "X",
+      "p",
+      "span"
+    ]
+  },
+  "QuickSubtaskForm": {
+    "definedIn": "src/builder/ui/forms/subtask/QuickSubtaskForm.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "taskId",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "subtasks",
+        "type": "Subtask[]",
+        "required": true
+      },
+      {
+        "name": "onChange",
+        "type": "(updatedSubtasks: Subtask[]) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "span",
+      "button",
+      "ChevronUp",
+      "ChevronDown",
+      "input",
+      "Clock",
+      "Trash2",
+      "Plus"
+    ]
+  },
+  "QuickEditPopover": {
+    "definedIn": "src/builder/ui/modals/quick-edit/QuickEditPopover.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "triggerRef",
+        "type": "React.RefObject<HTMLElement | null>",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "AnimatePresence",
+      "div",
+      "motion.div",
+      "span",
+      "button",
+      "X"
+    ]
+  },
+  "ReadinessCheckContent": {
+    "definedIn": "src/builder/ui/modals/readiness-check-modal/ReadinessCheckContent.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "task",
+        "type": "TaskCardData | null | undefined",
+        "required": false
+      },
+      {
+        "name": "action",
+        "type": "ActionCardData | null | undefined",
+        "required": false
+      },
+      {
+        "name": "phase",
+        "type": "PhaseNodeData | null | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "p",
+      "h4",
+      "span",
+      "ReadyMark",
+      "AlertMark",
+      "ShieldCheck",
+      "strong"
+    ]
+  },
+  "ReadinessCheckModal": {
+    "definedIn": "src/builder/ui/modals/readiness-check-modal/ReadinessCheckModal.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "task",
+        "type": "TaskCardData | null | undefined",
+        "required": false
+      },
+      {
+        "name": "action",
+        "type": "ActionCardData | null | undefined",
+        "required": false
+      },
+      {
+        "name": "phase",
+        "type": "PhaseNodeData | null | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "StickyPopupShell",
+      "div",
+      "Target",
+      "h4",
+      "p",
+      "ReadinessCheckContent"
+    ]
+  },
+  "ChannelPill": {
+    "definedIn": "src/builder/cards/templates/task/task-properties/ChannelPill.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "channelId",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ],
+    "childComponentsUsed": [
+      "Chip"
+    ]
+  },
+  "TaskCardPopovers": {
+    "definedIn": "src/builder/cards/templates/task/task-properties/TaskCardPopovers.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "task",
+        "type": "TaskCardData",
+        "required": true
+      },
+      {
+        "name": "activePopover",
+        "type": "\"specs\" | \"comp\" | \"missing\" | \"bench\" | null",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "compTriggerRef",
+        "type": "React.RefObject<HTMLButtonElement | null>",
+        "required": true
+      },
+      {
+        "name": "specsTriggerRef",
+        "type": "React.RefObject<HTMLButtonElement | null>",
+        "required": true
+      },
+      {
+        "name": "missingTriggerRef",
+        "type": "React.RefObject<HTMLButtonElement | null>",
+        "required": true
+      },
+      {
+        "name": "benchTriggerRef",
+        "type": "React.RefObject<HTMLButtonElement | null>",
+        "required": true
+      },
+      {
+        "name": "onCompositionChange",
+        "type": "(compositionId: string | null, subtasks?: Subtask[] | undefined) => void",
+        "required": true
+      },
+      {
+        "name": "onSpecsChange",
+        "type": "(state: ApiFieldCompletionState) => void",
+        "required": true
+      },
+      {
+        "name": "onMissingDataChange",
+        "type": "(state: ApiFieldCompletionState) => void",
+        "required": true
+      },
+      {
+        "name": "onSubtasksChange",
+        "type": "(subtasks: Subtask[]) => void",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "QuickEditPopover",
+      "ChannelCompositionSelect",
+      "CompletionStateSelect",
+      "QuickSubtaskForm"
+    ]
+  },
+  "TaskProperties": {
+    "definedIn": "src/builder/cards/templates/task/task-properties/TaskProperties.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "task",
+        "type": "TaskCardData",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "button",
+      "Layers",
+      "FileText",
+      "Database",
+      "ListTodo",
+      "TaskCardPopovers"
+    ]
+  },
+  "PropertyOption": {
+    "definedIn": "src/builder/islands/FocusIsland/options/PropertyOption/PropertyOption.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "id",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "activeProperty",
+        "type": "{ key: PropertyKey; val: string; } | null",
+        "required": true
+      },
+      {
+        "name": "setActiveProperty",
+        "type": "(prop: { key: PropertyKey; val: string; } | null) => void",
+        "required": true
+      },
+      {
+        "name": "focusMode",
+        "type": "\"and\" | \"or\"",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "button",
+      "Sliders",
+      "span",
+      "PopoverShell",
+      "h5",
+      "ArrowRight",
+      "ArrowLeft",
+      "Check",
+      "p"
+    ]
+  },
+  "WeekOption": {
+    "definedIn": "src/builder/islands/FocusIsland/options/WeekOption/WeekOption.tsx",
+    "exportType": "named",
+    "props": [
+      {
+        "name": "id",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "activeWeek",
+        "type": "number | null",
+        "required": true
+      },
+      {
+        "name": "setActiveWeek",
+        "type": "(week: number | null) => void",
+        "required": true
+      },
+      {
+        "name": "focusMode",
+        "type": "\"and\" | \"or\"",
+        "required": true
+      }
+    ],
+    "childComponentsUsed": [
+      "div",
+      "button",
+      "Calendar",
+      "span",
+      "PopoverShell",
+      "Check",
+      "p"
+    ]
+  }
+}

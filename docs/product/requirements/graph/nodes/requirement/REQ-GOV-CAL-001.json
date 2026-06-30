@@ -1,0 +1,22 @@
+{
+  "id": "REQ-GOV-CAL-001",
+  "type": "Requirement",
+  "statement": "During requirements-system rollout, the graph must operate in test/calibration mode: strict architecture remains binding, while imperfect mappings may remain provisional when visible, auditable, reversible, and queued for cleanup.",
+  "scope": "governance",
+  "governance": "locked",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "lock_owner": "PO",
+  "lock_date": "2026-06-29",
+  "ledger_ref": "LDG-2026-06-29-RS-CALIBRATION-MODE",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "source": "PO rollout calibration-mode ruling",
+    "source_path": "docs/plans/active/requirements-system/output/RS-rollout-calibration-mode.md",
+    "source_anchor": "Operating Principle",
+    "authoring_actor": "Codex",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  }
+}

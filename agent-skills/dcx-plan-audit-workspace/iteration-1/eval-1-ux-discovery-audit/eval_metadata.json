@@ -1,0 +1,1 @@
+{"eval_id": 1, "eval_name": "ux-discovery-audit", "prompt": "Audit the ux-discovery-v2 plan at docs/plans/drafted/ux-discovery-v2/. I want to know if it's ready to activate or if there are issues to fix before we hand it to opencode.", "assertions": []}

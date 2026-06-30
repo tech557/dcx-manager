@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-RDY-003-TO-MAN-react-component-taskcard-taskcard",
+  "type": "TraceLink",
+  "source": "REQ-RDY-003",
+  "target": "MAN-react-component-src-builder-cards-templates-task-taskcard",
+  "relationship_type": "supersedes",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"TaskCard\" matches \"Per-field readiness states on tasks — Each important task field needs a clear readiness state so the Task Card and Editor agree on what is filled, unset, or intentionally not needed. — Define field-level readiness states (ready / filled / unset / not-needed) for date, missing data, specs, sender, receiver, channel, subtasks. States are computed centrally and consumed by the Task Card indicators and the Editor.\" (score: 0.85)",
+    "Historical RS-R7 candidate superseded by canonical link TRC-RS-R7-REQ-RDY-003-TO-MAN-react-component-src-builder-cards-templates-task-taskcard."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "original_source": "REQ-RDY-003",
+  "original_target": "MAN-react-component-taskcard-taskcard",
+  "replacement_trace_link": "TRC-RS-R7-REQ-RDY-003-TO-MAN-react-component-src-builder-cards-templates-task-taskcard",
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

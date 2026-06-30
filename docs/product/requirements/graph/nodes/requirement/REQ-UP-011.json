@@ -1,0 +1,28 @@
+{
+  "id": "REQ-UP-011",
+  "statement": "Active editor restore — Restore active editor/panel only if still valid and safe. — Task existence check, version editability check, editor state",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "UP-011",
+  "source_category": "Preferences; Session & Telemetry",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Version status, task existence, Ready lock",
+  "related_requirements": "Lifecycle & Version Status Rules",
+  "affected_modules": "src/hooks/usePreferences.ts; local storage preference helpers; session restore; analytics/event adapter",
+  "ux_impact": "User may return to the same task editor",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "UP-011",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

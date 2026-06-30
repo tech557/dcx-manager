@@ -1,0 +1,18 @@
+{
+  "id": "REQ-HOME-CREATE-TAXONOMY",
+  "type": "Requirement",
+  "statement": "ClickUp taxonomy: a ClickUp list = project, a ClickUp folder = client. Backend-deferred: mock contract in HV-1.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "scope": "frontend",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confidence": 1,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

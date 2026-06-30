@@ -1,0 +1,28 @@
+{
+  "id": "REQ-UP-010",
+  "statement": "Preference scope — UI preference keys should be scoped by userId + dcxId + versionId. — Preference key generator, local storage schema.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "UP-010",
+  "source_category": "Preferences; Session & Telemetry",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Auth/user identity, version routing",
+  "related_requirements": "Routing, Auth & Load Control",
+  "affected_modules": "src/hooks/usePreferences.ts; local storage preference helpers; session restore; analytics/event adapter",
+  "ux_impact": "User-specific workspace memory behaves correctly.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "UP-010",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

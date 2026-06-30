@@ -1,0 +1,14 @@
+{
+  "id": "TRC-REQ-GOV-TRACE-001-TO-MAN-documentation-view-docs-product-requirements-graph-generated",
+  "type": "TraceLink",
+  "source": "REQ-GOV-TRACE-001",
+  "target": "MAN-documentation-view-docs-product-requirements-graph-generated",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "inference_source": "RS-R9 seed (manual curation)",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

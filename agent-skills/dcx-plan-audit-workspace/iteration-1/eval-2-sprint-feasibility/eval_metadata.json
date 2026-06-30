@@ -1,0 +1,1 @@
+{"eval_id": 2, "eval_name": "sprint-feasibility", "prompt": "Codex, review the frontend-discovery-v2 sprint FE2-R1 — specifically whether the dep-cruiser and code-index steps are actually executable as written. Write your audit so Claude can decide whether to activate it.", "assertions": []}

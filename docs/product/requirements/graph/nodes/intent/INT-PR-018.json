@@ -1,0 +1,27 @@
+{
+  "id": "INT-PR-018",
+  "statement": "Assigned editor model — Future version may restrict editing to assigned/editor users, while shared users retain — Assignment fields, permission checker, task/version ownership.",
+  "governance": "draft",
+  "maturity": "intent-captured",
+  "delivery": "not-assessed",
+  "source_id": "PR-018",
+  "source_category": "Permissions & Access Control",
+  "priority": "Future",
+  "status": "Deferred",
+  "chain_layer": "INT",
+  "dependencies": "Collaboration/version lifecycle",
+  "related_requirements": "",
+  "affected_modules": "src/rules/permissions.rules.ts; src/hooks/usePermissions.ts; route guards; backend policy/service enforcement",
+  "ux_impact": "Later teams can control who edits.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "PR-018",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.75,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Intent"
+}

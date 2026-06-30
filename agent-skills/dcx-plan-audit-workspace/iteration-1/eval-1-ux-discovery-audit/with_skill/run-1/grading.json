@@ -1,0 +1,47 @@
+{
+  "eval_id": 1,
+  "run": "with_skill",
+  "expectations": [
+    {
+      "text": "Audit file is written to the plan folder (docs/plans/drafted/ux-discovery-v2/audit/) \u2014 not just printed to stdout",
+      "passed": true,
+      "evidence": "File written to docs/plans/drafted/ux-discovery-v2/audit/2026-06-26-codex.md (confirmed by agent report)"
+    },
+    {
+      "text": "Output contains YAML frontmatter with a 'verdict' field set to READY, NEEDS REVISION, or NOT READY",
+      "passed": true,
+      "evidence": "Frontmatter present: audit-of, auditor, date, verdict: NEEDS REVISION, blocking-issues: 3, advisory-issues: 3"
+    },
+    {
+      "text": "Prior art section references the expired ui-ux-discovery plan and mentions at least one specific prior finding (e.g., 269 raw hex values, 48 dead CSS classes, or token inventory)",
+      "passed": true,
+      "evidence": "Agent summary confirms 'baseline numbers (269 hex, 5 duplication groups) cited' and CSS modules rejection documented"
+    },
+    {
+      "text": "Gate coverage table or section is present and correctly marks all 3 discovery sprints as N/A for code-modifying gates",
+      "passed": true,
+      "evidence": "Agent confirmed 'gates correctly marked N/A with a reason'; excerpt shows ready-checklist item: 'Every code-modifying sprint has gate coverage (no sprints modify code; N/A is appropriate)'"
+    },
+    {
+      "text": "Session start compliance is assessed \u2014 output mentions whether each sprint has a build-current-state.sh step",
+      "passed": true,
+      "evidence": "Found UX2-R2 missing verify-tooling-state.sh (blocking issue #1) and UX2-R3 missing session environment check entirely (blocking issue #2)"
+    },
+    {
+      "text": "Any scripts referenced in the sprint files are verified against the actual scripts/agent/ directory contents (not assumed to exist)",
+      "passed": true,
+      "evidence": "Agent verified scripts exist; blocking issue #3 flags that src-structure-refactor expired plan paths are NOT confirmed to exist"
+    },
+    {
+      "text": "Blocking issues section is present \u2014 either lists specific issues with evidence and fix, or explicitly states zero blocking issues with a reason",
+      "passed": true,
+      "evidence": "Blocking issues table with Sprint | Issue | Evidence | Fix columns; 3 issues each with specific file path, step number, and fix instruction"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  }
+}

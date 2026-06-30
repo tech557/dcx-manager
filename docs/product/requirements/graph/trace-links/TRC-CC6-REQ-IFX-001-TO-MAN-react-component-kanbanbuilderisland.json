@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CC6-REQ-IFX-001-TO-MAN-react-component-kanbanbuilderisland",
+  "type": "TraceLink",
+  "source": "REQ-IFX-001",
+  "target": "MAN-react-component-src-builder-islands-kanbanbuilderisland-kanbanbuilderisland",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.9,
+  "evidence_refs": [
+    "CC-6: KanbanBuilderIsland expanded-state text labels and dividers are now theme-aware (useTheme isDark). 'Controls' heading uses --theme-text-primary in light mode; dividers switch from bg-white/10 to bg-black/10 in light mode. Eliminates invisible-text patch on white-glass island surface."
+  ],
+  "inference_source": "CC-6 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

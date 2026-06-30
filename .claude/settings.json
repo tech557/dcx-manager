@@ -1,0 +1,26 @@
+{
+  "skillOverrides": {
+    "impeccable": "on"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'case \"$CLAUDE_TOOL_INPUT_FILE_PATH\" in */docs/progress/sessions/*.md) cd \"${CLAUDE_PROJECT_DIR:-.}\" && bash scripts/build-log-index.sh ;; esac'"
+          },
+          {
+            "type": "command",
+            "command": "bash -c 'case \"$CLAUDE_TOOL_INPUT_FILE_PATH\" in */docs/plans/completed/*) echo \"[HOOK WARN] Editing a file in docs/plans/completed/. Completed plans are read-only. Provide an explicit documentation-correction reason in your session log if this is intentional.\" >&2 ;; esac'"
+          },
+          {
+            "type": "command",
+            "command": "bash -c 'case \"$CLAUDE_TOOL_INPUT_FILE_PATH\" in */output/*.md) cd \"${CLAUDE_PROJECT_DIR:-.}\" && bash scripts/agent/run-completion-hook.sh \"$CLAUDE_TOOL_INPUT_FILE_PATH\" ;; esac'"
+          }
+        ]
+      }
+    ]
+  }
+}

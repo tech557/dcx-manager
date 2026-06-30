@@ -1,0 +1,22 @@
+{
+  "id": "MAN-function-docs-product-requirements-graph-nodes-requirement-req-gov-inv-001",
+  "type": "Manifestation",
+  "statement": "Graph requirement record for agent investigation triggers during calibration mode.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "data",
+  "kind": "documentation-view",
+  "current_paths": [
+    "docs/product/requirements/graph/nodes/requirement/REQ-GOV-INV-001.json"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "PO rollout calibration-mode ruling",
+    "source_path": "docs/product/requirements/graph/nodes/requirement/REQ-GOV-INV-001.json",
+    "authoring_actor": "Codex",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  }
+}

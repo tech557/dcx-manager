@@ -1,0 +1,16 @@
+/node_modules/
+/dist/
+/.venv*/
+/.playwright-mcp/
+/.npm-cache/
+/.vite/
+/test-results/
+/output/
+/tmp/
+*.pdf
+.env
+.env.*
+*.key
+*.pem
+*.local
+.DS_Store

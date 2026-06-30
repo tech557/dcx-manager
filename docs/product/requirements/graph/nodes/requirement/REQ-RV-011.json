@@ -1,0 +1,28 @@
+{
+  "id": "REQ-RV-011",
+  "statement": "Specs field rule — The specs field must either have content or be explicitly marked Not — TaskEditor field model, task type, validation, API DTO,",
+  "governance": "archived",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "RV-011",
+  "source_category": "Validation & Readiness Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "Data Model & Builder Structure",
+  "related_requirements": "Domain Model & API Contracts",
+  "affected_modules": "src/rules/validation.rules.ts; readiness checker; validation summary UI; TaskEditor validation hooks",
+  "ux_impact": "User can confirm “no specs needed” instead of",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RV-011",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

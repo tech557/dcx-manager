@@ -1,0 +1,28 @@
+{
+  "id": "REQ-RV-020",
+  "statement": "Modular import engine — Duplication/import logic should be modular because later the app will support a — Import/export service, builder mutations, template payload model, Kanban",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "RV-020",
+  "source_category": "Builder State & Mutation Layer",
+  "priority": "Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "Templates & Reuse future category",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/store/builderStore.ts; src/pages/builder/context/; src/pages/builder/hooks/useBuilderActions.ts; mutation commands",
+  "ux_impact": "Future users can save/reuse phase/action/task templates.",
+  "risk": "Medium-high",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RV-020",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

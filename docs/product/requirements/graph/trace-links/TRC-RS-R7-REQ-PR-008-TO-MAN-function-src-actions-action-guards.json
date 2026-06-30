@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-PR-008-TO-MAN-function-src-actions-action-guards",
+  "type": "TraceLink",
+  "source": "REQ-PR-008",
+  "target": "MAN-function-src-actions-action-guards",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"action.guards\" matches \"Shared user capability — For MVP, any shared DCX user can do everything inside that DCX — Permission checker, UI action guards, backend policy.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

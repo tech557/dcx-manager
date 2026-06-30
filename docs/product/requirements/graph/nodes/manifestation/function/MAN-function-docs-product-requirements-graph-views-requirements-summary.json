@@ -1,0 +1,22 @@
+{
+  "id": "MAN-function-docs-product-requirements-graph-views-requirements-summary",
+  "type": "Manifestation",
+  "statement": "Generated requirements summary view updated after adding rollout calibration-mode requirements.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "agent-workflow",
+  "kind": "documentation-view",
+  "current_paths": [
+    "docs/product/requirements/graph/views/requirements-summary.md"
+  ],
+  "lifecycle": "modified",
+  "provenance": {
+    "source": "req:generate-views",
+    "source_path": "docs/product/requirements/graph/views/requirements-summary.md",
+    "authoring_actor": "Codex",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  }
+}

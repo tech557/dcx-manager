@@ -1,0 +1,27 @@
+id,type,governance,maturity,delivery,scope,kind,statement
+RSP-AIC-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,product,,AI & Intelligence (Seed) system responsibility derived from RS-R5 AIC- family requirements.
+RSP-AIM-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,data,,Domain Model & API Contracts system responsibility derived from RS-R5 AIM- family requirements.
+RSP-BC-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,frontend,,Builder State & Mutation Layer system responsibility derived from RS-R5 BC- family requirements.
+RSP-CR-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,operations,,Audit; Logs & Error Reporting system responsibility derived from RS-R5 CR- family requirements.
+RSP-DM-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,data,,Builder State & Mutation Layer system responsibility derived from RS-R5 DM- family requirements.
+RSP-DZ-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,frontend,,Stage System system responsibility derived from RS-R5 DZ- family requirements.
+RSP-EFP-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,frontend,,Files & External References system responsibility derived from RS-R5 EFP- family requirements.
+RSP-EVI-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,frontend,,Builder UI Surfaces system responsibility derived from RS-R5 EVI- family requirements.
+RSP-FI-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,data,,Files & External References system responsibility derived from RS-R5 FI- family requirements.
+RSP-GOV-TRACE-BACKEND,SystemResponsibility,proposed,logic-defined,not-assessed,backend,,Trace governance backend responsibility: enforce traceability for all backend manifestations.
+RSP-GOV-TRACE-DEVOPS,SystemResponsibility,proposed,logic-defined,not-assessed,devops,,Trace governance devops responsibility: enforce traceability for all devops manifestations.
+RSP-GOV-TRACE-FRONTEND,SystemResponsibility,proposed,logic-defined,not-assessed,frontend,,Trace governance frontend responsibility: enforce traceability for all frontend manifestations.
+RSP-GOV-TRACE-OPERATIONS,SystemResponsibility,proposed,logic-defined,not-assessed,operations,,Trace governance operations responsibility: enforce traceability for all operations manifestations.
+RSP-GOV-TRACE-SECURITY,SystemResponsibility,proposed,logic-defined,not-assessed,security,,Trace governance security responsibility: enforce traceability for all security manifestations.
+RSP-GOV-TRACE-TESTQA,SystemResponsibility,proposed,logic-defined,not-assessed,test-qa,,Trace governance test-qa responsibility: enforce traceability for all test-qa manifestations.
+RSP-IFX-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,frontend,,Interaction & Motion System system responsibility derived from RS-R5 IFX- family requirements.
+RSP-PR-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,security,,Integration Contracts system responsibility derived from RS-R5 PR- family requirements.
+RSP-SBC-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,frontend,,Shared Builder Card System system responsibility derived from RS-R5 SBC- family requirements.
+RSP-SC-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,data,,Persistence; Autosave & Recovery system responsibility derived from RS-R5 SC- family requirements.
+RSP-SPS-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,frontend,,Interaction & Motion System system responsibility derived from RS-R5 SPS- family requirements.
+RSP-STG-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,frontend,,Stage System system responsibility derived from RS-R5 STG- family requirements.
+RSP-TPL-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,product,,Templates & Reuse (Seed) system responsibility derived from RS-R5 TPL- family requirements.
+RSP-UP-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,frontend,,Builder UI Surfaces system responsibility derived from RS-R5 UP- family requirements.
+RSP-VHB-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,frontend,,Builder UI Surfaces system responsibility derived from RS-R5 VHB- family requirements.
+RSP-VL-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,product,,Audit; Logs & Error Reporting system responsibility derived from RS-R5 VL- family requirements.
+RSP-VR-SEED,SystemResponsibility,proposed,logic-defined,not-assessed,backend,,Audit; Logs & Error Reporting system responsibility derived from RS-R5 VR- family requirements.

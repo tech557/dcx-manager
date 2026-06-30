@@ -1,0 +1,28 @@
+{
+  "id": "REQ-DM-018",
+  "statement": "Backend naming — Backend should use clean domain naming like actions[]; builder UI can map — api.ts, api-mappers.ts, node.helpers.ts, types/domain.ts.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "DM-018",
+  "source_category": "Domain Model & API Contracts",
+  "priority": "Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Mapper layer",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/types/; src/services/api-mappers.ts; src/utils/date.helpers.ts; src/utils/node.helpers.ts; DTO/domain/builder mapping",
+  "ux_impact": "No visible UX impact, but keeps future backend",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "DM-018",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "data"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "INT-PR-016",
+  "statement": "Super user override — Super users can override normal DCX rules when defined later. — Permission resolver, backend role flag, admin tools.",
+  "governance": "draft",
+  "maturity": "intent-captured",
+  "delivery": "not-assessed",
+  "source_id": "PR-016",
+  "source_category": "Permissions & Access Control",
+  "priority": "Future",
+  "status": "Deferred",
+  "chain_layer": "INT",
+  "dependencies": "Super user definition",
+  "related_requirements": "",
+  "affected_modules": "src/rules/permissions.rules.ts; src/hooks/usePermissions.ts; route guards; backend policy/service enforcement",
+  "ux_impact": "Admin can resolve blocked cases later.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "PR-016",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.75,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Intent"
+}

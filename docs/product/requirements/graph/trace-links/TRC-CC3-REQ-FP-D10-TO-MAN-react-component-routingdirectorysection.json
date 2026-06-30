@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CC3-REQ-FP-D10-TO-MAN-react-component-routingdirectorysection",
+  "type": "TraceLink",
+  "source": "REQ-FP-D10",
+  "target": "MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-routingdirectorysection",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.9,
+  "evidence_refs": [
+    "CC-3: routing/endpoint sender+receiver fields switched grid-cols-2 -> single-column so they get full editor width (382px) and no longer truncate."
+  ],
+  "inference_source": "CC-3 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

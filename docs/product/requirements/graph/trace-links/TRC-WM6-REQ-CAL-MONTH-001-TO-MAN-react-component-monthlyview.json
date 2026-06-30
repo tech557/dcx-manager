@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM6-REQ-CAL-MONTH-001-TO-MAN-react-component-monthlyview",
+  "type": "TraceLink",
+  "source": "REQ-CAL-MONTH-001",
+  "target": "MAN-react-component-src-builder-stage-views-monthlyview",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "inference_source": "WM-6 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "evidence_refs": [
+    "WM-6: MonthlyView rewritten — overflow-y-auto removed; 4-week page chunk driven by activeWeek; each week row is flex-1 min-h-0 (no scroll, rows divide height equally); DayGridCard receives isMonthly=true which now uses h-full and renders MonthlyTaskChip mini-chips (expansion disabled); long-press on chip fires setFocusedNodeId opening Task Editor; grid naturally shrinks when editor opens (flex layout)."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-PR-021",
+  "statement": "No-access behavior — If user is not authenticated or not shared on the DCX, show — Builder loader, access query, no-access screen, error reporting.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "PR-021",
+  "source_category": "Routing; Auth & Load Control",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Auth + workspace access",
+  "related_requirements": "Permissions & Access Control",
+  "affected_modules": "src/app/; src/router.tsx; src/components/auth/; src/services/access.service.ts; route/load guards",
+  "ux_impact": "User understands why they cannot open the link.",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "PR-021",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "security"
+}

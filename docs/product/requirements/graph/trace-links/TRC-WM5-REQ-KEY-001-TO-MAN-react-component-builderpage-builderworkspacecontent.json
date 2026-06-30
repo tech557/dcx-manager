@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM5-REQ-KEY-001-TO-MAN-react-component-builderpage-builderworkspacecontent",
+  "type": "TraceLink",
+  "source": "REQ-KEY-001",
+  "target": "MAN-react-component-builderpage-builderworkspacecontent",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "WM-5: Ctrl/Cmd+A in BuilderWorkspaceContent keyboard handler — iterates all nodes, collects phase IDs + action IDs + task IDs (excludes day-cards), calls setSelectedNodeIds(allIds). Guard: skips if isTypingTarget (REQ-KEY-007)."
+  ],
+  "inference_source": "WM-5 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

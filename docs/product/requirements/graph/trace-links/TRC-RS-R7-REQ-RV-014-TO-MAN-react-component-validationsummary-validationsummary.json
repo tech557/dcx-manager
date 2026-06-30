@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-RV-014-TO-MAN-react-component-validationsummary-validationsummary",
+  "type": "TraceLink",
+  "source": "REQ-RV-014",
+  "target": "MAN-react-component-src-builder-ui-feedback-validationsummary",
+  "relationship_type": "supersedes",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"ValidationSummary\" matches \"Ready attempt feedback — If Ready fails, the system should show what blocks readiness and where — Validation summary UI, focus/locate behavior, task/action/phase error markers.\" (score: 0.85)",
+    "Historical RS-R7 candidate superseded by canonical link TRC-RS-R7-REQ-RV-014-TO-MAN-react-component-src-builder-ui-feedback-validationsummary."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "original_source": "REQ-RV-014",
+  "original_target": "MAN-react-component-validationsummary-validationsummary",
+  "replacement_trace_link": "TRC-RS-R7-REQ-RV-014-TO-MAN-react-component-src-builder-ui-feedback-validationsummary",
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

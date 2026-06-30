@@ -1,0 +1,48 @@
+{
+  "skill_name": "dcx-plan-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit the ux-discovery-v2 plan at docs/plans/drafted/ux-discovery-v2/. I want to know if it's ready to activate or if there are issues to fix before we hand it to opencode.",
+      "expected_output": "A structured audit report saved to docs/plans/drafted/ux-discovery-v2/audit/ with: frontmatter verdict, blocking/advisory issues tables with specific evidence, prior art compliance section, gate coverage table, and a clear verdict with a one-sentence reason.",
+      "files": [],
+      "assertions": [
+        "Audit file is written to the plan folder (docs/plans/drafted/ux-discovery-v2/audit/) — not just printed to stdout",
+        "Output contains YAML frontmatter with a 'verdict' field set to READY, NEEDS REVISION, or NOT READY",
+        "Prior art section references the expired ui-ux-discovery plan and mentions at least one specific prior finding (e.g., 269 raw hex values, 48 dead CSS classes, or token inventory)",
+        "Gate coverage table or section is present and correctly marks all 3 discovery sprints as N/A for code-modifying gates (because no source code is changed)",
+        "Session start compliance is assessed — output mentions whether each sprint has a build-current-state.sh step",
+        "Any scripts referenced in the sprint files are verified against the actual scripts/agent/ directory contents (not assumed to exist)",
+        "Blocking issues section is present — either lists specific issues with evidence and fix, or explicitly states zero blocking issues with a reason"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Codex, review the frontend-discovery-v2 sprint FE2-R1 — specifically whether the dep-cruiser and code-index steps are actually executable as written. Write your audit so Claude can decide whether to activate it.",
+      "expected_output": "A sprint-level audit that verifies: npm run validate:architecture exists in package.json, scripts/agent/code-query.sh exists and supports the subcommands used, find/wc/awk commands are syntactically correct, and the output format section produces verifiable output.",
+      "files": [],
+      "assertions": [
+        "Audit checks whether 'npm run validate:architecture' exists by reading package.json — not by assuming",
+        "Audit checks whether scripts/agent/code-query.sh exists using a file system check (ls or find)",
+        "Audit assesses whether code-query.sh supports the subcommands called in the sprint (component, consumers, or similar)",
+        "Verdict is specific to FE2-R1 (not a verdict on the entire plan)",
+        "Audit file is written to disk (docs/plans/drafted/frontend-discovery-v2/audit/ or the workspace output path)",
+        "Audit does not flag architectural design decisions as issues — stays within sprint feasibility scope"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Is folder-structure-v2 ready to be activated? Give me a proper audit I can use to make the decision.",
+      "expected_output": "An audit that correctly returns NOT READY, correctly identifies the stub state as intentional (not a deficiency), names the 3 dependency plans that must complete first, and states the exact condition for readiness.",
+      "files": [],
+      "assertions": [
+        "Verdict is NOT READY",
+        "Audit correctly identifies that the lack of sprint files is intentional — documented in the README as 'DO NOT EXECUTE' — not treated as a bug or omission",
+        "Audit names all 3 dependency plans: ux-discovery-v2, frontend-discovery-v2, backend-discovery-v2",
+        "Audit states the activation condition: sprint files can be written only after all discovery outputs are available",
+        "Audit reads the prior art (expired/src-structure-refactor) and notes inherited decisions still valid",
+        "Audit file is written to docs/plans/drafted/folder-structure-v2/audit/ or the workspace output path"
+      ]
+    }
+  ]
+}

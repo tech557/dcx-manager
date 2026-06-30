@@ -1,0 +1,19 @@
+{
+  "id": "QST-LIFECYCLE-POST-READY",
+  "type": "OpenQuestion",
+  "statement": "C-03 ruled 'Ready' is not the terminal lifecycle state. What is the state AFTER Ready for MVP? It must NOT use the forbidden values 'Ready for Review' / 'Rejected' / 'Placed' (core.md \u00a714).",
+  "scope": "product",
+  "governance": "archived",
+  "maturity": "intent-captured",
+  "delivery": "not-assessed",
+  "provenance": {
+    "source": "session 2026-06-29 PO decisions (AskUserQuestion)",
+    "authoring_actor": "Claude",
+    "confirmation_status": "agent-proposed"
+  },
+  "decision_ref": "LDG-2026-06-29-PO-C03",
+  "resolution": "The state after 'Ready for Approval' is 'Approved' (locked, not editable), followed by 'Superseded' when replaced. Confirmed by VersionStatus union type and LOCKED_VERSION_STATUSES in src/types/lifecycle.ts.",
+  "resolved_by": "PO",
+  "resolution_date": "2026-06-30",
+  "resolution_ledger_ref": "LDG-2026-06-30-PO-LIFECYCLE-POST-READY"
+}

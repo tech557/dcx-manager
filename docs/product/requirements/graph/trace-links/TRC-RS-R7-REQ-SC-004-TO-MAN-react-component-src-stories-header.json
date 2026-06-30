@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-SC-004-TO-MAN-react-component-src-stories-header",
+  "type": "TraceLink",
+  "source": "REQ-SC-004",
+  "target": "MAN-react-component-src-stories-header",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"Header\" matches \"Manual save / Ctrl+S — Add manual save and Ctrl+S in addition to autosave. — Affects keyboard handler, User Island / header save\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

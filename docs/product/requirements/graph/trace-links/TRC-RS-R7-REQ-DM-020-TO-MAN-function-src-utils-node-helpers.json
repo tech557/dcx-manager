@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-020-TO-MAN-function-src-utils-node-helpers",
+  "type": "TraceLink",
+  "source": "REQ-DM-020",
+  "target": "MAN-function-src-utils-node-helpers",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"node.helpers\" matches \"Builder nodes — BuilderNode[] / PhaseNode is a render model for the builder stage, not — builder-node.types.ts, useBuilderNodes.ts, node.helpers.ts.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

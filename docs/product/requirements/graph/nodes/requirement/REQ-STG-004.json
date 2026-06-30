@@ -1,0 +1,28 @@
+{
+  "id": "REQ-STG-004",
+  "statement": "Kanban movement & off-stage dropzones — Users dragging items in Kanban must never lose drag context when the target is outside the visible area. — Kanban movement: phases horizontal; actions vertical within a phase and horizontal between phases; tasks within and between actions. When dragging near/beyond visible bounds, support edge-scroll, valid insertion zones, off-stage dropzones, and continuation feedback (e.g. moving a phase beyond bounds shows a valid insertion area or scrolls; moving an action to a far phase triggers horizontal movement/target highlight; moving a task to an action highlights the destination).",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "STG-004",
+  "source_category": "Stage System",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "STG-001, DZ-001",
+  "related_requirements": "SBC-002",
+  "affected_modules": "src/pages/builder/kanban/; stage movement; dropzone engine",
+  "ux_impact": "Reliable long-distance drag in Kanban.",
+  "risk": "Medium-High",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "STG-004",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

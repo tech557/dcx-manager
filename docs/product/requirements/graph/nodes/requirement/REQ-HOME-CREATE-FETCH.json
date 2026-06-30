@@ -1,0 +1,18 @@
+{
+  "id": "REQ-HOME-CREATE-FETCH",
+  "type": "Requirement",
+  "statement": "The create popup fetches a filtered list of ClickUp tasks from the client API to seed version creation. Backend-deferred: HV-1 satisfies via mock contract.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "frontend",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confidence": 1,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

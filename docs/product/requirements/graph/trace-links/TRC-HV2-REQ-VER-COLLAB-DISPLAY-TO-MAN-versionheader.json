@@ -1,0 +1,14 @@
+{
+  "id": "TRC-HV2-REQ-VER-COLLAB-DISPLAY-TO-MAN-versionheader",
+  "type": "TraceLink",
+  "source": "REQ-VER-COLLAB-DISPLAY",
+  "target": "MAN-react-component-src-pages-version-versionheader",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 1.0,
+  "evidence_refs": ["HV-2 implementation 2026-06-30"],
+  "inference_source": "HV-2 implementation 2026-06-30",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "needs_confirmation": false
+}

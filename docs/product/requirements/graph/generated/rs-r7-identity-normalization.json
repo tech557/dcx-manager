@@ -1,0 +1,631 @@
+{
+  "generated_at": "2026-06-29T18:08:31.768Z",
+  "ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION",
+  "duplicate_identity_groups": 121,
+  "superseded_manifestation_ids": 121,
+  "redirected_candidate_links": 124,
+  "merged_duplicate_candidate_links": 46,
+  "history_trace_links_preserved": 124,
+  "active_canonical_manifestations": 277,
+  "active_rs_r7_candidate_links": 238,
+  "canonical_manifestations_in_review": 54,
+  "unlinked_canonical_manifestations": 223,
+  "duplicate_active_requirement_manifestation_relationships": 0,
+  "batches": {
+    "actions-store": {
+      "candidate_links": 1,
+      "canonical_manifestations": 1
+    },
+    "remaining": {
+      "candidate_links": 113,
+      "canonical_manifestations": 22
+    },
+    "card-components": {
+      "candidate_links": 23,
+      "canonical_manifestations": 4
+    },
+    "frontend-islands": {
+      "candidate_links": 35,
+      "canonical_manifestations": 10
+    },
+    "stage-views": {
+      "candidate_links": 18,
+      "canonical_manifestations": 6
+    },
+    "ux-ui-components": {
+      "candidate_links": 48,
+      "canonical_manifestations": 11
+    }
+  },
+  "canonical_aliases": {
+    "MAN-react-component-src-builder-cards-templates-action-actioncard": [
+      "MAN-react-component-actioncard-actioncard"
+    ],
+    "MAN-react-component-src-builder-stage-views-actiondropzone": [
+      "MAN-react-component-actiondropzone-actiondropzone"
+    ],
+    "MAN-react-component-src-builder-islands-editorviewerisland-actioneditorsection": [
+      "MAN-react-component-actioneditorsection-actioneditorsection"
+    ],
+    "MAN-react-component-src-builder-cards-templates-action-actiontasklist": [
+      "MAN-react-component-actiontasklist-actiontasklist"
+    ],
+    "MAN-react-component-src-builder-islands-aichatpopup-aichatpopup": [
+      "MAN-react-component-aichatpopup-aichatpopup"
+    ],
+    "MAN-react-component-src-builder-ui-feedback-alertmark": [
+      "MAN-react-component-alertmark-alertmark"
+    ],
+    "MAN-react-component-src-builder-ui-modals-approvalconfirmmodal": [
+      "MAN-react-component-approvalconfirmmodal-approvalconfirmmodal"
+    ],
+    "MAN-react-component-src-ui-atoms-badge": [
+      "MAN-react-component-badge-badge"
+    ],
+    "MAN-react-component-src-ui-builderbg-builderbg": [
+      "MAN-react-component-builderbg-builderbg"
+    ],
+    "MAN-react-component-src-builder-islands-builderislandshell": [
+      "MAN-react-component-builderislandshell-builderislandshell"
+    ],
+    "MAN-react-component-builderloadingshell-builderloadingshell": [
+      "MAN-react-component-src-builder-builderloadingshell"
+    ],
+    "MAN-react-component-builderpage-builderpage": [
+      "MAN-react-component-src-builder-builderpage"
+    ],
+    "MAN-react-component-src-ui-forms-date-calendargrid": [
+      "MAN-react-component-calendargrid-calendargrid"
+    ],
+    "MAN-react-component-src-builder-islands-metadataisland-campaigndetailsgroup": [
+      "MAN-react-component-campaigndetailsgroup-campaigndetailsgroup"
+    ],
+    "MAN-react-component-src-builder-cards-cardshell": [
+      "MAN-react-component-cardshell-cardshell"
+    ],
+    "MAN-react-component-src-builder-cards-cardshellcontent": [
+      "MAN-react-component-cardshellcontent-cardshellcontent"
+    ],
+    "MAN-react-component-src-builder-ui-forms-channel-channelcompositionfields": [
+      "MAN-react-component-channelcompositionfields-channelcompositionfields"
+    ],
+    "MAN-react-component-src-builder-ui-forms-channel-channelcompositionselect": [
+      "MAN-react-component-channelcompositionselect-channelcompositionselect"
+    ],
+    "MAN-react-component-src-builder-cards-templates-task-task-properties-channelpill": [
+      "MAN-react-component-channelpill-channelpill"
+    ],
+    "MAN-react-component-src-ui-atoms-chip": [
+      "MAN-react-component-chip-chip"
+    ],
+    "MAN-react-component-communicationdatefield-communicationdatefield": [
+      "MAN-react-component-src-ui-forms-date-communicationdatefield"
+    ],
+    "MAN-react-component-completionstateselect-completionstateselect": [
+      "MAN-react-component-src-ui-forms-selects-completionstateselect"
+    ],
+    "MAN-react-component-src-builder-ui-forms-channel-compositionlibrarymodal": [
+      "MAN-react-component-compositionlibrarymodal-compositionlibrarymodal"
+    ],
+    "MAN-react-component-src-builder-islands-taskcreationflow-createcompositionform": [
+      "MAN-react-component-createcompositionform-createcompositionform"
+    ],
+    "MAN-react-component-src-ui-forms-date-datepickerpopup": [
+      "MAN-react-component-datepickerpopup-datepickerpopup"
+    ],
+    "MAN-react-component-src-ui-forms-date-datepickertoggle": [
+      "MAN-react-component-datepickertoggle-datepickertoggle"
+    ],
+    "MAN-react-component-src-builder-islands-editorviewerisland-dayeditorsection": [
+      "MAN-react-component-dayeditorsection-dayeditorsection"
+    ],
+    "MAN-react-component-src-builder-stage-views-daygridcard": [
+      "MAN-react-component-daygridcard-daygridcard"
+    ],
+    "MAN-react-component-src-builder-stage-views-daygridcardcollapsed": [
+      "MAN-react-component-daygridcardcollapsed-daygridcardcollapsed"
+    ],
+    "MAN-react-component-src-builder-stage-views-daygridcardempty": [
+      "MAN-react-component-daygridcardempty-daygridcardempty"
+    ],
+    "MAN-react-component-src-builder-stage-views-daytaskcreator": [
+      "MAN-react-component-daytaskcreator-daytaskcreator"
+    ],
+    "MAN-react-component-src-builder-islands-selectionisland-deleteconfirmation": [
+      "MAN-react-component-deleteconfirmation-deleteconfirmation"
+    ],
+    "MAN-react-component-src-builder-islands-editorviewerisland-discardsessionmodal": [
+      "MAN-react-component-discardsessionmodal-discardsessionmodal"
+    ],
+    "MAN-react-component-dividerline-dividerline": [
+      "MAN-react-component-src-ui-dividerline"
+    ],
+    "MAN-react-component-src-builder-dropzones-droptarget": [
+      "MAN-react-component-droptarget-droptarget"
+    ],
+    "MAN-react-component-src-builder-islands-editorviewerisland-editorheader": [
+      "MAN-react-component-editorheader-editorheader"
+    ],
+    "MAN-react-component-src-builder-islands-editorviewerisland-editorsessionpill": [
+      "MAN-react-component-editorsessionpill-editorsessionpill"
+    ],
+    "MAN-react-component-src-builder-islands-editorviewerisland-editorviewerisland": [
+      "MAN-react-component-editorviewerisland-editorviewerisland"
+    ],
+    "MAN-react-component-src-ui-motion-effectlayer": [
+      "MAN-react-component-effectlayer-effectlayer"
+    ],
+    "MAN-react-component-src-builder-islands-focusisland-focusisland": [
+      "MAN-react-component-focusisland-focusisland"
+    ],
+    "MAN-react-component-src-ui-surfaces-glasssurface": [
+      "MAN-react-component-glasssurface-glasssurface"
+    ],
+    "MAN-react-component-src-stories-header": [
+      "MAN-react-component-header-header"
+    ],
+    "MAN-react-component-src-builder-islands-headerbrandisland": [
+      "MAN-react-component-headerbrandisland-headerbrandisland"
+    ],
+    "MAN-react-component-src-builder-islands-headeruserisland-headeruseractionsmenu": [
+      "MAN-react-component-headeruseractionsmenu-headeruseractionsmenu"
+    ],
+    "MAN-react-component-src-builder-islands-headeruserisland-headeruserisland": [
+      "MAN-react-component-headeruserisland-headeruserisland"
+    ],
+    "MAN-react-component-src-pages-home-homepage": [
+      "MAN-react-component-homepage-homepage"
+    ],
+    "MAN-react-component-src-builder-cards-templates-phase-horizontaltaskflow": [
+      "MAN-react-component-horizontaltaskflow-horizontaltaskflow"
+    ],
+    "MAN-react-component-src-builder-ui-modals-importpreviewmodal": [
+      "MAN-react-component-importpreviewmodal-importpreviewmodal"
+    ],
+    "MAN-react-component-inlinechannelcompositionselector-inlinechannelcompositionselector": [
+      "MAN-react-component-src-builder-ui-forms-channel-inlinechannelcompositionselector"
+    ],
+    "MAN-react-component-src-builder-ui-buttons-inlineislandbutton": [
+      "MAN-react-component-inlineislandbutton-inlineislandbutton"
+    ],
+    "MAN-react-component-src-builder-ui-buttons-islandtogglebutton": [
+      "MAN-react-component-islandtogglebutton-islandtogglebutton"
+    ],
+    "MAN-react-component-src-builder-islands-kanbanbuilderisland-kanbanbuilderisland": [
+      "MAN-react-component-kanbanbuilderisland-kanbanbuilderisland"
+    ],
+    "MAN-react-component-src-builder-stage-views-kanbanhiddendropzones": [
+      "MAN-react-component-kanbanhiddendropzones-kanbanhiddendropzones"
+    ],
+    "MAN-react-component-src-builder-stage-views-kanbanview": [
+      "MAN-react-component-kanbanview-kanbanview"
+    ],
+    "MAN-react-component-src-ui-builderbg-lightrays": [
+      "MAN-react-component-lightrays-lightrays"
+    ],
+    "MAN-react-component-src-ui-forms-date-linkeddategrid": [
+      "MAN-react-component-linkeddategrid-linkeddategrid"
+    ],
+    "MAN-react-component-src-ui-forms-inputs-listinputlines": [
+      "MAN-react-component-listinputlines-listinputlines"
+    ],
+    "MAN-react-component-loginredirect-loginredirect": [
+      "MAN-react-component-src-ui-auth-loginredirect"
+    ],
+    "MAN-react-component-src-builder-stage-views-matrixtimelineheader": [
+      "MAN-react-component-matrixtimelineheader-matrixtimelineheader"
+    ],
+    "MAN-react-component-src-builder-stage-views-matrixtimelineview": [
+      "MAN-react-component-matrixtimelineview-matrixtimelineview"
+    ],
+    "MAN-react-component-src-builder-islands-metadataisland-metadatadetailscontent": [
+      "MAN-react-component-metadatadetailscontent-metadatadetailscontent"
+    ],
+    "MAN-react-component-src-builder-islands-metadataisland-metadatafilespopup": [
+      "MAN-react-component-metadatafilespopup-metadatafilespopup"
+    ],
+    "MAN-react-component-src-builder-islands-metadataisland-metadataisland": [
+      "MAN-react-component-metadataisland-metadataisland"
+    ],
+    "MAN-react-component-src-builder-islands-metadataisland-metadatamodalscontainer": [
+      "MAN-react-component-metadatamodalscontainer-metadatamodalscontainer"
+    ],
+    "MAN-react-component-src-builder-stage-views-monthlyview": [
+      "MAN-react-component-monthlyview-monthlyview"
+    ],
+    "MAN-react-component-noaccessscreen-noaccessscreen": [
+      "MAN-react-component-src-ui-auth-noaccessscreen"
+    ],
+    "MAN-react-component-src-stories-page": [
+      "MAN-react-component-page-page"
+    ],
+    "MAN-react-component-src-builder-cards-templates-phase-phasecard": [
+      "MAN-react-component-phasecard-phasecard"
+    ],
+    "MAN-react-component-src-builder-stage-views-phasedropzone": [
+      "MAN-react-component-phasedropzone-phasedropzone"
+    ],
+    "MAN-react-component-src-builder-islands-editorviewerisland-phaseeditorsection": [
+      "MAN-react-component-phaseeditorsection-phaseeditorsection"
+    ],
+    "MAN-react-component-src-builder-cards-templates-phase-phasereadinessbadge": [
+      "MAN-react-component-phasereadinessbadge-phasereadinessbadge"
+    ],
+    "MAN-react-component-popovershell-popovershell": [
+      "MAN-react-component-src-ui-popovershell"
+    ],
+    "MAN-react-component-src-builder-islands-focusisland-options-propertyoption-propertyoption": [
+      "MAN-react-component-propertyoption-propertyoption"
+    ],
+    "MAN-react-component-src-builder-ui-modals-quick-edit-quickeditpopover": [
+      "MAN-react-component-quickeditpopover-quickeditpopover"
+    ],
+    "MAN-react-component-src-builder-ui-forms-subtask-quicksubtaskform": [
+      "MAN-react-component-quicksubtaskform-quicksubtaskform"
+    ],
+    "MAN-react-component-src-builder-ui-modals-readiness-check-modal-readinesscheckcontent": [
+      "MAN-react-component-readinesscheckcontent-readinesscheckcontent"
+    ],
+    "MAN-react-component-src-builder-ui-modals-readiness-check-modal-readinesscheckmodal": [
+      "MAN-react-component-readinesscheckmodal-readinesscheckmodal"
+    ],
+    "MAN-react-component-src-builder-ui-feedback-readymark": [
+      "MAN-react-component-readymark-readymark"
+    ],
+    "MAN-react-component-src-builder-ui-forms-channel-registrydirectorymodal": [
+      "MAN-react-component-registrydirectorymodal-registrydirectorymodal"
+    ],
+    "MAN-react-component-src-builder-islands-previewreviewmodal-reviewmodal": [
+      "MAN-react-component-reviewmodal-reviewmodal"
+    ],
+    "MAN-react-component-rootlayout-rootlayout": [
+      "MAN-react-component-src-pages-rootlayout"
+    ],
+    "MAN-react-component-src-ui-auth-routeguard": [
+      "MAN-react-component-routeguard-routeguard"
+    ],
+    "MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-routingdirectorysection": [
+      "MAN-react-component-routingdirectorysection-routingdirectorysection"
+    ],
+    "MAN-react-component-src-ui-forms-selects-select": [
+      "MAN-react-component-select-select"
+    ],
+    "MAN-react-component-src-builder-islands-selectionisland-selectionbuttons": [
+      "MAN-react-component-selectionbuttons-selectionbuttons"
+    ],
+    "MAN-react-component-src-builder-islands-selectionisland-selectionisland": [
+      "MAN-react-component-selectionisland-selectionisland"
+    ],
+    "MAN-react-component-src-builder-islands-selectionisland-selectionlabel": [
+      "MAN-react-component-selectionlabel-selectionlabel"
+    ],
+    "MAN-react-component-src-builder-stage-views-smokestage": [
+      "MAN-react-component-smokestage-smokestage"
+    ],
+    "MAN-react-component-src-ui-forms-inputs-specsinput": [
+      "MAN-react-component-specsinput-specsinput"
+    ],
+    "MAN-react-component-src-builder-cards-templates-phase-taskbentogrid": [
+      "MAN-react-component-taskbentogrid-taskbentogrid"
+    ],
+    "MAN-react-component-src-builder-cards-templates-task-task-properties-taskcardpopovers": [
+      "MAN-react-component-taskcardpopovers-taskcardpopovers"
+    ],
+    "MAN-react-component-src-builder-cards-templates-task-task-properties-taskproperties": [
+      "MAN-react-component-taskproperties-taskproperties"
+    ],
+    "MAN-react-component-src-builder-cards-templates-task-taskcard": [
+      "MAN-react-component-taskcard-taskcard"
+    ],
+    "MAN-react-component-src-builder-cards-templates-task-taskreadonlypopup": [
+      "MAN-react-component-taskreadonlypopup-taskreadonlypopup"
+    ],
+    "MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-taskeditor": [
+      "MAN-react-component-taskeditor-taskeditor"
+    ],
+    "MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-tasksection1": [
+      "MAN-react-component-tasksection1-tasksection1"
+    ],
+    "MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-tasksection3": [
+      "MAN-react-component-tasksection3-tasksection3"
+    ],
+    "MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-tasksection4": [
+      "MAN-react-component-tasksection4-tasksection4"
+    ],
+    "MAN-react-component-src-builder-islands-editorviewerisland-unsavedchangesmodal": [
+      "MAN-react-component-unsavedchangesmodal-unsavedchangesmodal"
+    ],
+    "MAN-react-component-src-builder-islands-focusisland-options-weekoption-weekoption": [
+      "MAN-react-component-weekoption-weekoption"
+    ],
+    "MAN-react-component-src-builder-islands-metadataisland-statusdropdownbadge": [
+      "MAN-react-component-statusdropdownbadge-statusdropdownbadge"
+    ],
+    "MAN-react-component-src-builder-islands-metadataisland-viewtabswitcher": [
+      "MAN-react-component-viewtabswitcher-viewtabswitcher"
+    ],
+    "MAN-react-component-src-builder-islands-taskcreationflow-taskcreationflow": [
+      "MAN-react-component-taskcreationflow-taskcreationflow"
+    ],
+    "MAN-react-component-src-builder-islands-templatepopup-templatepopup": [
+      "MAN-react-component-templatepopup-templatepopup"
+    ],
+    "MAN-react-component-src-builder-islands-timelinebuilderisland-timelinebuilderisland": [
+      "MAN-react-component-timelinebuilderisland-timelinebuilderisland"
+    ],
+    "MAN-react-component-src-builder-islands-viewhelperisland-viewcontexttaskitem": [
+      "MAN-react-component-viewcontexttaskitem-viewcontexttaskitem"
+    ],
+    "MAN-react-component-src-builder-islands-viewhelperisland-viewcontexttasklist": [
+      "MAN-react-component-viewcontexttasklist-viewcontexttasklist"
+    ],
+    "MAN-react-component-src-builder-islands-viewhelperisland-viewhelperisland": [
+      "MAN-react-component-viewhelperisland-viewhelperisland"
+    ],
+    "MAN-react-component-src-builder-stage-stagecore": [
+      "MAN-react-component-stagecore-stagecore"
+    ],
+    "MAN-react-component-stageedgenavigation-stageedgenavigation": [
+      "MAN-react-component-src-builder-stage-stageedgenavigation"
+    ],
+    "MAN-react-component-src-builder-stage-stageprovider": [
+      "MAN-react-component-stageprovider-stageprovider"
+    ],
+    "MAN-react-component-src-builder-stage-views-taskdropzone": [
+      "MAN-react-component-taskdropzone-taskdropzone"
+    ],
+    "MAN-react-component-src-builder-stage-views-taskgridmarker": [
+      "MAN-react-component-taskgridmarker-taskgridmarker"
+    ],
+    "MAN-react-component-timelinecustomedgesensors-timelinecustomedgesensors": [
+      "MAN-react-component-src-builder-stage-views-timelinecustomedgesensors"
+    ],
+    "MAN-react-component-src-builder-stage-views-timelinehourcell": [
+      "MAN-react-component-timelinehourcell-timelinehourcell"
+    ],
+    "MAN-react-component-src-builder-stage-views-timelineview": [
+      "MAN-react-component-timelineview-timelineview"
+    ],
+    "MAN-react-component-src-builder-stage-views-weeklyview": [
+      "MAN-react-component-weeklyview-weeklyview"
+    ],
+    "MAN-react-component-src-builder-ui-feedback-validationsummary": [
+      "MAN-react-component-validationsummary-validationsummary"
+    ],
+    "MAN-react-component-src-pages-version-versionpage": [
+      "MAN-react-component-versionpage-versionpage"
+    ],
+    "MAN-react-component-src-ui-atoms-togglegroup": [
+      "MAN-react-component-togglegroup-togglegroup"
+    ],
+    "MAN-react-component-stickypopupshell-stickypopupshell": [
+      "MAN-react-component-src-ui-stickypopupshell"
+    ]
+  },
+  "duplicate_active_relationships": [],
+  "unlinked_manifestations": [
+    "MAN-function---package",
+    "MAN-function-docs-plans-active-requirements-system-output-rs-r6-build-notes",
+    "MAN-function-docs-plans-active-requirements-system-output-rs-r7-persist-pass",
+    "MAN-function-docs-plans-active-requirements-system-output-rs-r7-reconciliation-report",
+    "MAN-function-docs-plans-active-requirements-system-readme",
+    "MAN-function-docs-plans-active-requirements-system-sprints-rs-r6-migrate-seed-datamodel",
+    "MAN-function-scripts-requirements-normalize-rs-r7-identities",
+    "MAN-function-scripts-requirements-persist-rs-r7-review-queue",
+    "MAN-function-scripts-requirements-reconciliation-engine",
+    "MAN-function-scripts-requirements-seed-rs-r6",
+    "MAN-function-src-actions-action-actions",
+    "MAN-function-src-actions-action-helpers",
+    "MAN-function-src-actions-builder-actions",
+    "MAN-function-src-actions-node-actions",
+    "MAN-function-src-actions-phase-actions",
+    "MAN-function-src-actions-task-create",
+    "MAN-function-src-actions-task-delete",
+    "MAN-function-src-actions-task-update",
+    "MAN-function-src-actions-version-actions",
+    "MAN-function-src-brand-theme",
+    "MAN-function-src-brand-tokens",
+    "MAN-function-src-builder-cards-card-registry",
+    "MAN-function-src-builder-cards-carddrag-helpers",
+    "MAN-function-src-builder-cards-cardselection-helpers",
+    "MAN-function-src-builder-cards-dragdrophelpers",
+    "MAN-function-src-builder-cards-handlecarddrop",
+    "MAN-function-src-builder-cards-templates-phase-phase-icons",
+    "MAN-function-src-builder-dropzones-dropzone-registry",
+    "MAN-function-src-builder-import-import-helpers",
+    "MAN-function-src-builder-islands-selectionisland-selection-utils",
+    "MAN-function-src-builder-shared-channel-icons",
+    "MAN-function-src-builder-stage-stage-registry",
+    "MAN-function-src-builder-stage-stagecontext-types",
+    "MAN-function-src-builder-stage-stagelayoutcontract",
+    "MAN-function-src-builder-ui-buttons-index",
+    "MAN-function-src-builder-ui-forms-channel-index",
+    "MAN-function-src-builder-ui-forms-subtask-index",
+    "MAN-function-src-mock-compositions",
+    "MAN-function-src-mock-constants",
+    "MAN-function-src-mock-subtask-definitions",
+    "MAN-function-src-queries-channels-queries",
+    "MAN-function-src-queries-query-keys",
+    "MAN-function-src-queries-subtask-definitions-queries",
+    "MAN-function-src-queries-versions-queries",
+    "MAN-function-src-rules-date-rules",
+    "MAN-function-src-rules-lifecycle-rules",
+    "MAN-function-src-rules-permissions-rules",
+    "MAN-function-src-rules-readiness-rules",
+    "MAN-function-src-rules-validation-rules",
+    "MAN-function-src-stories-button-stories",
+    "MAN-function-src-stories-header-stories",
+    "MAN-function-src-stories-page-stories",
+    "MAN-function-src-telemetry-optin",
+    "MAN-function-src-ui-atoms-index",
+    "MAN-function-src-ui-forms-date-date-utils",
+    "MAN-function-src-ui-forms-date-index",
+    "MAN-function-src-ui-forms-inputs-index",
+    "MAN-function-src-ui-forms-selects-index",
+    "MAN-function-src-ui-motion-effects-registry",
+    "MAN-function-src-ui-motion-motion-config",
+    "MAN-function-src-utils-browser-storage-helpers",
+    "MAN-function-src-utils-composition-helpers",
+    "MAN-function-src-utils-export-helpers",
+    "MAN-function-src-utils-id-helpers",
+    "MAN-function-src-utils-preference-helpers",
+    "MAN-hook-src-actions-usebuilderactions",
+    "MAN-hook-src-builder-cards-templates-action-useactioncard",
+    "MAN-hook-src-builder-cards-templates-phase-usephasecard",
+    "MAN-hook-src-builder-cards-usecardbehavior",
+    "MAN-hook-src-builder-cards-usecarddrag",
+    "MAN-hook-src-builder-cards-usecardeffects",
+    "MAN-hook-src-builder-dropzones-usedropzones",
+    "MAN-hook-src-builder-import-useimport",
+    "MAN-hook-src-builder-islands-editorviewerisland-usedayeditortasks",
+    "MAN-hook-src-builder-islands-editorviewerisland-useeditorreadiness",
+    "MAN-hook-src-builder-islands-editorviewerisland-useeditorstate",
+    "MAN-hook-src-builder-islands-editorviewerisland-usetasksectionreadiness",
+    "MAN-hook-src-builder-islands-metadataisland-usefilepreview",
+    "MAN-hook-src-builder-islands-selectionisland-usepresentationmode",
+    "MAN-hook-src-builder-islands-taskcreationflow-usetaskcreationflow",
+    "MAN-hook-src-builder-islands-viewhelperisland-useviewhelper",
+    "MAN-hook-src-builder-islands-viewhelperisland-useviewhelperscrollers",
+    "MAN-hook-src-builder-stage-usedragstate",
+    "MAN-hook-src-builder-stage-usestageexpansion",
+    "MAN-hook-src-builder-stage-usestagemovement",
+    "MAN-hook-src-builder-stage-usetaskreschedule",
+    "MAN-hook-src-builder-stage-useweekstate",
+    "MAN-hook-src-builder-stage-views-usedaygridcard",
+    "MAN-hook-src-builder-stage-views-usedaygriddrag",
+    "MAN-hook-src-builder-stage-views-usekanbaninteraction",
+    "MAN-hook-src-builder-stage-views-usematrixtimeline",
+    "MAN-hook-src-builder-stage-views-useweeklyview",
+    "MAN-hook-src-hooks-useautosave",
+    "MAN-hook-src-hooks-usetheme",
+    "MAN-hook-src-hooks-usetoggle",
+    "MAN-hook-src-ui-forms-date-usedatepickerstate",
+    "MAN-hook-src-ui-motion-useeffect",
+    "MAN-react-component-builderloadingshell-builderloadingshell",
+    "MAN-react-component-builderpage-builderworkspacecontent",
+    "MAN-react-component-communicationdatefield-communicationdatefield",
+    "MAN-react-component-completionstateselect-completionstateselect",
+    "MAN-react-component-dividerline-dividerline",
+    "MAN-react-component-inlinechannelcompositionselector-inlinechannelcompositionselector",
+    "MAN-react-component-menusections-menusectionbutton",
+    "MAN-react-component-popovershell-popovershell",
+    "MAN-react-component-rootlayout-rootlayout",
+    "MAN-react-component-src-builder-buildererrorboundary",
+    "MAN-react-component-src-builder-cards-cardshell",
+    "MAN-react-component-src-builder-cards-cardshellcontent",
+    "MAN-react-component-src-builder-cards-templates-action-actiontasklist",
+    "MAN-react-component-src-builder-cards-templates-phase-horizontaltaskflow",
+    "MAN-react-component-src-builder-cards-templates-phase-phasereadinessbadge",
+    "MAN-react-component-src-builder-cards-templates-phase-taskbentogrid",
+    "MAN-react-component-src-builder-cards-templates-task-task-properties-channelpill",
+    "MAN-react-component-src-builder-cards-templates-task-task-properties-taskcardpopovers",
+    "MAN-react-component-src-builder-cards-templates-task-taskreadonlypopup",
+    "MAN-react-component-src-builder-islands-aichatpopup-aichatpopup",
+    "MAN-react-component-src-builder-islands-builderislandshell",
+    "MAN-react-component-src-builder-islands-editorviewerisland-actioneditorsection",
+    "MAN-react-component-src-builder-islands-editorviewerisland-dayeditorsection",
+    "MAN-react-component-src-builder-islands-editorviewerisland-discardsessionmodal",
+    "MAN-react-component-src-builder-islands-editorviewerisland-editorheader",
+    "MAN-react-component-src-builder-islands-editorviewerisland-editorsessionpill",
+    "MAN-react-component-src-builder-islands-editorviewerisland-phaseeditorsection",
+    "MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-routingdirectorysection",
+    "MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-tasksection1",
+    "MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-tasksection3",
+    "MAN-react-component-src-builder-islands-editorviewerisland-taskeditor-tasksection4",
+    "MAN-react-component-src-builder-islands-editorviewerisland-unsavedchangesmodal",
+    "MAN-react-component-src-builder-islands-focusisland-options-propertyoption-propertyoption",
+    "MAN-react-component-src-builder-islands-focusisland-options-weekoption-weekoption",
+    "MAN-react-component-src-builder-islands-headerbrandisland",
+    "MAN-react-component-src-builder-islands-headeruserisland-headeruseractionsmenu",
+    "MAN-react-component-src-builder-islands-headeruserisland-headeruserisland",
+    "MAN-react-component-src-builder-islands-metadataisland-campaigndetailsgroup",
+    "MAN-react-component-src-builder-islands-metadataisland-metadatadetailscontent",
+    "MAN-react-component-src-builder-islands-metadataisland-metadatafilespopup",
+    "MAN-react-component-src-builder-islands-metadataisland-metadatamodalscontainer",
+    "MAN-react-component-src-builder-islands-metadataisland-statusdropdownbadge",
+    "MAN-react-component-src-builder-islands-metadataisland-viewtabswitcher",
+    "MAN-react-component-src-builder-islands-selectionisland-deleteconfirmation",
+    "MAN-react-component-src-builder-islands-selectionisland-selectionbuttons",
+    "MAN-react-component-src-builder-islands-selectionisland-selectionisland",
+    "MAN-react-component-src-builder-islands-selectionisland-selectionlabel",
+    "MAN-react-component-src-builder-islands-taskcreationflow-createcompositionform",
+    "MAN-react-component-src-builder-islands-taskcreationflow-step1-selectchannel",
+    "MAN-react-component-src-builder-islands-taskcreationflow-step2-selectcomposition",
+    "MAN-react-component-src-builder-islands-taskcreationflow-step3-reviewsubtasks",
+    "MAN-react-component-src-builder-islands-timelinebuilderisland-timelinebuilderisland",
+    "MAN-react-component-src-builder-islands-viewhelperisland-viewcontexttaskitem",
+    "MAN-react-component-src-builder-islands-viewhelperisland-viewcontexttasklist",
+    "MAN-react-component-src-builder-stage-stagecore",
+    "MAN-react-component-src-builder-stage-stageprovider",
+    "MAN-react-component-src-builder-stage-views-actiondropzone",
+    "MAN-react-component-src-builder-stage-views-daygridcardcollapsed",
+    "MAN-react-component-src-builder-stage-views-daygridcardempty",
+    "MAN-react-component-src-builder-stage-views-daytaskcreator",
+    "MAN-react-component-src-builder-stage-views-kanbanhiddendropzones",
+    "MAN-react-component-src-builder-stage-views-matrixtimelineheader",
+    "MAN-react-component-src-builder-stage-views-matrixtimelineview",
+    "MAN-react-component-src-builder-stage-views-phasedropzone",
+    "MAN-react-component-src-builder-stage-views-smokestage",
+    "MAN-react-component-src-builder-stage-views-taskdropzone",
+    "MAN-react-component-src-builder-stage-views-taskgridmarker",
+    "MAN-react-component-src-builder-stage-views-timelinehourcell",
+    "MAN-react-component-src-builder-ui-buttons-inlineislandbutton",
+    "MAN-react-component-src-builder-ui-buttons-islandtogglebutton",
+    "MAN-react-component-src-builder-ui-buttons-menusections",
+    "MAN-react-component-src-builder-ui-feedback-alertmark",
+    "MAN-react-component-src-builder-ui-feedback-readymark",
+    "MAN-react-component-src-builder-ui-forms-channel-channelcompositionfields",
+    "MAN-react-component-src-builder-ui-forms-channel-channelcompositionselect",
+    "MAN-react-component-src-builder-ui-forms-channel-compositionlibrarymodal",
+    "MAN-react-component-src-builder-ui-forms-channel-registrydirectorymodal",
+    "MAN-react-component-src-builder-ui-forms-subtask-quicksubtaskform",
+    "MAN-react-component-src-builder-ui-modals-approvalconfirmmodal",
+    "MAN-react-component-src-builder-ui-modals-quick-edit-quickeditpopover",
+    "MAN-react-component-src-builder-ui-modals-quick-edit-quickedittrigger",
+    "MAN-react-component-src-builder-ui-modals-readiness-check-modal-readinesscheckcontent",
+    "MAN-react-component-src-builder-ui-modals-readiness-check-modal-readinesscheckmodal",
+    "MAN-react-component-src-pages-version-versionpage",
+    "MAN-react-component-src-router",
+    "MAN-react-component-src-ui-atoms-chip",
+    "MAN-react-component-src-ui-atoms-togglegroup",
+    "MAN-react-component-src-ui-builderbg-builderbg",
+    "MAN-react-component-src-ui-builderbg-lightrays",
+    "MAN-react-component-src-ui-forms-date-calendargrid",
+    "MAN-react-component-src-ui-forms-date-datepickerpopup",
+    "MAN-react-component-src-ui-forms-date-datepickertoggle",
+    "MAN-react-component-src-ui-forms-date-linkeddategrid",
+    "MAN-react-component-src-ui-forms-inputs-listinputlines",
+    "MAN-react-component-src-ui-forms-inputs-specsinput",
+    "MAN-react-component-src-ui-motion-effectlayer",
+    "MAN-react-component-src-ui-surfaces-glasssurface",
+    "MAN-react-component-stageedgenavigation-stageedgenavigation",
+    "MAN-react-component-step1-selectchannel-step1selectchannel",
+    "MAN-react-component-step2-selectcomposition-step2selectcomposition",
+    "MAN-react-component-step3-reviewsubtasks-step3reviewsubtasks",
+    "MAN-react-component-timelinecustomedgesensors-timelinecustomedgesensors",
+    "MAN-service-src-services-access-service",
+    "MAN-service-src-services-ai-service",
+    "MAN-service-src-services-api-client",
+    "MAN-service-src-services-builder-service",
+    "MAN-service-src-services-channels-service",
+    "MAN-service-src-services-clickup-service",
+    "MAN-service-src-services-files-service",
+    "MAN-service-src-services-logs-service",
+    "MAN-service-src-services-mock-access-mock",
+    "MAN-service-src-services-mock-builder-mock",
+    "MAN-service-src-services-mock-channels-mock",
+    "MAN-service-src-services-mock-dispatch",
+    "MAN-service-src-services-mock-logs-mock",
+    "MAN-service-src-services-mock-subtasks-mock",
+    "MAN-service-src-services-mock-versions-mock",
+    "MAN-service-src-services-service-utils",
+    "MAN-service-src-services-subtask-definitions-service",
+    "MAN-store-action-src-store-appstore",
+    "MAN-test-src-requirements-tests--requirements-reconciliation-test",
+    "MAN-type-src-types-card-types",
+    "MAN-type-src-types-dropzone-types",
+    "MAN-type-src-types-editor-types",
+    "MAN-type-src-types-index",
+    "MAN-type-src-types-stage-types"
+  ]
+}

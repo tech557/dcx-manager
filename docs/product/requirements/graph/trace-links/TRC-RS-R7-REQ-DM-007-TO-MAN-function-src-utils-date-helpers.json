@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-007-TO-MAN-function-src-utils-date-helpers",
+  "type": "TraceLink",
+  "source": "REQ-DM-007",
+  "target": "MAN-function-src-utils-date-helpers",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"date.helpers\" matches \"Communication date as anchor — The version communication date acts as the anchor for linked task dates. — Task date model, date helpers, timeline rendering, save\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

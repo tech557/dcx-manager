@@ -1,0 +1,18 @@
+{
+  "id": "REQ-VER-DOCS",
+  "type": "Requirement",
+  "statement": "The version control component lists the active version's attached documents/resources, openable safely via external links.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "ui-presentation",
+  "provenance": {
+    "source": "HV-2 sprint execution — proposed and applied 2026-06-30",
+    "authoring_actor": "Claude",
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  },
+  "supersedes": [],
+  "related": ["REQ-EFP-001"]
+}

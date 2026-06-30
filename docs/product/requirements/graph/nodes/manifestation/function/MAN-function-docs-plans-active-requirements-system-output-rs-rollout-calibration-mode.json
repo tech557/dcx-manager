@@ -1,0 +1,25 @@
+{
+  "id": "MAN-function-docs-plans-active-requirements-system-output-rs-rollout-calibration-mode",
+  "type": "Manifestation",
+  "statement": "Rollout calibration-mode output documenting requirements-system operating rules, blockers, non-blocking mapping debt, and investigation triggers.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "agent-workflow",
+  "kind": "documentation-view",
+  "current_paths": [
+    "docs/plans/active/requirements-system/output/RS-rollout-calibration-mode.md"
+  ],
+  "stale_state": "stale",
+  "stale_reason": "current_paths entry no longer exists on disk — path moved or deleted",
+  "lifecycle": "created",
+  "provenance": {
+    "source": "PO rollout calibration-mode ruling",
+    "source_path": "docs/plans/active/requirements-system/output/RS-rollout-calibration-mode.md",
+    "source_anchor": "Requirement Trace",
+    "authoring_actor": "Codex",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  }
+}

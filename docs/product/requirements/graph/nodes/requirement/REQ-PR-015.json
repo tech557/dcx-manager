@@ -1,0 +1,28 @@
+{
+  "id": "REQ-PR-015",
+  "statement": "Super user concept — Super users will exist and can do anything, but exact definition can — User role model, backend policy, future admin UI.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "PR-015",
+  "source_category": "Permissions & Access Control",
+  "priority": "Seed Now / Future",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Auth/user model",
+  "related_requirements": "",
+  "affected_modules": "src/rules/permissions.rules.ts; src/hooks/usePermissions.ts; route guards; backend policy/service enforcement",
+  "ux_impact": "Admin/support can later resolve issues or override access.",
+  "risk": "Low",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "PR-015",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "security"
+}

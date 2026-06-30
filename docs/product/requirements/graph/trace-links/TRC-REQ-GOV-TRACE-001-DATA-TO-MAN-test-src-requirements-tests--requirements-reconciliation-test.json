@@ -1,0 +1,17 @@
+{
+  "id": "TRC-REQ-GOV-TRACE-001-DATA-TO-MAN-test-src-requirements-tests--requirements-reconciliation-test",
+  "type": "TraceLink",
+  "source": "REQ-GOV-TRACE-001-DATA",
+  "target": "MAN-test-src-requirements-tests--requirements-reconciliation-test",
+  "relationship_type": "verifies",
+  "coverage": "partial",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "src/requirements/__tests__/requirements.reconciliation.test.ts"
+  ],
+  "inference_source": "RS-R7 audit amendment",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "stale",
+  "needs_confirmation": false
+}

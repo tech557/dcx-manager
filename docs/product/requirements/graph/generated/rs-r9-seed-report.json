@@ -1,0 +1,22 @@
+{
+  "phase": "RS-R9 dogfood + self-trace",
+  "sessionDecisionsCreated": 12,
+  "coreModelAlignmentsCreated": 4,
+  "selfTraceDerivedReqs": 6,
+  "selfTraceManifestations": 20,
+  "ledgerEntriesAdded": 2,
+  "totalNewNodes": 61,
+  "totalNewTraceLinks": 60,
+  "folderIndexNodeCount": 779,
+  "validationPass": true,
+  "validationErrors": 0,
+  "validationWarnings": 1,
+  "validationErrorsDetail": [],
+  "validationWarningsDetail": [
+    {
+      "validator": "state-combination-policy",
+      "id": "QST-VR-011",
+      "message": "approved + intent-captured should enter the needs-maturation queue."
+    }
+  ]
+}

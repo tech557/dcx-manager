@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-RV-016-TO-MAN-type-src-types-api",
+  "type": "TraceLink",
+  "source": "REQ-RV-016",
+  "target": "MAN-type-src-types-api",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"api\" matches \"Ready version duplication — A Ready version can be duplicated with all details into a new — Version duplication service, mapper layer, API endpoint, creation\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-KBI-001",
+  "statement": "Kanban Builder Island as creation surface — The Kanban Builder Island is a strategic creation surface. It starts compact and expands into a creation/control strip, with a reserved AI entry point, giving users a guided drag-to-create experience. — Compact button expands inline into a creation/control strip. Far-right reserves an AI Chat entry point. Supports drag-to-create: phase created only on drop into a valid board location, action only on drop into a phase, task only on drop into an action. Valid parent/drop target is highlighted during drag; created item animates/highlights after drop.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "KBI-001",
+  "source_category": "Builder UI Surfaces",
+  "priority": "MVP + Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "DZ-001, IFX-001",
+  "related_requirements": "AIC-001, BC-012",
+  "affected_modules": "src/pages/builder/islands/ (Kanban Builder Island); src/pages/builder/kanban/; dropzone engine",
+  "ux_impact": "Guided, forgiving creation flow.",
+  "risk": "Medium-High",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "KBI-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-RV-015",
+  "statement": "Validation source — Readiness validation should be centralized in a validation helper/service, not scattered across — utils/validate.ts, readiness checker, status transition service, tests.",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "RV-015",
+  "source_category": "Validation & Readiness Rules",
+  "priority": "MVP + Seed Now",
+  "status": "Proposed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "Data model",
+  "related_requirements": "",
+  "affected_modules": "src/rules/validation.rules.ts; readiness checker; validation summary UI; TaskEditor validation hooks",
+  "ux_impact": "User gets consistent readiness behavior everywhere.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RV-015",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.75,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

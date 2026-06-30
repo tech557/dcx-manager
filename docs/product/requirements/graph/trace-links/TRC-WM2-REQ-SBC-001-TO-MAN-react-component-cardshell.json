@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM2-REQ-SBC-001-TO-MAN-react-component-cardshell",
+  "type": "TraceLink",
+  "source": "REQ-SBC-001",
+  "target": "MAN-react-component-src-builder-cards-cardshell",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.9,
+  "inference_source": "WM-2 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "evidence_refs": [
+    "WM-2: CardShell is the shared card interaction shell providing drag-and-drop, selection, multi-selection, and motion feedback for Phase/Action/Task. Adds data-testid for Playwright real-pointer verification per REQ-SBC-001 common interaction layer requirement."
+  ]
+}

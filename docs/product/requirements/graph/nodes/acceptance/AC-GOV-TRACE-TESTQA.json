@@ -1,0 +1,17 @@
+{
+  "id": "AC-GOV-TRACE-TESTQA",
+  "type": "AcceptanceOutcome",
+  "statement": "Test/QA manifestations (test files, e2e suites, quality gates) each have a trace link to the acceptance outcome or requirement they verify.",
+  "scope": "test-qa",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "AC",
+  "provenance": {
+    "source": "docs/plans/active/requirements-system/sprints/RS-R9-dogfood-self-trace.md",
+    "authoring_actor": "RS-R9 seed",
+    "confidence": 0.8,
+    "confirmation_status": "skill-derived",
+    "last_checked_date": "2026-06-29"
+  }
+}

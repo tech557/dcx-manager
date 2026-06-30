@@ -1,0 +1,18 @@
+{
+  "id": "REQ-VER-COLLAB-DISPLAY",
+  "type": "Requirement",
+  "statement": "The Version page shows campaign collaborators (all users shared on any campaign version) in the header and the active version's assigned crew in the version control component.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "ui-presentation",
+  "provenance": {
+    "source": "HV-2 sprint execution — proposed and applied 2026-06-30",
+    "authoring_actor": "Claude",
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  },
+  "supersedes": [],
+  "related": ["REQ-PR-004", "REQ-VR-005", "REQ-VR-006"]
+}

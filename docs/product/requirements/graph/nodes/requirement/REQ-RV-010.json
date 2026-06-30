@@ -1,0 +1,28 @@
+{
+  "id": "REQ-RV-010",
+  "statement": "Missing data field rule — The missing datafield must either have content or be explicitly marked Not — TaskEditor field model, task type, validation, API DTO,",
+  "governance": "archived",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "RV-010",
+  "source_category": "Validation & Readiness Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "Data Model & Builder Structure",
+  "related_requirements": "Domain Model & API Contracts",
+  "affected_modules": "src/rules/validation.rules.ts; readiness checker; validation summary UI; TaskEditor validation hooks",
+  "ux_impact": "User must intentionally confirm whether missing data exists.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RV-010",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

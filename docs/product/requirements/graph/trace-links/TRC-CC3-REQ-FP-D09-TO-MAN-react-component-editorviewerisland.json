@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CC3-REQ-FP-D09-TO-MAN-react-component-editorviewerisland",
+  "type": "TraceLink",
+  "source": "REQ-FP-D09",
+  "target": "MAN-react-component-src-builder-islands-editorviewerisland-editorviewerisland",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.9,
+  "evidence_refs": [
+    "CC-3: editor pill enabled on valid card selection (enable-on-select) via selectedEditableNodeId + setFocusedNodeId in useEditorState/EditorViewerIsland."
+  ],
+  "inference_source": "CC-3 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

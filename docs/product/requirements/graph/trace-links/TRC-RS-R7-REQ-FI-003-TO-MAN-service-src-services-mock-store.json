@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-FI-003-TO-MAN-service-src-services-mock-store",
+  "type": "TraceLink",
+  "source": "REQ-FI-003",
+  "target": "MAN-service-src-services-mock-store",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"store\" matches \"File storage type — MVP stores file links/references, mostly Google Drive links, not uploaded file content. — File metadata schema: name, URL, source, createdBy, versionId.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

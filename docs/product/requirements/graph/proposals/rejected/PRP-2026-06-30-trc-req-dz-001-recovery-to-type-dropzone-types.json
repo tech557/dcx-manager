@@ -1,0 +1,25 @@
+{
+  "id": "PRP-2026-06-30-trc-req-dz-001-recovery-to-type-dropzone-types",
+  "type": "Proposal",
+  "action": "create-trace-link",
+  "actor": "opencode",
+  "date": "2026-06-30",
+  "reason": "Task-I backend contract tracing — Dropzone behavior recovery maps to Dropzone, DropzoneEdge, and DropCommand types",
+  "payload": {
+    "traceLink": {
+      "id": "TRC-TASK-I-REQ-DZ-001-RECOVERY-TO-MAN-type-src-types-dropzone-types",
+      "type": "TraceLink",
+      "source": "REQ-DZ-001-RECOVERY",
+      "target": "MAN-type-src-types-dropzone-types",
+      "relationship_type": "implements",
+      "coverage": "partial",
+      "confidence": 0.7,
+      "inference_source": "Task-I backend contract tracing 2026-06-30",
+      "confirmation_status": "agent-proposed",
+      "needs_confirmation": true,
+      "stale_state": "current",
+      "last_checked_date": "2026-06-30",
+      "match_reason": "Dropzone behavior recovery maps to Dropzone, DropzoneEdge, and DropCommand types"
+    }
+  }
+}

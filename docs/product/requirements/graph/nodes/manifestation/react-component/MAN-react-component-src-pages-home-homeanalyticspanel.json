@@ -1,0 +1,19 @@
+{
+  "id": "MAN-react-component-src-pages-home-homeanalyticspanel",
+  "type": "Manifestation",
+  "statement": "HV-1 implementation: MAN-react-component-src-pages-home-homeanalyticspanel",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "react-component",
+  "current_paths": [
+    "src/pages/home/HomeAnalyticsPanel.tsx"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

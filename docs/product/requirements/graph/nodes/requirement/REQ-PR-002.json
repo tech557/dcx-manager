@@ -1,0 +1,28 @@
+{
+  "id": "REQ-PR-002",
+  "statement": "Non-authenticated access — Non-authenticated users cannot open the Builder. — Route guard, no-access screen, login redirect.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "PR-002",
+  "source_category": "Routing; Auth & Load Control",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "Google auth",
+  "related_requirements": "Permissions & Access Control",
+  "affected_modules": "src/app/; src/router.tsx; src/components/auth/; src/services/access.service.ts; route/load guards",
+  "ux_impact": "User must log in before viewing work.",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "PR-002",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "security"
+}

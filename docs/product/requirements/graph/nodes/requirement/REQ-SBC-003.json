@@ -1,0 +1,28 @@
+{
+  "id": "REQ-SBC-003",
+  "statement": "Phase Card as strategic visual container — The Phase Card is the highest-value visual container. Beyond holding actions/tasks, it should communicate where the work and focus of a phase concentrates, especially when collapsed, seeding future workload/communication-flow views without a full analytics engine. — Phase Card supports expanded/collapsed states, phase-level task/action density, readiness/blocker indicators, visual emphasis where most work exists, subtle background/light-intensity signals, and a seam for future heatmap and communication-flow indicators.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "SBC-003",
+  "source_category": "Shared Builder Card System",
+  "priority": "MVP + Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "SBC-001, RDY-001",
+  "related_requirements": "SBC-005, SBC-006",
+  "affected_modules": "src/pages/builder/cards/phase/",
+  "ux_impact": "Collapsed phases still communicate weight and focus.",
+  "risk": "Medium-High",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "SBC-003",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "REQ-HOME-LAYOUT",
+  "type": "Requirement",
+  "statement": "Home is a fixed full-viewport shell (100vh x 100vw, no page scroll) on desktop; internal blocks scroll within their own regions. Mobile/tablet layout stacks responsively per REQ-RESP-001.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "scope": "frontend",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confidence": 1,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

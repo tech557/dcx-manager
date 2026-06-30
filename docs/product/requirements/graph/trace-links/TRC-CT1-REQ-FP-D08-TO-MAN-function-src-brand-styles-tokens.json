@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CT1-REQ-FP-D08-TO-MAN-function-src-brand-styles-tokens",
+  "type": "TraceLink",
+  "source": "REQ-FP-D08",
+  "target": "MAN-function-src-brand-styles-tokens",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.9,
+  "evidence_refs": [
+    "CT-1: src/brand/styles/tokens.css carries the brandbook-derived theme color/surface/text token values (REQ-FP-D08 brandbook values source). CT-1 removed pure-white offenders (--theme-surface-void, --theme-dropdown-bg, --background/--card/--popover), added --theme-text-secondary, and added contrast-safe --theme-accent-text per brandbook 'no pure white/black' interpretation contract."
+  ],
+  "inference_source": "CT-1 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

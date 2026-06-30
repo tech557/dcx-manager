@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-SPS-001-TO-MAN-react-component-src-builder-islands-viewhelperisland-viewhelperisland",
+  "type": "TraceLink",
+  "source": "REQ-SPS-001",
+  "target": "MAN-react-component-src-builder-islands-viewhelperisland-viewhelperisland",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"ViewHelperIsland\" matches \"Reusable sticky resizable popup shell — A single reusable popup shell should serve all floating helper surfaces so they look and behave consistently and never disturb the stage layout. — Reusable sticky, resizable, minimizable popup shell shared by AI Chat, View Helper Island, Google Docs/file preview, advanced Focus filter, and future template browser. It floats over the stage and does not resize the stage. Supports minimize, resize, sticky positioning, branded header, close behavior, and optional saved size/position as a user workspace preference.\" (score: 0.85)",
+    "RS-R7 identity normalization redirected TRC-RS-R7-REQ-SPS-001-TO-MAN-react-component-viewhelperisland-viewhelperisland to canonical manifestation identity."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "merged_from": [
+    "TRC-RS-R7-REQ-SPS-001-TO-MAN-react-component-viewhelperisland-viewhelperisland"
+  ],
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

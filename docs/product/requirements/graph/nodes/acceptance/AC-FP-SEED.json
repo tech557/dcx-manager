@@ -1,0 +1,18 @@
+{
+  "id": "AC-FP-SEED",
+  "type": "AcceptanceOutcome",
+  "statement": "Focus & Presentation (FP) acceptance outcome placeholder to be matured during RS-R8 evidence binding.",
+  "scope": "frontend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "AC",
+  "provenance": {
+    "source": "AC gap sweep — session 2026-06-30 Task H / PO decision",
+    "source_path": "docs/progress/sessions/2026-06-30-opencode/008-ac-coverage-gap-table.md",
+    "authoring_actor": "opencode",
+    "confidence": 0.85,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

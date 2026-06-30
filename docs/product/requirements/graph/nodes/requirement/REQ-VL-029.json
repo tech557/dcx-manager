@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VL-029",
+  "statement": "Status change logging — Major lifecycle transitions should create activity logs. — Activity log service, status transition endpoint.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VL-029",
+  "source_category": "Audit; Logs & Error Reporting",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Change Logs & Audit category",
+  "related_requirements": "Lifecycle & Version Status Rules",
+  "affected_modules": "src/services/logs.service.ts; src/services/error-reporter.service.ts; error boundary; report modal; activity/history UI",
+  "ux_impact": "PM/admin can see when work started, became Ready,",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VL-029",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-RDY-003",
+  "statement": "Per-field readiness states on tasks — Each important task field needs a clear readiness state so the Task Card and Editor agree on what is filled, unset, or intentionally not needed. — Define field-level readiness states (ready / filled / unset / not-needed) for date, missing data, specs, sender, receiver, channel, subtasks. States are computed centrally and consumed by the Task Card indicators and the Editor.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "RDY-003",
+  "source_category": "Validation & Readiness Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "RDY-001, DQ-001",
+  "related_requirements": "SBC-005",
+  "affected_modules": "src/rules/validation.rules.ts; task type; TaskEditor",
+  "ux_impact": "User sees exactly which fields still need attention.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RDY-003",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

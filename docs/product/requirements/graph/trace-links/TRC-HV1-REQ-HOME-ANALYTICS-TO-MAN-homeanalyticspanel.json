@@ -1,0 +1,16 @@
+{
+  "id": "TRC-HV1-REQ-HOME-ANALYTICS-TO-MAN-homeanalyticspanel",
+  "type": "TraceLink",
+  "source": "REQ-HOME-ANALYTICS",
+  "target": "MAN-react-component-src-pages-home-homeanalyticspanel",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 1.0,
+  "evidence_refs": [
+    "HV-1 implementation 2026-06-30"
+  ],
+  "inference_source": "HV-1 implementation 2026-06-30",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "needs_confirmation": false
+}

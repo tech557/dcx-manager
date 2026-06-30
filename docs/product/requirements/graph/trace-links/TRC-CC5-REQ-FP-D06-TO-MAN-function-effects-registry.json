@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CC5-REQ-FP-D06-TO-MAN-function-effects-registry",
+  "type": "TraceLink",
+  "source": "REQ-FP-D06",
+  "target": "MAN-function-src-ui-motion-effects-registry",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "CC-5: REQ-FP-D06 calls for a dedicated sprint to add reduced-motion branches across effects.registry.ts per FP-R4 M01-M05. reducedEffectsRegistry covers all 12 EffectName entries with no-spring/no-scale/no-shake variants."
+  ],
+  "inference_source": "CC-5 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

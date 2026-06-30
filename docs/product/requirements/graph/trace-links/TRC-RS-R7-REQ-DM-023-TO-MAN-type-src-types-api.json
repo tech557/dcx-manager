@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-023-TO-MAN-type-src-types-api",
+  "type": "TraceLink",
+  "source": "REQ-DM-023",
+  "target": "MAN-type-src-types-api",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"api\" matches \"Missing data and specs field model — For missing data and specs fields only, task is ready when each — TaskEditor fields, task type, validation, readiness checker, API\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

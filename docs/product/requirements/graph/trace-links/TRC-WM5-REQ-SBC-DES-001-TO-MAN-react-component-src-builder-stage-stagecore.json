@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM5-REQ-SBC-DES-001-TO-MAN-react-component-src-builder-stage-stagecore",
+  "type": "TraceLink",
+  "source": "REQ-SBC-DES-001",
+  "target": "MAN-react-component-src-builder-stage-stagecore",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.9,
+  "evidence_refs": [
+    "WM-5: StageCore backdrop onClick (handleStageBackdropClick) — fires only when e.target === e.currentTarget (not a card), calls setSelectedNodeIds([]) when selection is non-empty. Covers empty-stage click path of REQ-SBC-DES-001. Escape key path covered by BuilderWorkspaceContent (REQ-KEY-005 TRC)."
+  ],
+  "inference_source": "WM-5 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

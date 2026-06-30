@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-BC-008-TO-MAN-function-src-utils-date-helpers",
+  "type": "TraceLink",
+  "source": "REQ-BC-008",
+  "target": "MAN-function-src-utils-date-helpers",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"date.helpers\" matches \"Timeline day task creation — User can create a task from inside a day in Timeline. The — DayGridCard, date helpers, task factory, timeline task creation\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

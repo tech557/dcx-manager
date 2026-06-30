@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-FCS-001-TO-MAN-react-component-src-builder-islands-focusisland-focusisland",
+  "type": "TraceLink",
+  "source": "REQ-FCS-001",
+  "target": "MAN-react-component-src-builder-islands-focusisland-focusisland",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"FocusIsland\" matches \"Focus Island as selection/filtering engine — Focus Island is a strategic selection/filtering engine, not a simple filter. It lets users find and concentrate on specific work across the whole plan while preserving hierarchy. — Supports focus modes by Week, Action, Task, and Task property/spec (sender, receiver, channel, task type, subtask, future structured fields). On selecting a focus option, the system finds all matching tasks, selects them, highlights with animation, expands any collapsed phase/action containing them, and preserves hierarchy context. Works in both Kanban and Timeline.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-VL-005-TO-MAN-react-component-src-ui-atoms-badge",
+  "type": "TraceLink",
+  "source": "REQ-VL-005",
+  "target": "MAN-react-component-src-ui-atoms-badge",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"Badge\" matches \"Ready for Approval meaning — Ready for Approval means the DCX structure is complete enough for PM — Status transition, readiness validation, status badge, notification/log.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

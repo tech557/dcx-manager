@@ -1,0 +1,23 @@
+{
+  "id": "MAN-function---package",
+  "type": "Manifestation",
+  "statement": "Package script exposing the RS-R6 seed command.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "devops",
+  "kind": "config",
+  "current_paths": [
+    "package.json"
+  ],
+  "lifecycle": "modified",
+  "provenance": {
+    "source": "RS-R6 implementation",
+    "source_path": "package.json",
+    "source_anchor": "req:seed-rs-r6",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  }
+}

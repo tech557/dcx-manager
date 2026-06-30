@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-001-TO-MAN-function-src-utils-node-helpers",
+  "type": "TraceLink",
+  "source": "REQ-DM-001",
+  "target": "MAN-function-src-utils-node-helpers",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"node.helpers\" matches \"Official DCX structure — Official saved structure is Version → Phase → Action → Task. — types/domain.ts, types.ts, api.ts, BuilderNode, node.helpers.ts, api-mappers.ts.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM4-REQ-SBT-COPY-001-TO-MAN-react-component-src-builder-ui-forms-subtask-quicksubtaskform",
+  "type": "TraceLink",
+  "source": "REQ-SBT-COPY-001",
+  "target": "MAN-react-component-src-builder-ui-forms-subtask-quicksubtaskform",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.9,
+  "evidence_refs": [
+    "WM-4: QuickSubtaskForm — per-row checkboxes allow selecting one or more subtasks; 'Copy N' button calls subtaskClipboard.copy(selected) (no generation re-run — copies label/estimatedMinutes/definitionId/specs/fields verbatim). 'Paste N' button calls subtaskClipboard.paste() and appends cloned subtasks (new IDs, same taskId) — appended, not overwritten, satisfying no-blind-overwrite constraint. subtaskClipboard.ts is the shared module-level clipboard. Distinct from REQ-SBC-DUP-001 (card-level): operates on Subtask instances inside a Task, not on shared builder cards."
+  ],
+  "inference_source": "WM-4 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

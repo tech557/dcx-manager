@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-CR-010-TO-MAN-type-src-types-lifecycle",
+  "type": "TraceLink",
+  "source": "REQ-CR-010",
+  "target": "MAN-type-src-types-lifecycle",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"lifecycle\" matches \"Avoid noisy writes — Do not write logs for every UI interaction or autosave. — Event filtering, lifecycle-only DB writes.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-VL-030-TO-MAN-service-src-services-mock-store",
+  "type": "TraceLink",
+  "source": "REQ-VL-030",
+  "target": "MAN-service-src-services-mock-store",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"store\" matches \"Required timestamps — Version should store timestamps for important lifecycle moments: created, in progress, ready, — Version model, API DTO, status transition service.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

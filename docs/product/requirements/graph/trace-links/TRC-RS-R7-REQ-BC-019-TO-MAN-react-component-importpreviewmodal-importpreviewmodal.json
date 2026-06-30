@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-BC-019-TO-MAN-react-component-importpreviewmodal-importpreviewmodal",
+  "type": "TraceLink",
+  "source": "REQ-BC-019",
+  "target": "MAN-react-component-src-builder-ui-modals-importpreviewmodal",
+  "relationship_type": "supersedes",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"ImportPreviewModal\" matches \"New ID behavior — If imported data contains new IDs, confirm that new items will be — Import preview modal, add operation mapping.\" (score: 0.85)",
+    "Historical RS-R7 candidate superseded by canonical link TRC-RS-R7-REQ-BC-019-TO-MAN-react-component-src-builder-ui-modals-importpreviewmodal."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "original_source": "REQ-BC-019",
+  "original_target": "MAN-react-component-importpreviewmodal-importpreviewmodal",
+  "replacement_trace_link": "TRC-RS-R7-REQ-BC-019-TO-MAN-react-component-src-builder-ui-modals-importpreviewmodal",
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

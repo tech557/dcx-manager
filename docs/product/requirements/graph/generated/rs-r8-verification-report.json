@@ -1,0 +1,51 @@
+{
+  "phase": "RS-R8 seed evidence",
+  "boundEvidence": 3,
+  "evidenceTargets": 3,
+  "bindingResults": [
+    {
+      "acId": "AC-AIC-SEED",
+      "acStatement": "AI & Intelligence (Seed) acceptance outcome placeholder to b",
+      "success": true,
+      "evId": "EVD-ac-aic-seed-1782759014899"
+    },
+    {
+      "acId": "AC-AIM-SEED",
+      "acStatement": "Domain Model & API Contracts acceptance outcome placeholder ",
+      "success": true,
+      "evId": "EVD-ac-aim-seed-1782759014934"
+    },
+    {
+      "acId": "AC-BC-SEED",
+      "acStatement": "Builder State & Mutation Layer acceptance outcome placeholde",
+      "success": true,
+      "evId": "EVD-ac-bc-seed-1782759014968"
+    }
+  ],
+  "report": {
+    "implementedButUnverified": 0,
+    "verificationStale": 0,
+    "verificationInvalidated": 0,
+    "partiallyVerified": 0,
+    "unverified": 0,
+    "acceptanceOutcomesWithoutEvidence": 21
+  },
+  "queues": {
+    "needsClassification": 0,
+    "needsDecomposition": 221,
+    "missingManifestations": 0,
+    "partiallyImplemented": 0,
+    "implementedUnverified": 3,
+    "manifestationsLackingRequirements": 333,
+    "candidateLinksAwaitingConfirmation": 688,
+    "staleBrokenTraces": 0,
+    "supersededStillInCode": 0,
+    "testsDisconnected": 0,
+    "verificationStale": 0,
+    "exemptionsAwaitingReview": 0
+  },
+  "validationPass": true,
+  "validationErrors": 0,
+  "validationWarnings": 1,
+  "folderIndexNodes": 719
+}

@@ -1,0 +1,28 @@
+{
+  "id": "REQ-BC-025",
+  "statement": "Save as template entry — Future “save as template” action should likely live in Kanban Builder Island — Kanban Builder Island, phase/action/task menus, template service later.",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "BC-025",
+  "source_category": "Builder UI Surfaces",
+  "priority": "Future / Seed Now",
+  "status": "Proposed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "Template DB",
+  "related_requirements": "Integration Contracts",
+  "affected_modules": "src/pages/builder/stage/; src/pages/builder/cards/; src/pages/builder/islands/; src/pages/builder/kanban/; src/pages/builder/timeline/",
+  "ux_impact": "User can save reusable parts from the Builder.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "BC-025",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.75,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

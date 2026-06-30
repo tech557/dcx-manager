@@ -1,0 +1,35 @@
+{
+  "id": "MAN-react-component-src-builder-cards-templates-phase-phasecard",
+  "type": "Manifestation",
+  "statement": "Code manifestation discovered by RS-R7 inventory: PhaseCard (src/builder/cards/templates/phase/PhaseCard.tsx).",
+  "scope": "frontend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "react-component",
+  "current_paths": [
+    "src/builder/cards/templates/phase/PhaseCard.tsx"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "RS-R7 code manifestation inventory",
+    "source_path": "src/builder/cards/templates/phase/PhaseCard.tsx",
+    "source_anchor": "PhaseCard",
+    "authoring_actor": "Codex",
+    "inference_source": "reconciliation-engine",
+    "confidence": 0.8,
+    "confirmation_status": "code-discovered",
+    "last_checked_date": "2026-06-29"
+  },
+  "aliases": [
+    "MAN-react-component-phasecard-phasecard"
+  ],
+  "identity_normalization": {
+    "date": "2026-06-29",
+    "ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION",
+    "canonical": true,
+    "superseded_aliases": [
+      "MAN-react-component-phasecard-phasecard"
+    ]
+  }
+}

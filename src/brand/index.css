@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+@import "./styles/theme.css";
+@import "./styles/tokens.css";
+@import "./styles/components.css";
+
+@source not "../../docs";
+@source not "../../code-index";

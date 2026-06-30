@@ -1,0 +1,22 @@
+{
+  "id": "REQ-GOV-INV-001",
+  "type": "Requirement",
+  "statement": "Agents may use graph data as authoritative planning context, but must investigate beyond stored mappings when risk, ambiguity, conflict, low confidence, failing tests, runtime contradiction, or locked product intent could affect a decision.",
+  "scope": "agent-workflow",
+  "governance": "locked",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "lock_owner": "PO",
+  "lock_date": "2026-06-29",
+  "ledger_ref": "LDG-2026-06-29-RS-CALIBRATION-MODE",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "source": "PO rollout calibration-mode ruling",
+    "source_path": "docs/plans/active/requirements-system/output/RS-rollout-calibration-mode.md",
+    "source_anchor": "Investigation triggers",
+    "authoring_actor": "Codex",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  }
+}

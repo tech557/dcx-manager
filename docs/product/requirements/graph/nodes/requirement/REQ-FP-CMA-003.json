@@ -1,0 +1,21 @@
+{
+  "id": "REQ-FP-CMA-003",
+  "type": "Requirement",
+  "statement": "AUTO-CENTRE on select/navigate: selecting a card or jumping via focus/filter scrolls the stage to centre it (object-specific centring).",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "REQ->BHV->RSP",
+  "provenance": {
+    "source": "docs/plans/on-hold/frontend-polish-v0.3.5/output/core-interaction-model.md",
+    "source_path": "docs/plans/on-hold/frontend-polish-v0.3.5/output/core-interaction-model.md",
+    "authoring_actor": "RS-R9 seed",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  },
+  "source_category": "core-interaction-model PO alignments",
+  "priority": "MVP",
+  "status": "Confirmed"
+}

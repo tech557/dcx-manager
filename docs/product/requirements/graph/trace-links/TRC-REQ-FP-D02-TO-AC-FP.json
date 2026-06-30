@@ -1,0 +1,14 @@
+{
+  "id": "TRC-REQ-FP-D02-TO-AC-FP",
+  "type": "TraceLink",
+  "source": "REQ-FP-D02",
+  "target": "AC-FP-SEED",
+  "relationship_type": "validates",
+  "coverage": "partial",
+  "confidence": 0.7,
+  "inference_source": "AC gap sweep — 2026-06-30 opencode non-verified seeding",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

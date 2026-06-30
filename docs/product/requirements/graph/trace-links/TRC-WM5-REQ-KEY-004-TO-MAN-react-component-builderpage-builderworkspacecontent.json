@@ -1,0 +1,17 @@
+{
+  "id": "TRC-WM5-REQ-KEY-004-TO-MAN-react-component-builderpage-builderworkspacecontent",
+  "type": "TraceLink",
+  "source": "REQ-KEY-004",
+  "target": "MAN-react-component-builderpage-builderworkspacecontent",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "WM-5: Delete/Backspace in BuilderWorkspaceContent keyboard handler — resolves kind for each selectedNodeId, calls deletePhase/deleteAction/deleteTask accordingly, then clears selection. Guard: skips if no selection or isTypingTarget. Deletion governed by existing builderActionsHook methods (same path as SelectionIsland delete button)."
+  ],
+  "inference_source": "WM-5 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

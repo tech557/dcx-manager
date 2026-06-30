@@ -1,0 +1,28 @@
+{
+  "id": "REQ-RV-014",
+  "statement": "Ready attempt feedback — If Ready fails, the system should show what blocks readiness and where — Validation summary UI, focus/locate behavior, task/action/phase error markers.",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "RV-014",
+  "source_category": "Validation & Readiness Rules",
+  "priority": "MVP",
+  "status": "Proposed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "Validation layer",
+  "related_requirements": "Builder UI Surfaces",
+  "affected_modules": "src/rules/validation.rules.ts; readiness checker; validation summary UI; TaskEditor validation hooks",
+  "ux_impact": "User can quickly fix readiness blockers.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RV-014",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.75,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "REQ-HOME-USER",
+  "type": "Requirement",
+  "statement": "Home shows a user block reusing builder header user controls minus the Save action. No Save button present on Home.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "scope": "frontend",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confidence": 1,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-30"
+  }
+}

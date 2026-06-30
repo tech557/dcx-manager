@@ -1,0 +1,4 @@
+id,type,governance,maturity,delivery,scope,kind,statement
+MAN-script-scripts-requirements-seed-evidence-rs-r8,Manifestation,proposed,logic-defined,not-assessed,governance,script,RS-R8 evidence seed script: bound seeded evidence nodes to acceptance outcomes.
+MAN-script-scripts-requirements-seed-rs-r6,Manifestation,proposed,logic-defined,not-assessed,devops,script,RS-R6 migration seed script: populated the initial requirements graph from the RS-R5 itemized dataset.
+MAN-script-scripts-requirements-seed-rs-r9,Manifestation,proposed,logic-defined,not-assessed,governance,script,RS-R9 seed script: ingests session decisions and creates self-trace nodes for the system itself.

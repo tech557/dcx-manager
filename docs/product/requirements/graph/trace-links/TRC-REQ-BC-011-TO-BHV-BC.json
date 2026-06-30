@@ -1,0 +1,14 @@
+{
+  "id": "TRC-REQ-BC-011-TO-BHV-BC",
+  "type": "TraceLink",
+  "source": "REQ-BC-011",
+  "target": "BHV-BC-SEED",
+  "relationship_type": "decomposes-into",
+  "coverage": "partial",
+  "confidence": 0.8,
+  "inference_source": "RS-R6 seed migration",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

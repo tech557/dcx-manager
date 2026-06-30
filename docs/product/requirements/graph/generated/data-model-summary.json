@@ -1,0 +1,111 @@
+{
+  "generated_at": "2026-06-29T00:00:00.000Z",
+  "source": "src/types/",
+  "files": [
+    {
+      "path": "src/types/api.ts",
+      "exports": [
+        "ApiJsonValue",
+        "ApiTaskDate",
+        "ApiChannel",
+        "ApiSubtaskDefinition",
+        "ApiChannelComposition",
+        "ApiDCX",
+        "ApiVersion",
+        "ApiPhase",
+        "ApiPhaseIconType",
+        "ApiAction",
+        "ApiTask",
+        "ApiFieldCompletionState",
+        "ApiSubtask",
+        "ApiFileAttachment",
+        "ApiAssignedMember",
+        "ApiActivityEvent",
+        "ApiBuilderTree"
+      ]
+    },
+    {
+      "path": "src/types/domain.ts",
+      "exports": [
+        "ISODate",
+        "ISOTimestamp",
+        "AIContextFields",
+        "CollaborationFields",
+        "DCX",
+        "Version",
+        "Phase",
+        "Action",
+        "Task",
+        "Subtask"
+      ]
+    },
+    {
+      "path": "src/types/builder-node.types.ts",
+      "exports": [
+        "BuilderNodeKind",
+        "BuilderNodeBase",
+        "TaskCardData",
+        "ActionCardData",
+        "PhaseNodeData",
+        "TaskNode",
+        "ActionNode",
+        "PhaseNode",
+        "BuilderNode"
+      ]
+    },
+    {
+      "path": "src/types/card.types.ts",
+      "exports": [
+        "CardKind",
+        "CardCapability",
+        "MovementAxis",
+        "ReadinessState",
+        "ReadinessSource",
+        "FieldIndicator",
+        "CardEffectsConfig",
+        "CardConfig"
+      ]
+    },
+    {
+      "path": "src/types/dropzone.types.ts",
+      "exports": [
+        "DropzoneTarget",
+        "DropzoneEdge",
+        "DropCommand",
+        "Dropzone"
+      ]
+    },
+    {
+      "path": "src/types/editor.types.ts",
+      "exports": [
+        "DayDraft",
+        "EditorDraftData"
+      ]
+    },
+    {
+      "path": "src/types/lifecycle.ts",
+      "exports": [
+        "VersionStatus",
+        "VersionSourceType",
+        "LifecycleEventType",
+        "EDITABLE_VERSION_STATUSES",
+        "LOCKED_VERSION_STATUSES"
+      ]
+    },
+    {
+      "path": "src/types/stage.types.ts",
+      "exports": [
+        "ViewKind",
+        "StagePosition",
+        "StageContext",
+        "StageSurfaceBehavior",
+        "StageLayoutContract"
+      ]
+    }
+  ],
+  "drift_items": [
+    "LDG-2026-06-29-DMD-001",
+    "LDG-2026-06-29-DMD-002",
+    "LDG-2026-06-29-DMD-003"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-TPL-001-TO-MAN-react-component-src-builder-cards-templates-task-taskcard",
+  "type": "TraceLink",
+  "source": "REQ-TPL-001",
+  "target": "MAN-react-component-src-builder-cards-templates-task-taskcard",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"TaskCard\" matches \"Contextual object template popup (seed) — Phase, Action, and Task cards should support a contextual template popup so users can later load object-relevant templates without a full template database in MVP. — Holding/clicking an object opens a contextual popup loading templates relevant to that object type, supporting categories, search, loading state, empty state, and object-aware results. Future apply: phase templates add/merge actions+tasks; action templates add/merge tasks; task templates fill fields/specs/subtasks. Template application must not blindly overwrite without review.\" (score: 0.85)",
+    "RS-R7 identity normalization redirected TRC-RS-R7-REQ-TPL-001-TO-MAN-react-component-taskcard-taskcard to canonical manifestation identity."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "merged_from": [
+    "TRC-RS-R7-REQ-TPL-001-TO-MAN-react-component-taskcard-taskcard"
+  ],
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "TRC-RS-R7-REQ-SBC-005-TO-MAN-react-component-src-builder-cards-templates-task-taskcard",
+  "type": "TraceLink",
+  "source": "REQ-SBC-005",
+  "target": "MAN-react-component-src-builder-cards-templates-task-taskcard",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"TaskCard\" matches \"Task Card as field-status surface — The Task Card is a complex, high-investment component. It should communicate at a glance whether each key property is ready, unset, filled, or marked not needed, and allow quick inspection/correction without always opening the full Editor. — Task Card shows compact field indicators for: date/communication-date status, missing data, specs, sender, receiver, channel, subtasks, and future structured properties. Clicking an indicator opens a controlled popup showing field name, current value, readiness state, 'Unset' if not ready, or the selected value. Double-clicking the popup switches it to edit mode.\" (score: 0.85)",
+    "RS-R7 identity normalization redirected TRC-RS-R7-REQ-SBC-005-TO-MAN-react-component-taskcard-taskcard to canonical manifestation identity."
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false,
+  "merged_from": [
+    "TRC-RS-R7-REQ-SBC-005-TO-MAN-react-component-taskcard-taskcard"
+  ],
+  "normalization_ledger_ref": "LDG-2026-06-29-RS-R7-IDENTITY-NORMALIZATION"
+}

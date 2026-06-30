@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CC6-REQ-FP-D05-TO-MAN-function-src-brand-styles-components",
+  "type": "TraceLink",
+  "source": "REQ-FP-D05",
+  "target": "MAN-function-src-brand-styles-components",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.9,
+  "evidence_refs": [
+    "CC-6: .builder-canvas background changed from --theme-component-surface-deep (always dark rgb(13,13,14)) to --theme-surface-deep (light #FAF9F6, dark #050506). Canvas now switches fully to light surface in light theme. Verified: computed bg-color rgb(250,249,246) in light mode."
+  ],
+  "inference_source": "CC-6 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

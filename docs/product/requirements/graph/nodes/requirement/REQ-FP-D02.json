@@ -1,0 +1,22 @@
+{
+  "id": "REQ-FP-D02",
+  "type": "Requirement",
+  "statement": "FocusIsland DEFAULT mode = highlight/spotlight: activates/highlights matching values while keeping non-matching VISIBLE. No opt-in isolation mode. Full picture retained at all times.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "REQ->BHV->RSP",
+  "provenance": {
+    "source": "docs/plans/on-hold/frontend-polish-v0.3.5/output/decision-register.md",
+    "source_path": "docs/plans/on-hold/frontend-polish-v0.3.5/output/decision-register.md",
+    "authoring_actor": "RS-R9 seed",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-29"
+  },
+  "source_id": "D-02",
+  "source_category": "frontend-polish decision register",
+  "priority": "MVP",
+  "status": "Confirmed"
+}

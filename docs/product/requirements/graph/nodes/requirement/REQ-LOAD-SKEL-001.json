@@ -1,0 +1,24 @@
+{
+  "id": "REQ-LOAD-SKEL-001",
+  "type": "Requirement",
+  "statement": "App-wide skeleton loading states — Every app surface that loads data or async content (Builder shell/stage/cards, Home, Version pages, modals, lists, editor panels) must render a proper React skeleton/placeholder that matches the final layout during load, instead of spinners, layout shift, or blank states. This complements REQ-VR-003 (Builder progressive load sequence, backend-scoped ordering) but is broader: it applies app-wide and mandates skeleton placeholders as the loading affordance. Skeletons must respect prefers-reduced-motion (no infinite shimmer when reduced) per core.md §20.",
+  "scope": "frontend",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "chain_layer": "REQ->BHV->RSP",
+  "source_id": "PO-2026-06-30-SKELETON-LOADING",
+  "provenance": {
+    "source": "PO direction (session 2026-06-30-claude)",
+    "source_path": "docs/progress/sessions/2026-06-30-claude/001-p11-readiness-and-req-intake.md",
+    "source_anchor": "skeleton-loading-app-wide",
+    "authoring_actor": "Claude (claude-opus-4-8) at PO direction",
+    "confidence": 0.9,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-06-30"
+  },
+  "related_ids": [
+    "REQ-VR-003",
+    "REQ-STG-002"
+  ]
+}

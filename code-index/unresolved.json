@@ -1,0 +1,135 @@
+{
+  "unresolvedImports": [],
+  "unresolvedComponents": [
+    {
+      "file": "src/builder/stage/StageCore.tsx",
+      "line": 113,
+      "componentName": "Renderer"
+    },
+    {
+      "file": "src/builder/stage/StageCore.tsx",
+      "line": 129,
+      "componentName": "Renderer"
+    },
+    {
+      "file": "src/builder/stage/StageEdgeNavigation.tsx",
+      "line": 45,
+      "componentName": "Icon"
+    },
+    {
+      "file": "src/ui/shadcn/button.tsx",
+      "line": 57,
+      "componentName": "Comp"
+    },
+    {
+      "file": "src/builder/islands/EditorViewerIsland/EditorHeader.tsx",
+      "line": 147,
+      "componentName": "InlineChannelCompositionSelector"
+    },
+    {
+      "file": "src/builder/islands/EditorViewerIsland/EditorHeader.tsx",
+      "line": 167,
+      "componentName": "MenuSectionButton"
+    },
+    {
+      "file": "src/builder/islands/KanbanBuilderIsland/KanbanBuilderIsland.tsx",
+      "line": 68,
+      "componentName": "IslandToggleButton"
+    },
+    {
+      "file": "src/builder/islands/KanbanBuilderIsland/KanbanBuilderIsland.tsx",
+      "line": 126,
+      "componentName": "InlineIslandButton"
+    },
+    {
+      "file": "src/builder/islands/KanbanBuilderIsland/KanbanBuilderIsland.tsx",
+      "line": 160,
+      "componentName": "InlineIslandButton"
+    },
+    {
+      "file": "src/builder/islands/MetadataIsland/MetadataDetailsContent.tsx",
+      "line": 53,
+      "componentName": "CommunicationDateField"
+    },
+    {
+      "file": "src/builder/ui/buttons/InlineIslandButton.tsx",
+      "line": 88,
+      "componentName": "Icon"
+    },
+    {
+      "file": "src/builder/ui/buttons/IslandToggleButton.tsx",
+      "line": 48,
+      "componentName": "DisplayIcon"
+    },
+    {
+      "file": "src/ui/forms/date/DatePickerToggle.tsx",
+      "line": 40,
+      "componentName": "Icon"
+    },
+    {
+      "file": "src/builder/islands/EditorViewerIsland/TaskEditor/RoutingDirectorySection.tsx",
+      "line": 62,
+      "componentName": "Icon"
+    },
+    {
+      "file": "src/builder/islands/EditorViewerIsland/TaskEditor/RoutingDirectorySection.tsx",
+      "line": 163,
+      "componentName": "RegistryDirectoryModal"
+    },
+    {
+      "file": "src/builder/islands/EditorViewerIsland/TaskEditor/TaskSection1.tsx",
+      "line": 16,
+      "componentName": "CommunicationDateField"
+    },
+    {
+      "file": "src/builder/islands/EditorViewerIsland/TaskEditor/TaskSection3.tsx",
+      "line": 83,
+      "componentName": "SpecsInput"
+    },
+    {
+      "file": "src/builder/islands/EditorViewerIsland/TaskEditor/TaskSection3.tsx",
+      "line": 127,
+      "componentName": "ListInputLines"
+    },
+    {
+      "file": "src/builder/islands/EditorViewerIsland/TaskEditor/TaskSection4.tsx",
+      "line": 16,
+      "componentName": "QuickSubtaskForm"
+    },
+    {
+      "file": "src/builder/ui/forms/channel/ChannelCompositionFields.tsx",
+      "line": 43,
+      "componentName": "Select"
+    },
+    {
+      "file": "src/builder/ui/forms/channel/ChannelCompositionFields.tsx",
+      "line": 56,
+      "componentName": "Select"
+    },
+    {
+      "file": "src/builder/ui/forms/channel/CompositionLibraryModal.tsx",
+      "line": 84,
+      "componentName": "Icon"
+    },
+    {
+      "file": "src/builder/cards/templates/task/task-properties/TaskCardPopovers.tsx",
+      "line": 45,
+      "componentName": "ChannelCompositionSelect"
+    },
+    {
+      "file": "src/builder/cards/templates/task/task-properties/TaskCardPopovers.tsx",
+      "line": 63,
+      "componentName": "CompletionStateSelect"
+    },
+    {
+      "file": "src/builder/cards/templates/task/task-properties/TaskCardPopovers.tsx",
+      "line": 77,
+      "componentName": "CompletionStateSelect"
+    },
+    {
+      "file": "src/builder/cards/templates/task/task-properties/TaskCardPopovers.tsx",
+      "line": 91,
+      "componentName": "QuickSubtaskForm"
+    }
+  ]
+}

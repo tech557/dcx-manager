@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-021-TO-MAN-react-component-src-ui-forms-selects-select",
+  "type": "TraceLink",
+  "source": "REQ-DM-021",
+  "target": "MAN-react-component-src-ui-forms-selects-select",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"Select\" matches \"UI state exclusion — Selection, hover, expanded cards, island state, active popover, active file preview, and — Builder store, island hooks, local storage if needed,\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

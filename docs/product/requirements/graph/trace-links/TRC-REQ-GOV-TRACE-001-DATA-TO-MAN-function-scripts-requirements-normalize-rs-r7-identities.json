@@ -1,0 +1,18 @@
+{
+  "id": "TRC-REQ-GOV-TRACE-001-DATA-TO-MAN-function-scripts-requirements-normalize-rs-r7-identities",
+  "type": "TraceLink",
+  "source": "REQ-GOV-TRACE-001-DATA",
+  "target": "MAN-function-scripts-requirements-normalize-rs-r7-identities",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.95,
+  "evidence_refs": [
+    "scripts/requirements/normalize-rs-r7-identities.ts",
+    "docs/product/requirements/graph/generated/rs-r7-identity-normalization.json"
+  ],
+  "inference_source": "RS-R7 identity-normalization pass",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

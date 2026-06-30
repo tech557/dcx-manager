@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-KBI-001-TO-MAN-react-component-src-ui-shadcn-button",
+  "type": "TraceLink",
+  "source": "REQ-KBI-001",
+  "target": "MAN-react-component-src-ui-shadcn-button",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"button\" matches \"Kanban Builder Island as creation surface — The Kanban Builder Island is a strategic creation surface. It starts compact and expands into a creation/control strip, with a reserved AI entry point, giving users a guided drag-to-create experience. — Compact button expands inline into a creation/control strip. Far-right reserves an AI Chat entry point. Supports drag-to-create: phase created only on drop into a valid board location, action only on drop into a phase, task only on drop into an action. Valid parent/drop target is highlighted during drag; created item animates/highlights after drop.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

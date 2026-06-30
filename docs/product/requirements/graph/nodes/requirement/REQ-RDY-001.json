@@ -1,0 +1,28 @@
+{
+  "id": "REQ-RDY-001",
+  "statement": "Readiness as shared card-system feature — Readiness should be a shared feature across all cards, but readiness means something different at each level. Cards must never disagree about whether something is ready. — All cards display readiness state. Phase readiness depends on child actions/tasks; action readiness depends on child tasks; task readiness depends on required fields and explicit Not Needed values. Cards must receive readiness from centralized validation/readiness helpers and must not compute it independently.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "source_id": "RDY-001",
+  "source_category": "Validation & Readiness Rules",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV",
+  "dependencies": "RV-015, RV-001",
+  "related_requirements": "SBC-003, SBC-004, SBC-005, RDY-003",
+  "affected_modules": "src/rules/validation.rules.ts; readiness checker; card readiness props",
+  "ux_impact": "Consistent readiness signals everywhere.",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "RDY-001",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

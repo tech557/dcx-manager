@@ -1,0 +1,28 @@
+{
+  "id": "REQ-SBC-004",
+  "statement": "Action Card as simpler structural component — The Action Card should rely on the shared card system without becoming overdesigned. It is a structural grouping, not an intelligence surface. — Action Card supports selection, expand/collapse, drag/drop, reorder inside phase, move between phases, delete, task count, empty-action warning, readiness state, and locked state. No heatmap/visual-intelligence layer now.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "SBC-004",
+  "source_category": "Shared Builder Card System",
+  "priority": "MVP",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "SBC-001",
+  "related_requirements": "RDY-001",
+  "affected_modules": "src/pages/builder/cards/action/",
+  "ux_impact": "Clean, predictable action grouping.",
+  "risk": "Low-Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "SBC-004",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "frontend"
+}

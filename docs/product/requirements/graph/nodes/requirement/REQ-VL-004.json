@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VL-004",
+  "statement": "In Progress to Ready timing — Track time from In Progress to Ready for Approval as an actual — Status timestamps: inProgressAt, readyAt, activity logs, reporting.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VL-004",
+  "source_category": "Lifecycle & Version Status Rules",
+  "priority": "MVP / Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->BHV->RSP",
+  "dependencies": "In Progress trigger",
+  "related_requirements": "Audit, Logs & Error Reporting",
+  "affected_modules": "src/types/lifecycle.ts; src/rules/lifecycle.rules.ts; src/services/versions.service.ts; status transition handlers",
+  "ux_impact": "PM gets a more accurate indication of team",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VL-004",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "product"
+}

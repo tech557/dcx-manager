@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-DM-016-TO-MAN-function-src-utils-date-helpers",
+  "type": "TraceLink",
+  "source": "REQ-DM-016",
+  "target": "MAN-function-src-utils-date-helpers",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"date.helpers\" matches \"Phase date span — Phase start/end dates are calculated from the earliest/latest task/action dates inside the — Phase cards, timeline, date helpers, mapper layer.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

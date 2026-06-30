@@ -1,0 +1,28 @@
+{
+  "id": "REQ-VR-005",
+  "statement": "DCX/workspace-level sharing — A user can open/read a DCX if they are authenticated and shared — Workspace/DCX access table; version route guard; project payload;",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "VR-005",
+  "source_category": "Permissions & Access Control",
+  "priority": "MVP + Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "ACCESS-002; ACCESS-004",
+  "related_requirements": "Routing, Auth & Load Control",
+  "affected_modules": "src/rules/permissions.rules.ts; src/hooks/usePermissions.ts; route guards; backend policy/service enforcement",
+  "ux_impact": "Shared users can access all versions under that",
+  "risk": "Medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "VR-005",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "backend"
+}

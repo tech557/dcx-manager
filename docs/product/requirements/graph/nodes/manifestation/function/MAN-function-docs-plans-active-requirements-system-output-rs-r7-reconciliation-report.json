@@ -1,0 +1,25 @@
+{
+  "id": "MAN-function-docs-plans-active-requirements-system-output-rs-r7-reconciliation-report",
+  "type": "Manifestation",
+  "statement": "RS-R7 reconciliation report amended with audit verdict, corrected queue counts, and remaining acceptance gap.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "scope": "agent-workflow",
+  "kind": "function",
+  "current_paths": [
+    "docs/plans/active/requirements-system/output/RS-R7-reconciliation-report.md"
+  ],
+  "stale_state": "stale",
+  "stale_reason": "current_paths entry no longer exists on disk — path moved or deleted",
+  "lifecycle": "modified",
+  "provenance": {
+    "source": "RS-R7 audit amendment",
+    "source_path": "docs/plans/active/requirements-system/output/RS-R7-reconciliation-report.md",
+    "source_anchor": "Audit Amendment",
+    "authoring_actor": "Codex",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  }
+}

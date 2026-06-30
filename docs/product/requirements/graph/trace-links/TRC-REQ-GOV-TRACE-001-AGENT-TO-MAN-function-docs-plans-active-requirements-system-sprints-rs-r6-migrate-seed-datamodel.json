@@ -1,0 +1,14 @@
+{
+  "id": "TRC-REQ-GOV-TRACE-001-AGENT-TO-MAN-function-docs-plans-active-requirements-system-sprints-rs-r6-migrate-seed-datamodel",
+  "type": "TraceLink",
+  "source": "REQ-GOV-TRACE-001-AGENT",
+  "target": "MAN-function-docs-plans-active-requirements-system-sprints-rs-r6-migrate-seed-datamodel",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "inference_source": "RS-R6 self-trace",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-29",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

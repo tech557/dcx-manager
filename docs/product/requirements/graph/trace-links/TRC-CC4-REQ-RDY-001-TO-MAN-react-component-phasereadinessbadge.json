@@ -1,0 +1,17 @@
+{
+  "id": "TRC-CC4-REQ-RDY-001-TO-MAN-react-component-phasereadinessbadge",
+  "type": "TraceLink",
+  "source": "REQ-RDY-001",
+  "target": "MAN-react-component-src-builder-cards-templates-phase-phasereadinessbadge",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.8,
+  "evidence_refs": [
+    "CC-4: PhaseReadinessBadge renders the shared readiness state it receives from useCardBehavior (centralized readiness, not computed in UI), satisfying the display half of REQ-RDY-001 for the phase level. Readiness computation/wiring across all card levels remains WM-5."
+  ],
+  "inference_source": "CC-4 sprint execution",
+  "confirmation_status": "skill-derived",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

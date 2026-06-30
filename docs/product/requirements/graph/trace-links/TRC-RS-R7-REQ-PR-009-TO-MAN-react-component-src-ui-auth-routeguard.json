@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-PR-009-TO-MAN-react-component-src-ui-auth-routeguard",
+  "type": "TraceLink",
+  "source": "REQ-PR-009",
+  "target": "MAN-react-component-src-ui-auth-routeguard",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"RouteGuard\" matches \"Read access — Any shared DCX user can read all versions under the DCX. — Version list/query permissions, builder route guard.\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

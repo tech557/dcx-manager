@@ -1,0 +1,28 @@
+{
+  "id": "REQ-CR-009",
+  "statement": "Separation from audit logs — UX behavior tracking is separate from business activity logs. — Lightweight event layer, future analytics adapter.",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "source_id": "CR-009",
+  "source_category": "Audit; Logs & Error Reporting",
+  "priority": "Seed Now",
+  "status": "Confirmed",
+  "chain_layer": "REQ->RSP",
+  "dependencies": "UI behavior tracking",
+  "related_requirements": "Preferences, Session & Telemetry",
+  "affected_modules": "src/services/logs.service.ts; src/services/error-reporter.service.ts; error boundary; report modal; activity/history UI",
+  "ux_impact": "Future UX analysis without polluting version history.",
+  "risk": "Low-medium",
+  "provenance": {
+    "source": "dcx-requirements-master.csv",
+    "source_path": "dcx-requirements-master.csv",
+    "source_anchor": "CR-009",
+    "authoring_actor": "RS-R6 migration",
+    "confidence": 0.95,
+    "confirmation_status": "confirmed",
+    "last_checked_date": "2026-06-29"
+  },
+  "type": "Requirement",
+  "scope": "operations"
+}

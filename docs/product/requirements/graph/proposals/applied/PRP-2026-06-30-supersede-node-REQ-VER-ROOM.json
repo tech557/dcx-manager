@@ -1,0 +1,30 @@
+{
+  "id": "PRP-2026-06-30-supersede-node-REQ-VER-ROOM",
+  "type": "Proposal",
+  "action": "supersede-node",
+  "actor": "Claude (claude-sonnet-4-6)",
+  "date": "2026-06-30",
+  "reason": "D-1 resolved (PO 2026-06-30): version card navigates to Version page room before builder; REQ-VR-001 superseded per HV-1 Step 0 requirement",
+  "payload": {
+    "suppressed_node": "REQ-VR-001",
+    "replacement_node": {
+      "id": "REQ-VER-ROOM",
+      "type": "Requirement",
+      "statement": "Version Room — Clicking a version card on the Home page navigates to /version/:id (the Version workspace page), not directly to the Builder. The Version page is a dedicated workspace to review metadata, manage status transitions, view resources, crew, and structure, and launch into the Builder. The Builder is only reachable via the Version page (or direct link).",
+      "governance": "approved",
+      "maturity": "logic-defined",
+      "delivery": "not-assessed",
+      "scope": "frontend",
+      "priority": "MVP",
+      "status": "Confirmed",
+      "chain_layer": "REQ->RSP",
+      "supersedes": "REQ-VR-001",
+      "provenance": {
+        "authoring_actor": "Claude (claude-sonnet-4-6)",
+        "confidence": 1,
+        "confirmation_status": "confirmed",
+        "last_checked_date": "2026-06-30"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "MAN-service-src-services-builder-service",
+  "type": "Manifestation",
+  "statement": "Code manifestation discovered by RS-R7 inventory: builder.service (src/services/builder.service.ts).",
+  "scope": "backend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "kind": "service",
+  "current_paths": [
+    "src/services/builder.service.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "RS-R7 code manifestation inventory",
+    "source_path": "src/services/builder.service.ts",
+    "source_anchor": "builder.service",
+    "authoring_actor": "Codex",
+    "inference_source": "reconciliation-engine",
+    "confidence": 0.8,
+    "confirmation_status": "code-discovered",
+    "last_checked_date": "2026-06-29"
+  }
+}

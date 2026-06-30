@@ -1,0 +1,17 @@
+{
+  "id": "TRC-RS-R7-REQ-UP-014-TO-MAN-service-src-services-mock-store",
+  "type": "TraceLink",
+  "source": "REQ-UP-014",
+  "target": "MAN-service-src-services-mock-store",
+  "relationship_type": "implements",
+  "coverage": "partial",
+  "confidence": 0.85,
+  "evidence_refs": [
+    "Name/code similarity: \"store\" matches \"RAM/state safety — Runtime UI state should be cleared when leaving/unmounting Builder, while persisted preferences — Builder unmount cleanup, store reset actions, island state\" (score: 0.85)"
+  ],
+  "inference_source": "RS-R7 reconciliation-engine",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-06-30",
+  "stale_state": "current",
+  "needs_confirmation": false
+}
