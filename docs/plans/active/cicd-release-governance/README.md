@@ -202,6 +202,37 @@ repo has no `.git`, no `docs/releases/`, no `scripts/release/`, no `.github/`, n
   exception, before the branch model existed). From RG-R3 onward, sprint work lands on `integration`;
   `main` advances only via a future PO-approved promotion (RG-R4), never a direct sprint commit.
 
+**RG-R4 (2026-07-01, Partial — Pattern A live-verified; deployment protection PO-blocked)** — Vercel
+wiring: `output/RG-R4-vercel.md`.
+- New Vercel project **`dcx-manager-gov`** (`prj_cMwUI1TLANtnvnkGxSLO8CEwgdzx`, team
+  `dot-techs-projects`) — **deliberately separate from the pre-existing legacy `dcx-manager` project**
+  (PO decision: do not reuse/touch it). `productionBranch` confirmed = `main`.
+- `vercel.json` created. `.vercel/` and `.env*` confirmed git-ignored (Vercel CLI extended `.gitignore`
+  itself on `vercel link`).
+- New `scripts/release/patch-release-row.sh`: fills an empty registry field, refuses to overwrite a set
+  one. New `.github/workflows/record-preview.yml`: GitHub's native `deployment_status` event (Vercel's
+  own GitHub App) patches `preview_url` into the matching registry row — **no Vercel API token/secret
+  needed**.
+- New `scripts/release/promote.sh` (+ `--rollback`): the only path that moves a stable alias; enforces
+  all four §2.3 gates (verified status, built on `integration`, `preview_url` present, recorded approval
+  file). Domain targets default to `dcx-manager-gov[-staging].vercel.app` via
+  `PROMOTE_STAGING_DOMAIN`/`PROMOTE_PRODUCTION_DOMAIN` — swap to `dcx.dotment.com`/
+  `staging.dcx.dotment.com` once DNS exists, no script change needed.
+- **Live-verified, not just stubbed:** PO explicitly approved `v0.3.5.7 → staging` in-session
+  (`docs/releases/approvals/v0.3.5.7-staging.md`); `promote.sh` ran for real, re-aliased
+  `dcx-manager-gov-staging.vercel.app` to the exact existing deployment (confirmed via Vercel API — same
+  commit SHA, same original build timestamps, no rebuild), and appended registry row `v0.4.0.0`
+  (`promoted-staging`). Refusal re-tested live against a different unapproved version (`v0.3.5.8`) —
+  correctly refused.
+- **`--rollback` honest gap:** only tested live in the degenerate single-promotion case (rolled back to
+  the build it was already on); the genuine two-build scenario is covered by the 23-test stubbed suite,
+  not live. Will get real coverage the next time an actual second promotion happens.
+- **Still BLOCKED on PO:** deployment protection on the production domain (AC-RG-4-6) — no MCP/CLI path
+  found to verify or configure it; needs Vercel dashboard access, possibly a plan-tier check. Custom
+  domains (`dcx.dotment.com`/`staging.dcx.dotment.com`) need DNS access not yet granted.
+- `docs/VERSION.md` `current` is now `v0.4.0.0` (the real promotion's mechanical stamp, via `promote.sh`'s
+  own VERSION.md sync, mirroring `version-assign.yml`'s pattern).
+
 ### Retained by policy (intentionally NOT changed)
 - `src/**` — untouched by every RG sprint (D-RG-GIT).
 - Existing historical logs — never rewritten; `Version:` is additive (§3.4).

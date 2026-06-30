@@ -2,7 +2,7 @@
 
 > **Generated** by `scripts/build-po-actions.sh` (also run by `build-log-index.sh`). Do not hand-edit — flip the source log's `PO-Action:` header to `none` when an item is done. See `docs/agent-rules/log-format.md` §3.
 
-_Last generated: 2026-07-01 — open items: 33_
+_Last generated: 2026-07-01 — open items: 34_
 
 ## RS-R3-review — Output audit of RS-R3 + lint fix (OpenCode)
 Source: [`sessions/2026-06-29-claude/19-rs-r3-output-audit.md`](sessions/2026-06-29-claude/19-rs-r3-output-audit.md)
@@ -257,6 +257,16 @@ Source: [`sessions/2026-07-01-claude/008-cicd-release-governance-RG-R3-live-bugf
 | Item | Why it needs the PO | Suggested action |
 |---|---|---|
 | Same as RG-R3's original log (007): branch protection + CODEOWNERS owner confirmation still pending | Unaffected by this session's bugfixes | See `007-cicd-release-governance-RG-R3.md` |
+
+## RG-R4 — Vercel preview/promote wiring (exact-build promotion)
+Source: [`sessions/2026-07-01-claude/009-cicd-release-governance-RG-R4.md`](sessions/2026-07-01-claude/009-cicd-release-governance-RG-R4.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Deployment protection on production (AC-RG-4-6) | No MCP/CLI exposes this Vercel setting | Check Project Settings → Deployment Protection in the Vercel dashboard for `dcx-manager-gov`; may need a plan-tier check |
+| Custom domains (`dcx.dotment.com`, `staging.dcx.dotment.com`) | Needs DNS access to `dotment.com` | Add CNAME records; assign domains in Vercel; then set `PROMOTE_STAGING_DOMAIN`/`PROMOTE_PRODUCTION_DOMAIN` env vars (no script change) |
+| The legacy `dcx-manager` Vercel project (pre-existing, untouched) | Still exists with its own domains/deployment — unclear current purpose | Decide whether to deprecate, repurpose, or leave it; out of this plan's scope unless you want it addressed |
+| First real promotion-to-production, and a real second staging promotion (for genuine rollback evidence) | Both require a real PO approval, by design | Whenever you're ready for an actual release, not before |
 
 ## cicd-release-governance — Confirming Re-Audit
 Source: [`sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md`](sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md)

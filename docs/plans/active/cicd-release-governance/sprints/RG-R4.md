@@ -8,7 +8,8 @@ required-tools: Vercel (MCP or CLI), browser/Playwright
 depends-on: RG-R3
 allowed-writes: vercel.json, scripts/release/promote.sh, output/RG-R4-*.md
 forbidden-writes: src/**
-status: drafted
+status: Partial
+Status: Partial
 ---
 
 # RG-R4 — Vercel preview/promote wiring
