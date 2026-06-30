@@ -12,6 +12,9 @@ concurrency:
   group: version-assign-integration
   cancel-in-progress: false
 
+permissions:
+  contents: write
+
 jobs:
   assign:
     name: Assign version + append registry row
@@ -20,6 +23,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: true
 
       - name: Classify this push
         id: classify
