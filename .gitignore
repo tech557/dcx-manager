@@ -8,10 +8,10 @@
 /output/
 /tmp/
 *.pdf
-.env
-.env.*
+.env*
 *.key
 *.pem
 *.local
 .DS_Store
 .claude/scheduled_tasks.lock
+.vercel
