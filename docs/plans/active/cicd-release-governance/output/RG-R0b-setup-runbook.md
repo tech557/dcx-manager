@@ -83,10 +83,27 @@ existing files for the first time is not a "change" under D-RG-GIT).
 
 ### Step 3 — First commit
 ```
-$ git add -A   (3686 files, 299519 insertions)
+$ git add -A   (3687 files including this runbook, 299634 insertions)
 $ git commit -m "chore: initial commit — bootstrap v0.3.5.0 baseline (RG-R0b)"
+$ git log --oneline -1
+648dbf6 chore: initial commit — bootstrap v0.3.5.0 baseline (RG-R0b)
+$ git status --short --branch
+## main
 ```
-(commit hash recorded in carry-forward after commit completes)
+`git log --all --name-only | grep -iE '\.env$|\.key$|\.pem$|brandbook\.pdf$'` → empty (confirmed clean
+history after commit).
+
+### Step 4 (partial) — Branches
+`.github/workflows/` already existed pre-commit (now tracked as-is; see carry-forward note on the
+discrepancy). Local branches created (no remote yet to push to):
+```
+$ git branch staging
+$ git branch integration
+$ git branch -a
+  integration
+* main
+  staging
+```
 
 ## Steps NOT executed in this run — require PO credentials/account access
 
@@ -102,8 +119,8 @@ $ git commit -m "chore: initial commit — bootstrap v0.3.5.0 baseline (RG-R0b)"
 
 | ID | Criterion | Status |
 |---|---|---|
-| AC-RG-0b-1 | Repo initialized + remote set | **PARTIAL** — repo initialized; remote NOT set (no GitHub repo created yet) |
-| AC-RG-0b-2 | `main`/`staging`/`integration` branches exist | **BLOCKED** — awaiting remote (see table above) |
+| AC-RG-0b-1 | Repo initialized + remote set | **PARTIAL** — repo initialized (`git log` shows 1 commit on `main`); remote NOT set (no GitHub repo created yet) |
+| AC-RG-0b-2 | `main`/`staging`/`integration` branches exist | **PARTIAL** — all three exist locally (`git branch -a`); not yet pushed (no remote) |
 | AC-RG-0b-3 | Vercel project linked, no auto-promotion | **BLOCKED** — awaiting PO/credentials |
 | AC-RG-0b-4 | Pre-commit secret scan clean; no secret/`.env`/`brandbook.pdf` in history | **PASS** — see Step 2a |
 | AC-RG-0b-5 | Domains configured | **BLOCKED** — awaiting PO/DNS access |
