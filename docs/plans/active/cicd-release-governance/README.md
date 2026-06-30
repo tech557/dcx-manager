@@ -154,6 +154,26 @@ repo has no `.git`, no `docs/releases/`, no `scripts/release/`, no `.github/`, n
 - Verified end-to-end with a synthetic test log (added, columns populated correctly, then removed) before
   closing.
 
+**RG-R2 (2026-07-01, Completed)** — registry + scripts: `output/RG-R2-registry.md`.
+- New: `docs/releases/registry.csv` (header only — no real rows yet), `docs/releases/README.md`,
+  `docs/releases/approvals/.gitkeep`.
+- New scripts (`scripts/release/`): `classify-change.sh`, `append-release-row.sh`,
+  `build-release-views.sh`, `validate-release-registry.sh`, `claim-version.sh` — all executable, no
+  absolute/home paths, idempotent.
+- New dogfood fixtures for RG-R7 only: `dogfood/source-probe.txt` (classifies as `source`),
+  `dogfood/doc-probe.txt` (classifies as `non-source`) — not product code.
+- Tests: `scripts/release/tests/run-tests.sh` (plain-bash harness — `bats` not installed, fallback per
+  core.md §28), 10/10 PASS, uses disposable `mktemp -d` scratch repos/CSVs only.
+- **Bug found + fixed during this sprint's own testing:** `classify-change.sh` originally forced
+  `cd` into its own script's repo root, which broke when invoked against a different (e.g. test/CI
+  throwaway) repo. Fixed to operate on the *caller's* cwd instead — future sprints calling this script
+  must invoke it with cwd already set to the target repo, not assume it self-locates the dcx-manager root.
+- **Known limitation (not yet hit in practice):** the CSV writer/validator split on raw `,` after
+  quoting; a field containing a literal comma would miscount columns. Flagged for RG-R3/RG-R4 if free-text
+  fields (e.g. `notes`) start containing commas.
+- No `docs/releases/registry.csv` rows exist yet — the registry is schema-only until RG-R3/RG-R4 wire
+  CI/Vercel to actually call `append-release-row.sh`.
+
 ### Retained by policy (intentionally NOT changed)
 - `src/**` — untouched by every RG sprint (D-RG-GIT).
 - Existing historical logs — never rewritten; `Version:` is additive (§3.4).

@@ -8,7 +8,8 @@ required-tools: bash; bats or shell test harness
 depends-on: RG-R1
 allowed-writes: docs/releases/**, scripts/release/**, output/RG-R2-*.md
 forbidden-writes: src/**
-status: drafted
+status: Completed
+Status: Completed
 ---
 
 # RG-R2 — Release registry + scripts

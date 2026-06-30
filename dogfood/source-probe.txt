@@ -1,0 +1,2 @@
+RG-R7 dogfood fixture — classified as SOURCE by scripts/release/classify-change.sh
+(explicit allowlist entry; not product code; see docs/releases/README.md).

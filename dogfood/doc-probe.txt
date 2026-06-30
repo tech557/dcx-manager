@@ -1,0 +1,2 @@
+RG-R7 dogfood fixture — classified as NON-SOURCE by scripts/release/classify-change.sh
+(not product code; see docs/releases/README.md).
