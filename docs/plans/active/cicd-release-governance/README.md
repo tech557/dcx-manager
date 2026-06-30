@@ -249,6 +249,23 @@ wiring: `output/RG-R4-vercel.md`.
   proven live by `promote.sh`'s identical contract in RG-R4.
 - `get_advisors` (security) on both new projects: zero findings (expected — no schema yet).
 
+**RG-R6 (2026-07-01, Skipped — premise corrected by PO)** — `output/RG-R6-decision.md`.
+- PO clarified mid-sprint: **ClickUp is the existing DCX task-initiation system** (has a "version" field
+  for that purpose), **unrelated to production/CI-CD release tracking.** The original sprint design (a
+  ClickUp "Releases" board mirroring the registry, with status flips triggering promotions) would have
+  built a second, wrong source of truth.
+- Also discovered (before the correction, while scoping): the ClickUp MCP has **no tool to create custom
+  fields, custom statuses, or webhooks/automations** — only lists/tasks. Even if ClickUp *had* been the
+  right tool, AC-RG-6-3's "approval flip → file written" automation could not have been fully
+  agent-built; it would have needed ClickUp UI configuration regardless.
+- **Decision: release approval stays manual — the PO approves verbally/in-chat with whichever agent is
+  executing, who then writes the `docs/releases/approvals/<version>-<env>.md` record directly.** This is
+  already the real mechanism used for the RG-R4 staging promotion (`v0.3.5.7-staging.md`) — RG-R6 just
+  formalizes that this *is* the permanent design, not a stopgap.
+- No ClickUp list/task was created. No GAS work was attempted (secondary sink for a board that doesn't
+  exist). OD-RG-06 and OD-RG-09 revised accordingly (see Decisions above).
+- `src/**` untouched; no external resources created or modified this sprint.
+
 ### Retained by policy (intentionally NOT changed)
 - `src/**` — untouched by every RG sprint (D-RG-GIT).
 - Existing historical logs — never rewritten; `Version:` is additive (§3.4).
@@ -533,8 +550,8 @@ Each platform owns a mechanical control. Markdown/AI discipline is never the pri
 | **GitHub** | Source of truth + gates + version stamping | Repo + branches; **branch protection** on `integration`/`staging`/`main`; **required status checks** (typecheck, lint, verify.sh, validate:architecture, req:validate, registry-validate); PR-based merges; **CODEOWNERS = PO** on `docs/VERSION.md`, `docs/releases/**`, promotion config; **Actions**: classify-change, assign Iteration/Revision, append registry row, trigger preview | **Blocker:** repo is not in git locally — **RG-R0b (PO-owned)** must init + connect first |
 | **Vercel** | Preview-per-commit + exact-build promotion | Auto preview on every branch commit; **staging/prod as manual-promotion aliases** of an exact deployment (Pattern A); **deployment protection** on prod; **per-environment env vars** (preview/staging/prod scoped) | Verify plan tier supports aliasing/promotion + protection (RG-R4) |
 | **Supabase** | Environment data separation | Separate **preview/staging/prod** data (preview branches or separate projects); migrations gated — **prod migrations only on a production-approved release**; previews never point at prod data; scoped keys per Vercel environment | Decide branches-vs-projects (cost) — OD-RG-05 |
-| **ClickUp** | Approval mirror + human-visible release board | One **release task per version**; approval recorded as **status/custom field** ("Approved for Staging/Prod"); registry mirrored into the task; promotion script reads ClickUp approved-state as one approval layer | Decide canonical authority: **git registry canonical, ClickUp mirror** (recommended, OD-RG-06) |
-| **GAS** (no MCP) | Secondary record sink / env guard | Existing endpoints used to **log releases to a sheet** and/or **validate env separation**; a notification/audit mirror — **never an authority** | No MCP → driven via HTTP from CI, not from agent MCP tools |
+| **ClickUp** | **Not involved in release governance** (RG-R6, 2026-07-01) | ClickUp is the existing DCX task-initiation system, unrelated to CI/CD/production. No release board, no approval mirror, no automation built. | — |
+| **GAS** (no MCP) | **Not built** (RG-R6, 2026-07-01) | Was scoped as a secondary, non-blocking record sink. Skipped along with the rest of RG-R6 — approval stays manual (chat → file), no secondary sink needed. | — |
 
 **Approval flow across platforms:**
 
@@ -680,10 +697,18 @@ Each PO requirement → requirement ID → plan section → mechanism → mechan
 | **OD-RG-03** | Exact path boundary for source vs non-source | Per §3.3 set; confirm `scripts/**` and `package-lock.json` placement |
 | **OD-RG-04** | Keep or retire `scripts/version-bump.sh` | Retire in favor of mechanical merge-assign; keep a thin PO-only Major/Stage helper |
 | **OD-RG-05** | ✅ Supabase env model | **Separate production project** (hard isolation); **shared free dev project** for preview/staging (no paid branching) — see D-RG-ENV, refined RG-R5 2026-07-01 |
-| **OD-RG-06** | Canonical approval authority | **git registry canonical**; ClickUp status is a mirror + human gate |
+| **OD-RG-06** | Canonical approval authority | ✅ **REVISED** (RG-R6, 2026-07-01) — **git registry + `docs/releases/approvals/*.md` are canonical, full stop.** ClickUp is **not** a mirror or approval gate at all — see correction below. |
 | **OD-RG-07** | ✅ **CLOSED** (2026-06-30) — requirement intake | 19 `REQ-RG-*` nodes proposed via `req:propose`, PO-approved ("i approve them all"), applied + finalized **approved/PO-locked**; ledger `LDG-2026-06-30-create-node-REQ-RG-*` |
 | **OD-RG-08** | Integration branch name | `integration` (or reuse `develop`) — PO preference |
-| **OD-RG-09** | How PO physically signs an approval | ClickUp status flip → CI writes `docs/releases/approvals/` record (tamper-evident) |
+| **OD-RG-09** | How PO physically signs an approval | ✅ **REVISED** (RG-R6, 2026-07-01) — **the PO approves verbally/in-chat with the executing agent**, who then writes the `docs/releases/approvals/<version>-<env>.md` record directly. No ClickUp flip, no webhook. Already the actual mechanism used for the real RG-R4 staging promotion. |
+
+> **Correction (RG-R6, 2026-07-01) — ClickUp was never the right tool for this.** The original plan
+> (drafted 2026-06-30) assumed ClickUp would serve as a release-approval mirror/board. **PO clarified
+> in-session: ClickUp is the existing DCX *task initiation* system** (it has a "version" field for that
+> purpose) **and has nothing to do with production/CI-CD release tracking.** Building a parallel
+> "Releases" list in ClickUp would have been a second, wrong source of truth. **Release approval stays
+> manual: the PO approves in chat, the agent records the file.** RG-R6 (ClickUp board + GAS sink) is
+> **skipped** as originally scoped — see `sprints/RG-R6.md` and `output/RG-R6-decision.md`.
 
 **Each OD is gated by the sprint that consumes it** (temporary default applies until the PO confirms;
 the sprint records the decision before closing):
@@ -694,9 +719,9 @@ the sprint records the decision before closing):
 | OD-RG-03 (source path set) | RG-R1 / RG-R2 | §3.3 path set (`package-lock.json`=source; `scripts/**`=non-source) |
 | OD-RG-04 (version-bump.sh) | RG-R1 | retire; keep a thin PO-only Major/Stage helper |
 | OD-RG-05 (Supabase model) | RG-R5 | preview branches for non-prod; separate project for prod |
-| OD-RG-06 (approval authority) | RG-R6 | git registry canonical; ClickUp mirror |
+| OD-RG-06 (approval authority) | RG-R6 | git registry + `approvals/*.md` canonical, full stop (ClickUp not involved) |
 | OD-RG-08 (integration branch) | RG-R0b | `integration` |
-| OD-RG-09 (approval signature) | RG-R6 / RG-R8 | ClickUp flip → `approvals/` record |
+| OD-RG-09 (approval signature) | RG-R6 / RG-R8 | PO approves in chat; agent writes the `approvals/` record |
 
 No sprint closes against an undecided OD without recording the applied temporary default and a PO gate
 (`core.md §14`: never silently decide a ❓ — use a temporary default and label it).

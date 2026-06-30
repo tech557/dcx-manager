@@ -8,8 +8,15 @@ required-tools: ClickUp (MCP), HTTP client for GAS endpoints
 depends-on: RG-R4
 allowed-writes: ClickUp release list/fields config, GAS endpoint config, scripts/release/mirror-clickup.sh, output/RG-R6-*.md
 forbidden-writes: src/**
-status: drafted
+status: Skipped — premise corrected by PO 2026-07-01, see output/RG-R6-decision.md
+Status: Skipped
 ---
+
+> **Skipped (2026-07-01).** ClickUp is the existing DCX task-initiation system, unrelated to
+> production/CI-CD release tracking — building a ClickUp release board would have created a second,
+> wrong source of truth. PO decision: release approval stays manual (PO approves in chat; agent writes
+> `docs/releases/approvals/<version>-<env>.md` directly) — already the real mechanism used in RG-R4.
+> See `output/RG-R6-decision.md` and the plan README's OD-RG-06/OD-RG-09 revision.
 
 # RG-R6 — ClickUp release board + GAS sink
 
