@@ -1,1 +1,2 @@
 version,change_class,commit_sha,branch,session_folder,clickup_task,deployment_id,preview_url,staging_url,production_url,status,approved_for,approved_by,approved_at,gates,notes
+"v0.3.5.1","non-source","2ec9c440c7a3ec5186e1d295b1cffd6e30f7ddde","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"
