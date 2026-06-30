@@ -8,7 +8,8 @@ required-tools: Supabase (MCP or CLI)
 depends-on: RG-R4
 allowed-writes: env/key scoping config, migration-gating config, output/RG-R5-*.md
 forbidden-writes: src/**
-status: drafted
+status: Completed
+Status: Completed
 ---
 
 # RG-R5 — Supabase environment separation

@@ -2,7 +2,7 @@
 
 > **Generated** by `scripts/build-po-actions.sh` (also run by `build-log-index.sh`). Do not hand-edit — flip the source log's `PO-Action:` header to `none` when an item is done. See `docs/agent-rules/log-format.md` §3.
 
-_Last generated: 2026-07-01 — open items: 34_
+_Last generated: 2026-07-01 — open items: 35_
 
 ## RS-R3-review — Output audit of RS-R3 + lint fix (OpenCode)
 Source: [`sessions/2026-06-29-claude/19-rs-r3-output-audit.md`](sessions/2026-06-29-claude/19-rs-r3-output-audit.md)
@@ -267,6 +267,14 @@ Source: [`sessions/2026-07-01-claude/009-cicd-release-governance-RG-R4.md`](sess
 | Custom domains (`dcx.dotment.com`, `staging.dcx.dotment.com`) | Needs DNS access to `dotment.com` | Add CNAME records; assign domains in Vercel; then set `PROMOTE_STAGING_DOMAIN`/`PROMOTE_PRODUCTION_DOMAIN` env vars (no script change) |
 | The legacy `dcx-manager` Vercel project (pre-existing, untouched) | Still exists with its own domains/deployment — unclear current purpose | Decide whether to deprecate, repurpose, or leave it; out of this plan's scope unless you want it addressed |
 | First real promotion-to-production, and a real second staging promotion (for genuine rollback evidence) | Both require a real PO approval, by design | Whenever you're ready for an actual release, not before |
+
+## RG-R5 — Supabase environment separation
+Source: [`sessions/2026-07-01-claude/010-cicd-release-governance-RG-R5.md`](sessions/2026-07-01-claude/010-cicd-release-governance-RG-R5.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Real production-migration test still pending | Needs an actual production approval + actual migration content, neither of which exists yet (app is still mocked) | No action needed now — will happen naturally with the first real backend release |
+| Confirm `VITE_SUPABASE_*` naming convention | Agent chose the standard Vite convention since no existing convention was found in `src/` | None needed unless you want different names before backend code starts consuming them |
 
 ## cicd-release-governance — Confirming Re-Audit
 Source: [`sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md`](sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md)

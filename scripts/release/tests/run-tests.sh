@@ -191,6 +191,32 @@ assert_exit_zero "rollback targets the exact previous preview_url" "$rollback_ta
 rm -rf "$PROMOTE_REPO"
 
 echo ""
+echo "=== gate-prod-migration.sh (RG-R5) ==="
+GATE_TMP="$(mktemp -d)"
+mkdir -p "$GATE_TMP/approvals"
+GATE_APPROVALS_DIR="$GATE_TMP/approvals" "$RELEASE_DIR/gate-prod-migration.sh" "v9.9.9" > /tmp/gate-blocked.log 2>&1
+gate_blocked_code=$?
+assert_exit_nonzero "gate blocks a version with no production approval record" "$gate_blocked_code"
+
+cat > "$GATE_TMP/approvals/v9.9.9-production.md" <<'EOF'
+approved-by: PO
+approved-at: 2026-07-01
+EOF
+GATE_APPROVALS_DIR="$GATE_TMP/approvals" "$RELEASE_DIR/gate-prod-migration.sh" "v9.9.9" > /tmp/gate-allowed.log 2>&1
+gate_allowed_code=$?
+assert_exit_zero "gate allows a version with a complete production approval record" "$gate_allowed_code"
+
+cat > "$GATE_TMP/approvals/v8.8.8-production.md" <<'EOF'
+approved-by:
+approved-at:
+EOF
+GATE_APPROVALS_DIR="$GATE_TMP/approvals" "$RELEASE_DIR/gate-prod-migration.sh" "v8.8.8" > /tmp/gate-incomplete.log 2>&1
+gate_incomplete_code=$?
+assert_exit_nonzero "gate blocks an approval record missing approved-by/approved-at" "$gate_incomplete_code"
+
+rm -rf "$GATE_TMP"
+
+echo ""
 echo "=== idempotence (core.md §36b) ==="
 TMPDIR_IDEMP="$(mktemp -d)"
 mkdir -p "$TMPDIR_IDEMP/docs/releases" "$TMPDIR_IDEMP/scripts/release"

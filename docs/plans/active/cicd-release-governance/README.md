@@ -83,8 +83,8 @@ These are **decided** — not open. Open items live in §9.2.
 | **D-RG-PATH** | Lock architecture now; build deferred until after active polish (G1); this is an executable plan but stays in `drafted/` until PO activates | 2026-06-30 | — |
 | **D-RG-GIT** | **git/GitHub setup is approved** as governance/setup work | 2026-06-30 (PO: "we start using git as long as no src code changes unless I start implementing the plan") | May create repo metadata, `.github/**`, docs, release tooling/config, and external connections. **Must NOT change `src/**`** until the PO explicitly starts implementation. RG-R0b executes within this boundary. |
 | **D-RG-VER** | 4-part `Major.Stage.Iteration.Revision`; bootstrap **`v0.3.5.0`** (carry `v0.3.5` as-is); manual "version 0"; automation only after GitHub setup; no jump to v0.4 | 2026-06-30 | OD-RG-01; see §3.2a |
-| **D-RG-DOMAIN** | All envs hang off `dotment.com` (no new domain): production **`dcx.dotment.com`**, staging **`staging.dcx.dotment.com`** (DNS CNAME → Vercel, manual-promote aliases), previews use auto **`*.vercel.app`** immutable URLs | 2026-06-30 | Branded `*.preview.*` wildcard + deployment protection need Vercel Pro — verified in RG-R4 |
-| **D-RG-ENV** | Supabase: **separate project for production** (hard isolation); preview branches for preview/staging (OD-RG-05) | 2026-06-30 | Chosen to make prod-data exposure structurally impossible (the one fatal-class decision) |
+| **D-RG-DOMAIN** | All envs hang off `dotment.com` (no new domain): production **`dcx.dotment.com`**, staging **`staging.dcx.dotment.com`** (DNS CNAME → Vercel, manual-promote aliases), previews use auto **`*.vercel.app`** immutable URLs | 2026-06-30 | Branded `*.preview.*` wildcard + deployment protection need Vercel Pro — **not yet verified** (RG-R4, 2026-07-01): no MCP/CLI path found to check the team's plan tier or configure deployment protection; needs PO dashboard access. Domains themselves not yet created — need PO DNS access. `promote.sh` defaults to `*.vercel.app` aliases in the meantime (env-var swap, no script change, once DNS exists). |
+| **D-RG-ENV** | Supabase: **separate project for production** (hard isolation); **shared free dev project** for preview/staging (OD-RG-05, refined 2026-07-01 — see below) | 2026-06-30 (refined 2026-07-01) | Chosen to make prod-data exposure structurally impossible (the one fatal-class decision). **Refinement (RG-R5, 2026-07-01):** the spec's literal "preview branches" turned out to be a paid Supabase feature (~$0.0134/hr, confirmed via `get_cost` — not free like a plain project); PO chose a second free project (`dcx-manager-dev`) shared by preview+staging instead of paying for per-branch isolation. Hard prod isolation is unaffected — only the non-prod side changed. |
 
 ## Carry-forward contract — current structural state (`core.md §27`)
 
@@ -232,6 +232,22 @@ wiring: `output/RG-R4-vercel.md`.
   domains (`dcx.dotment.com`/`staging.dcx.dotment.com`) need DNS access not yet granted.
 - `docs/VERSION.md` `current` is now `v0.4.0.0` (the real promotion's mechanical stamp, via `promote.sh`'s
   own VERSION.md sync, mirroring `version-assign.yml`'s pattern).
+
+**RG-R5 (2026-07-01, Completed)** — Supabase env separation: `output/RG-R5-supabase.md`.
+- Two real Supabase projects (free tier, `$0/month` confirmed via `get_cost`): **`dcx-manager-prod`**
+  (`xokgguodxjjwokngyquo`, `us-east-1`) and **`dcx-manager-dev`** (`ibekkxqujqvlajeldpoa`, `us-east-1`,
+  shared by preview + staging — paid branching avoided, see D-RG-ENV refinement above).
+- Vercel env vars set (encrypted, never in-repo) via the CLI: `VITE_SUPABASE_URL` /
+  `VITE_SUPABASE_ANON_KEY`, scoped Production → `dcx-manager-prod`, Preview/Development →
+  `dcx-manager-dev`. Confirmed via `vercel env ls`; `git grep` confirmed zero key/URL leaks in the repo.
+- New `scripts/release/gate-prod-migration.sh <version>`: pure approval-record check (same contract as
+  `promote.sh`'s gate, standalone since it never touches a database itself). Tested with disposable
+  fixtures (`GATE_APPROVALS_DIR` override) — 3/3 new tests, 26/26 total suite.
+- **Honest gap, deliberate:** no real production-migration test was performed — there's no schema/
+  migration to gate yet (app is still 100% mocked), and doing a "real" test would require fabricating a
+  production approval, which this agent must never do. The gate's logic is the same shape already
+  proven live by `promote.sh`'s identical contract in RG-R4.
+- `get_advisors` (security) on both new projects: zero findings (expected — no schema yet).
 
 ### Retained by policy (intentionally NOT changed)
 - `src/**` — untouched by every RG sprint (D-RG-GIT).
@@ -663,7 +679,7 @@ Each PO requirement → requirement ID → plan section → mechanism → mechan
 | **OD-RG-02** | Does an Iteration bump reset Revision to 0? | **Yes** (Revision = non-source changes since last code change) |
 | **OD-RG-03** | Exact path boundary for source vs non-source | Per §3.3 set; confirm `scripts/**` and `package-lock.json` placement |
 | **OD-RG-04** | Keep or retire `scripts/version-bump.sh` | Retire in favor of mechanical merge-assign; keep a thin PO-only Major/Stage helper |
-| **OD-RG-05** | ✅ Supabase env model | **Separate production project** (hard isolation); preview branches for preview/staging — see D-RG-ENV |
+| **OD-RG-05** | ✅ Supabase env model | **Separate production project** (hard isolation); **shared free dev project** for preview/staging (no paid branching) — see D-RG-ENV, refined RG-R5 2026-07-01 |
 | **OD-RG-06** | Canonical approval authority | **git registry canonical**; ClickUp status is a mirror + human gate |
 | **OD-RG-07** | ✅ **CLOSED** (2026-06-30) — requirement intake | 19 `REQ-RG-*` nodes proposed via `req:propose`, PO-approved ("i approve them all"), applied + finalized **approved/PO-locked**; ledger `LDG-2026-06-30-create-node-REQ-RG-*` |
 | **OD-RG-08** | Integration branch name | `integration` (or reuse `develop`) — PO preference |
