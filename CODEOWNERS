@@ -1,0 +1,13 @@
+# CODEOWNERS — RG-R3 (cicd-release-governance)
+# PO-only files: any PR touching these requires PO review/approval before merge,
+# once branch protection's "require review from Code Owners" is enabled (PO applies this in the
+# GitHub UI — see docs/plans/active/cicd-release-governance/output/RG-R3-github-ci.md).
+#
+# ASSUMPTION (flag if wrong): @tech557 is the PO's GitHub account (the repo owner). The cached git
+# credential in this environment (@MahmoudSamaha2) was added only as a write collaborator for pushing —
+# it is NOT assumed to be the PO for ownership purposes.
+
+docs/VERSION.md           @tech557
+docs/releases/**          @tech557
+.github/workflows/**      @tech557
+CODEOWNERS                @tech557
