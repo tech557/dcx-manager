@@ -120,6 +120,22 @@ repo has no `.git`, no `docs/releases/`, no `scripts/release/`, no `.github/`, n
   non-blocking per RG-R6 design (secondary sink only).
 - Full gap → sprint map in the report §7.
 
+**RG-R0b (2026-07-01, Partial — PO-credentialed steps pending)** — runbook + evidence:
+`output/RG-R0b-setup-runbook.md`.
+- `.git` now exists. First commit `648dbf6` ("chore: initial commit — bootstrap v0.3.5.0 baseline
+  (RG-R0b)"), follow-up evidence commit `e9f005d`. On branch `main`.
+- Pre-commit secret scan (FATAL gate) ran clean before the first commit — see runbook Step 2a. `gitleaks`
+  not installed; grep-based scan + manual review used as the recorded fallback (core.md §28).
+- `.gitignore` written (repo root) — anchored (`/output/`, `/tmp/`, etc.) so it does NOT swallow
+  `docs/plans/**/output/` plan deliverables, which the unanchored sprint-spec pattern would have.
+- Local branches `staging` and `integration` created alongside `main` (OD-RG-08: `integration`
+  confirmed). Not yet pushed — no remote exists.
+- **Still BLOCKED on PO credentials/account access** (not agent-executable): GitHub repo creation +
+  remote + push, Vercel project link + domains (`dcx.dotment.com`, `staging.dcx.dotment.com`), and
+  adding platform secrets. `gh` CLI is not installed in this environment. See runbook "Steps NOT executed"
+  table for the exact PO actions needed.
+- `src/**` unchanged (shasum diff empty); existing source was committed as-is, not edited.
+
 ### Retained by policy (intentionally NOT changed)
 - `src/**` — untouched by every RG sprint (D-RG-GIT).
 - Existing historical logs — never rewritten; `Version:` is additive (§3.4).

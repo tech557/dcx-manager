@@ -8,7 +8,8 @@ required-tools: git, gh CLI, Vercel/Supabase/ClickUp account access (PO credenti
 depends-on: RG-R0a
 allowed-writes: output/RG-R0b-*.md, repo metadata (.git via init), .github/ scaffolding placeholders, README carry-forward + decisions
 forbidden-writes: src/** (D-RG-GIT — no product source until PO starts implementation)
-status: drafted
+status: Partial
+Status: Partial
 ---
 
 # RG-R0b — Repo + integration setup (PO-owned)

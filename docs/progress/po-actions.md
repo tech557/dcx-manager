@@ -2,7 +2,7 @@
 
 > **Generated** by `scripts/build-po-actions.sh` (also run by `build-log-index.sh`). Do not hand-edit — flip the source log's `PO-Action:` header to `none` when an item is done. See `docs/agent-rules/log-format.md` §3.
 
-_Last generated: 2026-07-01 — open items: 29_
+_Last generated: 2026-07-01 — open items: 30_
 
 ## RS-R3-review — Output audit of RS-R3 + lint fix (OpenCode)
 Source: [`sessions/2026-06-29-claude/19-rs-r3-output-audit.md`](sessions/2026-06-29-claude/19-rs-r3-output-audit.md)
@@ -220,6 +220,17 @@ Source: [`sessions/2026-07-01-claude/002-cicd-release-governance-activate-RG-R0a
 | RG-R0b is explicitly **PO-owned** per the plan (first git/GitHub init — irreversible, external/shared-state action) | The plan's own README lists RG-R0b as "PO executes; agent writes the runbook." I stopped after RG-R0a rather than auto-running git init / GitHub setup on your behalf. | Confirm whether you want me to (a) write the RG-R0b runbook only and you execute it, or (b) execute RG-R0b directly (git init, first commit with secret scan, optional GitHub repo) under the already-approved D-RG-GIT boundary (no `src/**`). |
 | `req:completion-gate` returns FAIL for docs-only governance changes (see Gates row above) | Not a defect in RG-R0a's work, but a gap in how the requirements graph models plan/process docs — every future docs-only RG sprint will likely hit the same FAIL. | Either accept this as expected/non-blocking for plan-housekeeping docs (recommended), or have a future sprint register plan README/output files as manifestations of REQ-RG-PLAT-018/REQ-RG-AUTO-019 in the graph. |
 | Discrepancy found: `.github/workflows/ci.yml` and `.github/workflows/req-validate-on-graph-change.yml` already exist despite no `.git` | The plan's drafting-time assumption was "no `.github/`" — false. These are orphaned configs that predate any git history. | RG-R0b/RG-R3 will reconcile rather than overwrite; flagging now so it's not a surprise later. |
+
+## RG-R0b — Repo + integration setup (executed directly per PO instruction)
+Source: [`sessions/2026-07-01-claude/003-cicd-release-governance-RG-R0b.md`](sessions/2026-07-01-claude/003-cicd-release-governance-RG-R0b.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| GitHub repo creation, remote, push, branch push | No `gh` CLI installed in this environment; no GitHub credentials available to the agent | Install `gh` + `gh auth login`, or create the repo via the GitHub web UI, then either share the remote URL for me to `git remote add origin <url> && git push -u origin main staging integration`, or push it yourself |
+| Vercel project link + domain config (`dcx.dotment.com`, `staging.dcx.dotment.com`) | Needs Vercel account access and DNS access to `dotment.com`; needs a GitHub remote first (Vercel's import flow links to a GitHub repo) | Do this after the GitHub remote exists; I can drive parts of it via the Vercel MCP once a remote/import target exists, if you want me to attempt it then |
+| Platform secrets (GitHub/Vercel env vars) | Requires account access I don't have | Add via GitHub repo Settings → Secrets and Vercel project → Environment Variables |
+| RG-R0b cannot close as Completed | 3 of 6 acceptance criteria are genuinely blocked on the above | Confirm whether to (a) leave RG-R0b open/Partial and proceed to RG-R1 (docs/tooling sprint, doesn't need the GitHub remote) in parallel, or (b) pause until GitHub/Vercel/DNS are set up |
+| `req:completion-gate` FAIL pattern repeats for docs-only sprints | Same as flagged in RG-R0a's log | No new action needed — already an open item from the RG-R0a log |
 
 ## cicd-release-governance — Confirming Re-Audit
 Source: [`sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md`](sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md)
