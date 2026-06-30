@@ -1,0 +1,25 @@
+name: Branch name lint
+
+# RG-R7 (cicd-release-governance): enforces the §4.1 branch-naming convention so git branch identity
+# ties to the existing session identity (core.md §31) — every working branch must be
+# agent/<session-folder>/<topic> (source work) or docs/<session-folder>/<topic> (docs-only work).
+# main/staging/integration are the long-lived branches and are exempt from this naming rule.
+on:
+  push:
+    branches-ignore: [main, staging, integration]
+
+jobs:
+  lint:
+    name: Validate branch name
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check branch name pattern
+        run: |
+          BRANCH="${GITHUB_REF#refs/heads/}"
+          echo "Branch: $BRANCH"
+          if [[ "$BRANCH" =~ ^(agent|docs)/[^/]+/[^/]+$ ]]; then
+            echo "OK: '$BRANCH' matches agent/<session-folder>/<topic> or docs/<session-folder>/<topic>."
+          else
+            echo "REJECTED: '$BRANCH' does not match the required pattern 'agent/<session-folder>/<topic>' or 'docs/<session-folder>/<topic>' (core.md §31 / plan §4.1)."
+            exit 1
+          fi
