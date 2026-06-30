@@ -1,3 +1,5 @@
 RG-R7 dogfood fixture — classified as SOURCE by scripts/release/classify-change.sh
 (explicit allowlist entry; not product code; see docs/releases/README.md).
 Dogfood A probe run: 2026-07-01.
+Dogfood A retry (the first version-assign attempt failed at the git-push step, a real race with a
+concurrent manual push during this same session — see output/RG-R7-dogfood.md).
