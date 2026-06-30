@@ -2,7 +2,7 @@
 
 > **Generated** by `scripts/build-po-actions.sh` (also run by `build-log-index.sh`). Do not hand-edit — flip the source log's `PO-Action:` header to `none` when an item is done. See `docs/agent-rules/log-format.md` §3.
 
-_Last generated: 2026-07-01 — open items: 31_
+_Last generated: 2026-07-01 — open items: 32_
 
 ## RS-R3-review — Output audit of RS-R3 + lint fix (OpenCode)
 Source: [`sessions/2026-06-29-claude/19-rs-r3-output-audit.md`](sessions/2026-06-29-claude/19-rs-r3-output-audit.md)
@@ -240,6 +240,16 @@ Source: [`sessions/2026-07-01-claude/006-cicd-release-governance-RG-R0b-remote-p
 | Repo is temporarily public | PO stated this is "till we setup a private connection" | Set up a durable private-repo auth path (SSH deploy key, or a scoped PAT issued from the `tech557` account itself rather than relying on the `MahmoudSamaha2` collaborator grant), then flip the repo back to private |
 | Vercel project link, domains, secrets | Needs Vercel account access and DNS access to `dotment.com` | As listed in the RG-R0b runbook's "Steps NOT executed" table |
 | RG-R0b still not fully Completed | 2 of 6 AC remain BLOCKED (Vercel, domains) | Decide whether to proceed to RG-R3 now (it only needs the GitHub remote, which is done) while RG-R0b stays open for the Vercel/DNS pieces, or wait |
+
+## RG-R3 — GitHub CI wiring
+Source: [`sessions/2026-07-01-claude/007-cicd-release-governance-RG-R3.md`](sessions/2026-07-01-claude/007-cicd-release-governance-RG-R3.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Apply branch protection on `main`/`staging`/`integration` | Requires GitHub repo admin settings access | Exact settings table in `output/RG-R3-github-ci.md` ("Branch protection settings") — required PR + Code Owner review + status checks |
+| Verify `@tech557` is the right CODEOWNERS identity | Agent assumed the repo owner is the PO; not confirmed | Edit `CODEOWNERS` if a different GitHub username should own these files |
+| Real bug found + fixed during live testing: `version-assign.yml` needed explicit `permissions: contents: write` | Default `GITHUB_TOKEN` is read-only by default on this repo; the first live run failed | Already fixed and reverified green — no action needed, flagging for awareness |
+| First real PR into `integration` (once branch protection is on) should serve as the retroactive AC-RG-3-1 evidence | A throwaway PR wasn't opened due to missing `gh`/API write credential | No immediate action; just don't expect a separate throwaway-PR log entry later — the first real PR covers it |
 
 ## cicd-release-governance — Confirming Re-Audit
 Source: [`sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md`](sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md)

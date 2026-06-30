@@ -178,6 +178,30 @@ repo has no `.git`, no `docs/releases/`, no `scripts/release/`, no `.github/`, n
 - No `docs/releases/registry.csv` rows exist yet — the registry is schema-only until RG-R3/RG-R4 wire
   CI/Vercel to actually call `append-release-row.sh`.
 
+**RG-R3 (2026-07-01, Partial — CI verified live; branch protection PO-blocked)** — CI wiring:
+`output/RG-R3-github-ci.md`.
+- `.github/workflows/ci.yml` extended (not replaced — pre-existing per RG-R0a): triggers now cover
+  `main`/`staging`/`integration`, not just `main`; added a release-registry-validate step.
+- New `.github/workflows/version-assign.yml`: on push to `integration`, classifies the diff, computes
+  the next Iteration/Revision, appends a registry row. **Needs `permissions: contents: write`** — the
+  default `GITHUB_TOKEN` is read-only by default; a first live run failed without it (run `28480421316`),
+  fixed and confirmed green (run `28480531146`).
+- New `CODEOWNERS` (repo root): `@tech557` assumed as the PO's GitHub identity for
+  `docs/VERSION.md`/`docs/releases/**`/`.github/workflows/**` — flag/correct if wrong.
+- **Live-verified, not simulated:** pushed to `integration` → registry stamped
+  `v0.3.5.0 → v0.3.5.1` (non-source, Revision +1) for real, confirmed via the public GitHub API
+  (`curl https://api.github.com/repos/tech557/dcx-manager/actions/runs`, no auth needed — repo is
+  currently public).
+- **Gap, documented honestly:** no `gh` CLI / API write credential exists in this environment, so the
+  "test PR" verification used a direct git merge into `integration` instead of an actual PR object —
+  this exercised the `push` trigger, not `pull_request`. The first real PR (once branch protection is on)
+  should count as the retroactive PR-gate evidence rather than redoing a throwaway one now.
+- **Branch protection (AC-RG-3-4/3-5) is PO-only** — exact settings documented in the output file; not
+  agent-applicable (no GitHub admin-settings credential/UI access from here).
+- **Process correction starting now:** RG-R0a–RG-R2 committed directly to `main` (acceptable bootstrap
+  exception, before the branch model existed). From RG-R3 onward, sprint work lands on `integration`;
+  `main` advances only via a future PO-approved promotion (RG-R4), never a direct sprint commit.
+
 ### Retained by policy (intentionally NOT changed)
 - `src/**` — untouched by every RG sprint (D-RG-GIT).
 - Existing historical logs — never rewritten; `Version:` is additive (§3.4).

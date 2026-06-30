@@ -8,7 +8,8 @@ required-tools: git, gh CLI, GitHub Actions, browser/Playwright for PR-check ver
 depends-on: RG-R0b (git), RG-R2
 allowed-writes: .github/workflows/**, CODEOWNERS, output/RG-R3-*.md
 forbidden-writes: src/**
-status: drafted
+status: Partial
+Status: Partial
 ---
 
 # RG-R3 — GitHub CI wiring
