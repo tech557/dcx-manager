@@ -125,6 +125,26 @@ printf '"v0.3.5.1","non-source","aaa111","integration","ci","","","","","","veri
 validate_candidates_code=$?
 assert_exit_zero "validator does NOT flag two unapproved 'verified' candidates as conflicting" "$validate_candidates_code"
 
+echo ""
+echo "=== patch-release-row.sh (RG-R4) ==="
+cp "$RELEASE_DIR/patch-release-row.sh" "$TMP_REPO/scripts/release/"
+PATCH_CSV="$TMPDIR_CSV/patch.csv"
+mkdir -p "$TMPDIR_CSV/patchrepo/docs/releases" "$TMPDIR_CSV/patchrepo/scripts/release"
+echo "version,change_class,commit_sha,branch,session_folder,clickup_task,deployment_id,preview_url,staging_url,production_url,status,approved_for,approved_by,approved_at,gates,notes" > "$TMPDIR_CSV/patchrepo/docs/releases/registry.csv"
+printf '"v9.9.9","source","abc123","integration","ci","","","","","","verified","","","","","test row"\n' >> "$TMPDIR_CSV/patchrepo/docs/releases/registry.csv"
+cp "$RELEASE_DIR/patch-release-row.sh" "$TMPDIR_CSV/patchrepo/scripts/release/"
+"$TMPDIR_CSV/patchrepo/scripts/release/patch-release-row.sh" "v9.9.9" "deployment_id" "dpl_test123" > /tmp/patch1.log 2>&1
+patch1_code=$?
+assert_exit_zero "patching an empty field succeeds" "$patch1_code"
+patched_value="$(tail -1 "$TMPDIR_CSV/patchrepo/docs/releases/registry.csv" | cut -d',' -f7 | tr -d '"')"
+assert_eq "patched value is stored in the right column" "dpl_test123" "$patched_value"
+
+"$TMPDIR_CSV/patchrepo/scripts/release/patch-release-row.sh" "v9.9.9" "deployment_id" "dpl_other" > /tmp/patch2.log 2>&1
+patch2_code=$?
+assert_exit_nonzero "patching an already-filled field is refused" "$patch2_code"
+patched_value_after="$(tail -1 "$TMPDIR_CSV/patchrepo/docs/releases/registry.csv" | cut -d',' -f7 | tr -d '"')"
+assert_eq "refused patch leaves the original value untouched" "dpl_test123" "$patched_value_after"
+
 rm -rf "$TMPDIR_CSV"
 
 echo ""

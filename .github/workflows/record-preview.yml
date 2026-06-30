@@ -1,0 +1,64 @@
+name: Record preview deployment
+
+# RG-R4 (cicd-release-governance): Vercel's own GitHub App fires a `deployment_status` event when a
+# deployment finishes — no Vercel API token/secret needed. On success, find the registry row whose
+# commit_sha matches this deployment's commit and fill in its (currently empty) preview_url field.
+# Patches, never edits an already-filled field — see scripts/release/patch-release-row.sh.
+#
+# Note: GitHub's deployment.id here is GitHub's own wrapper ID, NOT Vercel's native `dpl_...` ID —
+# storing it would be misleading. promote.sh instead resolves the real Vercel deployment ID live via
+# the Vercel API/MCP from this stored preview_url at promotion time (get_deployment accepts a hostname).
+on:
+  deployment_status:
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    name: Patch registry row with deployment_id + preview_url
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: record-preview-${{ github.event.deployment.sha }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: integration
+          persist-credentials: true
+
+      - name: Find registry row for this commit
+        id: find
+        run: |
+          SHA="${{ github.event.deployment.sha }}"
+          ROW="$(grep ",\"$SHA\"," docs/releases/registry.csv || true)"
+          if [ -z "$ROW" ]; then
+            echo "No registry row for commit $SHA — not a version-assign-stamped build, skipping."
+            echo "version=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          VERSION="$(echo "$ROW" | cut -d',' -f1 | tr -d '"')"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Patch preview_url
+        if: steps.find.outputs.version != ''
+        run: |
+          PREVIEW_URL="${{ github.event.deployment_status.target_url }}"
+          if [ -z "$PREVIEW_URL" ]; then
+            PREVIEW_URL="${{ github.event.deployment.payload.web_url }}"
+          fi
+          bash scripts/release/patch-release-row.sh "${{ steps.find.outputs.version }}" preview_url "$PREVIEW_URL" || true
+
+      - name: Commit if changed
+        if: steps.find.outputs.version != ''
+        run: |
+          if git diff --quiet docs/releases/registry.csv; then
+            echo "No change (already patched, or both patches refused) — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/releases/registry.csv
+          git commit -m "chore(release): record preview for ${{ steps.find.outputs.version }} [skip ci]"
+          git push
