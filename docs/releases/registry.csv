@@ -3,3 +3,4 @@ version,change_class,commit_sha,branch,session_folder,clickup_task,deployment_id
 "v0.3.5.2","non-source","ea9b460159ed68c8a67ea7f43a239f2d1a8a355e","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"
 "v0.3.5.3","non-source","d2e34ceac3bcf847cf765b0479da465f41f2ab6a","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"
 "v0.3.5.4","non-source","5eaf1e8577581a4e87c5457d3d922183f1b63104","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"
+"v0.3.5.5","non-source","0f99a4d584b413c86bc5565e26ead8b5cc21922b","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"
