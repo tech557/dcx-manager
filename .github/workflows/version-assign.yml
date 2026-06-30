@@ -1,0 +1,71 @@
+name: Version assign
+
+# RG-R3 (cicd-release-governance): on a merge to integration, classify the merge commit's diff
+# (source vs non-source), compute the next Iteration/Revision from the registry, and append a row.
+# Serialized via `concurrency:` so two queued merges can never compute the same next number
+# (docs/plans/active/cicd-release-governance/README.md §4.2).
+on:
+  push:
+    branches: [integration]
+
+concurrency:
+  group: version-assign-integration
+  cancel-in-progress: false
+
+jobs:
+  assign:
+    name: Assign version + append registry row
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Classify this push
+        id: classify
+        run: |
+          BEFORE="${{ github.event.before }}"
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            BEFORE="HEAD~1"
+          fi
+          CLASS="$(bash scripts/release/classify-change.sh "$BEFORE" "${{ github.sha }}")"
+          echo "class=$CLASS" >> "$GITHUB_OUTPUT"
+
+      - name: Compute next version
+        id: nextver
+        run: |
+          CURRENT="$(grep -v '^version,' docs/releases/registry.csv | tail -1 | cut -d',' -f1 | tr -d '"')"
+          if [ -z "$CURRENT" ]; then
+            CURRENT="$(cat docs/VERSION.md | grep -m1 '| current |' | sed -E 's/.*`([^`]+)`.*/\1/')"
+          fi
+          CURRENT="${CURRENT#v}"
+          MAJOR="$(echo "$CURRENT" | cut -d'.' -f1)"
+          STAGE="$(echo "$CURRENT" | cut -d'.' -f2)"
+          ITER="$(echo "$CURRENT" | cut -d'.' -f3)"
+          REV="$(echo "$CURRENT" | cut -d'.' -f4)"
+          if [ "${{ steps.classify.outputs.class }}" = "source" ]; then
+            ITER=$((ITER + 1)); REV=0
+          else
+            REV=$((REV + 1))
+          fi
+          echo "version=v${MAJOR}.${STAGE}.${ITER}.${REV}" >> "$GITHUB_OUTPUT"
+
+      - name: Append registry row
+        run: |
+          bash scripts/release/append-release-row.sh \
+            "${{ steps.nextver.outputs.version }}" \
+            "${{ steps.classify.outputs.class }}" \
+            "${{ github.sha }}" \
+            "integration" \
+            "ci" \
+            "" "" "" "" "" \
+            "verified" "" "" "" "" \
+            "stamped by version-assign.yml"
+
+      - name: Commit registry update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/releases/registry.csv
+          git commit -m "chore(release): stamp ${{ steps.nextver.outputs.version }} [skip ci]"
+          git push

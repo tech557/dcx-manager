@@ -1,10 +1,13 @@
 name: CI
 
+# RG-R3 (cicd-release-governance): extended to cover the integration/staging/main branch model
+# instead of main-only — required checks for branch protection on all three (see
+# docs/plans/active/cicd-release-governance/output/RG-R3-github-ci.md).
 on:
   push:
-    branches: [main]
+    branches: [main, staging, integration]
   pull_request:
-    branches: [main]
+    branches: [main, staging, integration]
 
 jobs:
   requirements:
@@ -40,6 +43,8 @@ jobs:
         run: npm run validate:architecture
       - name: test
         run: npm run test
+      - name: release registry validate
+        run: bash scripts/release/validate-release-registry.sh
 
   build:
     name: Build
