@@ -2,7 +2,7 @@
 
 > **Generated** by `scripts/build-po-actions.sh` (also run by `build-log-index.sh`). Do not hand-edit — flip the source log's `PO-Action:` header to `none` when an item is done. See `docs/agent-rules/log-format.md` §3.
 
-_Last generated: 2026-07-01 — open items: 32_
+_Last generated: 2026-07-01 — open items: 33_
 
 ## RS-R3-review — Output audit of RS-R3 + lint fix (OpenCode)
 Source: [`sessions/2026-06-29-claude/19-rs-r3-output-audit.md`](sessions/2026-06-29-claude/19-rs-r3-output-audit.md)
@@ -250,6 +250,13 @@ Source: [`sessions/2026-07-01-claude/007-cicd-release-governance-RG-R3.md`](sess
 | Verify `@tech557` is the right CODEOWNERS identity | Agent assumed the repo owner is the PO; not confirmed | Edit `CODEOWNERS` if a different GitHub username should own these files |
 | Real bug found + fixed during live testing: `version-assign.yml` needed explicit `permissions: contents: write` | Default `GITHUB_TOKEN` is read-only by default on this repo; the first live run failed | Already fixed and reverified green — no action needed, flagging for awareness |
 | First real PR into `integration` (once branch protection is on) should serve as the retroactive AC-RG-3-1 evidence | A throwaway PR wasn't opened due to missing `gh`/API write credential | No immediate action; just don't expect a separate throwaway-PR log entry later — the first real PR covers it |
+
+## RG-R3 — three live bugs found and fixed via real GitHub Actions runs
+Source: [`sessions/2026-07-01-claude/008-cicd-release-governance-RG-R3-live-bugfixes.md`](sessions/2026-07-01-claude/008-cicd-release-governance-RG-R3-live-bugfixes.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Same as RG-R3's original log (007): branch protection + CODEOWNERS owner confirmation still pending | Unaffected by this session's bugfixes | See `007-cicd-release-governance-RG-R3.md` |
 
 ## cicd-release-governance — Confirming Re-Audit
 Source: [`sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md`](sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md)

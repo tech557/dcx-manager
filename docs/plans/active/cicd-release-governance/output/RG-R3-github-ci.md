@@ -89,6 +89,44 @@ a future `promote.sh` (RG-R4) PO-approved promotion, not further direct commits.
 isn't silently inconsistent — no corrective action taken on the already-landed `main` commits since
 rewriting pushed history is itself risky and out of scope.
 
+### Second bug found, fixed, reverified: VERSION.md drift, then a registry-validator false positive
+
+**Bug 2 — `docs/VERSION.md` drift.** `version-assign.yml` only updated `registry.csv`, not
+`docs/VERSION.md`. After the first two live stamps (`v0.3.5.1`, `v0.3.5.2`), `VERSION.md` still read
+`v0.3.5.0` — the file most docs/agents actually read as "the version" was stale. Fixed by adding a `sed`
+step that syncs `docs/VERSION.md`'s `current` field in the same commit as the registry row (commit
+`d2e34ce`).
+
+**Bug 3 — registry validator false positive, caught by the fix above.** The `d2e34ce` push triggered
+both workflows; `version-assign` succeeded (stamped `v0.3.5.3`), but `ci.yml`'s new "release registry
+validate" step **failed** (run `28480885125`). Root cause: `validate-release-registry.sh`'s "no two
+verified/approved rows for the same env" check used `approved_for` as the comparison key without
+checking it was non-empty — so two real, legitimate version-assign rows (`v0.3.5.1`, `v0.3.5.2`, both
+`status=verified`, both `approved_for=""`, i.e. unapproved candidate builds) were flagged as
+"conflicting" with each other, which they are not: only rows that actually target an environment can
+conflict. Fixed in `scripts/release/validate-release-registry.sh` (skip the check when `approved_for` is
+empty) and added a regression test (`scripts/release/tests/run-tests.sh`, now 11/11) reproducing this
+exact shape so it can't silently regress. Pushed as `5eaf1e8`; reverified fully green:
+
+```
+28481045127  CI              integration  push  success
+28481045117  Version assign  integration  push  success
+```
+
+Current live state after all four real stamps:
+```
+$ git show origin/integration:docs/releases/registry.csv
+v0.3.5.0 (RG-R1 bootstrap) → v0.3.5.1 → v0.3.5.2 → v0.3.5.3 → v0.3.5.4
+$ git show origin/integration:docs/VERSION.md | grep '| current |'
+| current | `v0.3.5.4` |
+```
+`registry.csv` and `VERSION.md` now agree — both real, both live, no manual edits after the fix.
+
+**Pattern across all three bugs found this sprint:** every one was caught because the verification was
+*live* (real Actions runs against a real public repo), not simulated. A claimed-PASS without this would
+have shipped a read-only token, a stale VERSION.md, and a validator that breaks the very pipeline it's
+meant to gate.
+
 ## Branch protection settings — PO applies in GitHub UI (not agent-executable)
 
 For each of `main`, `staging`, `integration` (Settings → Branches → Add branch protection rule):
@@ -119,5 +157,5 @@ For each of `main`, `staging`, `integration` (Settings → Branches → Add bran
 | Gate | Result |
 |---|---|
 | no-`src/**` proof | PASS |
-| CI green on test (push, not PR) | PASS — runs `28480531131`/`28480531146` both `success` |
+| CI green on test (push, not PR) | PASS — final state: runs `28481045127`/`28481045117` both `success`, after 3 bugs found+fixed live (read-only token, VERSION.md drift, validator false positive) |
 | browser | N/A for this evidence path — verification was via the public GitHub REST API (`curl`), not a browser; no PR UI existed to screenshot since no PR was opened (see "Honest gap") |
