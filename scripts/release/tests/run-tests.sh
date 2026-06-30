@@ -148,6 +148,49 @@ assert_eq "refused patch leaves the original value untouched" "dpl_test123" "$pa
 rm -rf "$TMPDIR_CSV"
 
 echo ""
+echo "=== promote.sh (RG-R4) ==="
+PROMOTE_REPO="$(mktemp -d)"
+mkdir -p "$PROMOTE_REPO/docs/releases/approvals" "$PROMOTE_REPO/scripts/release"
+echo "version,change_class,commit_sha,branch,session_folder,clickup_task,deployment_id,preview_url,staging_url,production_url,status,approved_for,approved_by,approved_at,gates,notes" > "$PROMOTE_REPO/docs/releases/registry.csv"
+printf '"v0.3.5.1","non-source","abc123","integration","ci","","","https://example-preview.vercel.app","","","verified","","","","","candidate"\n' >> "$PROMOTE_REPO/docs/releases/registry.csv"
+cat > "$PROMOTE_REPO/docs/VERSION.md" <<'EOF'
+| current | `v0.3.5.1` |
+EOF
+cp "$RELEASE_DIR/promote.sh" "$RELEASE_DIR/append-release-row.sh" "$PROMOTE_REPO/scripts/release/"
+
+PROMOTE_ALIAS_CMD="echo STUB-ALIAS-CALL" "$PROMOTE_REPO/scripts/release/promote.sh" "v0.3.5.1" "staging" > /tmp/promote-no-approval.log 2>&1
+promote_no_approval_code=$?
+assert_exit_nonzero "promote refuses without an approval record" "$promote_no_approval_code"
+
+mkdir -p "$PROMOTE_REPO/docs/releases/approvals"
+cat > "$PROMOTE_REPO/docs/releases/approvals/v0.3.5.1-staging.md" <<'EOF'
+approved-by: PO
+approved-at: 2026-07-01
+EOF
+PROMOTE_ALIAS_CMD="echo STUB-ALIAS-CALL" "$PROMOTE_REPO/scripts/release/promote.sh" "v0.3.5.1" "staging" > /tmp/promote-ok.log 2>&1
+promote_ok_code=$?
+assert_exit_zero "promote succeeds once approval record exists (alias call stubbed)" "$promote_ok_code"
+grep -q "STUB-ALIAS-CALL https://example-preview.vercel.app" /tmp/promote-ok.log && stub_called=0 || stub_called=1
+assert_exit_zero "promote called the alias command with the exact preview_url (no rebuild)" "$stub_called"
+new_row="$(tail -1 "$PROMOTE_REPO/docs/releases/registry.csv")"
+echo "$new_row" | grep -q '"v0.4.0.0"' && new_version_ok=0 || new_version_ok=1
+assert_exit_zero "promotion appends a new row with the §3.2 staging-promotion version (Stage+1, reset)" "$new_version_ok"
+echo "$new_row" | grep -q 'promoted-staging' && status_ok=0 || status_ok=1
+assert_exit_zero "promoted row status is promoted-staging" "$status_ok"
+
+PROMOTE_ALIAS_CMD="echo STUB-ALIAS-CALL" "$PROMOTE_REPO/scripts/release/promote.sh" "v0.3.5.1" "production" > /tmp/promote-no-prod-approval.log 2>&1
+promote_no_prod_code=$?
+assert_exit_nonzero "promote refuses for a different (unapproved) environment even with a staging approval present" "$promote_no_prod_code"
+
+PROMOTE_ALIAS_CMD="echo STUB-ALIAS-CALL" "$PROMOTE_REPO/scripts/release/promote.sh" "--rollback" "staging" > /tmp/promote-rollback.log 2>&1
+rollback_code=$?
+assert_exit_zero "rollback re-aliases to the previous promoted-staging build" "$rollback_code"
+grep -q "STUB-ALIAS-CALL https://example-preview.vercel.app" /tmp/promote-rollback.log && rollback_target_ok=0 || rollback_target_ok=1
+assert_exit_zero "rollback targets the exact previous preview_url" "$rollback_target_ok"
+
+rm -rf "$PROMOTE_REPO"
+
+echo ""
 echo "=== idempotence (core.md §36b) ==="
 TMPDIR_IDEMP="$(mktemp -d)"
 mkdir -p "$TMPDIR_IDEMP/docs/releases" "$TMPDIR_IDEMP/scripts/release"
