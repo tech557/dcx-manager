@@ -66,10 +66,14 @@ jobs:
             "verified" "" "" "" "" \
             "stamped by version-assign.yml"
 
-      - name: Commit registry update
+      - name: Sync docs/VERSION.md current field
+        run: |
+          sed -i "s/| current | \`v[0-9.]*\` |/| current | \`${{ steps.nextver.outputs.version }}\` |/" docs/VERSION.md
+
+      - name: Commit registry + VERSION.md update
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/releases/registry.csv
+          git add docs/releases/registry.csv docs/VERSION.md
           git commit -m "chore(release): stamp ${{ steps.nextver.outputs.version }} [skip ci]"
           git push
