@@ -2,6 +2,8 @@
 # append-release-row.sh — the ONLY writer for docs/releases/registry.csv.
 # Append-only: refuses to write if the given version already has a row.
 # Corrections are a new superseding row, never an edit of an existing one.
+# Duplicate check uses a quote-aware CSV splitter — see validate-release-registry.sh for why naive
+# `-F','` is unsafe (a field with a literal comma, e.g. an approval name, broke it in production).
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -24,9 +26,26 @@ if [ ! -f "$REGISTRY" ]; then
   exit 1
 fi
 
-if awk -F',' -v v="$VERSION" '
-  function unquote(s) { gsub(/^"|"$/, "", s); return s }
-  NR>1 && unquote($1)==v { found=1 }
+if awk -v v="$VERSION" '
+  function csv_split(line, arr,    n, i, c, field, inquotes) {
+    n = 0; field = ""; inquotes = 0
+    for (i = 1; i <= length(line); i++) {
+      c = substr(line, i, 1)
+      if (inquotes) {
+        if (c == "\"") {
+          if (substr(line, i + 1, 1) == "\"") { field = field "\""; i++ }
+          else { inquotes = 0 }
+        } else { field = field c }
+      } else {
+        if (c == "\"") { inquotes = 1 }
+        else if (c == ",") { arr[++n] = field; field = "" }
+        else { field = field c }
+      }
+    }
+    arr[++n] = field
+    return n
+  }
+  NR>1 && $0 != "" { delete f; csv_split($0, f); if (f[1] == v) { found = 1 } }
   END { exit !found }
 ' "$REGISTRY"; then
   echo "REFUSED: version '$VERSION' already has a row in registry.csv — append a superseding row with a new version instead, never edit an existing one." >&2

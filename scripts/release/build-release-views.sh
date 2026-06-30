@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # build-release-views.sh — regenerate a derived, disposable summary view of registry.csv.
 # Not authoritative: registry.csv remains the source of truth; this file is safe to delete/regenerate.
+# Uses a quote-aware CSV splitter — see validate-release-registry.sh for why naive `-F','` is unsafe.
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -19,11 +20,32 @@ fi
   echo
   echo "| Version | Class | Status | Branch | Approved for | Approved by | Approved at |"
   echo "|---|---|---|---|---|---|---|"
-  tail -n +2 "$REGISTRY" | awk -F',' '
-    function unquote(s) { gsub(/^"|"$/, "", s); return s }
-    NF >= 14 {
-      printf "| %s | %s | %s | %s | %s | %s | %s |\n", \
-        unquote($1), unquote($2), unquote($11), unquote($4), unquote($12), unquote($13), unquote($14)
+  tail -n +2 "$REGISTRY" | awk '
+    function csv_split(line, arr,    n, i, c, field, inquotes) {
+      n = 0; field = ""; inquotes = 0
+      for (i = 1; i <= length(line); i++) {
+        c = substr(line, i, 1)
+        if (inquotes) {
+          if (c == "\"") {
+            if (substr(line, i + 1, 1) == "\"") { field = field "\""; i++ }
+            else { inquotes = 0 }
+          } else { field = field c }
+        } else {
+          if (c == "\"") { inquotes = 1 }
+          else if (c == ",") { arr[++n] = field; field = "" }
+          else { field = field c }
+        }
+      }
+      arr[++n] = field
+      return n
+    }
+    $0 == "" { next }
+    {
+      delete f
+      nf = csv_split($0, f)
+      if (nf >= 14) {
+        printf "| %s | %s | %s | %s | %s | %s | %s |\n", f[1], f[2], f[11], f[4], f[12], f[13], f[14]
+      }
     }
   '
 } > "$VIEW"

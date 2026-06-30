@@ -5,6 +5,9 @@
 # same rule as append-release-row.sh). This exists because some fields (deployment_id, preview_url)
 # are only known asynchronously, after Vercel finishes a deployment that started from the same commit
 # the row already records — see .github/workflows/record-preview.yml.
+#
+# Uses a quote-aware CSV splitter/writer — see validate-release-registry.sh for why naive `-F','` is
+# unsafe (a field with a literal comma broke it in production, 2026-07-01).
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -26,22 +29,44 @@ if [ -z "$COL_INDEX" ]; then
   exit 1
 fi
 
-awk -F',' -v OFS=',' -v v="$VERSION" -v col="$COL_INDEX" -v val="$VALUE" '
-  function unquote(s) { gsub(/^"|"$/, "", s); return s }
+awk -v v="$VERSION" -v col="$COL_INDEX" -v val="$VALUE" '
+  function csv_split(line, arr,    n, i, c, field, inquotes) {
+    n = 0; field = ""; inquotes = 0
+    for (i = 1; i <= length(line); i++) {
+      c = substr(line, i, 1)
+      if (inquotes) {
+        if (c == "\"") {
+          if (substr(line, i + 1, 1) == "\"") { field = field "\""; i++ }
+          else { inquotes = 0 }
+        } else { field = field c }
+      } else {
+        if (c == "\"") { inquotes = 1 }
+        else if (c == ",") { arr[++n] = field; field = "" }
+        else { field = field c }
+      }
+    }
+    arr[++n] = field
+    return n
+  }
   function quote(s) { gsub(/"/, "\"\"", s); return "\"" s "\"" }
   NR==1 { print; next }
-  NF == 0 { next }
+  $0 == "" { next }
   {
-    if (unquote($1) == v) {
+    delete f
+    nf = csv_split($0, f)
+    if (f[1] == v) {
       found = 1
-      current = unquote($col)
-      if (current != "") {
-        print "REFUSED: version '\''" v "'\'' column already has a value (\"" current "\") — never overwrite a recorded fact" > "/dev/stderr"
+      if (f[col] != "") {
+        print "REFUSED: version '\''" v "'\'' column already has a value (\"" f[col] "\") — never overwrite a recorded fact" > "/dev/stderr"
         exit 1
       }
-      $col = quote(val)
+      f[col] = val
     }
-    print
+    line = ""
+    for (i = 1; i <= nf; i++) {
+      line = line (i > 1 ? "," : "") quote(f[i])
+    }
+    print line
   }
   END {
     if (!found) {

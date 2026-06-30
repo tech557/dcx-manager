@@ -105,6 +105,19 @@ assert_exit_nonzero "duplicate-version append is refused" "$append2_code"
 row_count_after="$(tail -n +2 "$TMP_REPO/docs/releases/registry.csv" | grep -c . || true)"
 assert_eq "row count unchanged after refused duplicate" "1" "$row_count_after"
 
+"$TMP_REPO/scripts/release/append-release-row.sh" \
+  "v0.4.0.0" "promotion" "abc123" "integration" "promote.sh" "" "" "https://p.vercel.app" "" "" \
+  "promoted-prod" "production" "PO (Mahmoud, tech@dotment.com)" "2026-07-01" "" "comma in approved_by" > /tmp/append-comma.log 2>&1
+append_comma_code=$?
+assert_exit_zero "append with a comma inside a field succeeds" "$append_comma_code"
+# Re-running the SAME version again must still be refused as a duplicate, proving the comma-aware
+# duplicate check isn't fooled by the comma in the existing row.
+"$TMP_REPO/scripts/release/append-release-row.sh" \
+  "v0.4.0.0" "promotion" "xyz789" "integration" "promote.sh" "" "" "https://p2.vercel.app" "" "" \
+  "promoted-prod" "production" "PO" "2026-07-01" "" "should be refused" > /tmp/append-comma-dup.log 2>&1
+append_comma_dup_code=$?
+assert_exit_nonzero "duplicate-version check still works when an existing row has a comma in a field" "$append_comma_dup_code"
+
 "$TMP_REPO/scripts/release/validate-release-registry.sh" "$TMP_REPO/docs/releases/registry.csv" > /tmp/validate-clean.log
 validate_clean_code=$?
 assert_exit_zero "validator passes a clean registry" "$validate_clean_code"
@@ -125,6 +138,29 @@ printf '"v0.3.5.1","non-source","aaa111","integration","ci","","","","","","veri
 validate_candidates_code=$?
 assert_exit_zero "validator does NOT flag two unapproved 'verified' candidates as conflicting" "$validate_candidates_code"
 
+# Regression test (RG-R6 prep, real bug found 2026-07-01): a field containing a literal comma (e.g.
+# an approval name like "PO (Mahmoud, tech@dotment.com)") must not be miscounted as extra columns by
+# any script that reads registry.csv. This broke production CI for real before the quote-aware
+# csv_split fix landed.
+COMMA_CSV="$TMPDIR_CSV/comma.csv"
+echo "version,change_class,commit_sha,branch,session_folder,clickup_task,deployment_id,preview_url,staging_url,production_url,status,approved_for,approved_by,approved_at,gates,notes" > "$COMMA_CSV"
+printf '"v0.4.0.0","promotion","abc123","integration","promote.sh","","","https://preview.vercel.app","","","promoted-staging","staging","PO (Mahmoud, tech@dotment.com)","2026-07-01","","promoted from v0.3.5.7 via promote.sh, exact deployment, no rebuild"\n' >> "$COMMA_CSV"
+"$TMP_REPO/scripts/release/validate-release-registry.sh" "$COMMA_CSV" > /tmp/validate-comma.log 2>&1
+validate_comma_code=$?
+assert_exit_zero "validator handles a field containing a literal comma without miscounting columns" "$validate_comma_code"
+
+cp "$RELEASE_DIR/build-release-views.sh" "$TMP_REPO/scripts/release/"
+COMMA_VIEW_DIR="$(mktemp -d)"
+mkdir -p "$COMMA_VIEW_DIR/docs/releases" "$COMMA_VIEW_DIR/scripts/release"
+cp "$COMMA_CSV" "$COMMA_VIEW_DIR/docs/releases/registry.csv"
+cp "$RELEASE_DIR/build-release-views.sh" "$COMMA_VIEW_DIR/scripts/release/"
+"$COMMA_VIEW_DIR/scripts/release/build-release-views.sh" > /tmp/view-comma.log 2>&1
+view_comma_code=$?
+assert_exit_zero "build-release-views.sh handles a field containing a literal comma" "$view_comma_code"
+grep -q "PO (Mahmoud, tech@dotment.com)" "$COMMA_VIEW_DIR/docs/releases/registry-view.md" && comma_in_view=0 || comma_in_view=1
+assert_exit_zero "the comma-containing approved_by value appears intact in the generated view" "$comma_in_view"
+rm -rf "$COMMA_VIEW_DIR"
+
 echo ""
 echo "=== patch-release-row.sh (RG-R4) ==="
 cp "$RELEASE_DIR/patch-release-row.sh" "$TMP_REPO/scripts/release/"
@@ -144,6 +180,19 @@ patch2_code=$?
 assert_exit_nonzero "patching an already-filled field is refused" "$patch2_code"
 patched_value_after="$(tail -1 "$TMPDIR_CSV/patchrepo/docs/releases/registry.csv" | cut -d',' -f7 | tr -d '"')"
 assert_eq "refused patch leaves the original value untouched" "dpl_test123" "$patched_value_after"
+
+# Regression: patching one column on a row that has a comma in a DIFFERENT column must not corrupt it.
+printf '"v7.7.7","source","def456","integration","ci","","","","","","verified","","PO (Mahmoud, tech@dotment.com)","2026-07-01","","note, with a comma too"\n' >> "$TMPDIR_CSV/patchrepo/docs/releases/registry.csv"
+"$TMPDIR_CSV/patchrepo/scripts/release/patch-release-row.sh" "v7.7.7" "deployment_id" "dpl_comma_test" > /tmp/patch-comma.log 2>&1
+patch_comma_code=$?
+assert_exit_zero "patching a row that has commas in other fields succeeds" "$patch_comma_code"
+comma_row="$(grep '^"v7.7.7"' "$TMPDIR_CSV/patchrepo/docs/releases/registry.csv")"
+echo "$comma_row" | grep -q 'PO (Mahmoud, tech@dotment.com)' && approved_by_intact=0 || approved_by_intact=1
+assert_exit_zero "approved_by with a comma survives the patch intact" "$approved_by_intact"
+echo "$comma_row" | grep -q 'note, with a comma too' && notes_intact=0 || notes_intact=1
+assert_exit_zero "notes with a comma survives the patch intact" "$notes_intact"
+echo "$comma_row" | grep -q 'dpl_comma_test' && deployment_id_set=0 || deployment_id_set=1
+assert_exit_zero "the patched column itself was actually set" "$deployment_id_set"
 
 rm -rf "$TMPDIR_CSV"
 

@@ -3,6 +3,10 @@
 #   - duplicate `version`
 #   - two verified/approved rows for the same approved_for env at different commit_sha
 #   - a malformed row (wrong column count vs the header)
+#
+# Uses a quote-aware CSV splitter (csv_split), NOT naive `-F','` — a field containing a literal comma
+# (e.g. an approved-by name like `"PO (Mahmoud, tech@dotment.com)"`) broke the naive split in production
+# (real CI failure, 2026-07-01); never split CSV on a raw comma again in this script family.
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -14,20 +18,36 @@ if [ ! -f "$REGISTRY" ]; then
   exit 1
 fi
 
-awk -F',' '
-  function unquote(s) { gsub(/^"|"$/, "", s); return s }
-  NR==1 { ncols = NF; next }
-  NF == 1 && $0 == "" { next }  # tolerate a trailing blank line
+awk '
+  function csv_split(line, arr,    n, i, c, field, inquotes) {
+    n = 0; field = ""; inquotes = 0
+    for (i = 1; i <= length(line); i++) {
+      c = substr(line, i, 1)
+      if (inquotes) {
+        if (c == "\"") {
+          if (substr(line, i + 1, 1) == "\"") { field = field "\""; i++ }
+          else { inquotes = 0 }
+        } else { field = field c }
+      } else {
+        if (c == "\"") { inquotes = 1 }
+        else if (c == ",") { arr[++n] = field; field = "" }
+        else { field = field c }
+      }
+    }
+    arr[++n] = field
+    return n
+  }
+  NR==1 { ncols = csv_split($0, hdr); next }
+  $0 == "" { next }
   {
-    if (NF != ncols) {
-      printf "MALFORMED ROW (line %d): expected %d columns, got %d: %s\n", NR, ncols, NF, $0
+    delete f
+    nf = csv_split($0, f)
+    if (nf != ncols) {
+      printf "MALFORMED ROW (line %d): expected %d columns, got %d: %s\n", NR, ncols, nf, $0
       errors++
       next
     }
-    version = unquote($1)
-    status = unquote($11)
-    approved_for = unquote($12)
-    commit_sha = unquote($3)
+    version = f[1]; commit_sha = f[3]; preview_url = f[8]; status = f[11]; approved_for = f[12]
 
     if (version in seen_version) {
       printf "DUPLICATE VERSION (line %d): '\''%s'\'' already seen at line %d\n", NR, version, seen_version[version]

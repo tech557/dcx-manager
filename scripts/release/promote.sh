@@ -41,22 +41,49 @@ ENV="$2"
 
 if [ "$ENV" = "staging" ]; then TARGET_DOMAIN="$STAGING_DOMAIN"; else TARGET_DOMAIN="$PRODUCTION_DOMAIN"; fi
 
-unquote() { local s="$1"; s="${s%\"}"; s="${s#\"}"; echo "$s"; }
+# Quote-aware CSV splitter — see validate-release-registry.sh for why naive `-F','` is unsafe (a field
+# with a literal comma, e.g. an approval name, broke the naive version of this script in production).
+CSV_SPLIT_FN='
+  function csv_split(line, arr,    n, i, c, field, inquotes) {
+    n = 0; field = ""; inquotes = 0
+    for (i = 1; i <= length(line); i++) {
+      c = substr(line, i, 1)
+      if (inquotes) {
+        if (c == "\"") {
+          if (substr(line, i + 1, 1) == "\"") { field = field "\""; i++ }
+          else { inquotes = 0 }
+        } else { field = field c }
+      } else {
+        if (c == "\"") { inquotes = 1 }
+        else if (c == ",") { arr[++n] = field; field = "" }
+        else { field = field c }
+      }
+    }
+    arr[++n] = field
+    return n
+  }
+'
 
 row_for_version() {
-  awk -F',' -v v="$1" '
-    function unquote(s) { gsub(/^"|"$/, "", s); return s }
-    NR>1 && unquote($1)==v { print; exit }
+  awk -v v="$1" "$CSV_SPLIT_FN"'
+    NR>1 && $0 != "" { delete f; csv_split($0, f); if (f[1]==v) { print; exit } }
   ' "$REGISTRY"
 }
 
-field() { echo "$1" | awk -F',' -v n="$2" '{ gsub(/^"|"$/, "", $n); print $n }'; }
+# field <row> <n> — extract column n (1-indexed) from a single CSV row, quote-aware.
+field() {
+  echo "$1" | awk -v n="$2" "$CSV_SPLIT_FN"'
+    { delete f; csv_split($0, f); print f[n] }
+  '
+}
 
 # --- Rollback path ---
 if [ "$ARG1" = "--rollback" ]; then
-  PREV_ROW="$(awk -F',' -v env="$ENV" '
-    function unquote(s) { gsub(/^"|"$/, "", s); return s }
-    NR>1 && unquote($11) ~ /^promoted-/ && unquote($12)==env { last=$0 }
+  PREV_ROW="$(awk -v env="$ENV" "$CSV_SPLIT_FN"'
+    NR>1 && $0 != "" {
+      delete f; csv_split($0, f)
+      if (f[11] ~ /^promoted-/ && f[12]==env) { last=$0 }
+    }
     END { print last }
   ' "$REGISTRY")"
   if [ -z "$PREV_ROW" ]; then
