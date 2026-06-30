@@ -448,16 +448,45 @@ If you are unsure, default to user-initiated. Never assume a plan is in scope un
 
 ---
 
-## §26. Version Number — PO-Only, Never Auto-Increment
+## §26. Version Number — 4-Part Split Ownership (revised RG-R1, 2026-07-01)
 
-The project version is set **exclusively by the PO (Mahmoud)**. Agents read it; they never change it.
+The version is a 4-part `Major.Stage.Iteration.Revision` (e.g. `v0.3.5.0`). **PO owns Major and Stage
+exclusively** (tied to an actual Staging/Production promotion). **The system/agents own Iteration and
+Revision**, but only *mechanically* — via the classifier and CI wiring introduced in
+`docs/plans/active/cicd-release-governance/` (RG-R1..RG-R3), never by an agent hand-picking a number.
 
 **Rules:**
-- Never increment, bump, or suggest a version change in any output or plan.
-- Never run `scripts/version-bump.sh` or edit `docs/VERSION.md` on your own initiative.
+- Never increment, bump, or suggest a **Major** or **Stage** change in any output or plan — PO-only,
+  triggered only by a real Staging/Production promotion.
+- **Until the RG-R3 CI wiring exists**, treat `docs/VERSION.md` as still PO-maintained by hand (same as
+  the pre-governance rule) — do not edit it or hand-pick an Iteration/Revision bump on your own
+  initiative. Once RG-R3 lands, Iteration bumps on source changes and Revision bumps on non-source
+  changes are mechanical (CI-driven), not agent-judged.
+- Never run `scripts/version-bump.sh` on your own initiative outside the RG-governed mechanism.
 - When writing `version_context` in a plan or log frontmatter, copy the exact value from `docs/VERSION.md` — do not derive or guess.
-- If the PO says "the version is now vX.Y.Z", update only the `current` field in `docs/VERSION.md` to that exact value. Do not change anything else.
+- If the PO says "the version is now vX.Y.Z.W", update only the `current` field in `docs/VERSION.md` to that exact value. Do not change anything else.
 - If `version_context` in a plan frontmatter does not match the current version in `docs/VERSION.md`, note the mismatch but do not auto-correct it — ask the PO whether the plan should be updated.
+
+---
+
+## §26a. Release Governance (added RG-R1, 2026-07-01)
+
+This project uses a mechanically-enforced release pipeline, defined in full in
+`docs/plans/active/cicd-release-governance/README.md`. Summary for day-to-day work:
+
+- **Operational record of truth:** `docs/releases/registry.csv` (RG-R2) — one append-only row per
+  build/version event. Markdown (this doc, session logs, plan READMEs) stays the human narrative; the
+  registry is the queryable, diff-able machine record, the same relationship `index.csv` has to session
+  logs (§1/§29).
+- **Promotion gate (§2.3 of the plan):** a build is promoted to Staging or Production **only** via
+  `scripts/release/promote.sh` (RG-R4), and only after a recorded PO approval
+  (`docs/releases/approvals/<version>-<env>.md`). **No agent ever promotes a build on its own
+  initiative** — promotion is the one action in this entire rule set that is hard-gated on an explicit,
+  recorded PO sign-off, never inferred from a conversational "looks good."
+- **No auto-promotion, ever.** Every source-code change gets a preview deployment automatically; nothing
+  moves from preview → staging → production without that recorded approval.
+- This section is additive to the rest of `core.md` — it does not relax any existing rule (§5 preserve-
+  semantic boundaries, §6 file size, §19 no `src/` writes for governance/discovery sprints, etc.).
 
 ---
 

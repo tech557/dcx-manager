@@ -13,11 +13,22 @@ Provider: [Google | OpenAI | Anthropic | other]
 Date: YYYY-MM-DD
 Type: [sprint-execution | user-request-code | user-request-planning | audit-review | process-governance | mixed]
 PO-Action: [none | pending]
+Version: [the 4-part version this entry's work belongs to, e.g. v0.3.5.0 — "—" for pre-governance logs]
+Change-Class: [source | non-source — "—" for pre-governance logs]
 ```
 
 No session log is complete without this. `Type:` is mandatory — see **§2**. `PO-Action:` is mandatory —
 see **§3** (it drives the always-visible PO follow-up roll-up). These stay as plain `Key: value` lines
 (the index builder parses them); the **body** of the log is tables (§1) for human readability.
+
+**`Version:`/`Change-Class:` (added RG-R1, 2026-07-01)** — additive and backward-compatible. Every log
+written before 2026-07-01 has no `Version:`/`Change-Class:` field and is **never rewritten**; the index
+builder renders `—` for those rows. New logs: `Version:` is the current `docs/VERSION.md` value; classify
+`Change-Class:` mechanically per `docs/plans/active/cicd-release-governance/README.md` §3.3 (touches
+`src/**`, `index.html`, `vite.config.ts`, `tsconfig*.json`, `package.json`, `package-lock.json`,
+`components.json`, `eslint.config.js`, `.dependency-cruiser.cjs` → `source`; docs/scripts/config-only →
+`non-source`). The CI-driven mechanical version bump itself activates only after RG-R3 lands — until
+then, record `Change-Class:` for traceability, but do not bump `docs/VERSION.md` by hand (`core.md §26`).
 
 ---
 
@@ -70,6 +81,8 @@ Date: YYYY-MM-DD
 Type: [see §2 taxonomy]
 Status: Completed | Partial | Blocked
 PO-Action: none | pending
+Version: [current docs/VERSION.md value, e.g. v0.3.5.0 — "—" for pre-RG-R1 logs]
+Change-Class: [source | non-source — "—" for pre-RG-R1 logs]
 
 Intent: [one sentence]
 Trigger: [requirement ID | user request quoted | bug name]

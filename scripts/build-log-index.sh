@@ -16,14 +16,23 @@ if [ ! -d "$SESSIONS_DIR" ]; then
   echo "No sessions directory found at $SESSIONS_DIR"
   echo "Creating empty index."
   mkdir -p "$(dirname "$INDEX_FILE")"
-  echo "date,agent,model,session_folder,sprint_id,status,intent,typecheck,verify,other_gates,files_changed,type" > "$INDEX_FILE"
+  echo "date,agent,model,session_folder,sprint_id,status,intent,typecheck,verify,other_gates,files_changed,type,version,change_class" > "$INDEX_FILE"
   exit 0
 fi
 
 # Create header if file doesn't exist
 if [ ! -f "$INDEX_FILE" ]; then
   mkdir -p "$(dirname "$INDEX_FILE")"
-  echo "date,agent,model,session_folder,sprint_id,status,intent,typecheck,verify,other_gates,files_changed,type" > "$INDEX_FILE"
+  echo "date,agent,model,session_folder,sprint_id,status,intent,typecheck,verify,other_gates,files_changed,type,version,change_class" > "$INDEX_FILE"
+fi
+
+# One-time additive migration (RG-R1): an existing index.csv predating the version/change_class
+# columns gets its header rewritten to include them. Data rows are NEVER touched — old rows simply
+# have fewer fields than the new header (consumers read them as empty trailing values).
+if ! head -1 "$INDEX_FILE" | grep -q ',version,change_class$'; then
+  echo "  Migrating index header to add version,change_class columns (old rows untouched)"
+  { echo "date,agent,model,session_folder,sprint_id,status,intent,typecheck,verify,other_gates,files_changed,type,version,change_class"; tail -n +2 "$INDEX_FILE"; } > "${INDEX_FILE}.tmp"
+  mv "${INDEX_FILE}.tmp" "$INDEX_FILE"
 fi
 
 # Track already-indexed filenames via temp file
@@ -62,6 +71,7 @@ for session_dir in "$SESSIONS_DIR"/*/; do
         sprint_id = ""; agent = ""; model = ""; provider = "";
         date = ""; status = ""; intent = ""; files_changed = 0;
         typecheck = ""; verify = ""; other_gates = ""; type = "";
+        version = ""; change_class = "";
       }
       # Sprint ID from title: ## SprintID — ...
       # Capture the FIRST H2 only; later section headings must not overwrite it.
@@ -79,6 +89,8 @@ for session_dir in "$SESSIONS_DIR"/*/; do
       /^Date: / { date = substr($0, 7); }
       /^Status: / { status = substr($0, 9); }
       /^Type: / { type = substr($0, 7); }
+      /^Version: / { version = substr($0, 10); }
+      /^Change-Class: / { change_class = substr($0, 15); }
       /^Intent: / { intent = substr($0, 9); }
       # Count files created and edited — OLD plain-block format
       /^Files created:/ { in_files = 1; next; }
@@ -123,9 +135,12 @@ for session_dir in "$SESSIONS_DIR"/*/; do
         gsub(/,/, " ", verify);
         gsub(/,/, " ", other_gates);
         gsub(/,/, " ", type);
-        printf "%s,%s,%s,%s/%s,%s,%s,\"%s\",%s,%s,\"%s\",%d,%s\n",
+        gsub(/,/, " ", version);
+        gsub(/,/, " ", change_class);
+        printf "%s,%s,%s,%s/%s,%s,%s,\"%s\",%s,%s,\"%s\",%d,%s,%s,%s\n",
           date, agent, model, session_name, log_name,
-          sprint_id, status, intent, typecheck, verify, other_gates, files_changed, type;
+          sprint_id, status, intent, typecheck, verify, other_gates, files_changed, type,
+          version, change_class;
       }
     ' "$log_file")
 

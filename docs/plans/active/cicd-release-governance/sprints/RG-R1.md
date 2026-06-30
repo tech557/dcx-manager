@@ -8,7 +8,8 @@ required-tools: bash
 depends-on: RG-R0a
 allowed-writes: docs/VERSION.md, docs/agent-rules/core.md, docs/agent-rules/log-format.md, scripts/build-log-index.sh, README decision register, output/RG-R1-*.md
 forbidden-writes: src/**
-status: drafted
+status: Completed
+Status: Completed
 ---
 
 # RG-R1 — Versioning model + rule changes

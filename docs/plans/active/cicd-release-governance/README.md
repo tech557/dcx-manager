@@ -136,6 +136,24 @@ repo has no `.git`, no `docs/releases/`, no `scripts/release/`, no `.github/`, n
   table for the exact PO actions needed.
 - `src/**` unchanged (shasum diff empty); existing source was committed as-is, not edited.
 
+**RG-R1 (2026-07-01, Completed)** — version model docs: `output/RG-R1-version-model.md`.
+- `docs/VERSION.md`: `current` now `v0.3.5.0` (4-part bootstrap value, carry-as-is per D-RG-VER); new
+  "Version scheme" + "Migration & bootstrap" sections; legacy 3-part table retained as historical
+  reference; ownership section rewritten (PO owns Major/Stage; Iteration/Revision mechanical-only once
+  RG-R3 lands; until then this file is still PO-maintained by hand).
+- `core.md §26` rewritten ("4-Part Split Ownership"); new `§26a` "Release Governance" added (registry as
+  operational record, promotion gate, no-auto-promotion rule) — additive, does not relax other sections.
+- `log-format.md §0`/§1: `Version:` + `Change-Class:` fields added to the identity block and sample
+  template — additive, old logs render `—`, never rewritten.
+- `scripts/build-log-index.sh`: `version`/`change_class` columns added. **Important for future sprints
+  editing this script:** an existing `index.csv`'s header is only rewritten via the new one-time
+  migration block (header doesn't match `,version,change_class$` → rewrite header only, data rows
+  untouched) — the original "create header if file doesn't exist" branch does NOT fire for an
+  already-existing file, so a column add must always go through a migration check like this, not just
+  the create-branch.
+- Verified end-to-end with a synthetic test log (added, columns populated correctly, then removed) before
+  closing.
+
 ### Retained by policy (intentionally NOT changed)
 - `src/**` — untouched by every RG sprint (D-RG-GIT).
 - Existing historical logs — never rewritten; `Version:` is additive (§3.4).
