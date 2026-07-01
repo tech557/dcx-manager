@@ -2,7 +2,7 @@
 plan: cicd-release-governance
 status: active
 classification: Path 1 — EXECUTABLE PLAN (sprint files present; final-approval audit READY; PO-activated)
-stage: Active — executing RG-R0a..RG-R8 in order (per core.md §34/§36)
+stage: Active — all sprints RG-R0a..RG-R8 have run; RG-R0b/RG-R3/RG-R4 Partial (PO-owned items open); first production release live (v1.0.0.0) as of 2026-07-01
 architecture-audit: READY (audit/2026-06-30-codex-reaudit.md — Path 2 architecture approved, 0 blocking)
 final-approval-audit: READY (audit/2026-07-01-codex.md — 0 blocking, 4 advisory)
 version_context: v0.3.5        # current per docs/VERSION.md — copied exactly, not derived (core.md §26)
@@ -288,6 +288,37 @@ wiring: `output/RG-R4-vercel.md`.
   version produced a real `CONFLICT (content)` on `registry.csv`; a naive "keep both lines" resolution
   was then shown to be caught by `validate-release-registry.sh`'s duplicate check.
 - Plan is now ready for **RG-R8** (first-production bootstrap) per its own dependency chain.
+
+**RG-R8 (2026-07-01, Completed)** — first production release, live: `output/RG-R8-first-production.md`.
+- **PO explicitly approved binding `v0.3.5.0` to commit `b4b5d0b`** (the last real, non-skipped build on
+  `integration` — everything after it was docs-only) after this agent found and flagged that the sprint's
+  own "bind the approved existing build" instruction was ambiguous (the production alias was still on an
+  accidental first-ever deployment; `main` had never been deployed on its own).
+- Seed row `v0.3.5.0` (`bootstrap`) + `docs/releases/approvals/v0.3.5.0-production.md` +
+  `promote.sh v0.3.5.0 production` all ran for real. **`dcx-manager-gov.vercel.app` now serves the exact
+  bound build** — confirmed via `curl` (`200`) and the Vercel API (`get_deployment` shows the unchanged
+  original build timestamps — no rebuild). Registry: `v1.0.0.0` (`promoted-prod`).
+  `docs/VERSION.md` `current` → `v1.0.0.0`.
+- **Carried-forward gap (not fixed here, flagged prominently):** production served the request with a
+  plain `200`, no deployment-protection challenge — AC-RG-4-6 (deployment protection) was never
+  confirmed, and it now matters for real since production is live and public.
+- **Hand-off complete:** every future release follows the normal §2.3 rules; `promote.sh` has no
+  bootstrap-specific code path, so a second bootstrap cannot accidentally run.
+
+## Plan-level status (2026-07-01)
+
+Every sprint (RG-R0a → RG-R8) has run at least once; the plan is **not** fully `Completed` in the
+core.md §24 sense, because three sprints closed **Partial** with concrete PO-owned items still open:
+
+| Sprint | Status | What's still open (PO-owned) |
+|---|---|---|
+| RG-R0b | Partial | Vercel project link/domains/secrets beyond what RG-R4/RG-R5 already did directly; repo currently public pending a private-auth setup |
+| RG-R3 | Partial | Branch protection (required PR review + status checks) not yet applied — needs GitHub admin UI |
+| RG-R4 | Partial | Deployment protection on production not yet confirmed/configured — needs Vercel dashboard access; now materially relevant since production is live (see RG-R8) |
+
+All other sprints (RG-R0a, RG-R1, RG-R2, RG-R5, RG-R7, RG-R8) closed **Completed**; RG-R6 closed
+**Skipped** (premise corrected by PO). **Do not move this plan folder to `completed/`** until the three
+Partial items above are resolved or the PO explicitly accepts them as permanent debt.
 
 ### Retained by policy (intentionally NOT changed)
 - `src/**` — untouched by every RG sprint (D-RG-GIT).

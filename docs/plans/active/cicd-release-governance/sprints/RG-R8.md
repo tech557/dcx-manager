@@ -8,7 +8,8 @@ required-tools: git, Vercel, browser/Playwright
 depends-on: RG-R4, RG-R7
 allowed-writes: docs/releases/registry.csv (one seed row via append-release-row.sh), docs/releases/approvals/v0.3.5.0-production.md, output/RG-R8-*.md
 forbidden-writes: src/**
-status: drafted
+status: Completed
+Status: Completed
 ---
 
 # RG-R8 — First-production bootstrap (one-time)

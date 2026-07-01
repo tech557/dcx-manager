@@ -6,7 +6,7 @@ This folder contains plans that agents are currently executing. Only plans in th
 
 | Plan | Status | Executing | Goal |
 |---|---|---|---|
-| [cicd-release-governance](./cicd-release-governance/README.md) | active (PO-activated 2026-07-01, final-approval audit READY) | RG-R0a → RG-R0b → RG-R1 → RG-R2 → RG-R3 → RG-R4 → RG-R5/RG-R6 → RG-R7 → RG-R8, one sprint at a time | Mechanically-enforced CI/CD + release governance: preview-per-source-change, exact-build promotion gated by PO approval, 4-part versioning, CSV release registry. Docs/tooling/config only — never writes `src/`. |
+| [cicd-release-governance](./cicd-release-governance/README.md) | active — all 9 sprints have run; RG-R0b/RG-R3/RG-R4 **Partial** (PO-owned items open: branch protection, deployment protection, private-repo setup); first production release **live** (`v1.0.0.0`, 2026-07-01) | done: RG-R0a, RG-R1, RG-R2, RG-R5, RG-R7, RG-R8; partial: RG-R0b, RG-R3, RG-R4; skipped (PO decision): RG-R6 | Mechanically-enforced CI/CD + release governance: preview-per-source-change, exact-build promotion gated by PO approval, 4-part versioning, CSV release registry. Real GitHub repo, Vercel project, and Supabase projects now live. Docs/tooling/config only — never wrote `src/`. |
 
 As of 2026-06-30, `requirements-system` and `frontend-polish-v0.3.5` are **completed**
 (`docs/plans/completed/`).

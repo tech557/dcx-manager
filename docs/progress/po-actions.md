@@ -2,7 +2,7 @@
 
 > **Generated** by `scripts/build-po-actions.sh` (also run by `build-log-index.sh`). Do not hand-edit — flip the source log's `PO-Action:` header to `none` when an item is done. See `docs/agent-rules/log-format.md` §3.
 
-_Last generated: 2026-07-01 — open items: 35_
+_Last generated: 2026-07-01 — open items: 36_
 
 ## RS-R3-review — Output audit of RS-R3 + lint fix (OpenCode)
 Source: [`sessions/2026-06-29-claude/19-rs-r3-output-audit.md`](sessions/2026-06-29-claude/19-rs-r3-output-audit.md)
@@ -275,6 +275,16 @@ Source: [`sessions/2026-07-01-claude/010-cicd-release-governance-RG-R5.md`](sess
 |---|---|---|
 | Real production-migration test still pending | Needs an actual production approval + actual migration content, neither of which exists yet (app is still mocked) | No action needed now — will happen naturally with the first real backend release |
 | Confirm `VITE_SUPABASE_*` naming convention | Agent chose the standard Vite convention since no existing convention was found in `src/` | None needed unless you want different names before backend code starts consuming them |
+
+## RG-R8 — First-production bootstrap (one-time)
+Source: [`sessions/2026-07-01-claude/014-cicd-release-governance-RG-R8.md`](sessions/2026-07-01-claude/014-cicd-release-governance-RG-R8.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| **Deployment protection on production is unconfirmed and now matters for real** | Production is live and public (plain `200`, no auth challenge observed); AC-RG-4-6 was never resolved (no MCP/CLI path exists) | Check Vercel dashboard → Project Settings → Deployment Protection for `dcx-manager-gov` |
+| Branch protection (RG-R3) still not applied | Needs GitHub admin UI access | Apply the documented settings in `output/RG-R3-github-ci.md` |
+| Repo still public (RG-R0b) | PO said this was temporary | Set up a durable private-auth path, then flip to private |
+| **Plan should NOT move to `docs/plans/completed/` yet** | 3 sprints (RG-R0b, RG-R3, RG-R4) are Partial with the items above still open | Either resolve them or explicitly accept them as permanent debt before closing the plan |
 
 ## cicd-release-governance — Confirming Re-Audit
 Source: [`sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md`](sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md)
