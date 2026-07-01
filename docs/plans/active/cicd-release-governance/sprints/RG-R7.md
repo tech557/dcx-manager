@@ -8,7 +8,8 @@ required-tools: git, GitHub Actions, Vercel, browser/Playwright
 depends-on: RG-R3, RG-R4, RG-R5, RG-R6
 allowed-writes: scripts/release/* (branch-lint, conflict checks), output/RG-R7-*.md, output/evidence/**
 forbidden-writes: src/**
-status: drafted
+status: Completed
+Status: Completed
 ---
 
 # RG-R7 — Concurrency enforcement + dogfood

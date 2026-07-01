@@ -266,6 +266,29 @@ wiring: `output/RG-R4-vercel.md`.
   exist). OD-RG-06 and OD-RG-09 revised accordingly (see Decisions above).
 - `src/**` untouched; no external resources created or modified this sprint.
 
+**RG-R7 (2026-07-01, Completed — all 7 AC live-proven)** — dogfood: `output/RG-R7-dogfood.md`.
+- New `vercel.json` `ignoreCommand` → `scripts/release/vercel-ignore-build.sh`: **fixed a real gap** —
+  Vercel's git integration was deploying every push regardless of source/non-source classification;
+  "non-source → no preview" was previously only true in the registry's bookkeeping, never in Vercel
+  itself. Fails open on any classification error.
+- New `.github/workflows/branch-lint.yml`: rejects any branch not matching
+  `agent/<session>/<topic>`/`docs/<session>/<topic>` (exempts `main`/`staging`/`integration`).
+  Live-tested against a real bad branch (`feature/bad-branch-name-test`) — rejected, then deleted.
+- **Dogfood A (source, `dogfood/source-probe.txt`):** first attempt's version-assign job failed at
+  `git push` — a real race between a concurrent manual push and the bot's commit within the same
+  session (the `concurrency:` group serializes Actions-vs-Actions, not human-vs-Actions). Retried clean:
+  `v0.4.0.7 → v0.4.1.0` (Iteration bump), real Vercel deployment confirmed `READY` via the API.
+- **Dogfood B (non-source, `dogfood/doc-probe.txt`):** registry correctly stamped a Revision bump, but
+  the Vercel deployment for that exact commit was `READY`, not `CANCELED` — traced to
+  `version-assign.yml` and `vercel-ignore-build.sh` using **different "before" references**
+  (GitHub's per-push `before` vs. Vercel's own `VERCEL_GIT_PREVIOUS_SHA`), which can diverge after an
+  intermediate failed/canceled build. Not a data-integrity bug (fails open → an extra build, never a
+  missed one); documented as a known architectural edge case, not silently passed.
+- AC-RG-7-2 (conflict demo) done **locally, disposable, never pushed**: two branches stamping the same
+  version produced a real `CONFLICT (content)` on `registry.csv`; a naive "keep both lines" resolution
+  was then shown to be caught by `validate-release-registry.sh`'s duplicate check.
+- Plan is now ready for **RG-R8** (first-production bootstrap) per its own dependency chain.
+
 ### Retained by policy (intentionally NOT changed)
 - `src/**` — untouched by every RG sprint (D-RG-GIT).
 - Existing historical logs — never rewritten; `Version:` is additive (§3.4).
