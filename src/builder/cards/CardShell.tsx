@@ -6,6 +6,7 @@ import { useCardBehavior, type CardData } from './useCardBehavior';
 import { useCardDrag } from './useCardDrag';
 import { useCardEffects } from './useCardEffects';
 import { getSelectionInfo } from './cardSelection.helpers';
+import { scrollIntoViewWithinAction } from './cardScroll.helpers';
 import { CardShellContent } from './CardShellContent';
 
 interface CardShellProps extends PropsWithChildren {
@@ -80,7 +81,7 @@ export function CardShell({
   useEffect(() => {
     if (!isExpanded || kind !== 'task') return;
     const timer = setTimeout(() => {
-      elementRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      if (elementRef.current) scrollIntoViewWithinAction(elementRef.current, 'x');
     }, 100);
     return () => clearTimeout(timer);
   }, [isExpanded, kind]);
@@ -88,7 +89,7 @@ export function CardShell({
   useEffect(() => {
     if (!effectiveSelected || kind !== 'task') return;
     const timer = setTimeout(() => {
-      elementRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+      if (elementRef.current) scrollIntoViewWithinAction(elementRef.current, 'x');
     }, 80);
     return () => clearTimeout(timer);
   }, [effectiveSelected, kind]);

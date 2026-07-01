@@ -162,7 +162,7 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
                 }}
                 onClick={(e) => e.stopPropagation()}
                 onDoubleClick={(e) => e.stopPropagation()}
-                className="bg-transparent border border-transparent hover:border-white/10 focus:border-[var(--theme-accent)]/30 hover:bg-white/[0.02] focus:bg-black/30 font-semibold text-dcx-xs text-neutral-200 px-1 py-0 rounded outline-none transition-all w-full truncate focus:text-white"
+                className="bg-transparent border border-transparent hover:border-white/10 focus:border-[var(--theme-accent)]/30 hover:bg-white/[0.02] focus:bg-black/30 font-semibold text-dcx-2xs text-neutral-200 px-1 py-0 rounded outline-none transition-all w-full truncate focus:text-white"
                 title="Click to edit task name"
               />
             </div>

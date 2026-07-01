@@ -53,7 +53,7 @@ export function ActionCard({ action, selected = false, locked = false, onSelect 
               }}
               onClick={(e) => e.stopPropagation()}
               onDoubleClick={(e) => e.stopPropagation()}
-              className="bg-transparent border border-transparent hover:border-white/10 focus:border-[var(--theme-accent)]/30 hover:bg-white/[0.02] focus:bg-black/30 font-bold text-sm text-neutral-200 px-1 py-0.5 rounded outline-none transition-all truncate focus:text-white w-full"
+              className="bg-transparent border border-transparent hover:border-white/10 focus:border-[var(--theme-accent)]/30 hover:bg-white/[0.02] focus:bg-black/30 font-bold text-dcx-xs text-neutral-200 px-1 py-0.5 rounded outline-none transition-all truncate focus:text-white w-full"
               title="Click to edit action name"
             />
           </div>
