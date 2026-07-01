@@ -468,6 +468,17 @@ select {
   box-shadow: var(--shadow-card), var(--glow-accent);
 }
 
+/* Homepage version-card variant — a denser, more tactile treatment layered on top of
+   the shared .glass-card foundation (never overrides the global base). Owns the card's
+   padding/density and a subtle hover lift; colour/glow come from the base + status tokens. */
+.home-version-card {
+  padding: 0.875rem;
+}
+
+.home-version-card:hover {
+  transform: translateY(-1px);
+}
+
 .glass-field {
   background: var(--theme-surface-raised);
   border: 1px solid var(--theme-border);
@@ -535,6 +546,10 @@ select {
   }
 
   .btn-brand:hover {
+    transform: none;
+  }
+
+  .home-version-card:hover {
     transform: none;
   }
 }

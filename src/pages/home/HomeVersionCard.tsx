@@ -1,7 +1,10 @@
 import { useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
 import type { Version } from '@/types/domain';
 import type { VersionStatus } from '@/types/lifecycle';
+import type { ApiAssignedMember } from '@/types/api';
+import { AvatarGroup, type AvatarGroupItem } from '@/ui/atoms';
 
 const STATUS_TOKEN: Record<VersionStatus, string> = {
   'Draft': 'draft',
@@ -10,6 +13,18 @@ const STATUS_TOKEN: Record<VersionStatus, string> = {
   'Approved': 'approved',
   'Superseded': 'superseded',
 };
+
+const ROLE_INITIALS: Record<string, string> = {
+  ICS: 'MS',
+  Strategist: 'ST',
+  Creative: 'CR',
+  Analyst: 'AN',
+  Producer: 'PR',
+};
+
+function memberInitials(member: ApiAssignedMember): string {
+  return ROLE_INITIALS[member.role] ?? member.userId.slice(0, 2).toUpperCase();
+}
 
 function getClientFromMetadata(version: Version): string {
   if (version.metadata && typeof version.metadata === 'object' && !Array.isArray(version.metadata)) {
@@ -27,8 +42,8 @@ function getProjectFromMetadata(version: Version): string {
   return '—';
 }
 
-function formatDate(iso: string | null): string {
-  if (!iso) return '—';
+function formatLaunchDate(iso: string | null): string {
+  if (!iso) return 'TBD';
   return new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
 
@@ -42,6 +57,13 @@ export function HomeVersionCard({ version }: HomeVersionCardProps) {
   const client = getClientFromMetadata(version);
   const project = getProjectFromMetadata(version);
   const cardRef = useRef<HTMLButtonElement>(null);
+
+  const team = version.assignedTeam;
+  const avatarItems: AvatarGroupItem[] = team.map((member) => ({
+    id: member.userId,
+    initials: memberInitials(member),
+    title: `${member.role}: ${member.userId}`,
+  }));
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     const rect = cardRef.current?.getBoundingClientRect();
@@ -58,19 +80,19 @@ export function HomeVersionCard({ version }: HomeVersionCardProps) {
       type="button"
       onClick={() => navigate(`/version/${version.id}`)}
       onMouseMove={handleMouseMove}
-      className="relative w-full text-left glass-card rounded-xl p-4 flex flex-col gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--theme-accent)]"
+      className="home-version-card glass-card relative w-full text-left rounded-xl flex flex-col gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--theme-accent)]"
       aria-label={`Open version ${version.versionNumber} — ${client} ${project}`}
     >
       {/* Mouse-follow radial glow */}
       <div className="mouse-glow" aria-hidden />
 
-      <div className="flex items-start justify-between gap-2">
-        <div className="flex flex-col gap-0.5 min-w-0">
-          <span className="text-dcx-xs font-black text-[var(--theme-text-secondary)] uppercase tracking-widest truncate">{client}</span>
-          <span className="text-dcx-sm font-semibold text-[var(--theme-text-primary)] truncate leading-snug">{project}</span>
-        </div>
+      {/* 1. Client + lifecycle status */}
+      <div className="flex items-center justify-between gap-2">
+        <span className="text-dcx-2xs font-bold uppercase tracking-widest text-[var(--theme-text-secondary)]/70 truncate">
+          {client}
+        </span>
         <span
-          className="status-badge shrink-0 mt-0.5"
+          className="status-badge shrink-0"
           style={{
             color: `var(--status-${tokenKey}-fg)`,
             borderColor: `var(--status-${tokenKey}-border)`,
@@ -80,28 +102,36 @@ export function HomeVersionCard({ version }: HomeVersionCardProps) {
           {version.status}
         </span>
       </div>
-      <div className="flex items-center justify-between gap-2">
-        <span className="text-dcx-2xs font-semibold text-[var(--theme-accent)] tracking-wider font-mono">{version.versionNumber}</span>
-        <span className="text-dcx-3xs text-[var(--theme-text-secondary)]/70 font-mono">{formatDate(version.communicatedDate)}</span>
+
+      {/* 2. Project — primary information */}
+      <h3 className="text-dcx-md-plus font-bold text-[var(--theme-text-primary)] leading-snug truncate">
+        {project}
+      </h3>
+
+      {/* 3. Version number + launch date */}
+      <div className="flex items-center gap-2 text-dcx-2xs">
+        <span className="font-bold tracking-wider text-[var(--theme-accent)]">{version.versionNumber}</span>
+        <span className="h-3 w-px bg-[var(--theme-border)]" aria-hidden />
+        <span className="text-[var(--theme-text-secondary)]/70">{formatLaunchDate(version.communicatedDate)}</span>
       </div>
-      {version.assignedTeam.length > 0 && (
-        <div className="flex items-center gap-1.5">
-          <div className="flex -space-x-1">
-            {version.assignedTeam.slice(0, 3).map((m) => (
-              <div
-                key={m.userId}
-                className="w-5 h-5 rounded-full bg-[var(--theme-accent)]/20 border border-[var(--theme-border)] flex items-center justify-center text-[9px] font-bold text-[var(--theme-accent)] transition-all group-hover:grayscale-0"
-                title={`${m.role}: ${m.userId}`}
-              >
-                {m.role.charAt(0)}
-              </div>
-            ))}
+
+      {/* 4. Assigned team + open affordance */}
+      <div className="mt-0.5 flex items-center justify-between gap-2 border-t border-[var(--theme-border-subtle)] pt-2">
+        {team.length > 0 ? (
+          <div className="flex items-center gap-2 min-w-0">
+            <AvatarGroup items={avatarItems} max={3} size="sm" />
+            <span className="text-dcx-3xs text-[var(--theme-text-secondary)]/60 truncate">
+              {team.length} member{team.length !== 1 ? 's' : ''}
+            </span>
           </div>
-          <span className="text-dcx-3xs text-[var(--theme-text-secondary)]/60">
-            {version.assignedTeam.length} member{version.assignedTeam.length !== 1 ? 's' : ''}
-          </span>
-        </div>
-      )}
+        ) : (
+          <span className="text-dcx-3xs text-[var(--theme-text-secondary)]/40">No crew assigned</span>
+        )}
+        <span className="flex shrink-0 items-center gap-1 text-dcx-2xs font-semibold text-[var(--theme-text-secondary)]/50 transition-colors group-hover:text-[var(--theme-accent)]">
+          Open
+          <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transform-none" />
+        </span>
+      </div>
     </button>
   );
 }

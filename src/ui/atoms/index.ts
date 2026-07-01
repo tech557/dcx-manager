@@ -1,3 +1,5 @@
+export { AvatarGroup } from './AvatarGroup';
+export type { AvatarGroupItem, AvatarGroupProps } from './AvatarGroup';
 export { Badge } from './Badge';
 export type { BadgeProps } from './Badge';
 export { Chip } from './Chip';
