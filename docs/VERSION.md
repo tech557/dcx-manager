@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| current | `v1.1.1.3` |
+| current | `v1.1.1.4` |
 | previous_minor | `v0.2.x` (archived: `docs/archive/v0.2/`) |
 | next_planned | `v0.3.6.0` (next source-code Iteration bump, once RG-R3 CI wiring is live) |
 
