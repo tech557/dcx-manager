@@ -128,8 +128,8 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
           className="flex items-center h-full gap-1.5 w-full"
           id={`task-card-expanded-${task.id}`}
         >
-          {/* Left Side: Channel Icon */}
-          <div className="flex items-center justify-center shrink-0">
+          {/* Left Side: Channel Icon + Date below it (mirrors the collapsed card arrangement) */}
+          <div className="flex flex-col items-center justify-center shrink-0 gap-0.5">
             <div className={`flex items-center justify-center w-5 h-5 rounded-md border transition-all duration-200 shrink-0 ${
               selected
                 ? 'bg-[var(--theme-accent)]/20 border-[var(--theme-accent)]/30 text-[var(--theme-accent)]'
@@ -139,6 +139,22 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
             }`}>
               {React.createElement(IconComponent, { className: 'w-3.5 h-3.5' })}
             </div>
+            {dateDisplay ? (
+              <div className="flex items-center gap-0.5 select-none font-mono leading-none" id={`task-card-date-${task.id}`} title={isLinked ? 'Linked Date' : 'Custom Date'}>
+                {isLinked ? (
+                  <Link2 className="w-2 h-2 text-[var(--theme-accent)]/80 shrink-0" />
+                ) : (
+                  <span className="w-1 h-1 rounded-full bg-neutral-600 shrink-0" />
+                )}
+                <span className={`text-dcx-4xs font-bold tracking-tighter leading-none ${isLinked ? 'text-[var(--theme-accent)]/90' : 'text-neutral-450'}`}>
+                  {dateDisplay}
+                </span>
+              </div>
+            ) : (
+              <div className="flex items-center justify-center select-none" id={`task-card-date-${task.id}`} title="No Date set">
+                <Calendar className="w-2.5 h-2.5 text-neutral-500/80" />
+              </div>
+            )}
           </div>
 
           {/* Center / Stacking Area: Two lines */}
@@ -167,27 +183,9 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
               />
             </div>
 
-            {/* Line 2: Properties (TaskProperties deck + Date) */}
-            <div className="flex items-center justify-between w-full gap-1.5" onClick={(e) => e.stopPropagation()}>
+            {/* Line 2: Properties (date now lives under the channel icon) */}
+            <div className="flex items-center w-full" onClick={(e) => e.stopPropagation()}>
               <TaskProperties task={task} />
-
-              {/* Date Indicator with Calendar/Link Icon */}
-              <div className="flex items-center gap-1 shrink-0 pr-0.5 select-none font-mono" id={`task-card-date-${task.id}`}>
-                {isLinked ? (
-                  <Link2 className="w-2.5 h-2.5 text-[var(--theme-accent)] animate-pulse shrink-0" />
-                ) : (
-                  <Calendar className="w-2 h-2 text-neutral-500 shrink-0" />
-                )}
-                {dateDisplay ? (
-                  <span className={`text-dcx-4xs font-bold tracking-tighter ${isLinked ? 'text-[var(--theme-accent)] font-bold' : 'text-neutral-400'}`} title={isLinked ? "Linked Date" : "Custom Date"}>
-                    {dateDisplay}
-                  </span>
-                ) : (
-                  <span className="text-dcx-4xs font-bold tracking-tighter text-neutral-500" title="No Date set">
-                    No Date
-                  </span>
-                )}
-              </div>
             </div>
           </div>
 
