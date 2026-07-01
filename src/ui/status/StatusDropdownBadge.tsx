@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import type { VersionStatus } from '@/types/lifecycle';
 import { useTheme } from '@/hooks/useTheme';
 import { useToggle } from '@/hooks/useToggle';
+import { ISLAND_LABEL_CLASS } from '@/ui/atoms/labels';
 
 interface StatusDropdownBadgeProps {
   status: VersionStatus;
@@ -87,7 +88,7 @@ export function StatusDropdownBadge({
     <div className="relative" ref={containerRef} id="status-dropdown-container">
       {styleMode === 'minimalist' ? (
         <div className="flex flex-col text-left justify-center select-none">
-          <span className="text-dcx-3xs font-bold tracking-[0.18em] font-sans uppercase text-neutral-400/70 leading-none mb-1 text-left">
+          <span className={`${ISLAND_LABEL_CLASS} mb-1 text-left`}>
             Project Status
           </span>
           <button

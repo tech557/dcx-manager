@@ -1,19 +1,24 @@
-import { AlertCircle, Copy, Paperclip, Users } from 'lucide-react';
+import { AlertCircle, Copy, Users } from 'lucide-react';
 import { CommunicationDateField } from '@/ui/forms/date';
 import { DividerLine } from '@/ui/DividerLine';
 import { Chip } from '@/ui/atoms/Chip';
+import { ISLAND_LABEL_CLASS } from '@/ui/atoms/labels';
 import type { VersionStatus } from '@/types/lifecycle';
 import type { ViewKind } from '@/types/stage.types';
+import type { ApiFileAttachment } from '@/types/api';
 import { CampaignDetailsGroup } from './CampaignDetailsGroup';
 import { StatusDropdownBadge } from '@/ui/status/StatusDropdownBadge';
 import { ViewTabSwitcher } from './ViewTabSwitcher';
+import { MetadataFilesField } from './MetadataFilesField';
+import type { useFilePreview } from './useFilePreview';
 
 interface MetadataDetailsContentProps {
   versionName: string;
   status: VersionStatus;
   communicatedDate: string | null;
   teamCount: number;
-  filesCount: number;
+  attachments: ApiFileAttachment[];
+  filePreview: ReturnType<typeof useFilePreview>;
   currentView: ViewKind;
   isLocked: boolean;
   isDuplicating: boolean;
@@ -22,7 +27,6 @@ interface MetadataDetailsContentProps {
   onDateChange: (date: string) => void;
   onViewChange: (view: ViewKind) => void;
   onDuplicate: () => void;
-  onFilesClick: () => void;
 }
 
 export function MetadataDetailsContent({
@@ -30,7 +34,8 @@ export function MetadataDetailsContent({
   status,
   communicatedDate,
   teamCount,
-  filesCount,
+  attachments,
+  filePreview,
   currentView,
   isLocked,
   isDuplicating,
@@ -39,7 +44,6 @@ export function MetadataDetailsContent({
   onDateChange,
   onViewChange,
   onDuplicate,
-  onFilesClick,
 }: MetadataDetailsContentProps) {
   return (
     <>
@@ -55,6 +59,7 @@ export function MetadataDetailsContent({
           onChange={(date) => onDateChange(date.mode === 'fixed' ? date.date : '')}
           anchorDateStr={communicatedDate || '2026-07-01'}
           label="Launch Window"
+          labelClassName={`${ISLAND_LABEL_CLASS} mb-1`}
           showLinkMode={false}
           disabled={isLocked}
           triggerStyle="minimalist"
@@ -66,16 +71,15 @@ export function MetadataDetailsContent({
           <Users size={12} className="text-[var(--theme-muted)] shrink-0" />
           <span className="text-dcx-xs font-bold font-mono text-white/60">{teamCount}</span>
         </div>
-        <button
-          id="metadata-files-trigger-button"
-          type="button"
-          onClick={onFilesClick}
-          className="flex items-center gap-1.5 hover:text-[var(--theme-accent)] hover:opacity-100 opacity-80 text-white transition cursor-pointer"
-          title={`${filesCount} attachments — Click to view files`}
-        >
-          <Paperclip size={12} className="text-[var(--theme-muted)] shrink-0" />
-          <span className="text-dcx-xs font-bold font-mono text-white/60">{filesCount}</span>
-        </button>
+        <MetadataFilesField
+          attachments={attachments}
+          sessions={filePreview.sessions}
+          closeFile={filePreview.closeFile}
+          minimizeFile={filePreview.minimizeFile}
+          restoreFile={filePreview.restoreFile}
+          handleFileChange={filePreview.handleFileChange}
+          handleRemotePreview={filePreview.handleRemotePreview}
+        />
       </div>
       <DividerLine />
       <ViewTabSwitcher currentView={currentView} onViewChange={onViewChange} />

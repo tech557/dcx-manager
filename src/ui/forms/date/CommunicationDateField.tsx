@@ -12,6 +12,7 @@ interface CommunicationDateFieldProps {
   onChange: (value: ApiTaskDate) => void;
   anchorDateStr: string;
   label?: string;
+  labelClassName?: string;
   showLinkMode?: boolean;
   disabled?: boolean;
   triggerStyle?: 'default' | 'minimalist';
@@ -22,6 +23,7 @@ export function CommunicationDateField({
   onChange,
   anchorDateStr,
   label = 'Communication Date',
+  labelClassName = FIELD_LABEL_CLASS,
   showLinkMode = true,
   disabled = false,
   triggerStyle = 'default',
@@ -102,7 +104,7 @@ export function CommunicationDateField({
 
   return (
     <div id="editor-field-comm-date" className="relative flex select-none flex-col gap-1.5 text-left">
-      {label && <label className={FIELD_LABEL_CLASS}>{label}</label>}
+      {label && <label className={labelClassName}>{label}</label>}
       {trigger}
       {value.mode === 'linked' && triggerStyle === 'default' && (
         <p className={FIELD_HINT_CLASS}>Hold to detach relative date</p>

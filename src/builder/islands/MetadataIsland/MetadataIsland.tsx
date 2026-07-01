@@ -20,7 +20,6 @@ import { useImport } from '@/builder/import/useImport';
 import { MetadataModalsContainer } from './MetadataModalsContainer';
 import { MetadataDetailsContent } from './MetadataDetailsContent';
 import { useFilePreview } from './useFilePreview';
-import { MetadataFilesPopup } from './MetadataFilesPopup';
 import { useToggle } from '@/hooks/useToggle';
 
 interface MetadataIslandProps {
@@ -50,7 +49,6 @@ export function MetadataIsland({
   const [validationIssues, setValidationIssues] = useState<string[]>([]);
   const [isValidationOpen, , openValidation, closeValidation] = useToggle();
   const [isImportOpen, , openImport, closeImport] = useToggle();
-  const [isFilesOpen, , openFiles, closeFiles] = useToggle();
 
   const filePreview = useFilePreview();
 
@@ -66,10 +64,11 @@ export function MetadataIsland({
   const siblingsQuery = useVersionsQuery(dcxId);
   const siblings = siblingsQuery.data || [];
 
-  const versionName = versionData ? `v${versionData.versionNumber}` : `Version ${versionId}`;
+  // versionNumber already carries its "V" (e.g. "V1"); pass it raw so the pill isn't doubled.
+  const versionName = versionData?.versionNumber ?? `v${versionId}`;
   const status: VersionStatus = versionData?.status || 'Draft';
   const teamCount = versionData?.assignedTeam?.length ?? 0;
-  const filesCount = versionData?.attachments?.length ?? 0;
+  const attachments = versionData?.attachments ?? [];
 
   const handleDateChange = async (dateVal: string) => {
     try {
@@ -155,7 +154,8 @@ export function MetadataIsland({
             status={status}
             communicatedDate={versionData?.communicatedDate || null}
             teamCount={teamCount}
-            filesCount={filesCount}
+            attachments={attachments}
+            filePreview={filePreview}
             currentView={currentView}
             isLocked={isLocked}
             isDuplicating={isDuplicating}
@@ -164,7 +164,6 @@ export function MetadataIsland({
             onDateChange={handleDateChange}
             onViewChange={onViewChange}
             onDuplicate={handleDuplicate}
-            onFilesClick={openFiles}
           />
         </motion.div>
 
@@ -186,13 +185,6 @@ export function MetadataIsland({
         isValidationOpen={isValidationOpen}
         setIsValidationOpen={(open) => (open ? openValidation() : closeValidation())}
         validationIssues={validationIssues}
-      />
-
-      <MetadataFilesPopup
-        isOpen={isFilesOpen}
-        onClose={closeFiles}
-        attachments={versionData?.attachments ?? []}
-        {...filePreview}
       />
     </>
   );
