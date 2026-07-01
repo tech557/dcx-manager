@@ -24,12 +24,13 @@ export function TaskSection1({ draftData, updateDraftField, anchorDateStr }: Tas
         as="textarea"
         id="task-message-field"
         label="Draft Message Text"
+        hint="The core message body for this communication. Structure it as it should read to the recipient."
         value={draftData.message || ''}
         onChange={(event) => updateDraftField('message', event.target.value)}
         placeholder="Enter draft message structure..."
         rows={3}
         size="lg"
-        className="bg-neutral-900/60 hover:bg-neutral-900 resize-y select-text font-sans"
+        className="resize-y select-text font-sans leading-relaxed"
       />
 
       <RoutingDirectorySection draftData={draftData} updateDraftField={updateDraftField} />

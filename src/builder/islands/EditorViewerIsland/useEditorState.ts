@@ -137,6 +137,13 @@ export function useEditorState() {
     useBuilderStore.getState().discardSessionDraft(activeNode.id, initialData);
   };
 
+  // Collapse the editor to its pill. Minimizing clears activeTaskId (keeping the
+  // draft session) so the focus-sync effect doesn't immediately re-open the panel.
+  const closeEditor = () => {
+    if (activeNode) minimizeSessionStore(activeNode.id);
+    setFocusedNodeId(null);
+  };
+
   const { pendingAction, setPendingAction, setView, setSelectedNodeIds } = stage;
 
   const handleProceedPending = (shouldSave: boolean) => {
@@ -163,6 +170,7 @@ export function useEditorState() {
     activeTab,
     setActiveTab,
     activeNode,
+    closeEditor,
     isEditorDirty,
     setIsEditorDirty,
     sessions,

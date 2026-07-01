@@ -21,7 +21,7 @@ interface TaskCardProps {
 }
 
 export function TaskCard({ task, selected = false, locked = false, onSelect, disableExpand = false }: TaskCardProps) {
-  const { expandedNodeIds, setFocusedNodeId } = useStageContext();
+  const { expandedNodeIds } = useStageContext();
   const isExpanded = !disableExpand && expandedNodeIds.includes(task.id);
   const anchorRef = useRef<HTMLDivElement>(null);
   const behavior = useCardBehavior({ kind: 'task', data: task, selected, locked, onSelect });
@@ -72,7 +72,6 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
           selected={selected}
           locked={locked}
           onSelect={onSelect}
-          onLongPress={() => setFocusedNodeId(task.id)}
           onClick={openPopup}
           className="w-14 h-[60px] flex-none relative group/card overflow-hidden select-none px-1.5"
         >
@@ -125,7 +124,6 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
         selected={selected}
         locked={locked}
         onSelect={onSelect}
-        onLongPress={() => setFocusedNodeId(task.id)}
         onClick={openPopup}
         className="w-full h-[60px] relative group/card select-none px-2.5 py-1.5"
       >

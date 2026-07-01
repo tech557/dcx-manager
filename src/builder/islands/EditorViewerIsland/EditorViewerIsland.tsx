@@ -17,6 +17,7 @@ export function EditorViewerIsland() {
   const {
     nodes,
     setFocusedNodeId,
+    closeEditor,
     selectedEditableNodeId,
     isLocked,
     anchorDateStr,
@@ -137,7 +138,7 @@ export function EditorViewerIsland() {
                 displayName={draftData ? ('name' in draftData ? draftData.name : draftData.label) : ''}
                 isLocked={isLocked}
                 readinessFeedback={readinessFeedback}
-                onClose={() => setFocusedNodeId(null)}
+                onClose={closeEditor}
                 onOpenReadinessModal={() => setIsReadinessModalOpen(true)}
                 activeTab={activeTab}
                 setActiveTab={setActiveTab}
@@ -159,12 +160,12 @@ export function EditorViewerIsland() {
                 </fieldset>
               </section>
 
-              <footer className="border-t border-white/10 p-4 shrink-0 flex gap-2 justify-end">
+              <footer className="border-t border-white/10 p-4 shrink-0 flex items-center gap-2 justify-end">
                 <button
                   type="button"
                   disabled={!isEditorDirty}
                   onClick={handleDiscard}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all ${isEditorDirty ? 'border-white/10 hover:border-white/20 text-white/80 hover:bg-white/5 cursor-pointer' : 'border-white/5 text-white/30 cursor-not-allowed'}`}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${isEditorDirty ? 'text-white/60 hover:text-white/90 hover:bg-white/[0.06] cursor-pointer' : 'text-white/25 cursor-not-allowed'}`}
                 >
                   Discard
                 </button>
@@ -172,7 +173,7 @@ export function EditorViewerIsland() {
                   type="button"
                   disabled={!isEditorDirty}
                   onClick={handleSave}
-                  className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${isEditorDirty ? 'bg-sky-500 hover:bg-sky-400 text-black shadow-md cursor-pointer' : 'bg-white/5 text-white/30 cursor-not-allowed'}`}
+                  className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${isEditorDirty ? 'bg-[var(--theme-accent)] hover:brightness-110 text-black shadow-[0_2px_12px_var(--theme-accent-medium)] cursor-pointer' : 'bg-white/5 text-white/25 cursor-not-allowed'}`}
                 >
                   <Save className="w-3.5 h-3.5" />
                   Save

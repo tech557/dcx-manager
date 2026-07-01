@@ -5,6 +5,7 @@ import { useTheme } from '@/hooks/useTheme';
 import { DatePickerPopup } from './DatePickerPopup';
 import { formatFriendlyDate, getDateForWeekAndDay, getDayIndexForOffset } from './date.utils';
 import { useToggle } from '@/hooks/useToggle';
+import { FIELD_HINT_CLASS, FIELD_LABEL_CLASS } from '@/ui/atoms/Input';
 
 interface CommunicationDateFieldProps {
   value: ApiTaskDate;
@@ -85,9 +86,11 @@ export function CommunicationDateField({
       disabled={disabled}
       className={triggerStyle === 'minimalist'
         ? 'flex items-center gap-1.5 text-left hover:text-[var(--theme-accent)] disabled:opacity-50'
-        : `relative overflow-hidden w-full px-3 py-2.5 rounded-xl text-left text-dcx-sm font-mono border font-bold flex items-center justify-between ${
-            isDark ? 'bg-neutral-950/40 border-white/5 text-neutral-200' : 'bg-neutral-100 border-black/5 text-neutral-700'
-          } ${isOpen ? 'ring-1 ring-[var(--theme-accent)]/20 border-[var(--theme-accent)]/30' : ''}`}
+        : `relative overflow-hidden w-full px-3 py-2.5 rounded-xl text-left text-dcx-sm font-mono border font-bold flex items-center justify-between transition-all disabled:cursor-not-allowed disabled:opacity-45 ${
+            isDark
+              ? 'bg-white/[0.02] border-[var(--theme-border-subtle)] text-neutral-200 enabled:hover:border-white/15 enabled:hover:bg-white/[0.04]'
+              : 'bg-neutral-100 border-black/5 text-neutral-700 enabled:hover:border-black/15'
+          } ${isOpen ? 'ring-2 ring-[var(--theme-accent)]/15 border-[var(--theme-accent)]/50 bg-white/[0.05]' : ''}`}
     >
       <span className="truncate">{displayValue}</span>
       {icon}
@@ -98,11 +101,11 @@ export function CommunicationDateField({
   );
 
   return (
-    <div id="editor-field-comm-date" className="relative select-none text-left">
-      {label && <span className="text-dcx-3xs font-bold tracking-[0.18em] uppercase text-neutral-400/70 block mb-1">{label}</span>}
+    <div id="editor-field-comm-date" className="relative flex select-none flex-col gap-1.5 text-left">
+      {label && <label className={FIELD_LABEL_CLASS}>{label}</label>}
       {trigger}
       {value.mode === 'linked' && triggerStyle === 'default' && (
-        <span className="text-dcx-3xs opacity-40 font-mono block ml-1">Hold to detach relative date</span>
+        <p className={FIELD_HINT_CLASS}>Hold to detach relative date</p>
       )}
       {isOpen && (
         <DatePickerPopup
