@@ -168,6 +168,7 @@
   --dim-builder-footer: clamp(64px, 5.28vw, 96px);         /* ~68px@1280→76px@1440→96px */
   --dim-selection-max-width: clamp(320px, 29.17vw, 560px); /* ~373px@1280→420px@1440→560px */
 
+  --text-5xs: 0.375rem;
   --text-4xs: 0.4375rem;
   --text-3xs: 0.5rem;
   --text-3xs-plus: 0.53125rem;

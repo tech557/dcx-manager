@@ -2,6 +2,7 @@
 
 @theme {
   --font-sans: "Gilroy";
+  --font-size-dcx-5xs: var(--text-5xs);
   --font-size-dcx-4xs: var(--text-4xs);
   --font-size-dcx-3xs: var(--text-3xs);
   --font-size-dcx-3xs-plus: var(--text-3xs-plus);
