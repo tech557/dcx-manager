@@ -1,4 +1,4 @@
-import { Bot, LayoutTemplate, ListPlus, Plus, Rows3 } from 'lucide-react';
+import { Bot, ListPlus, Plus, Rows3 } from 'lucide-react';
 import { useState, type DragEvent } from 'react';
 import { useBuilderActions } from '@/actions/useBuilderActions';
 import { TaskCreationFlow } from '@/builder/islands/TaskCreationFlow/TaskCreationFlow';
@@ -143,14 +143,6 @@ export function KanbanBuilderIsland({ versionId, phases, onPaletteDragStart, onP
                   );
                 })}
               </motion.div>
-
-                {/* Template button — REQ-TPL-001 */}
-                <InlineIslandButton
-                  label="Template"
-                  icon={LayoutTemplate}
-                  onClick={toggleTemplate}
-                  title="Browse and apply project templates"
-                />
 
               {/* Third vertical divider separating the standby AI Section */}
               <motion.div

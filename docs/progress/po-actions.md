@@ -2,7 +2,7 @@
 
 > **Generated** by `scripts/build-po-actions.sh` (also run by `build-log-index.sh`). Do not hand-edit — flip the source log's `PO-Action:` header to `none` when an item is done. See `docs/agent-rules/log-format.md` §3.
 
-_Last generated: 2026-07-01 — open items: 36_
+_Last generated: 2026-07-01 — open items: 51_
 
 ## RS-R3-review — Output audit of RS-R3 + lint fix (OpenCode)
 Source: [`sessions/2026-06-29-claude/19-rs-r3-output-audit.md`](sessions/2026-06-29-claude/19-rs-r3-output-audit.md)
@@ -212,6 +212,68 @@ Source: [`sessions/2026-06-30-codex/019-hv-discovery-output-review.md`](sessions
 |---|---|---|
 | Resolve HV discovery review blockers | The review found route, data-source, sign-off, graph-governance, and logging issues that can block HV-1/HV-2 execution. | Review `output-review/2026-06-30-codex-HV-1-HV-2-discovery-review.md`; revise/sign off before HV-1/HV-2 implementation. |
 
+## cicd-release-governance — Output-review remediation + plan closeout
+Source: [`sessions/2026-07-01-claude-02/001-cicd-release-governance-output-review-remediation.md`](sessions/2026-07-01-claude-02/001-cicd-release-governance-output-review-remediation.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Branch protection (RG-R3, AC-RG-3-1/4/5) | Needs repo admin; agent token is `admin:false` | GitHub → repo Settings → Branches: require PR review + status checks on `main`/`staging`/`integration`; enable "Require review from Code Owners" so `CODEOWNERS` activates |
+| Production deployment protection (RG-R4, AC-RG-4-6) | Vercel dashboard only; no MCP/CLI path exists | Vercel → project `dcx-manager-gov` → Settings → Deployment Protection: decide + apply the production posture |
+| Repo privacy + custom-domain DNS (RG-R0b/RG-R4) | Needs repo admin + DNS access to `dotment.com` | GitHub → make `tech557/dcx-manager` private + wire private-auth; add DNS for `dcx.dotment.com` / `staging.dcx.dotment.com` when granted |
+
+## BE3-R5b — Live CI data capture
+Source: [`sessions/2026-07-01-claude-03/007-BE3-R5b-live-capture.md`](sessions/2026-07-01-claude-03/007-BE3-R5b-live-capture.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| CI credentials for live capture | `backend-capture.yml` needs GitHub Actions `contents: write` + a source-change preview to fire on `deployment_status` | grant/confirm Actions write; push a source change to produce a preview |
+| Registry capture-reference column | registry has no capture field; `notes` pre-filled by version-assign; sprint forbids adding a column; `patch-release-row.sh` won't overwrite non-empty | decide: add a `capture_ref` column (PO-approved schema change) vs. rely on `<version>` path as join key |
+
+## BE3-R6 — Readiness synthesis & gate
+Source: [`sessions/2026-07-01-claude-03/008-BE3-R6-readiness-gate.md`](sessions/2026-07-01-claude-03/008-BE3-R6-readiness-gate.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Requirement intake for 8 backend manifestations | req:completion-gate FAIL blocks G6/readiness; §35b forbids silent linking | run dcx-requirement-intake/req:propose → PO sign-off (capture-sink + scripts/backend/* → REQ-BE-*/REQ-GOV-TRACE-001-BACKEND) |
+| Live capture (shared w/ R5b) | G5 FAIL until real payloads accumulate | grant CI creds; run R5b live to ≥3 payloads/route; then re-run R6 |
+
+## Codex output-review remediation — backend-discovery-v3
+Source: [`sessions/2026-07-01-claude-03/009-codex-output-review-remediation.md`](sessions/2026-07-01-claude-03/009-codex-output-review-remediation.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Concurrent UI edits in shared tree | 4 files (Input.tsx, CommunicationDateField.tsx, EditorViewerIsland/*) modified by a parallel frontend-polish process 2026-07-01 12:03–12:04 — not part of this plan | ensure they are attributed/committed to their own workstream, not backend-discovery-v3 |
+| (Carried) live capture + requirement intake | G5/G6 still fail — gate remains NOT READY | run R5b live to ≥3 organic payloads/route; run requirement intake for the 8 backend manifestations |
+
+## Endpoint & integration overview for PO review
+Source: [`sessions/2026-07-01-claude-03/010-endpoint-integration-overview-for-po.md`](sessions/2026-07-01-claude-03/010-endpoint-integration-overview-for-po.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Confirm 4 product-model points | need PO intent to finalize the implementation sprint | review docs/backend/endpoint-integration-overview.md §"confirm at the implementation-sprint draft": (1) create-via-duplicate only? (2) workspace vs DCX-scoped access? (3) files/attachments in v1? (4) AI/ClickUp stay stubs? |
+
+## Draft the production-api-client-switch implementation plan
+Source: [`sessions/2026-07-01-claude-03/011-draft-production-api-client-switch.md`](sessions/2026-07-01-claude-03/011-draft-production-api-client-switch.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Audit + activate decision | drafted plan cannot execute until audited READY + PO activation, and only after backend-discovery-v3 = READY | run `dcx-plan-audit` on the drafted plan; activate when both conditions hold |
+| Confirm 4 product-model points | drive PAC-R0/PAC-R2 scope | confirm at audit/activation: create-via-duplicate (OD-PAC-01), workspace-scoped access, files scope, ClickUp/AI stubs |
+
+## Revise production-api-client-switch per Codex audit
+Source: [`sessions/2026-07-01-claude-03/012-revise-pac-plan-per-codex-audit.md`](sessions/2026-07-01-claude-03/012-revise-pac-plan-per-codex-audit.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Re-audit the revised plan | verdict was NEEDS REVISION; blockers now addressed | run `dcx-plan-audit` again → expect READY; then two-stage activation once backend-discovery-v3 = READY |
+
+## PAC-R0 — Prerequisites, PO confirmations & switch architecture
+Source: [`sessions/2026-07-01-claude-05/002-production-api-client-switch-PAC-R0.md`](sessions/2026-07-01-claude-05/002-production-api-client-switch-PAC-R0.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Sign off 3 queued `REQ-BE-*` proposals | ID-lock rule (audit blocking #1): PAC-R1..R6 carry placeholder Requirement Trace fields and legally cannot execute until these are PO-signed, minting real node IDs | Run `npm run req:apply-after-signoff -- --id <PRP-id> --signoff <ref>` for each of `PRP-2026-07-01-create-node-REQ-BE-{SCHEMA,AUTH,API}-001`, or direct the executing agent to do so once you approve |
+
 ## Activate cicd-release-governance plan + RG-R0a — Discovery & capability report
 Source: [`sessions/2026-07-01-claude/002-cicd-release-governance-activate-RG-R0a.md`](sessions/2026-07-01-claude/002-cicd-release-governance-activate-RG-R0a.md)
 
@@ -292,4 +354,55 @@ Source: [`sessions/2026-07-01-codex/001-cicd-release-governance-confirming-reaud
 | Item | Why it needs the PO | Suggested action |
 |---|---|---|
 | Activate `cicd-release-governance` when ready | Audit verdict is READY; activation is a PO lifecycle decision | Move `docs/plans/drafted/cicd-release-governance/` to `docs/plans/active/` when you want agents to begin RG-R0a → RG-R8 |
+
+## BE3 — Backend Discovery v3 Plan Audit
+Source: [`sessions/2026-07-01-codex/002-backend-discovery-v3-plan-audit.md`](sessions/2026-07-01-codex/002-backend-discovery-v3-plan-audit.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| BE3 plan is not ready to activate | Audit found 5 blocking issues, including stale `version_context` and BE3-R5 executable-gate problems | Ask the plan author to revise, then request re-audit before moving to `active/` |
+
+## cicd-release-governance — Output Review
+Source: [`sessions/2026-07-01-codex/003-cicd-release-governance-output-review.md`](sessions/2026-07-01-codex/003-cicd-release-governance-output-review.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Plan output needs revision before close | Output review found stale version context, contradictory sprint statuses, missing stable promotion URLs in the registry, stale README baseline text, and tooling-state mismatches | Decide whether to have an agent apply the output-review fixes now; keep the plan active until RG-R0b/RG-R3/RG-R4 Partial items are resolved or accepted as debt |
+
+## BE3 — Backend Discovery v3 Re-Audit
+Source: [`sessions/2026-07-01-codex/004-backend-discovery-v3-reaudit.md`](sessions/2026-07-01-codex/004-backend-discovery-v3-reaudit.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| BE3 plan still not ready to activate | Re-audit found 3 remaining blocking issues: version reconciliation, R5a flag-off assertion mechanics, and R6 changed-file gate syntax | Revise those three items, then request another re-audit before moving BE3 to `active/` |
+
+## BE3 — Backend Discovery v3 Re-Audit 2
+Source: [`sessions/2026-07-01-codex/005-backend-discovery-v3-reaudit-2.md`](sessions/2026-07-01-codex/005-backend-discovery-v3-reaudit-2.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| BE3 plan still not ready to activate | Re-audit found 1 remaining blocking issue: BE3-R5b requires patching `docs/releases/registry.csv`, but that file is not in BE3-R5b `allowed-writes` | Add `docs/releases/registry.csv` to BE3-R5b `allowed-writes` and "Files likely affected", limiting the change to the matching `version` row's capture reference; then request one more quick re-audit |
+
+## BE3 — Backend discovery output review
+Source: [`sessions/2026-07-01-codex/007-backend-discovery-v3-output-review.md`](sessions/2026-07-01-codex/007-backend-discovery-v3-output-review.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Backend discovery output findings | The scorecard is NOT READY and the review found stale/incorrect evidence that should be corrected before handoff | Fix the P1/P2 findings in `output-review/2026-07-01-codex-output-review.md`, then re-run BE3-R6 |
+
+## BE3 — Backend discovery changed-output re-audit
+Source: [`sessions/2026-07-01-codex/008-backend-discovery-v3-output-reaudit.md`](sessions/2026-07-01-codex/008-backend-discovery-v3-output-reaudit.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Remaining BE3 readiness blockers | G5 live organic capture and G6 requirement intake still keep the plan NOT READY | Continue with live R5b capture and PO-gated requirement intake before re-running R6 |
+| Minor R5b follow-up cleanup | R5b follow-up text still points to the old app-hook tuning idea, though the remaining missing route is specifically the status transition probe | Update the follow-up wording when doing the next BE3 cleanup pass |
+
+## PAC — production-api-client-switch re-audit
+Source: [`sessions/2026-07-01-codex/009-production-api-client-switch-reaudit.md`](sessions/2026-07-01-codex/009-production-api-client-switch-reaudit.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| PAC activation decision | Re-audit verdict is READY, but activation is still PO-gated and backend-discovery-v3 must be READY first | Activate PAC-R0 only when ready; later activate PAC-R1..R6 after PAC-R0 produces signed IDs and BE3 is READY |
+| Version metadata drift | Current `docs/VERSION.md` is v1.0.1.1 while `metadata.json` still names v1.0.1.0; PAC README also still has draft-time `version_context: v1.0.1.0` | Resolve/accept metadata drift and re-copy current version into PAC frontmatter at activation |
 

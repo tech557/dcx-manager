@@ -66,9 +66,6 @@ export function SelectionLabel({
           title={isPresentationActive ? "Click to exit presentation mode" : "Click to enter presentation mode"}
         >
           <span>{natureLabel}</span>
-          <span className="text-dcx-2xs opacity-75 px-1 py-0.5 rounded bg-white/10 text-white font-normal uppercase tracking-wider font-mono scale-90">
-            {isPresentationActive ? 'Active' : 'Present'}
-          </span>
         </button>
       ) : (
         <span className={`text-dcx-xs font-bold font-sans tracking-tight block leading-none ${!hasSelection ? 'opacity-40' : 'text-[var(--theme-accent)]'}`}>
