@@ -311,13 +311,33 @@ mkdir -p "$ALIAS_TMP/docs/releases" "$ALIAS_TMP/scripts/release"
 echo "version,change_class,commit_sha,branch,session_folder,clickup_task,deployment_id,preview_url,staging_url,production_url,status,approved_for,approved_by,approved_at,gates,notes" > "$ALIAS_TMP/docs/releases/registry.csv"
 printf '"v9.9.9","source","abc123","integration","ci","","","https://example-preview.vercel.app","","","verified","","","","","test row"\n' >> "$ALIAS_TMP/docs/releases/registry.csv"
 cp "$RELEASE_DIR/alias-preview.sh" "$ALIAS_TMP/scripts/release/"
-(cd "$ALIAS_TMP" && PROMOTE_ALIAS_CMD="echo STUB-ALIAS-CALL" bash scripts/release/alias-preview.sh v9.9.9) > /tmp/alias-preview.log 2>&1
+
+# Stub scripts mimicking the two real Vercel CLI behaviors this script must handle: a normal success
+# (prints "Success!"), and the confirmed CLI bug where it prints an error but still exits 0.
+cat > "$ALIAS_TMP/stub-success.sh" <<'EOF'
+#!/usr/bin/env bash
+echo "STUB-ALIAS-CALL $*"
+echo "> Success! aliased."
+EOF
+cat > "$ALIAS_TMP/stub-silent-fail.sh" <<'EOF'
+#!/usr/bin/env bash
+echo "STUB-ALIAS-CALL $*"
+echo "Error: something went wrong"
+exit 0
+EOF
+chmod +x "$ALIAS_TMP/stub-success.sh" "$ALIAS_TMP/stub-silent-fail.sh"
+
+(cd "$ALIAS_TMP" && PROMOTE_ALIAS_CMD="bash $ALIAS_TMP/stub-success.sh" bash scripts/release/alias-preview.sh v9.9.9) > /tmp/alias-preview.log 2>&1
 alias_preview_code=$?
-assert_exit_zero "alias-preview.sh resolves the registry row and calls the alias command (stubbed)" "$alias_preview_code"
+assert_exit_zero "alias-preview.sh resolves the registry row and calls the alias command (stubbed success)" "$alias_preview_code"
 grep -q "STUB-ALIAS-CALL https://example-preview.vercel.app dcx-manager-gov-v9-9-9.vercel.app" /tmp/alias-preview.log && alias_slug_ok=0 || alias_slug_ok=1
 assert_exit_zero "alias slug correctly converts dots to dashes (v9.9.9 -> v9-9-9)" "$alias_slug_ok"
 
-(cd "$ALIAS_TMP" && PROMOTE_ALIAS_CMD="echo STUB-ALIAS-CALL" bash scripts/release/alias-preview.sh v0.0.0.missing) > /tmp/alias-missing.log 2>&1
+(cd "$ALIAS_TMP" && PROMOTE_ALIAS_CMD="bash $ALIAS_TMP/stub-silent-fail.sh" bash scripts/release/alias-preview.sh v9.9.9) > /tmp/alias-silent-fail.log 2>&1
+alias_silent_fail_code=$?
+assert_exit_nonzero "alias-preview.sh treats a 0-exit-but-no-Success! output as a failure (real Vercel CLI bug)" "$alias_silent_fail_code"
+
+(cd "$ALIAS_TMP" && PROMOTE_ALIAS_CMD="bash $ALIAS_TMP/stub-success.sh" bash scripts/release/alias-preview.sh v0.0.0.missing) > /tmp/alias-missing.log 2>&1
 alias_missing_code=$?
 assert_exit_nonzero "alias-preview.sh refuses a version with no registry row" "$alias_missing_code"
 

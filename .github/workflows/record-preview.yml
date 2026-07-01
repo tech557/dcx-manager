@@ -9,10 +9,15 @@ name: Record preview deployment
 # storing it would be misleading. promote.sh instead resolves the real Vercel deployment ID live via
 # the Vercel API/MCP from this stored preview_url at promotion time (get_deployment accepts a hostname).
 #
-# Also creates a friendly per-version alias (e.g. dcx-manager-gov-v0-4-1-0.vercel.app) so the version
-# number is visible directly in the Vercel dashboard/URL bar, not only in docs/releases/registry.csv.
-# Requires a `VERCEL_TOKEN` repository secret (PO-added; no MCP/CLI path exists to create one — see
-# docs/releases/README.md). If the secret is absent, this step logs and skips (never fails the job).
+# Also creates a friendly per-version alias (e.g. dcx-manager-gov-v0-4-1-0.vercel.app) via
+# scripts/release/alias-preview.sh, so the version number is visible directly in the Vercel
+# dashboard/URL bar, not only in docs/releases/registry.csv. Requires a `VERCEL_TOKEN` repository
+# secret (PO-added; no MCP/CLI path exists to create one — see docs/releases/README.md). If the secret
+# is absent, this step logs and skips (never fails the job). alias-preview.sh itself verifies the
+# Vercel CLI's own output says "Success!" rather than trusting its exit code — the CLI has a confirmed
+# bug where `alias set` can exit 0 on failure (e.g. an empty/invalid deployment argument); this is what
+# caused a real silent failure found live, 2026-07-01, when this step reported "success" in the Actions
+# UI but the alias was never actually created.
 on:
   deployment_status:
 
@@ -66,10 +71,7 @@ jobs:
             echo "VERCEL_TOKEN secret not set — skipping friendly alias (see docs/releases/README.md)."
             exit 0
           fi
-          SLUG="$(echo "${{ steps.find.outputs.version }}" | tr '.' '-')"
-          ALIAS="dcx-manager-gov-${SLUG}.vercel.app"
-          npx --yes vercel alias set "${{ steps.preview.outputs.preview_url }}" "$ALIAS" --scope dot-techs-projects --token "$VERCEL_TOKEN"
-          echo "Aliased ${{ steps.find.outputs.version }} -> $ALIAS"
+          bash scripts/release/alias-preview.sh "${{ steps.find.outputs.version }}"
 
       - name: Commit if changed
         if: steps.find.outputs.version != ''

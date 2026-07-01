@@ -3,9 +3,9 @@
 # row (e.g. dcx-manager-gov-v0-4-1-0.vercel.app -> that version's preview_url). Idempotent: re-running
 # for the same version just re-points the same alias to the same URL (no-op).
 #
-# CI does this automatically via .github/workflows/record-preview.yml once VERCEL_TOKEN is set as a
-# repo secret. Use this script to backfill versions stamped before that secret existed, or to run
-# locally with an already-authenticated Vercel CLI session (no VERCEL_TOKEN needed here).
+# Called both by CI (.github/workflows/record-preview.yml, passing VERCEL_TOKEN) and manually/locally
+# (with an already-authenticated Vercel CLI session — VERCEL_TOKEN not needed then). Single
+# implementation, not duplicated logic, so the output-verification fix below applies everywhere.
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -48,5 +48,20 @@ fi
 SLUG="$(echo "$VERSION" | tr '.' '-')"
 ALIAS="${VERCEL_PROJECT}-${SLUG}.vercel.app"
 
-$ALIAS_CMD "$PREVIEW_URL" "$ALIAS" --scope "$VERCEL_SCOPE"
+# The Vercel CLI has a real, confirmed bug: `vercel alias set` can exit 0 even when it fails (e.g. an
+# empty/invalid deployment argument prints "Error: ..." to stdout but still returns exit code 0).
+# Never trust the exit code alone — verify the command's own output actually says "Success!".
+# (Deliberately not a bash array for the optional --token arg: an empty-array reference under `set -u`
+# throws "unbound variable" on bash < 4.4, which macOS still ships by default — a second real bug found
+# while fixing the first.)
+if [ -n "${VERCEL_TOKEN:-}" ]; then
+  OUTPUT="$($ALIAS_CMD "$PREVIEW_URL" "$ALIAS" --scope "$VERCEL_SCOPE" --token "$VERCEL_TOKEN" 2>&1)"
+else
+  OUTPUT="$($ALIAS_CMD "$PREVIEW_URL" "$ALIAS" --scope "$VERCEL_SCOPE" 2>&1)"
+fi
+echo "$OUTPUT"
+if ! echo "$OUTPUT" | grep -qi "Success!"; then
+  echo "REFUSED: 'vercel alias set' did not report Success — treating as a failure regardless of its exit code (known CLI bug)." >&2
+  exit 1
+fi
 echo "Aliased $VERSION -> $ALIAS -> $PREVIEW_URL"
