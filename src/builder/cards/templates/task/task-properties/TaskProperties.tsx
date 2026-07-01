@@ -68,7 +68,7 @@ export function TaskProperties({ task }: TaskPropertiesProps) {
         <button
           ref={compTriggerRef}
           onClick={() => setActivePopover(activePopover === 'comp' ? null : 'comp')}
-          className={`w-[18px] h-[18px] flex items-center justify-center rounded-full border transition-all outline-none cursor-pointer ${
+          className={`w-4 h-4 flex items-center justify-center rounded-full border transition-all outline-none cursor-pointer ${
             task.compositionId 
               ? 'bg-[var(--theme-accent)]/10 border-[var(--theme-accent)]/30 text-[var(--theme-accent)]' 
               : 'bg-white/5 border-white/10 hover:border-white/20 text-neutral-400 hover:text-neutral-200'
@@ -76,14 +76,14 @@ export function TaskProperties({ task }: TaskPropertiesProps) {
           title={`Layout: ${compLabel}`}
           id={`quick-edit-trigger-layout-${task.id}`}
         >
-          <Layers className="w-2.5 h-2.5" />
+          <Layers className="w-2 h-2" />
         </button>
 
         {/* 2. Specs Button */}
         <button
           ref={specsTriggerRef}
           onClick={() => setActivePopover(activePopover === 'specs' ? null : 'specs')}
-          className={`w-[18px] h-[18px] flex items-center justify-center rounded-full border transition-all outline-none cursor-pointer ${
+          className={`w-4 h-4 flex items-center justify-center rounded-full border transition-all outline-none cursor-pointer ${
             task.specsState?.status === 'filled'
               ? 'bg-[var(--theme-accent)]/15 border-[var(--theme-accent)]/30 text-[var(--theme-accent)]'
               : task.specsState?.status === 'not-needed'
@@ -93,14 +93,14 @@ export function TaskProperties({ task }: TaskPropertiesProps) {
           title={`Specs: ${task.specsState?.status || 'empty'}`}
           id={`quick-edit-trigger-specs-${task.id}`}
         >
-          <FileText className="w-2.5 h-2.5" />
+          <FileText className="w-2 h-2" />
         </button>
 
         {/* 3. Data Button */}
         <button
           ref={missingTriggerRef}
           onClick={() => setActivePopover(activePopover === 'missing' ? null : 'missing')}
-          className={`w-[18px] h-[18px] flex items-center justify-center rounded-full border transition-all outline-none cursor-pointer ${
+          className={`w-4 h-4 flex items-center justify-center rounded-full border transition-all outline-none cursor-pointer ${
             task.missingDataState?.status === 'filled'
               ? 'bg-[var(--theme-accent)]/15 border-[var(--theme-accent)]/30 text-[var(--theme-accent)]'
               : task.missingDataState?.status === 'not-needed'
@@ -110,14 +110,14 @@ export function TaskProperties({ task }: TaskPropertiesProps) {
           title={`Data: ${task.missingDataState?.status || 'empty'}`}
           id={`quick-edit-trigger-data-${task.id}`}
         >
-          <Database className="w-2.5 h-2.5" />
+          <Database className="w-2 h-2" />
         </button>
 
         {/* 4. Bench (Subtasks) Button */}
         <button
           ref={benchTriggerRef}
           onClick={() => setActivePopover(activePopover === 'bench' ? null : 'bench')}
-          className={`w-[18px] h-[18px] flex items-center justify-center rounded-full border transition-all outline-none cursor-pointer ${
+          className={`w-4 h-4 flex items-center justify-center rounded-full border transition-all outline-none cursor-pointer ${
             (task.subtasks?.length || 0) > 0
               ? 'bg-[var(--theme-accent)]/15 border-[var(--theme-accent)]/30 text-[var(--theme-accent)]'
               : 'bg-white/5 border-white/10 hover:border-white/20 text-neutral-400 hover:text-neutral-200'
@@ -125,7 +125,7 @@ export function TaskProperties({ task }: TaskPropertiesProps) {
           title={`Subtasks: ${task.subtasks?.length || 0}`}
           id={`quick-edit-trigger-bench-${task.id}`}
         >
-          <ListTodo className="w-2.5 h-2.5" />
+          <ListTodo className="w-2 h-2" />
         </button>
       </div>
 

@@ -7,10 +7,9 @@ import { CardShell } from '../../CardShell';
 import type { TaskCardData } from '@/types/builder-node.types';
 import { useStageContext } from '@/builder/stage/StageProvider';
 import { TaskProperties } from './task-properties/TaskProperties';
-import { Calendar, Link2 } from 'lucide-react';
-import { TaskReadOnlyPopup } from './TaskReadOnlyPopup';
+import { Calendar, Link2, CornerDownLeft } from 'lucide-react';
+import { TaskHoverCard } from './TaskHoverCard';
 import { useCardBehavior } from '../../useCardBehavior';
-import { useToggle } from '@/hooks/useToggle';
 
 interface TaskCardProps {
   task: TaskCardData;
@@ -21,7 +20,7 @@ interface TaskCardProps {
 }
 
 export function TaskCard({ task, selected = false, locked = false, onSelect, disableExpand = false }: TaskCardProps) {
-  const { expandedNodeIds } = useStageContext();
+  const { expandedNodeIds, setFocusedNodeId } = useStageContext();
   const isExpanded = !disableExpand && expandedNodeIds.includes(task.id);
   const anchorRef = useRef<HTMLDivElement>(null);
   const behavior = useCardBehavior({ kind: 'task', data: task, selected, locked, onSelect });
@@ -32,7 +31,9 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
 
   // Inline Title Editor states
   const [editedName, setEditedName] = useState(task.name);
-  const [isPopupOpen, , openPopup, closePopup] = useToggle();
+  const [isHovering, setIsHovering] = useState(false);
+
+  const openEditor = () => setFocusedNodeId(task.id);
 
   useEffect(() => {
     // Keep the inline draft name in sync when the backing task changes externally.
@@ -65,14 +66,18 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
 
   if (!isExpanded) {
     return (
-      <div ref={anchorRef} className="relative flex-none">
+      <div
+        ref={anchorRef}
+        className="relative flex-none"
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
         <CardShell
           kind="task"
           data={task || {}}
           selected={selected}
           locked={locked}
           onSelect={onSelect}
-          onClick={openPopup}
           className="w-14 h-[60px] flex-none relative group/card overflow-hidden select-none px-1.5"
         >
           <div className="flex flex-col items-center justify-center w-full h-full gap-1.5" id={`task-card-collapsed-${task.id}`}>
@@ -95,7 +100,7 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
                 ) : (
                   <span className="w-1 h-1 rounded-full bg-neutral-600 shrink-0" />
                 )}
-                <span className={`text-dcx-3xs font-black tracking-tighter leading-none ${
+                <span className={`text-dcx-4xs font-bold tracking-tighter leading-none ${
                   isLinked ? 'text-[var(--theme-accent)]/90' : 'text-neutral-450'
                 }`}>
                   {dayNum} {monthStr}
@@ -104,14 +109,7 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
             )}
           </div>
         </CardShell>
-        <TaskReadOnlyPopup
-          task={task}
-          isOpen={isPopupOpen}
-          readiness={behavior.readiness}
-          resolvedDate={resolvedDate}
-          anchorRef={anchorRef}
-          onClose={closePopup}
-        />
+        <TaskHoverCard name={task.name || 'Untitled Task'} isOpen={isHovering} anchorRef={anchorRef} />
       </div>
     );
   }
@@ -124,23 +122,22 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
         selected={selected}
         locked={locked}
         onSelect={onSelect}
-        onClick={openPopup}
-        className="w-full h-[60px] relative group/card select-none px-2.5 py-1.5"
+        className="w-full h-[60px] relative group/card select-none px-2 py-1"
       >
         <div
-          className="flex items-center h-full gap-2 w-full"
+          className="flex items-center h-full gap-1.5 w-full"
           id={`task-card-expanded-${task.id}`}
         >
-          {/* Left Side: Bigger Channel Icon */}
+          {/* Left Side: Channel Icon */}
           <div className="flex items-center justify-center shrink-0">
-            <div className={`flex items-center justify-center w-6.5 h-6.5 rounded-md border transition-all duration-200 shrink-0 ${
-              selected 
-                ? 'bg-[var(--theme-accent)]/20 border-[var(--theme-accent)]/30 text-[var(--theme-accent)]' 
+            <div className={`flex items-center justify-center w-5 h-5 rounded-md border transition-all duration-200 shrink-0 ${
+              selected
+                ? 'bg-[var(--theme-accent)]/20 border-[var(--theme-accent)]/30 text-[var(--theme-accent)]'
                 : isFilled
                   ? 'bg-[var(--theme-accent)]/10 border-[var(--theme-accent)]/20 text-[var(--theme-accent)]'
                   : 'bg-white/5 border-white/10 text-neutral-400'
             }`}>
-              {React.createElement(IconComponent, { className: 'w-4 h-4' })}
+              {React.createElement(IconComponent, { className: 'w-3.5 h-3.5' })}
             </div>
           </div>
 
@@ -165,7 +162,7 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
                 }}
                 onClick={(e) => e.stopPropagation()}
                 onDoubleClick={(e) => e.stopPropagation()}
-                className="bg-transparent border border-transparent hover:border-white/10 focus:border-[var(--theme-accent)]/30 hover:bg-white/[0.02] focus:bg-black/30 font-semibold text-dcx-xs-plus text-neutral-200 px-1 py-0 rounded outline-none transition-all w-full truncate focus:text-white"
+                className="bg-transparent border border-transparent hover:border-white/10 focus:border-[var(--theme-accent)]/30 hover:bg-white/[0.02] focus:bg-black/30 font-semibold text-dcx-2xs-plus text-neutral-200 px-1 py-0 rounded outline-none transition-all w-full truncate focus:text-white"
                 title="Click to edit task name"
               />
             </div>
@@ -175,34 +172,39 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
               <TaskProperties task={task} />
 
               {/* Date Indicator with Calendar/Link Icon */}
-              <div className="flex items-center gap-1 shrink-0 pr-1 select-none font-mono" id={`task-card-date-${task.id}`}>
+              <div className="flex items-center gap-1 shrink-0 pr-0.5 select-none font-mono" id={`task-card-date-${task.id}`}>
                 {isLinked ? (
-                  <Link2 className="w-3 h-3 text-[var(--theme-accent)] animate-pulse shrink-0" />
+                  <Link2 className="w-2.5 h-2.5 text-[var(--theme-accent)] animate-pulse shrink-0" />
                 ) : (
-                  <Calendar className="w-2.5 h-2.5 text-neutral-500 shrink-0" />
+                  <Calendar className="w-2 h-2 text-neutral-500 shrink-0" />
                 )}
                 {dateDisplay ? (
-                  <span className={`text-dcx-2xs-plus font-bold tracking-tighter ${isLinked ? 'text-[var(--theme-accent)] font-extrabold' : 'text-neutral-400'}`} title={isLinked ? "Linked Date" : "Custom Date"}>
+                  <span className={`text-dcx-3xs font-bold tracking-tighter ${isLinked ? 'text-[var(--theme-accent)] font-extrabold' : 'text-neutral-400'}`} title={isLinked ? "Linked Date" : "Custom Date"}>
                     {dateDisplay}
                   </span>
                 ) : (
-                  <span className="text-dcx-2xs font-bold tracking-tighter text-neutral-500" title="No Date set">
+                  <span className="text-dcx-3xs font-bold tracking-tighter text-neutral-500" title="No Date set">
                     No Date
                   </span>
                 )}
               </div>
             </div>
           </div>
+
+          {/* Open-in-editor button (Enter glyph) — opens the task editor directly */}
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); openEditor(); }}
+            onDoubleClick={(e) => e.stopPropagation()}
+            className="shrink-0 flex items-center justify-center w-5 h-5 rounded-md border border-white/10 bg-white/5 text-neutral-400 hover:text-[var(--theme-accent)] hover:border-[var(--theme-accent)]/30 hover:bg-[var(--theme-accent)]/10 transition-all cursor-pointer"
+            title="Open in editor"
+            aria-label="Open task in editor"
+            id={`task-open-editor-${task.id}`}
+          >
+            <CornerDownLeft className="w-3 h-3" />
+          </button>
         </div>
       </CardShell>
-      <TaskReadOnlyPopup
-        task={task}
-        isOpen={isPopupOpen}
-        readiness={behavior.readiness}
-        resolvedDate={resolvedDate}
-        anchorRef={anchorRef}
-        onClose={closePopup}
-      />
     </div>
   );
 }
