@@ -1,5 +1,8 @@
 {
   "name": "dcx-manager-gov",
   "framework": "vite",
-  "ignoreCommand": "bash scripts/release/vercel-ignore-build.sh"
+  "ignoreCommand": "bash scripts/release/vercel-ignore-build.sh",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }

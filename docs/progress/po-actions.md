@@ -2,7 +2,7 @@
 
 > **Generated** by `scripts/build-po-actions.sh` (also run by `build-log-index.sh`). Do not hand-edit — flip the source log's `PO-Action:` header to `none` when an item is done. See `docs/agent-rules/log-format.md` §3.
 
-_Last generated: 2026-07-01 — open items: 52_
+_Last generated: 2026-07-01 — open items: 54_
 
 ## RS-R3-review — Output audit of RS-R3 + lint fix (OpenCode)
 Source: [`sessions/2026-06-29-claude/19-rs-r3-output-audit.md`](sessions/2026-06-29-claude/19-rs-r3-output-audit.md)
@@ -282,6 +282,13 @@ Source: [`sessions/2026-07-01-claude-05/008-production-api-client-switch-PAC-R4.
 | Finding #3: `channel_compositions_write` RLS policy is broken (raw `memberships` subquery, blocked by RLS — every insert rejected, even for real editors) | Needs a schema/RLS migration (`apply_migration`), which is a PO-gated action per this plan's governance — and out of PAC-R4's own tool scope | Approve a small follow-up migration rewriting the policy's `WITH CHECK` to call `app_user_can_edit(...)` like the other `_write` policies, before PAC-R6 or any real composition-create usage |
 | Finding #2: `rationale.md` HYPOTHESIS-resolved note not yet written (outside PAC-R4's `allowed-writes`) | Doc-only, mechanical, but scope-gated | Low priority — approve a doc-only touch-up whenever convenient |
 
+## skeleton-loading-v2 — Draft plan for app-wide skeleton loading fix
+Source: [`sessions/2026-07-01-claude-07/001-skeleton-loading-v2-draft-plan.md`](sessions/2026-07-01-claude-07/001-skeleton-loading-v2-draft-plan.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Review and confirm scope of `docs/plans/drafted/skeleton-loading-v2/` | New drafted plan proposes 7 sprints (SKEL-R0..R6) touching Builder/Home/Version loading paths; needs `dcx-plan-audit` READY + PO activation before any agent may execute it | Read the plan README; if scope is right, request `dcx-plan-audit`; if not, redirect before audit |
+
 ## Activate cicd-release-governance plan + RG-R0a — Discovery & capability report
 Source: [`sessions/2026-07-01-claude/002-cicd-release-governance-activate-RG-R0a.md`](sessions/2026-07-01-claude/002-cicd-release-governance-activate-RG-R0a.md)
 
@@ -413,4 +420,12 @@ Source: [`sessions/2026-07-01-codex/009-production-api-client-switch-reaudit.md`
 |---|---|---|
 | PAC activation decision | Re-audit verdict is READY, but activation is still PO-gated and backend-discovery-v3 must be READY first | Activate PAC-R0 only when ready; later activate PAC-R1..R6 after PAC-R0 produces signed IDs and BE3 is READY |
 | Version metadata drift | Current `docs/VERSION.md` is v1.0.1.1 while `metadata.json` still names v1.0.1.0; PAC README also still has draft-time `version_context: v1.0.1.0` | Resolve/accept metadata drift and re-copy current version into PAC frontmatter at activation |
+
+## Skeleton Loading v2 — Draft Plan Audit
+Source: [`sessions/2026-07-01-codex/011-skeleton-loading-v2-plan-audit.md`](sessions/2026-07-01-codex/011-skeleton-loading-v2-plan-audit.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Skeleton-loading-v2 verdict is `NOT READY` | The plan has activation blockers: stale `version_context`, incomplete code-sprint manifestation trace, unregistered preview tool names, weak browser fallbacks, and an unresolved SKEL-R1 PO sign-off model | Ask the plan author to revise the draft, then re-audit before moving it to `active/` |
+| Third-party dependency decision | `phantom-ui` may help reduce handcrafted page skeleton drift, but it does not solve this plan's sequencing/theme/governance work and adds runtime/custom-element dependency risk | Treat it as an optional spike in SKEL-R1, not as a replacement for the current plan |
 
