@@ -37,7 +37,7 @@ export function TaskHoverCard({ name, isOpen, anchorRef }: TaskHoverCardProps) {
       role="tooltip"
     >
       <GlassSurface radius="sm" intensity="high" className="border border-white/10 bg-[var(--theme-surface-deep-alt)]/95 px-2.5 py-1">
-        <span className="block max-w-[200px] truncate text-dcx-2xs font-semibold text-white">{name}</span>
+        <span className="block max-w-[200px] truncate text-dcx-md font-semibold text-white">{name}</span>
       </GlassSurface>
     </div>,
     document.body,

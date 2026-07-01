@@ -100,7 +100,7 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
                 ) : (
                   <span className="w-1 h-1 rounded-full bg-neutral-600 shrink-0" />
                 )}
-                <span className={`text-dcx-5xs font-bold tracking-tighter leading-none ${
+                <span className={`text-dcx-2xs font-bold tracking-tighter leading-none ${
                   isLinked ? 'text-[var(--theme-accent)]/90' : 'text-neutral-450'
                 }`}>
                   {dayNum} {monthStr}
@@ -162,7 +162,7 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
                 }}
                 onClick={(e) => e.stopPropagation()}
                 onDoubleClick={(e) => e.stopPropagation()}
-                className="bg-transparent border border-transparent hover:border-white/10 focus:border-[var(--theme-accent)]/30 hover:bg-white/[0.02] focus:bg-black/30 font-semibold text-dcx-3xs text-neutral-200 px-1 py-0 rounded outline-none transition-all w-full truncate focus:text-white"
+                className="bg-transparent border border-transparent hover:border-white/10 focus:border-[var(--theme-accent)]/30 hover:bg-white/[0.02] focus:bg-black/30 font-semibold text-dcx-xs text-neutral-200 px-1 py-0 rounded outline-none transition-all w-full truncate focus:text-white"
                 title="Click to edit task name"
               />
             </div>
@@ -179,11 +179,11 @@ export function TaskCard({ task, selected = false, locked = false, onSelect, dis
                   <Calendar className="w-2 h-2 text-neutral-500 shrink-0" />
                 )}
                 {dateDisplay ? (
-                  <span className={`text-dcx-4xs font-bold tracking-tighter ${isLinked ? 'text-[var(--theme-accent)] font-extrabold' : 'text-neutral-400'}`} title={isLinked ? "Linked Date" : "Custom Date"}>
+                  <span className={`text-dcx-2xs font-bold tracking-tighter ${isLinked ? 'text-[var(--theme-accent)] font-extrabold' : 'text-neutral-400'}`} title={isLinked ? "Linked Date" : "Custom Date"}>
                     {dateDisplay}
                   </span>
                 ) : (
-                  <span className="text-dcx-4xs font-bold tracking-tighter text-neutral-500" title="No Date set">
+                  <span className="text-dcx-2xs font-bold tracking-tighter text-neutral-500" title="No Date set">
                     No Date
                   </span>
                 )}

@@ -2,18 +2,17 @@
 
 @theme {
   --font-sans: "Gilroy";
-  --font-size-dcx-5xs: var(--text-5xs);
-  --font-size-dcx-4xs: var(--text-4xs);
-  --font-size-dcx-3xs: var(--text-3xs);
-  --font-size-dcx-3xs-plus: var(--text-3xs-plus);
-  --font-size-dcx-2xs: var(--text-2xs);
-  --font-size-dcx-2xs-plus: var(--text-2xs-plus);
-  --font-size-dcx-xs: var(--text-xs);
-  --font-size-dcx-xs-plus: var(--text-xs-plus);
-  --font-size-dcx-sm: var(--text-sm);
-  --font-size-dcx-md: var(--text-md);
-  --font-size-dcx-md-plus: var(--text-md-plus);
-  --font-size-dcx-base: var(--text-base);
+  --text-dcx-4xs: var(--text-4xs);
+  --text-dcx-3xs: var(--text-3xs);
+  --text-dcx-3xs-plus: var(--text-3xs-plus);
+  --text-dcx-2xs: var(--text-2xs);
+  --text-dcx-2xs-plus: var(--text-2xs-plus);
+  --text-dcx-xs: var(--text-xs);
+  --text-dcx-xs-plus: var(--text-xs-plus);
+  --text-dcx-sm: var(--text-sm);
+  --text-dcx-md: var(--text-md);
+  --text-dcx-md-plus: var(--text-md-plus);
+  --text-dcx-base: var(--text-base);
   --color-dcx-surface-void: var(--theme-surface-void);
   --color-dcx-surface-deep-alt: var(--theme-surface-deep-alt);
   --color-dcx-surface-dark: var(--theme-surface-dark);
