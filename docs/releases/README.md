@@ -64,6 +64,30 @@ Source → Iteration bump + preview deployment. Non-source → Revision bump + n
 touching real product `src/**`); `dogfood/doc-probe.txt` stays `non-source`. These exist solely so RG-R7
 can exercise both classification paths end-to-end. Do not treat either file as product code.
 
+## Vercel deploy skipping (RG-R7)
+
+`vercel.json`'s `ignoreCommand` runs `scripts/release/vercel-ignore-build.sh` on every push: a
+non-source change (per the same path-set above) genuinely produces **no Vercel deployment** — not just
+no `preview_url` in the registry. Classification uses `HEAD~1` (the immediate parent commit), never
+Vercel's own `VERCEL_GIT_PREVIOUS_SHA` — that value tracks Vercel's last *successful* deploy per branch,
+which can lag behind the actual git history after an intermediate build fails or is canceled, causing the
+two classifiers to disagree (a real bug found live 2026-07-01). `HEAD~1` matches
+`version-assign.yml`'s `github.event.before` semantics exactly, so both systems agree by construction.
+
+## Friendly per-version alias (RG-R8)
+
+Each version gets a human-readable Vercel alias, e.g. `dcx-manager-gov-v0-4-1-0.vercel.app`, pointing at
+that version's exact `preview_url` — so the version number is visible directly in the Vercel
+dashboard/URL bar, not only by cross-referencing `registry.csv`.
+
+- **Automatic**: `.github/workflows/record-preview.yml` creates the alias right after patching
+  `preview_url`, using a `VERCEL_TOKEN` repository secret (PO-added — no MCP/CLI path exists to mint a
+  CI-scoped token; the PO's own classic personal access token is used directly). If the secret is
+  absent, this step logs and skips without failing the job.
+- **Manual/backfill**: `scripts/release/alias-preview.sh <version>` does the same thing using an
+  already-authenticated local Vercel CLI session — use this to backfill versions stamped before the
+  secret existed, or when running locally.
+
 ## Promotion (RG-R4+)
 
 A build is promoted to Staging or Production **only** via `scripts/release/promote.sh` (not yet built —

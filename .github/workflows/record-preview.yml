@@ -8,6 +8,11 @@ name: Record preview deployment
 # Note: GitHub's deployment.id here is GitHub's own wrapper ID, NOT Vercel's native `dpl_...` ID —
 # storing it would be misleading. promote.sh instead resolves the real Vercel deployment ID live via
 # the Vercel API/MCP from this stored preview_url at promotion time (get_deployment accepts a hostname).
+#
+# Also creates a friendly per-version alias (e.g. dcx-manager-gov-v0-4-1-0.vercel.app) so the version
+# number is visible directly in the Vercel dashboard/URL bar, not only in docs/releases/registry.csv.
+# Requires a `VERCEL_TOKEN` repository secret (PO-added; no MCP/CLI path exists to create one — see
+# docs/releases/README.md). If the secret is absent, this step logs and skips (never fails the job).
 on:
   deployment_status:
 
@@ -42,13 +47,29 @@ jobs:
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Patch preview_url
+        id: preview
         if: steps.find.outputs.version != ''
         run: |
           PREVIEW_URL="${{ github.event.deployment_status.target_url }}"
           if [ -z "$PREVIEW_URL" ]; then
             PREVIEW_URL="${{ github.event.deployment.payload.web_url }}"
           fi
+          echo "preview_url=$PREVIEW_URL" >> "$GITHUB_OUTPUT"
           bash scripts/release/patch-release-row.sh "${{ steps.find.outputs.version }}" preview_url "$PREVIEW_URL" || true
+
+      - name: Create friendly per-version alias
+        if: steps.find.outputs.version != '' && steps.preview.outputs.preview_url != ''
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "VERCEL_TOKEN secret not set — skipping friendly alias (see docs/releases/README.md)."
+            exit 0
+          fi
+          SLUG="$(echo "${{ steps.find.outputs.version }}" | tr '.' '-')"
+          ALIAS="dcx-manager-gov-${SLUG}.vercel.app"
+          npx --yes vercel alias set "${{ steps.preview.outputs.preview_url }}" "$ALIAS" --scope dot-techs-projects --token "$VERCEL_TOKEN"
+          echo "Aliased ${{ steps.find.outputs.version }} -> $ALIAS"
 
       - name: Commit if changed
         if: steps.find.outputs.version != ''

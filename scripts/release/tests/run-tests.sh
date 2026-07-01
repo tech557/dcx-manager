@@ -266,6 +266,64 @@ assert_exit_nonzero "gate blocks an approval record missing approved-by/approved
 rm -rf "$GATE_TMP"
 
 echo ""
+echo "=== vercel-ignore-build.sh (RG-R7/RG-R8, HEAD~1 regression) ==="
+IGNORE_TMP="$(mktemp -d)"
+(
+  cd "$IGNORE_TMP"
+  git init -q
+  git config user.email test@test.local
+  git config user.name test
+  mkdir -p scripts/release
+  cp "$RELEASE_DIR/classify-change.sh" "$RELEASE_DIR/vercel-ignore-build.sh" scripts/release/
+  echo "a" > a.txt
+  git add -A && git commit -qm base
+  # A non-source commit on top of base — HEAD~1 is well-defined and this must classify non-source.
+  mkdir -p docs
+  echo "b" > docs/note.md
+  git add -A && git commit -qm "docs change"
+)
+(cd "$IGNORE_TMP" && bash scripts/release/vercel-ignore-build.sh) > /tmp/ignore-nonsource.log 2>&1
+ignore_nonsource_code=$?
+assert_exit_zero "vercel-ignore-build skips (exit 0) a non-source commit using HEAD~1, no Vercel env vars needed" "$ignore_nonsource_code"
+
+(
+  cd "$IGNORE_TMP"
+  mkdir -p src
+  echo "x" > src/file.ts
+  git add -A && git commit -qm "src change"
+)
+(cd "$IGNORE_TMP" && bash scripts/release/vercel-ignore-build.sh) > /tmp/ignore-source.log 2>&1
+ignore_source_code=$?
+assert_exit_nonzero "vercel-ignore-build proceeds (non-zero) for a real src/ change using HEAD~1" "$ignore_source_code"
+
+# Regression for the real 2026-07-01 bug: VERCEL_GIT_PREVIOUS_SHA must be ignored even if set to a
+# stale/misleading value — classification must depend only on HEAD~1.
+(cd "$IGNORE_TMP" && VERCEL_GIT_PREVIOUS_SHA="0000000000000000000000000000000000000000" bash scripts/release/vercel-ignore-build.sh) > /tmp/ignore-stale-env.log 2>&1
+ignore_stale_env_code=$?
+assert_exit_nonzero "a stale/misleading VERCEL_GIT_PREVIOUS_SHA does not change the classification" "$ignore_stale_env_code"
+
+rm -rf "$IGNORE_TMP"
+
+echo ""
+echo "=== alias-preview.sh (RG-R8 friendly version->preview alias) ==="
+ALIAS_TMP="$(mktemp -d)"
+mkdir -p "$ALIAS_TMP/docs/releases" "$ALIAS_TMP/scripts/release"
+echo "version,change_class,commit_sha,branch,session_folder,clickup_task,deployment_id,preview_url,staging_url,production_url,status,approved_for,approved_by,approved_at,gates,notes" > "$ALIAS_TMP/docs/releases/registry.csv"
+printf '"v9.9.9","source","abc123","integration","ci","","","https://example-preview.vercel.app","","","verified","","","","","test row"\n' >> "$ALIAS_TMP/docs/releases/registry.csv"
+cp "$RELEASE_DIR/alias-preview.sh" "$ALIAS_TMP/scripts/release/"
+(cd "$ALIAS_TMP" && PROMOTE_ALIAS_CMD="echo STUB-ALIAS-CALL" bash scripts/release/alias-preview.sh v9.9.9) > /tmp/alias-preview.log 2>&1
+alias_preview_code=$?
+assert_exit_zero "alias-preview.sh resolves the registry row and calls the alias command (stubbed)" "$alias_preview_code"
+grep -q "STUB-ALIAS-CALL https://example-preview.vercel.app dcx-manager-gov-v9-9-9.vercel.app" /tmp/alias-preview.log && alias_slug_ok=0 || alias_slug_ok=1
+assert_exit_zero "alias slug correctly converts dots to dashes (v9.9.9 -> v9-9-9)" "$alias_slug_ok"
+
+(cd "$ALIAS_TMP" && PROMOTE_ALIAS_CMD="echo STUB-ALIAS-CALL" bash scripts/release/alias-preview.sh v0.0.0.missing) > /tmp/alias-missing.log 2>&1
+alias_missing_code=$?
+assert_exit_nonzero "alias-preview.sh refuses a version with no registry row" "$alias_missing_code"
+
+rm -rf "$ALIAS_TMP"
+
+echo ""
 echo "=== idempotence (core.md §36b) ==="
 TMPDIR_IDEMP="$(mktemp -d)"
 mkdir -p "$TMPDIR_IDEMP/docs/releases" "$TMPDIR_IDEMP/scripts/release"
