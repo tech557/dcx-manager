@@ -1,0 +1,18 @@
+{
+  "id": "REQ-BE-AUTH-ALLOWLIST-001",
+  "type": "Requirement",
+  "statement": "Sign-in (Google OAuth or email magic-link) is restricted to emails present in the ClickUp workspace member roster (allowed_members), enforced at the database level via a signup-blocking trigger; the same roster is the intended source for in-app user assignment.",
+  "scope": "security",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "source": "docs/plans/active/production-api-client-switch/output/PAC-addendum-clickup-gated-auth.md",
+    "source_path": "docs/plans/active/production-api-client-switch/output/PAC-addendum-clickup-gated-auth.md",
+    "authoring_actor": "Claude (claude-sonnet-4-6) PAC addendum intake",
+    "confidence": 0.9,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-07-01"
+  }
+}

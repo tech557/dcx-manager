@@ -1,0 +1,24 @@
+{
+  "id": "PRP-2026-07-01-create-trace-link-TRC-MAN-function-scripts-backend-seed-dev-TO-REQ-BE-API-001",
+  "type": "Proposal",
+  "action": "create-trace-link",
+  "actor": "Claude (claude-sonnet-4-6)",
+  "date": "2026-07-01",
+  "reason": "PAC-R4: link seed-dev to REQ-BE-API-001",
+  "payload": {
+    "traceLink": {
+      "id": "TRC-MAN-function-scripts-backend-seed-dev-TO-REQ-BE-API-001",
+      "type": "TraceLink",
+      "source": "MAN-function-scripts-backend-seed-dev",
+      "target": "REQ-BE-API-001",
+      "relationship_type": "supports",
+      "coverage": "partial",
+      "confidence": 0.9,
+      "inference_source": "PAC-R4 sprint execution (seeds fixtures the parity suite depends on)",
+      "confirmation_status": "confirmed",
+      "last_checked_date": "2026-07-01",
+      "stale_state": "current",
+      "needs_confirmation": false
+    }
+  }
+}

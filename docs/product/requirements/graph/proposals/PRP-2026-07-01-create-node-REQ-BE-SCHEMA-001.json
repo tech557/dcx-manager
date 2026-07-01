@@ -1,0 +1,28 @@
+{
+  "id": "PRP-2026-07-01-create-node-REQ-BE-SCHEMA-001",
+  "type": "Proposal",
+  "action": "create-node",
+  "actor": "Claude (claude-sonnet-4-6)",
+  "date": "2026-07-01",
+  "reason": "production-api-client-switch PAC-R0 intake: net-new backend schema requirement, queued for PO sign-off before PAC-R1 applies schema.sql",
+  "payload": {
+    "node": {
+      "id": "REQ-BE-SCHEMA-001",
+      "type": "Requirement",
+      "statement": "The application persists all 12 Api* domain entities in a real Supabase Postgres schema (17 tables, 6 enums) matching the frozen backend-discovery-v3 dataset, replacing the in-memory/localStorage mock store.",
+      "scope": "backend",
+      "governance": "proposed",
+      "maturity": "logic-defined",
+      "delivery": "not-assessed",
+      "chain_layer": "REQ->RSP",
+      "provenance": {
+        "source": "docs/plans/active/production-api-client-switch/README.md",
+        "source_path": "docs/backend/schema/schema.sql",
+        "authoring_actor": "Claude (claude-sonnet-4-6) PAC-R0 intake",
+        "confidence": 0.9,
+        "confirmation_status": "agent-proposed",
+        "last_checked_date": "2026-07-01"
+      }
+    }
+  }
+}

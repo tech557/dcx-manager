@@ -1,0 +1,14 @@
+{
+  "id": "TRC-MAN-react-component-src-ui-auth-loginredirect-TO-REQ-PR-002",
+  "type": "TraceLink",
+  "source": "MAN-react-component-src-ui-auth-loginredirect",
+  "target": "REQ-PR-002",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.9,
+  "inference_source": "PAC-R3 sprint execution (real email/Google sign-in form)",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-07-01",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

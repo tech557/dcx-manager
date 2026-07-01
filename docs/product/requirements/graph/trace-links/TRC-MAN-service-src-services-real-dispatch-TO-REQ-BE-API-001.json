@@ -1,0 +1,14 @@
+{
+  "id": "TRC-MAN-service-src-services-real-dispatch-TO-REQ-BE-API-001",
+  "type": "TraceLink",
+  "source": "MAN-service-src-services-real-dispatch",
+  "target": "REQ-BE-API-001",
+  "relationship_type": "implements",
+  "coverage": "complete",
+  "confidence": 0.95,
+  "inference_source": "PAC-R2 sprint execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-07-01",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

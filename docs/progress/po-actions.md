@@ -2,7 +2,7 @@
 
 > **Generated** by `scripts/build-po-actions.sh` (also run by `build-log-index.sh`). Do not hand-edit — flip the source log's `PO-Action:` header to `none` when an item is done. See `docs/agent-rules/log-format.md` §3.
 
-_Last generated: 2026-07-01 — open items: 51_
+_Last generated: 2026-07-01 — open items: 52_
 
 ## RS-R3-review — Output audit of RS-R3 + lint fix (OpenCode)
 Source: [`sessions/2026-06-29-claude/19-rs-r3-output-audit.md`](sessions/2026-06-29-claude/19-rs-r3-output-audit.md)
@@ -273,6 +273,14 @@ Source: [`sessions/2026-07-01-claude-05/002-production-api-client-switch-PAC-R0.
 | Item | Why it needs the PO | Suggested action |
 |---|---|---|
 | Sign off 3 queued `REQ-BE-*` proposals | ID-lock rule (audit blocking #1): PAC-R1..R6 carry placeholder Requirement Trace fields and legally cannot execute until these are PO-signed, minting real node IDs | Run `npm run req:apply-after-signoff -- --id <PRP-id> --signoff <ref>` for each of `PRP-2026-07-01-create-node-REQ-BE-{SCHEMA,AUTH,API}-001`, or direct the executing agent to do so once you approve |
+
+## PAC-R4 — Route parity + dev data seed (real vs. contract)
+Source: [`sessions/2026-07-01-claude-05/008-production-api-client-switch-PAC-R4.md`](sessions/2026-07-01-claude-05/008-production-api-client-switch-PAC-R4.md)
+
+| Item | Why it needs the PO | Suggested action |
+|---|---|---|
+| Finding #3: `channel_compositions_write` RLS policy is broken (raw `memberships` subquery, blocked by RLS — every insert rejected, even for real editors) | Needs a schema/RLS migration (`apply_migration`), which is a PO-gated action per this plan's governance — and out of PAC-R4's own tool scope | Approve a small follow-up migration rewriting the policy's `WITH CHECK` to call `app_user_can_edit(...)` like the other `_write` policies, before PAC-R6 or any real composition-create usage |
+| Finding #2: `rationale.md` HYPOTHESIS-resolved note not yet written (outside PAC-R4's `allowed-writes`) | Doc-only, mechanical, but scope-gated | Low priority — approve a doc-only touch-up whenever convenient |
 
 ## Activate cicd-release-governance plan + RG-R0a — Discovery & capability report
 Source: [`sessions/2026-07-01-claude/002-cicd-release-governance-activate-RG-R0a.md`](sessions/2026-07-01-claude/002-cicd-release-governance-activate-RG-R0a.md)

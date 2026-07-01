@@ -1,14 +1,19 @@
 {
-  "_generated_at": "2026-06-30T22:04:54.109622+00:00",
+  "_generated_at": "2026-07-01T19:42:49.226343+00:00",
   "_note": "Non-authoritative snapshot. Do not edit manually. Regenerate: bash scripts/agent/build-current-state.sh",
-  "repository_version": "v0.3.5",
+  "repository_version": "v1.1.0.1",
   "package_version": "0.3.5",
-  "metadata_version": "v0.3.5",
-  "active_plans": [],
+  "metadata_version": "v1.0.1.0",
+  "active_plans": [
+    {
+      "name": "production-api-client-switch",
+      "sprint_files": []
+    }
+  ],
   "latest_log": {
     "date": "2026-07-01",
-    "agent": "Codex",
-    "folder": "2026-07-01-codex/001-cicd-release-governance-confirming-reaudit.md",
+    "agent": "Claude",
+    "folder": "2026-07-01-claude-06/005-session-log-gate-hook.md",
     "status": "Completed"
   },
   "open_questions_count": 0,
@@ -64,10 +69,12 @@
     "sonarqube"
   ],
   "code_index_stale": true,
-  "code_index_age_minutes": 778,
-  "git_branch": "unknown",
-  "uncommitted_changes": 0,
-  "documentation_contradictions": [],
+  "code_index_age_minutes": 2076,
+  "git_branch": "integration",
+  "uncommitted_changes": 144,
+  "documentation_contradictions": [
+    "docs/VERSION.md=v1.1.0.1 vs metadata.json=v1.0.1.0"
+  ],
   "validation_scripts": [
     "scripts/agent/verify-plan-state.sh",
     "scripts/agent/verify-version-state.sh",

@@ -1,0 +1,33 @@
+{
+  "id": "PRP-2026-07-01-create-node-MAN-test-src-services-tests-real-dispatch-parity-test",
+  "type": "Proposal",
+  "action": "create-node",
+  "actor": "Claude (claude-sonnet-4-6)",
+  "date": "2026-07-01",
+  "reason": "PAC-R4: new parity test manifestation",
+  "payload": {
+    "node": {
+      "id": "MAN-test-src-services-tests--real-dispatch-parity-test",
+      "type": "Manifestation",
+      "statement": "PAC-R4 live parity suite -- proves realDispatch returns contract-valid, mock-equivalent shapes for all 22 routes against seeded dev data.",
+      "scope": "backend",
+      "governance": "proposed",
+      "maturity": "logic-defined",
+      "delivery": "not-assessed",
+      "kind": "test",
+      "current_paths": [
+        "src/services/__tests__/real-dispatch.parity.test.ts"
+      ],
+      "lifecycle": "created",
+      "provenance": {
+        "source": "PAC-R4 sprint (production-api-client-switch)",
+        "source_path": "src/services/__tests__/real-dispatch.parity.test.ts",
+        "source_anchor": "real-dispatch.parity.test",
+        "authoring_actor": "Claude (claude-sonnet-4-6)",
+        "confidence": 0.9,
+        "confirmation_status": "agent-proposed",
+        "last_checked_date": "2026-07-01"
+      }
+    }
+  }
+}

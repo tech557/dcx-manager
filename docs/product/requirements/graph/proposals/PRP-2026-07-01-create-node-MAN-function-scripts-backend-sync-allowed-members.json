@@ -1,0 +1,33 @@
+{
+  "id": "PRP-2026-07-01-create-node-MAN-function-scripts-backend-sync-allowed-members",
+  "type": "Proposal",
+  "action": "create-node",
+  "actor": "Claude (claude-sonnet-4-6)",
+  "date": "2026-07-01",
+  "reason": "PAC addendum: new sync-allowed-members.mjs manifestation",
+  "payload": {
+    "node": {
+      "id": "MAN-function-scripts-backend-sync-allowed-members",
+      "type": "Manifestation",
+      "statement": "Manual re-sync script pulling ClickUp workspace members into allowed_members (PAC addendum, production-api-client-switch).",
+      "scope": "backend",
+      "governance": "proposed",
+      "maturity": "logic-defined",
+      "delivery": "not-assessed",
+      "kind": "function",
+      "current_paths": [
+        "scripts/backend/sync-allowed-members.mjs"
+      ],
+      "lifecycle": "created",
+      "provenance": {
+        "source": "PAC addendum (production-api-client-switch)",
+        "source_path": "scripts/backend/sync-allowed-members.mjs",
+        "source_anchor": "sync-allowed-members",
+        "authoring_actor": "Claude (claude-sonnet-4-6)",
+        "confidence": 0.9,
+        "confirmation_status": "agent-proposed",
+        "last_checked_date": "2026-07-01"
+      }
+    }
+  }
+}

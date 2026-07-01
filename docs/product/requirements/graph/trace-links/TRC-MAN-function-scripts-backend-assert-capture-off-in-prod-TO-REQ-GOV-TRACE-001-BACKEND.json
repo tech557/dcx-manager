@@ -1,0 +1,17 @@
+{
+  "id": "TRC-MAN-function-scripts-backend-assert-capture-off-in-prod-TO-REQ-GOV-TRACE-001-BACKEND",
+  "type": "TraceLink",
+  "source": "MAN-function-scripts-backend-assert-capture-off-in-prod",
+  "target": "REQ-GOV-TRACE-001-BACKEND",
+  "relationship_type": "verifies",
+  "coverage": "complete",
+  "confidence": 1,
+  "inference_source": "BE3-R7 requirement intake (PO-signed)",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-07-01",
+  "stale_state": "stale",
+  "needs_confirmation": false,
+  "evidence_refs": [
+    "docs/plans/completed/backend-discovery-v3/output/BE3-R7-debt-clearance.md"
+  ]
+}

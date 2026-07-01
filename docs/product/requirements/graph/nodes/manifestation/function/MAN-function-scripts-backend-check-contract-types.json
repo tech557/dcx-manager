@@ -1,0 +1,23 @@
+{
+  "id": "MAN-function-scripts-backend-check-contract-types",
+  "type": "Manifestation",
+  "statement": "Round-trip contract type check (BE3-R1): asserts the frozen contract matches the live Api* types via tsc (exit 0 = contract ≡ types).",
+  "scope": "test-qa",
+  "governance": "approved",
+  "maturity": "logic-defined",
+  "delivery": "implemented",
+  "kind": "function",
+  "current_paths": [
+    "scripts/backend/check-contract-types.ts",
+    "scripts/backend/tsconfig.contract-check.json"
+  ],
+  "stale_state": "current",
+  "lifecycle": "created",
+  "provenance": {
+    "source": "docs/plans/active/backend-discovery-v3/sprints/BE3-R7.md",
+    "authoring_actor": "BE3-R7 intake",
+    "confidence": 1,
+    "confirmation_status": "po-decided",
+    "last_checked_date": "2026-07-01"
+  }
+}

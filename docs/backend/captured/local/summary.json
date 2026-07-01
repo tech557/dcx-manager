@@ -1,0 +1,1975 @@
+{
+  "_meta": {
+    "generated_by": "scripts/backend/summarize-capture.mjs (BE3-R5a)",
+    "source": "docs/backend/captured/local/raw-capture.json",
+    "total_records": 71,
+    "routes_observed": 22,
+    "scrub_check": "PASS",
+    "redaction_marker": "[REDACTED]"
+  },
+  "routes": [
+    {
+      "route": "/access/me",
+      "methods": [
+        "GET"
+      ],
+      "captures": 4,
+      "response_kind": [
+        "object"
+      ],
+      "duration_ms": {
+        "min": 0,
+        "max": 0.2,
+        "avg": 0.05
+      },
+      "fields": [
+        {
+          "field": "userId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "isAuthenticated",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "boolean"
+          ]
+        },
+        {
+          "field": "workspaceIds",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/activity-logs",
+      "methods": [
+        "GET"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "array"
+      ],
+      "duration_ms": {
+        "min": 0,
+        "max": 0,
+        "avg": 0
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "type",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "versionId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "userId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "timestamp",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "details",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "object"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/activity-logs",
+      "methods": [
+        "POST"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "object"
+      ],
+      "duration_ms": {
+        "min": 0.2,
+        "max": 0.3,
+        "avg": 0.233
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "type",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "versionId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "userId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "timestamp",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "details",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/ai/review-draft",
+      "methods": [
+        "POST"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "object"
+      ],
+      "duration_ms": {
+        "min": 0,
+        "max": 0.1,
+        "avg": 0.033
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "summary",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "proposedActions",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/api/channels",
+      "methods": [
+        "GET"
+      ],
+      "captures": 4,
+      "response_kind": [
+        "array"
+      ],
+      "duration_ms": {
+        "min": 0,
+        "max": 0.2,
+        "avg": 0.05
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "label",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "icon",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "availableCompositionIds",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/api/channels/:channelId/compositions",
+      "methods": [
+        "GET"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "array"
+      ],
+      "duration_ms": {
+        "min": 0,
+        "max": 0.1,
+        "avg": 0.033
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "channelId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "name",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "definitionIds",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "createdBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "isUserDefined",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "boolean"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/api/channels/:channelId/compositions",
+      "methods": [
+        "POST"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "object"
+      ],
+      "duration_ms": {
+        "min": 0.1,
+        "max": 0.7,
+        "avg": 0.433
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "channelId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "name",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "definitionIds",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "createdBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "isUserDefined",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "boolean"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/api/subtask-definitions",
+      "methods": [
+        "GET"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "array"
+      ],
+      "duration_ms": {
+        "min": 0,
+        "max": 0,
+        "avg": 0
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "label",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "estimatedMinutes",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "number"
+          ]
+        },
+        {
+          "field": "channelIds",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/api/subtask-definitions/:channelId",
+      "methods": [
+        "GET"
+      ],
+      "captures": 4,
+      "response_kind": [
+        "array"
+      ],
+      "duration_ms": {
+        "min": 0,
+        "max": 0.3,
+        "avg": 0.1
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "label",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "estimatedMinutes",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "number"
+          ]
+        },
+        {
+          "field": "channelIds",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/clickup/entry/:versionId",
+      "methods": [
+        "GET"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "object"
+      ],
+      "duration_ms": {
+        "min": 0,
+        "max": 0.1,
+        "avg": 0.033
+      },
+      "fields": [
+        {
+          "field": "versionId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "dcxId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceTaskId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/dcx/:dcxId/access",
+      "methods": [
+        "GET"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "object"
+      ],
+      "duration_ms": {
+        "min": 0,
+        "max": 0.3,
+        "avg": 0.133
+      },
+      "fields": [
+        {
+          "field": "dcxId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "hasAccess",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "boolean"
+          ]
+        },
+        {
+          "field": "canEdit",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "boolean"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/dcx/:dcxId/versions",
+      "methods": [
+        "GET"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "array"
+      ],
+      "duration_ms": {
+        "min": 0,
+        "max": 0.2,
+        "avg": 0.067
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "dcxId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "versionNumber",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "status",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "communicatedDate",
+          "population_rate": 0.333,
+          "null_rate": 0.667,
+          "types": [
+            "null",
+            "string"
+          ]
+        },
+        {
+          "field": "createdAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "createdBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "lastUpdatedAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "lastUpdatedBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "inProgressAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "readyAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "approvedAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "supersededAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceType",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "sourceVersionId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceBackupId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceTemplateId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "assignedTeam",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "attachments",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "metadata",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "object"
+          ]
+        },
+        {
+          "field": "strategyContext",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/versions",
+      "methods": [
+        "GET"
+      ],
+      "captures": 4,
+      "response_kind": [
+        "array"
+      ],
+      "duration_ms": {
+        "min": 0.1,
+        "max": 0.2,
+        "avg": 0.125
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "dcxId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "versionNumber",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "status",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "communicatedDate",
+          "population_rate": 0.5,
+          "null_rate": 0.5,
+          "types": [
+            "null",
+            "string"
+          ]
+        },
+        {
+          "field": "createdAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "createdBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "lastUpdatedAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "lastUpdatedBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "inProgressAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "readyAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "approvedAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "supersededAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceType",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "sourceVersionId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceBackupId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceTemplateId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "assignedTeam",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "attachments",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "metadata",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "object"
+          ]
+        },
+        {
+          "field": "strategyContext",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/versions/:sourceVersionId/duplicate",
+      "methods": [
+        "POST"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "object"
+      ],
+      "duration_ms": {
+        "min": 6.4,
+        "max": 8.4,
+        "avg": 7.633
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "dcxId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "versionNumber",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "status",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "communicatedDate",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "createdAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "createdBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "lastUpdatedAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "lastUpdatedBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "inProgressAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "readyAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "approvedAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "supersededAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceType",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "sourceVersionId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "sourceBackupId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceTemplateId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "assignedTeam",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "attachments",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "metadata",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "object"
+          ]
+        },
+        {
+          "field": "strategyContext",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/versions/:versionId",
+      "methods": [
+        "GET"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "object"
+      ],
+      "duration_ms": {
+        "min": 0,
+        "max": 0.1,
+        "avg": 0.067
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "dcxId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "versionNumber",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "status",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "communicatedDate",
+          "population_rate": 0.333,
+          "null_rate": 0.667,
+          "types": [
+            "null",
+            "string"
+          ]
+        },
+        {
+          "field": "createdAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "createdBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "lastUpdatedAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "lastUpdatedBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "inProgressAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "readyAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "approvedAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "supersededAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceType",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "sourceVersionId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceBackupId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceTemplateId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "assignedTeam",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "attachments",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "metadata",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "object"
+          ]
+        },
+        {
+          "field": "strategyContext",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/versions/:versionId/activity-logs",
+      "methods": [
+        "GET"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "array"
+      ],
+      "duration_ms": {
+        "min": 0,
+        "max": 0.1,
+        "avg": 0.033
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "type",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "versionId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "userId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "timestamp",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "details",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "object"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/versions/:versionId/builder",
+      "methods": [
+        "GET"
+      ],
+      "captures": 4,
+      "response_kind": [
+        "object"
+      ],
+      "duration_ms": {
+        "min": 0.6,
+        "max": 2.4,
+        "avg": 1.675
+      },
+      "fields": [
+        {
+          "field": "version",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "object"
+          ]
+        },
+        {
+          "field": "phases",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array",
+            "object"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/versions/:versionId/builder",
+      "methods": [
+        "PATCH"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "object"
+      ],
+      "duration_ms": {
+        "min": 8,
+        "max": 13.1,
+        "avg": 10.1
+      },
+      "fields": [
+        {
+          "field": "version",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "object"
+          ]
+        },
+        {
+          "field": "phases",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "object"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/versions/:versionId/date",
+      "methods": [
+        "PATCH"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "object"
+      ],
+      "duration_ms": {
+        "min": 0.2,
+        "max": 0.4,
+        "avg": 0.267
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "dcxId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "versionNumber",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "status",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "communicatedDate",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "createdAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "createdBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "lastUpdatedAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "lastUpdatedBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "inProgressAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "readyAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "approvedAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "supersededAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceType",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "sourceVersionId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceBackupId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceTemplateId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "assignedTeam",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "attachments",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "metadata",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "object"
+          ]
+        },
+        {
+          "field": "strategyContext",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/versions/:versionId/files",
+      "methods": [
+        "GET"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "array"
+      ],
+      "duration_ms": {
+        "min": 0.1,
+        "max": 0.2,
+        "avg": 0.133
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "versionId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "title",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "url",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "source",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "createdBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "createdAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/versions/:versionId/files",
+      "methods": [
+        "POST"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "object"
+      ],
+      "duration_ms": {
+        "min": 0.2,
+        "max": 0.3,
+        "avg": 0.233
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "versionId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "title",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "url",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "source",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "createdBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "createdAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/versions/:versionId/status",
+      "methods": [
+        "PATCH"
+      ],
+      "captures": 3,
+      "response_kind": [
+        "object"
+      ],
+      "duration_ms": {
+        "min": 0.3,
+        "max": 3.6,
+        "avg": 1.4
+      },
+      "fields": [
+        {
+          "field": "id",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "dcxId",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "versionNumber",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "status",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "communicatedDate",
+          "population_rate": 0.333,
+          "null_rate": 0.667,
+          "types": [
+            "null",
+            "string"
+          ]
+        },
+        {
+          "field": "createdAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "createdBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "lastUpdatedAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "lastUpdatedBy",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "inProgressAt",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "readyAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "approvedAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "supersededAt",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceType",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "field": "sourceVersionId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceBackupId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "sourceTemplateId",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        },
+        {
+          "field": "assignedTeam",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "attachments",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "array"
+          ]
+        },
+        {
+          "field": "metadata",
+          "population_rate": 1,
+          "null_rate": 0,
+          "types": [
+            "object"
+          ]
+        },
+        {
+          "field": "strategyContext",
+          "population_rate": 0,
+          "null_rate": 1,
+          "types": [
+            "null"
+          ]
+        }
+      ]
+    }
+  ]
+}

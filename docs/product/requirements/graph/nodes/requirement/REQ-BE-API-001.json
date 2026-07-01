@@ -1,0 +1,18 @@
+{
+  "id": "REQ-BE-API-001",
+  "type": "Requirement",
+  "statement": "The frozen 22-route apiClient contract is served by a real Supabase-backed dispatcher (behind VITE_USE_REAL_BACKEND, whole-dispatcher flip), preserving api-mappers.ts and all UI components unchanged, with mock remaining the default until parity is proven.",
+  "scope": "backend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "source": "docs/plans/active/production-api-client-switch/README.md",
+    "source_path": "docs/backend/contract/contract.json",
+    "authoring_actor": "Claude (claude-sonnet-4-6) PAC-R0 intake",
+    "confidence": 0.9,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-07-01"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "PRP-2026-07-01-create-node-MAN-service-src-services-real-dispatch",
+  "type": "Proposal",
+  "action": "create-node",
+  "actor": "Claude (claude-sonnet-4-6)",
+  "date": "2026-07-01",
+  "reason": "PAC-R2: new real-dispatch.ts manifestation, implements REQ-BE-API-001",
+  "payload": {
+    "node": {
+      "id": "MAN-service-src-services-real-dispatch",
+      "type": "Manifestation",
+      "statement": "Real Supabase-backed dispatcher implementing the 22-route contract (PAC-R2, production-api-client-switch).",
+      "scope": "backend",
+      "governance": "proposed",
+      "maturity": "logic-defined",
+      "delivery": "not-assessed",
+      "kind": "service",
+      "current_paths": [
+        "src/services/real-dispatch.ts"
+      ],
+      "lifecycle": "created",
+      "provenance": {
+        "source": "PAC-R2 sprint (production-api-client-switch)",
+        "source_path": "src/services/real-dispatch.ts",
+        "source_anchor": "real-dispatch",
+        "authoring_actor": "Claude (claude-sonnet-4-6)",
+        "confidence": 0.9,
+        "confirmation_status": "agent-proposed",
+        "last_checked_date": "2026-07-01"
+      }
+    }
+  }
+}

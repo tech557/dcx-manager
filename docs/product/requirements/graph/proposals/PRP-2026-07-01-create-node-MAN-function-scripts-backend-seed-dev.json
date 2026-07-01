@@ -1,0 +1,33 @@
+{
+  "id": "PRP-2026-07-01-create-node-MAN-function-scripts-backend-seed-dev",
+  "type": "Proposal",
+  "action": "create-node",
+  "actor": "Claude (claude-sonnet-4-6)",
+  "date": "2026-07-01",
+  "reason": "PAC-R4: new seed-dev script manifestation",
+  "payload": {
+    "node": {
+      "id": "MAN-function-scripts-backend-seed-dev",
+      "type": "Manifestation",
+      "statement": "PAC-R4 idempotent dev-data seed script -- catalog + one workspace/dcx/version/builder-tree/file/activity fixture for dcx-manager-dev.",
+      "scope": "backend",
+      "governance": "proposed",
+      "maturity": "logic-defined",
+      "delivery": "not-assessed",
+      "kind": "script",
+      "current_paths": [
+        "scripts/backend/seed-dev.mjs"
+      ],
+      "lifecycle": "created",
+      "provenance": {
+        "source": "PAC-R4 sprint (production-api-client-switch)",
+        "source_path": "scripts/backend/seed-dev.mjs",
+        "source_anchor": "seed-dev",
+        "authoring_actor": "Claude (claude-sonnet-4-6)",
+        "confidence": 0.9,
+        "confirmation_status": "agent-proposed",
+        "last_checked_date": "2026-07-01"
+      }
+    }
+  }
+}

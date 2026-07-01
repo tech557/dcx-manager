@@ -14,4 +14,10 @@
 *.local
 .DS_Store
 .claude/scheduled_tasks.lock
+.claude/.session-log-gate-state
 .vercel
+
+# BE3-R5b: raw backend capture payloads are gitignored (may contain seed values);
+# only the rolled-up, scrubbed summaries under docs/backend/captured/<version>/summary.json are committed.
+docs/backend/captured/**/raw-capture.json
+docs/backend/captured/**/raw-*.json

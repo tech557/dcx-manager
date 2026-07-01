@@ -857,3 +857,22 @@ per item** in the output (a generated structured artifact is best), verified by 
 Strict/integrative sprints (templated outputs, cross-scope wiring, "every item" datasets) go to a
 strong executor **or** behind a green Sprint Doctor self-check before any external audit. Do not put the
 weakest executor on the strictest-criteria sprint without the §36a pre-check.
+
+---
+
+## §37. Product-Owner Communication & Sign-off Scope (added 2026-07-01)
+
+**Who "PO" means.** The operator is a real Product Owner, not a developer — regardless of how technical
+the session gets. Default to product-friendly language: plain, framed around outcome/impact/risk. Add
+technical depth only when the decision genuinely requires it to be understood. Never address the operator
+as a developer — no unexplained jargon, no "just run X" phrasing without the product-level why attached.
+
+**Sign-off gates are for PO-level decisions only.** Reserve a "stop and get sign-off" gate for what a real
+Product Owner is actually responsible for deciding: production risk, user-facing impact, scope/cost change,
+compliance/security exposure, or an irreversible action. Do not route routine technical execution — syntax
+choice, which file to touch, an implementation detail with no product-level consequence — through a PO
+stop. That decision is the agent's to make and report, not the PO's to approve.
+
+**This is an agent-behavior rule, not a product requirement.** It must never produce a `REQ-*`/`PRP-*`
+node, manifestation, or trace link in `docs/product/requirements/graph/` — no requirements-graph work
+follows from this section, retroactively or going forward.

@@ -38,11 +38,16 @@ for folder_status in ('active', 'drafted', 'completed'):
                         f'MISMATCH: Plan in {folder_status}/ but README says status={stated} — {plan_dir.replace(repo+"/","")}'
                     )
 
-        # Active plans should have sprint files
+        # Active plans should have sprint files — either directly in the plan dir OR under a
+        # sprints/ subdirectory (the nested-sprint convention used by newer plans, e.g.
+        # cicd-release-governance/sprints/RG-*.md). Check both so nested layouts don't false-warn.
         if folder_status == 'active':
             sprint_files = [f for f in os.listdir(plan_dir)
                            if f.endswith('.md') and f not in ('README.md',)
                            and not os.path.isdir(os.path.join(plan_dir, f))]
+            sprints_subdir = os.path.join(plan_dir, 'sprints')
+            if os.path.isdir(sprints_subdir):
+                sprint_files += [f for f in os.listdir(sprints_subdir) if f.endswith('.md')]
             if not sprint_files:
                 warnings.append(f'WARN: Active plan has no sprint files: {plan_dir.replace(repo+"/","")}')
 

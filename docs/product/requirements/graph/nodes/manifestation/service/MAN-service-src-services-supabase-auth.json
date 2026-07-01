@@ -1,0 +1,23 @@
+{
+  "id": "MAN-service-src-services-supabase-auth",
+  "type": "Manifestation",
+  "statement": "Real Supabase Auth session wiring (email magic-link + Google OAuth, session listener) for PAC-R3, production-api-client-switch.",
+  "scope": "backend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "kind": "service",
+  "current_paths": [
+    "src/services/supabase-auth.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "PAC-R3 sprint (production-api-client-switch)",
+    "source_path": "src/services/supabase-auth.ts",
+    "source_anchor": "supabase-auth",
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confidence": 0.9,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-07-01"
+  }
+}

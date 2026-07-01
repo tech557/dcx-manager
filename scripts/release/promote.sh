@@ -151,15 +151,19 @@ if [ "$ENV" = "staging" ]; then
   STAGE=$((STAGE + 1))
   NEW_VERSION="v${MAJOR}.${STAGE}.0.0"
   NEW_STATUS="promoted-staging"
+  # Record the stable environment URL in its dedicated column so the registry can answer
+  # "what stable URL did this promotion move?" without parsing notes (RG output-review P1, 2026-07-01).
+  STAGING_URL="https://$TARGET_DOMAIN"; PRODUCTION_URL=""
 else
   MAJOR=$((MAJOR + 1))
   NEW_VERSION="v${MAJOR}.0.0.0"
   NEW_STATUS="promoted-prod"
+  STAGING_URL=""; PRODUCTION_URL="https://$TARGET_DOMAIN"
 fi
 
 bash "$SCRIPT_DIR/append-release-row.sh" \
   "$NEW_VERSION" "promotion" "$COMMIT_SHA" "$BRANCH" "promote.sh" \
-  "" "" "$PREVIEW_URL" "" "" \
+  "" "" "$PREVIEW_URL" "$STAGING_URL" "$PRODUCTION_URL" \
   "$NEW_STATUS" "$ENV" "$APPROVED_BY" "$APPROVED_AT" "" \
   "promoted from $VERSION via promote.sh, exact deployment, no rebuild"
 

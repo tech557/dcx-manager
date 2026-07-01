@@ -1,0 +1,14 @@
+{
+  "id": "TRC-MAN-function-scripts-backend-sync-allowed-members-TO-REQ-BE-AUTH-ALLOWLIST-001",
+  "type": "TraceLink",
+  "source": "MAN-function-scripts-backend-sync-allowed-members",
+  "target": "REQ-BE-AUTH-ALLOWLIST-001",
+  "relationship_type": "supports",
+  "coverage": "partial",
+  "confidence": 0.9,
+  "inference_source": "PAC addendum execution",
+  "confirmation_status": "confirmed",
+  "last_checked_date": "2026-07-01",
+  "stale_state": "current",
+  "needs_confirmation": false
+}

@@ -216,7 +216,7 @@ cat > "$PROMOTE_REPO/docs/releases/approvals/v0.3.5.1-staging.md" <<'EOF'
 approved-by: PO
 approved-at: 2026-07-01
 EOF
-PROMOTE_ALIAS_CMD="echo STUB-ALIAS-CALL" "$PROMOTE_REPO/scripts/release/promote.sh" "v0.3.5.1" "staging" > /tmp/promote-ok.log 2>&1
+PROMOTE_STAGING_DOMAIN="staging.example.com" PROMOTE_ALIAS_CMD="echo STUB-ALIAS-CALL" "$PROMOTE_REPO/scripts/release/promote.sh" "v0.3.5.1" "staging" > /tmp/promote-ok.log 2>&1
 promote_ok_code=$?
 assert_exit_zero "promote succeeds once approval record exists (alias call stubbed)" "$promote_ok_code"
 grep -q "STUB-ALIAS-CALL https://example-preview.vercel.app" /tmp/promote-ok.log && stub_called=0 || stub_called=1
@@ -226,6 +226,12 @@ echo "$new_row" | grep -q '"v0.4.0.0"' && new_version_ok=0 || new_version_ok=1
 assert_exit_zero "promotion appends a new row with the §3.2 staging-promotion version (Stage+1, reset)" "$new_version_ok"
 echo "$new_row" | grep -q 'promoted-staging' && status_ok=0 || status_ok=1
 assert_exit_zero "promoted row status is promoted-staging" "$status_ok"
+# RG output-review P1 (2026-07-01): a staging promotion must record the stable staging URL in the
+# dedicated staging_url column (9) and leave production_url (10) empty. All fields are quote-wrapped,
+# so the exact ordered segment preview_url,staging_url,production_url,status is unambiguous.
+echo "$new_row" | grep -q '"https://example-preview.vercel.app","https://staging.example.com","","promoted-staging"' \
+  && staging_url_ok=0 || staging_url_ok=1
+assert_exit_zero "staging promotion fills staging_url with the stable target domain, production_url empty" "$staging_url_ok"
 
 PROMOTE_ALIAS_CMD="echo STUB-ALIAS-CALL" "$PROMOTE_REPO/scripts/release/promote.sh" "v0.3.5.1" "production" > /tmp/promote-no-prod-approval.log 2>&1
 promote_no_prod_code=$?

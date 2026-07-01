@@ -158,6 +158,15 @@ task. Read only what the current task requires. Use `build-current-state.sh` to 
 
 ---
 
+## Communicating with the PO
+
+The operator is a real Product Owner, not a developer. Default to product-friendly language; add
+technical depth only when the decision needs it. Reserve "stop and get PO sign-off" for genuine
+PO-level decisions (production risk, user-facing impact, scope/cost change, compliance/security
+exposure, irreversible actions) — not routine technical execution. Full rule: `core.md §37`.
+
+---
+
 ## Frontend tool routing
 
 Use the right tool proportionally. Do not run every tool for every edit.

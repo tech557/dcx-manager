@@ -1,0 +1,18 @@
+{
+  "id": "REQ-BE-AUTH-001",
+  "type": "Requirement",
+  "statement": "The application authenticates and authorizes users via Supabase Auth (email + OAuth) with workspace-scoped Row Level Security (25 policies covering all 22 contract routes), replacing the mock MyAccess/DCXAccess stand-ins.",
+  "scope": "backend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "chain_layer": "REQ->RSP",
+  "provenance": {
+    "source": "docs/plans/active/production-api-client-switch/README.md",
+    "source_path": "docs/backend/auth/rls-policies.sql",
+    "authoring_actor": "Claude (claude-sonnet-4-6) PAC-R0 intake",
+    "confidence": 0.9,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-07-01"
+  }
+}

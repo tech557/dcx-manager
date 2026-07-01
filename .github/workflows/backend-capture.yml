@@ -1,0 +1,182 @@
+name: Backend capture (BE3-R5b)
+
+# BE3-R5b (backend-discovery-v3): on every successful preview deployment, snapshot the API contract
+# from the deployed commit and record real request/response payloads via the BE3-R5a off-by-default
+# capture sink, rolling them into docs/backend/captured/<version>/summary.json — referenced by <version>
+# in the existing release registry (docs/releases/registry.csv). It ACCUMULATES across previews so
+# BE3-R6 can score readiness gate G5.
+#
+# Reuses the RG `deployment_status` trigger (same event as record-preview.yml). The app is still
+# mock-backed, so capture runs against a capture-specific build (VITE_BE3_CAPTURE=1) of the SAME commit
+# the preview was built from (checked out by deployment sha) — faithful to the preview, and independent
+# of Vercel's build env. Two ADVISORY gates (promotable to required later — OD-BE3-06):
+#   * contract-drift   — committed contract.json must match the code's emitted contract
+#   * capture-coverage — the summary must cover every route the seeded journey exercised
+#
+# Guarded by scripts/backend/assert-capture-off-in-prod.sh (D-BE3-CAPTURE-OFF): capture never runs in a
+# production context.
+
+on:
+  deployment_status:
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    name: Snapshot contract + capture payloads
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: backend-capture-${{ github.event.deployment.sha }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha }}
+          persist-credentials: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Resolve version for this commit (registry join key)
+        id: find
+        run: |
+          SHA="${{ github.event.deployment.sha }}"
+          ROW="$(grep ",\"$SHA\"," docs/releases/registry.csv || true)"
+          if [ -z "$ROW" ]; then
+            echo "No registry row for commit $SHA — not a stamped build; skipping capture."
+            echo "version=" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          echo "version=$(echo "$ROW" | cut -d',' -f1 | tr -d '\"')" >> "$GITHUB_OUTPUT"
+
+      - name: Prod-guard — capture must never run in production (D-BE3-CAPTURE-OFF)
+        if: steps.find.outputs.version != ''
+        env:
+          DEPLOY_CONTEXT: ${{ github.event.deployment_status.environment }}
+        run: bash scripts/backend/assert-capture-off-in-prod.sh
+
+      - name: Install deps + Playwright
+        if: steps.find.outputs.version != ''
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Contract-drift gate (advisory)
+        id: drift
+        if: steps.find.outputs.version != ''
+        continue-on-error: true
+        run: bash scripts/backend/capture-contract-snapshot.sh
+
+      - name: Run seeded journey (dev server + full-route walk)
+        if: steps.find.outputs.version != ''
+        env:
+          VITE_BE3_CAPTURE: '1'
+        run: |
+          set -euo pipefail
+          VER="${{ steps.find.outputs.version }}"
+          OUT="docs/backend/captured/${VER}"
+          mkdir -p "$OUT"
+          # The Vite DEV server serves /src modules, so the seeded walk can import the real
+          # apiClient and deterministically drive EVERY contract route from extract-routes.sh
+          # through the capture tap (flag on) — no src change, no app window-hook needed.
+          VITE_BE3_CAPTURE=1 npm run dev &
+          SERVER_PID=$!
+          npx wait-on http://127.0.0.1:3000 -t 60000
+          export ROUTES_JSON="$(bash scripts/backend/extract-routes.sh)"
+
+          # Ephemeral seeded-journey script (runner temp — not a committed repo file).
+          cat > /tmp/seeded-journey.mjs <<'JS'
+          import { chromium } from 'playwright';
+          import { writeFileSync } from 'node:fs';
+          const routes = JSON.parse(process.env.ROUTES_JSON);
+          const browser = await chromium.launch();
+          const page = await browser.newPage();
+          await page.goto('http://127.0.0.1:3000');
+          const records = await page.evaluate(async (routeList) => {
+            const { apiClient } = await import('/src/services/api-client.ts');
+            const sink = window.__BE3_CAPTURE__;
+            if (!sink) return { error: 'capture sink not exposed (VITE_BE3_CAPTURE not set at dev)' };
+            const versions = (await apiClient('/versions')).data || [];
+            const vid = versions[0]?.id ?? 'v-1';
+            const dcxId = versions[0]?.dcxId ?? 'dcx-1';
+            const channels = (await apiClient('/api/channels')).data || [];
+            const cid = channels[0]?.id ?? 'c-1';
+            const bodyFor = (r) => {
+              if (!r.mutation) return undefined;
+              if (r.path.endsWith('/compositions')) return { name: 'probe', definitionIds: [] };
+              if (r.path.endsWith('/builder')) return [];
+              if (r.path.endsWith('/status')) return { status: 'In Progress' };
+              if (r.path.endsWith('/date')) return { date: null };
+              if (r.path.endsWith('/files')) return { id: 'f-probe', versionId: vid, title: 't', url: 'https://x', source: 'link', createdBy: 'u', createdAt: '2026-01-01' };
+              if (r.path.endsWith('/activity-logs')) return { type: 'version_created', versionId: vid, userId: 'u' };
+              if (r.path.endsWith('/review-draft')) return { prompt: 'probe' };
+              return {};
+            };
+            for (const r of routeList) {
+              const p = r.path
+                .replace(':sourceVersionId', vid).replace(':versionId', vid)
+                .replace(':dcxId', dcxId).replace(':channelId', cid);
+              try { await apiClient(p, { method: r.method, body: bodyFor(r) }); } catch { /* per-route best-effort */ }
+            }
+            return sink.flush();
+          }, routes);
+          writeFileSync('/tmp/raw-capture.json', JSON.stringify(Array.isArray(records) ? records : [], null, 2));
+          if (!Array.isArray(records)) console.error('seeded-journey:', JSON.stringify(records));
+          await browser.close();
+          JS
+          node /tmp/seeded-journey.mjs || true
+          kill $SERVER_PID || true
+
+          # Roll raw payloads into the committed summary (normalizes concrete paths to route
+          # templates; + scrub check).
+          if [ -s /tmp/raw-capture.json ] && [ "$(jq 'length' /tmp/raw-capture.json)" -gt 0 ]; then
+            bash scripts/backend/summarize-capture.sh /tmp/raw-capture.json "${OUT}/summary.json"
+          else
+            echo "No raw capture produced (dev server / capture-flag issue) — see step log."
+            echo '{"_meta":{"note":"no capture produced this run"},"routes":[]}' > "${OUT}/summary.json"
+          fi
+
+      - name: Capture-coverage gate (advisory)
+        id: coverage
+        if: steps.find.outputs.version != ''
+        continue-on-error: true
+        run: |
+          VER="${{ steps.find.outputs.version }}"
+          SUMMARY="docs/backend/captured/${VER}/summary.json"
+          node -e '
+            const fs=require("fs");
+            const routes=JSON.parse(require("child_process").execSync("bash scripts/backend/extract-routes.sh").toString());
+            const sum=JSON.parse(fs.readFileSync(process.argv[1],"utf8"));
+            // method+template granularity: the summary routes are already templated by summarize-capture.
+            const seen=new Set(); for(const r of (sum.routes||[])) for(const m of (r.methods||[])) seen.add(m+" "+r.route);
+            const want=routes.map(r=>r.method+" "+r.path);
+            const missing=want.filter(k=>!seen.has(k));
+            console.log(`capture-coverage: ${want.length-missing.length}/${want.length} method+path covered`);
+            if(missing.length) console.log("thin (not yet captured): "+missing.join(", "));
+          ' "$SUMMARY"
+
+      - name: Reference summary by version in the release registry
+        if: steps.find.outputs.version != ''
+        continue-on-error: true
+        run: |
+          VER="${{ steps.find.outputs.version }}"
+          REF="captured:docs/backend/captured/${VER}/summary.json"
+          # Reuse the RG patch tool; fills the capture reference on the matching row ONLY (no new row).
+          # NOTE (PO): the registry has no dedicated capture column and `notes` is pre-filled by
+          # version-assign, so this patch is best-effort/advisory until the PO decides whether to add a
+          # `capture_ref` column (BE3-R5b forbids adding columns) — see output/BE3-R5b-live-capture.md.
+          bash scripts/release/patch-release-row.sh "$VER" notes "$REF" || \
+            echo "registry patch skipped (notes already filled) — summary still referenced by <version> path"
+
+      - name: Commit captured summary
+        if: steps.find.outputs.version != ''
+        run: |
+          VER="${{ steps.find.outputs.version }}"
+          git config user.name "DCX Capture Bot"
+          git config user.email "capture@dcx-manager.local"
+          git add "docs/backend/captured/${VER}/summary.json" docs/releases/registry.csv || true
+          git commit -m "chore(capture): record backend payload summary for ${VER} [skip ci]" || echo "nothing to commit"
+          git push origin HEAD:integration || echo "push skipped"

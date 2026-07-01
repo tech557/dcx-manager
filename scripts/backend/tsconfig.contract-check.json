@@ -1,0 +1,9 @@
+{
+  "//": "BE3-R1 contract round-trip check config. Extends the root tsconfig so it inherits strict + paths, but compiles ONLY the contract-check file (which pulls in the src it references via relative imports). Run: npx tsc -p scripts/backend/tsconfig.contract-check.json --noEmit",
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "types": []
+  },
+  "include": ["check-contract-types.ts"]
+}

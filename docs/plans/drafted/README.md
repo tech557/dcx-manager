@@ -9,13 +9,21 @@ A drafted plan moves to `docs/plans/active/` when:
 
 ## Current drafted plans
 
-| Plan | Version | Prior art | Runs when | Executor | Goal |
-|---|---|---|---|---|---|
-| [frontend-polish-implementation-v0.3.5](./frontend-polish-implementation-v0.3.5/README.md) | v0.3.5 | `completed/frontend-polish-v0.3.5` (FP-R0..R5 + RS-R11 brief), `completed/requirements-system` | After `dcx-plan-audit` READY → PO activates | per-sprint by skill/tool (see plan) | Execute the graph-grounded frontend polish: 17 sprints (WM/CT/SK/CC/HV) covering all 88 FP-R4 criteria, token-first, with PO Web Checks + Requirement Debt Burn-down |
+| Plan | Version | Prior art | Runs when | Goal |
+|---|---|---|---|---|
+| [production-api-client-switch](./production-api-client-switch/README.md) | v1.0.1.0 | `active/backend-discovery-v3` (readiness dataset), `completed/cicd-release-governance` (release pipeline) | After `dcx-plan-audit` READY **and** backend-discovery-v3 readiness gate = READY → PO activates | Connect the real Supabase backend behind the frozen 22-route `apiClient` contract (7 sprints PAC-R0..R6): apply schema+RLS to dev, real dispatcher behind a flag, auth wiring, route parity, preview cutover, PO-gated production promotion |
 
-> **2026-07-01:** `cicd-release-governance` moved to `docs/plans/active/` after the final-approval audit
-> (`active/cicd-release-governance/audit/2026-07-01-codex.md`) returned READY (0 blocking). See
-> `docs/plans/active/README.md`.
+> **Drafted 2026-07-01.** Not yet audited. Must NOT execute until (a) audit READY and (b) backend-discovery-v3
+> reaches its readiness gate. Applies schema + wires a real backend, so every apply/promotion is PO-approved
+> through the release-governance pipeline.
+
+> **2026-07-01:** `backend-discovery-v3` was drafted, audited READY (`audit/2026-07-01-codex-ready.md`,
+> 0 blocking), and **activated** — it now lives in [`docs/plans/active/backend-discovery-v3/`](../active/backend-discovery-v3/README.md)
+> and is executing.
+>
+> **2026-07-01 (earlier):** `frontend-polish-implementation-v0.3.5` completed its audit + execution and moved
+> to [`docs/plans/completed/frontend-polish-implementation-v0.3.5/`](../completed/frontend-polish-implementation-v0.3.5/README.md).
+> `cicd-release-governance` also completed (see `docs/plans/completed/`).
 
 ## Execution order (implementation)
 

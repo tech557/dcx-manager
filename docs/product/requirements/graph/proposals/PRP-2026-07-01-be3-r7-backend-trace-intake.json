@@ -1,0 +1,17 @@
+{
+  "id": "PRP-2026-07-01-be3-r7-backend-trace-intake",
+  "source_message": "PO: \"can u clear the debt now in a one final sprint\" (BE3 readiness gate G6 — backend capture/contract tooling manifestations).",
+  "proposal_type": "reconciliation-grounding",
+  "ground_to": "REQ-GOV-TRACE-001-BACKEND",
+  "reason": "Ground the BE3-R5a/R5b backend capture + contract-gate tooling to the approved governance-trace-backend requirement so req:completion-gate passes (G6). No new product behavior; these are discovery/governance artifacts.",
+  "manifestations": [
+    "MAN-function-src-telemetry-capture-sink",
+    "MAN-test-src-telemetry-capture-sink-test",
+    "MAN-function-scripts-backend-extract-routes",
+    "MAN-function-scripts-backend-check-contract-types",
+    "MAN-function-scripts-backend-capture-contract-snapshot",
+    "MAN-function-scripts-backend-summarize-capture",
+    "MAN-function-scripts-backend-assert-capture-off-in-prod"
+  ],
+  "signoff_by": "PO-2026-07-01-BE3-R7-SIGNOFF"
+}

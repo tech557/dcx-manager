@@ -1,0 +1,24 @@
+{
+  "id": "PRP-2026-07-01-create-trace-link-TRC-MAN-service-src-services-supabase-auth-TO-REQ-BE-AUTH-001",
+  "type": "Proposal",
+  "action": "create-trace-link",
+  "actor": "Claude (claude-sonnet-4-6)",
+  "date": "2026-07-01",
+  "reason": "PAC-R3: link supabase-auth.ts to REQ-BE-AUTH-001",
+  "payload": {
+    "traceLink": {
+      "id": "TRC-MAN-service-src-services-supabase-auth-TO-REQ-BE-AUTH-001",
+      "type": "TraceLink",
+      "source": "MAN-service-src-services-supabase-auth",
+      "target": "REQ-BE-AUTH-001",
+      "relationship_type": "implements",
+      "coverage": "complete",
+      "confidence": 0.95,
+      "inference_source": "PAC-R3 sprint execution",
+      "confirmation_status": "confirmed",
+      "last_checked_date": "2026-07-01",
+      "stale_state": "current",
+      "needs_confirmation": false
+    }
+  }
+}

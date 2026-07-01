@@ -1,0 +1,24 @@
+{
+  "id": "PRP-2026-07-01-create-trace-link-TRC-MAN-react-component-src-ui-auth-loginredirect-TO-REQ-PR-002",
+  "type": "Proposal",
+  "action": "create-trace-link",
+  "actor": "Claude (claude-sonnet-4-6)",
+  "date": "2026-07-01",
+  "reason": "PAC-R3: link LoginRedirect.tsx to REQ-PR-002 (real sign-in form)",
+  "payload": {
+    "traceLink": {
+      "id": "TRC-MAN-react-component-src-ui-auth-loginredirect-TO-REQ-PR-002",
+      "type": "TraceLink",
+      "source": "MAN-react-component-src-ui-auth-loginredirect",
+      "target": "REQ-PR-002",
+      "relationship_type": "implements",
+      "coverage": "complete",
+      "confidence": 0.9,
+      "inference_source": "PAC-R3 sprint execution (real email/Google sign-in form)",
+      "confirmation_status": "confirmed",
+      "last_checked_date": "2026-07-01",
+      "stale_state": "current",
+      "needs_confirmation": false
+    }
+  }
+}

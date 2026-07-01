@@ -33,7 +33,7 @@ def run_quiet(cmd):
 
 # --- Version ---
 version_md_content = slurp('docs/VERSION.md')
-repo_version = re.search(r'v([0-9]+\.[0-9]+\.[0-9]+)', version_md_content)
+repo_version = re.search(r'v([0-9]+\.[0-9]+\.[0-9]+(?:\.[0-9]+)?)', version_md_content)
 repo_version = repo_version.group(0) if repo_version else 'unknown'
 
 pkg = jload('package.json', {})
@@ -41,7 +41,7 @@ pkg_version = pkg.get('version', 'unknown')
 
 meta = jload('metadata.json', {})
 meta_version_str = meta.get('name', '')
-meta_version = re.search(r'v([0-9]+\.[0-9]+\.[0-9]+)', meta_version_str)
+meta_version = re.search(r'v([0-9]+\.[0-9]+\.[0-9]+(?:\.[0-9]+)?)', meta_version_str)
 meta_version = meta_version.group(0) if meta_version else 'unknown'
 
 # --- Plans ---

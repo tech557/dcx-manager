@@ -1,0 +1,23 @@
+{
+  "id": "MAN-service-src-services-supabase-client",
+  "type": "Manifestation",
+  "statement": "Lazily-constructed Supabase JS client + VITE_USE_REAL_BACKEND flag reader (PAC-R2, production-api-client-switch).",
+  "scope": "backend",
+  "governance": "proposed",
+  "maturity": "logic-defined",
+  "delivery": "not-assessed",
+  "kind": "service",
+  "current_paths": [
+    "src/services/supabase-client.ts"
+  ],
+  "lifecycle": "created",
+  "provenance": {
+    "source": "PAC-R2 sprint (production-api-client-switch)",
+    "source_path": "src/services/supabase-client.ts",
+    "source_anchor": "supabase-client",
+    "authoring_actor": "Claude (claude-sonnet-4-6)",
+    "confidence": 0.9,
+    "confirmation_status": "agent-proposed",
+    "last_checked_date": "2026-07-01"
+  }
+}

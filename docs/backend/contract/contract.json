@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "generated_by": "BE3-R1 (backend-discovery-v3)",
+    "source_of_truth": "src/services/mock-dispatch.ts (D-BE3-CONTRACT-SOT)",
+    "route_list_authority": "scripts/backend/extract-routes.sh",
+    "date": "2026-07-01",
+    "route_count": 22,
+    "types_source": "src/types/api.ts + src/types/lifecycle.ts",
+    "note": "request_body_type / response_type reference live TypeScript types; the round-trip check (scripts/backend/check-contract-types.ts) proves the contract has not drifted from those types."
+  },
+  "routes": [
+    { "method": "GET", "path": "/api/channels", "paramNames": [], "mutation": false, "family": "channels", "service": "channels.service.ts", "request_body_type": null, "response_type": "ApiChannel[]" },
+    { "method": "GET", "path": "/api/channels/:channelId/compositions", "paramNames": ["channelId"], "mutation": false, "family": "channel-compositions", "service": "channels.service.ts", "request_body_type": null, "response_type": "ApiChannelComposition[]" },
+    { "method": "POST", "path": "/api/channels/:channelId/compositions", "paramNames": ["channelId"], "mutation": true, "family": "channel-compositions", "service": "channels.service.ts", "request_body_type": "CreateCompositionInput", "response_type": "ApiChannelComposition" },
+
+    { "method": "GET", "path": "/versions/:versionId/builder", "paramNames": ["versionId"], "mutation": false, "family": "builder", "service": "builder.service.ts", "request_body_type": null, "response_type": "ApiBuilderTree" },
+    { "method": "PATCH", "path": "/versions/:versionId/builder", "paramNames": ["versionId"], "mutation": true, "family": "builder", "service": "builder.service.ts", "request_body_type": "ApiPhase[]", "response_type": "ApiBuilderTree" },
+
+    { "method": "GET", "path": "/versions", "paramNames": [], "mutation": false, "family": "versions", "service": "versions.service.ts", "request_body_type": null, "response_type": "ApiVersion[]" },
+    { "method": "GET", "path": "/dcx/:dcxId/versions", "paramNames": ["dcxId"], "mutation": false, "family": "versions", "service": "versions.service.ts", "request_body_type": null, "response_type": "ApiVersion[]" },
+    { "method": "GET", "path": "/versions/:versionId", "paramNames": ["versionId"], "mutation": false, "family": "versions", "service": "versions.service.ts", "request_body_type": null, "response_type": "ApiVersion" },
+    { "method": "PATCH", "path": "/versions/:versionId/status", "paramNames": ["versionId"], "mutation": true, "family": "versions", "service": "versions.service.ts", "request_body_type": "{ status: VersionStatus }", "response_type": "ApiVersion" },
+    { "method": "PATCH", "path": "/versions/:versionId/date", "paramNames": ["versionId"], "mutation": true, "family": "versions", "service": "versions.service.ts", "request_body_type": "{ date: string | null }", "response_type": "ApiVersion" },
+    { "method": "POST", "path": "/versions/:sourceVersionId/duplicate", "paramNames": ["sourceVersionId"], "mutation": true, "family": "versions", "service": "versions.service.ts", "request_body_type": null, "response_type": "ApiVersion" },
+
+    { "method": "GET", "path": "/versions/:versionId/files", "paramNames": ["versionId"], "mutation": false, "family": "files", "service": "files.service.ts", "request_body_type": null, "response_type": "ApiFileAttachment[]" },
+    { "method": "POST", "path": "/versions/:versionId/files", "paramNames": ["versionId"], "mutation": true, "family": "files", "service": "files.service.ts", "request_body_type": "ApiFileAttachment", "response_type": "ApiFileAttachment" },
+
+    { "method": "GET", "path": "/activity-logs", "paramNames": [], "mutation": false, "family": "activity-logs", "service": "logs.service.ts", "request_body_type": null, "response_type": "ApiActivityEvent[]" },
+    { "method": "GET", "path": "/versions/:versionId/activity-logs", "paramNames": ["versionId"], "mutation": false, "family": "activity-logs", "service": "logs.service.ts", "request_body_type": null, "response_type": "ApiActivityEvent[]" },
+    { "method": "POST", "path": "/activity-logs", "paramNames": [], "mutation": true, "family": "activity-logs", "service": "logs.service.ts", "request_body_type": "WriteLifecycleLogInput", "response_type": "ApiActivityEvent" },
+
+    { "method": "GET", "path": "/api/subtask-definitions", "paramNames": [], "mutation": false, "family": "subtask-definitions", "service": "subtask-definitions.service.ts", "request_body_type": null, "response_type": "ApiSubtaskDefinition[]" },
+    { "method": "GET", "path": "/api/subtask-definitions/:channelId", "paramNames": ["channelId"], "mutation": false, "family": "subtask-definitions", "service": "subtask-definitions.service.ts", "request_body_type": null, "response_type": "ApiSubtaskDefinition[]" },
+
+    { "method": "GET", "path": "/access/me", "paramNames": [], "mutation": false, "family": "access", "service": "access.service.ts", "request_body_type": null, "response_type": "MyAccess" },
+    { "method": "GET", "path": "/dcx/:dcxId/access", "paramNames": ["dcxId"], "mutation": false, "family": "access", "service": "access.service.ts", "request_body_type": null, "response_type": "DCXAccess" },
+
+    { "method": "POST", "path": "/ai/review-draft", "paramNames": [], "mutation": true, "family": "integrations", "service": "ai.service.ts", "request_body_type": "{ prompt: string }", "response_type": "AIReviewDraft" },
+    { "method": "GET", "path": "/clickup/entry/:versionId", "paramNames": ["versionId"], "mutation": false, "family": "integrations", "service": "clickup.service.ts", "request_body_type": null, "response_type": "ClickUpEntryPayload" }
+  ]
+}
