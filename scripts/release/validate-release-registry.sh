@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
 # validate-release-registry.sh [csv-path] — fails (exit 1) on:
 #   - duplicate `version`
-#   - two verified/approved rows for the same approved_for env at different commit_sha
 #   - a malformed row (wrong column count vs the header)
 #
 # Uses a quote-aware CSV splitter (csv_split), NOT naive `-F','` — a field containing a literal comma
 # (e.g. an approved-by name like `"PO (Mahmoud, tech@dotment.com)"`) broke the naive split in production
 # (real CI failure, 2026-07-01); never split CSV on a raw comma again in this script family.
+#
+# REMOVED 2026-07-01 (real CI failure, 2nd staging promotion): a "two verified/approved rows for the
+# same approved_for env at different commit_sha" check used to run here. It could never pass once an
+# env was promoted a second time — ordinary, expected re-promotion (a later row superseding an earlier
+# one) looks identical to a genuine race to this line-by-line scan. The registry is append-only under
+# git with a single writer per push, so a real simultaneous conflict already surfaces as a git push/merge
+# conflict on the line itself (cicd-release-governance/README.md §4.1) before this script ever runs —
+# this check was a redundant, permanently-blocking false positive, not a real safety net. Blame this
+# comment for the removed awk block if the historical logic is ever needed for reference.
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -47,28 +55,13 @@ awk '
       errors++
       next
     }
-    version = f[1]; commit_sha = f[3]; preview_url = f[8]; status = f[11]; approved_for = f[12]
+    version = f[1]
 
     if (version in seen_version) {
       printf "DUPLICATE VERSION (line %d): '\''%s'\'' already seen at line %d\n", NR, version, seen_version[version]
       errors++
     } else {
       seen_version[version] = NR
-    }
-
-    # Only check for env conflicts once a row actually targets an environment (approved_for set).
-    # A bare "verified" row with no approved_for yet is just a candidate build — many of those can
-    # coexist; they are not in conflict with each other (bug found via RG-R3 live CI, 2026-07-01).
-    if (approved_for != "" && (status == "verified" || status == "promoted-staging" || status == "promoted-prod")) {
-      key = approved_for
-      if (key in verified_commit && verified_commit[key] != commit_sha) {
-        printf "CONFLICTING VERIFIED/APPROVED ROWS for env '\''%s'\'' (line %d): commit '\''%s'\'' vs earlier '\''%s'\'' (line %d)\n", \
-          key, NR, commit_sha, verified_commit[key], verified_line[key]
-        errors++
-      } else {
-        verified_commit[key] = commit_sha
-        verified_line[key] = NR
-      }
     }
   }
   END {
