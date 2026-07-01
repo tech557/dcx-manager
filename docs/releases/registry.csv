@@ -21,3 +21,4 @@ version,change_class,commit_sha,branch,session_folder,clickup_task,deployment_id
 "v1.0.0.0","promotion","b4b5d0b09ed6f64f3cc45d76f9a376788def5707","integration","promote.sh","","","https://dcx-manager-dij3wundt-dot-techs-projects.vercel.app","","","promoted-prod","production","PO (Mahmoud, tech@dotment.com)","2026-07-01","","promoted from v0.3.5.0 via promote.sh, exact deployment, no rebuild"
 "v1.0.0.1","non-source","06d7a0a3c8019f86f6c9b93ec77e8fa2e07e8d99","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"
 "v1.0.0.2","non-source","f6856ad70923ee4a22b1d172b4e8af95848dbf47","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"
+"v1.0.1.0","source","d791304401467ad27173b5639cf97ab670cedb31","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"
