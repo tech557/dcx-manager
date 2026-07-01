@@ -5,6 +5,7 @@ import { getCardConfig } from './card.registry';
 interface UseCardEffectsOptions {
   kind: CardKind;
   isDragOver: boolean;
+  isLifted?: boolean;
   isJustCreated: boolean;
   isJustEdited?: boolean;
   isReceivingChild?: boolean;
@@ -18,6 +19,7 @@ interface UseCardEffectsOptions {
 export function useCardEffects({
   kind,
   isDragOver,
+  isLifted = false,
   isJustCreated,
   isJustEdited = false,
   isReceivingChild = false,
@@ -31,7 +33,11 @@ export function useCardEffects({
   let effectName: EffectName = 'newItemHighlight';
   let effectActive = false;
 
-  if (isDragOver && config.showDropGlow) {
+  if (isLifted) {
+    // Grabbed via long-press — lift the card above the board for a fast, smooth drag.
+    effectName = 'dragFeedback';
+    effectActive = true;
+  } else if (isDragOver && config.showDropGlow) {
     effectName = 'dropTargetGlow';
     effectActive = true;
   } else if (isJustCreated) {
@@ -55,7 +61,9 @@ export function useCardEffects({
       : config.glassBorderBlocked ?? '';
   const isActive = isDragOver || isSelected || isHighlighted;
 
-  const surfaceClass = isReceivingChild
+  const surfaceClass = isLifted
+    ? 'bg-white/[0.08] border-[var(--theme-accent)]/55 shadow-[0_18px_50px_-14px_rgba(0,0,0,0.65)] ring-2 ring-[var(--theme-accent)]/40 transition-all duration-200 ease-out'
+    : isReceivingChild
     ? 'bg-[var(--theme-accent)]/12 border-[var(--theme-accent)]/70 shadow-[0_0_16px_var(--theme-accent-medium)] transition-all duration-300 scale-[1.01] ring-2 ring-[var(--theme-accent)]/15'
     : isActive
       ? kind === 'action'
@@ -85,6 +93,6 @@ export function useCardEffects({
     glassBorderClass,
     surfaceClass,
     showCorners,
-    noBackground: Boolean(config.noBackground && !isActive && !isHovered && !isReceivingChild),
+    noBackground: Boolean(config.noBackground && !isActive && !isHovered && !isReceivingChild && !isLifted),
   };
 }

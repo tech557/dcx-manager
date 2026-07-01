@@ -89,6 +89,19 @@ export function isInternalDragTransition(
   return relatedTarget !== null && container.contains(relatedTarget as Node);
 }
 
+/**
+ * A long-press must never arm a drag when the press lands on an interactive control
+ * (name inputs, readiness buttons, focus toggles, links) — pressing those is "using the
+ * card", not "grabbing" it. Nested child cards exclude themselves by stopping pointer-down
+ * propagation so only the innermost card arms; this guard covers the leaf controls.
+ */
+const DRAG_EXCLUDED_SELECTOR =
+  'input, textarea, select, button, a, [role="button"], [contenteditable="true"], [data-no-drag]';
+
+export function isDragExcludedTarget(target: EventTarget | null): boolean {
+  return target instanceof Element && Boolean(target.closest(DRAG_EXCLUDED_SELECTOR));
+}
+
 export function getPhaseDropDirection(
   event: React.DragEvent<HTMLDivElement>,
   source: CardKind | null,

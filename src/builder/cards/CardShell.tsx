@@ -50,6 +50,7 @@ export function CardShell({
   const {
     isDragOver,
     isDraggable,
+    isLifted,
     consumeLongPressClick,
     dragHandlers,
     pointerHandlers,
@@ -65,6 +66,7 @@ export function CardShell({
   const cardEffects = useCardEffects({
     kind,
     isDragOver,
+    isLifted,
     isJustCreated,
     isJustEdited,
     isReceivingChild,
@@ -112,15 +114,16 @@ export function CardShell({
       <article
         ref={elementRef}
         id={`card-${data.id}`}
-        className={`w-full min-h-0 flex flex-col relative select-none cursor-pointer border-none bg-transparent outline-none shadow-none ${
-          kind === 'phase' ? 'h-full max-h-full overflow-hidden' : 'h-auto shrink-0'
-        }`}
+        className={`w-full min-h-0 flex flex-col relative select-none border-none bg-transparent outline-none shadow-none ${
+          isLifted ? 'cursor-grabbing z-30' : 'cursor-pointer'
+        } ${kind === 'phase' ? 'h-full max-h-full overflow-hidden' : 'h-auto shrink-0'}`}
         data-testid={`card-${kind}-${data.id}`}
         data-card-kind={kind}
         data-movement-axis={behavior.movementAxis}
         data-readiness={behavior.readiness.state}
         data-expanded={isExpanded}
         data-selected={effectiveSelected}
+        data-lifted={isLifted}
         draggable={isDraggable}
         onClick={(e) => {
           if (consumeLongPressClick()) return;

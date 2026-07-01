@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
+import { CornerDownRight } from 'lucide-react';
 import { useStageContext } from '@/builder/stage/StageProvider';
 import { useBuilderActions } from '@/actions/useBuilderActions';
+import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { adjustDropIndex } from '@/builder/cards/dragDropHelpers';
 import { getCardDragPayload, setActiveCardDragPayload } from '@/builder/cards/cardDrag.helpers';
 
@@ -13,6 +15,7 @@ interface ActionDropZoneProps {
 export function ActionDropZone({ index, phaseId }: ActionDropZoneProps) {
   const { isDragging, draggedNodeKind, nodes, setDraggingState } = useStageContext();
   const actions = useBuilderActions();
+  const reducedMotion = useReducedMotion();
   const [isOver, setIsOver] = useState(false);
 
   const isActive = isDragging && draggedNodeKind === 'action';
@@ -64,20 +67,23 @@ export function ActionDropZone({ index, phaseId }: ActionDropZoneProps) {
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
       className={[
-        'transition-all duration-300 relative rounded-2xl flex items-center justify-center shrink-0 w-full',
+        'relative rounded-xl flex items-center justify-center shrink-0 w-full overflow-hidden',
+        reducedMotion ? 'transition-none' : 'transition-[height,margin,opacity] duration-300 ease-out',
         isOver
-          ? 'h-16 border-2 border-dashed border-[var(--theme-accent)]/70 bg-[var(--theme-accent)]/10 opacity-100 my-1.5'
-          : 'h-2 hover:h-4 opacity-0 hover:opacity-100 hover:border hover:border-dashed hover:border-[var(--theme-accent)]/30 hover:my-1 cursor-pointer bg-[var(--theme-accent)]/5',
+          ? 'h-14 my-1.5 opacity-100 border-[1.5px] border-dashed border-[var(--theme-accent)]/65 bg-[var(--theme-accent)]/[0.08] shadow-[inset_0_0_18px_var(--theme-accent-medium)]'
+          : 'h-2 hover:h-4 opacity-0 hover:opacity-100 hover:my-1 cursor-pointer border-[1.5px] border-dashed border-transparent hover:border-[var(--theme-accent)]/25 bg-[var(--theme-accent)]/5',
       ].join(' ')}
       id={`action-drop-zone-${phaseId}-${index}`}
     >
       <div
         className={[
-          'text-dcx-3xs font-black uppercase tracking-widest text-center transition-all leading-none pointer-events-none',
-          isOver ? 'text-[var(--theme-accent)] scale-105' : 'text-neutral-500 opacity-60 hover:opacity-100',
+          'flex items-center gap-1.5 text-dcx-3xs font-black uppercase tracking-widest text-center leading-none pointer-events-none',
+          reducedMotion ? '' : 'transition-all duration-300 ease-out',
+          isOver ? 'text-[var(--theme-accent)] opacity-100' : 'text-neutral-500 opacity-0',
         ].join(' ')}
       >
-        {isOver ? '↓ Drop Action Here ↓' : '+ Insert Action Here'}
+        <CornerDownRight className="w-3.5 h-3.5" />
+        <span>Drop action here</span>
       </div>
     </div>
   );

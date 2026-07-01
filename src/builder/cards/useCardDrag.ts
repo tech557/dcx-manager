@@ -11,6 +11,7 @@ import {
   getCardDragPayload,
   getPhaseDropDirection,
   isCardDropCompatible,
+  isDragExcludedTarget,
   isInternalDragTransition,
   setActiveCardDragPayload,
 } from './cardDrag.helpers';
@@ -27,6 +28,7 @@ interface UseCardDragOptions {
 export function useCardDrag({ kind, data, locked, isSelected, isSelectionInvalid, behavior, onLongPress }: UseCardDragOptions) {
   const stage = useStageContext();
   const [isDragOver, setIsDragOver] = useState(false);
+  const [isLifted, setIsLifted] = useState(false);
   const autoExpandedIdsRef = useRef<string[]>([]);
   const isDraggable = behavior.draggable && !isSelectionInvalid && !locked;
 
@@ -35,15 +37,26 @@ export function useCardDrag({ kind, data, locked, isSelected, isSelectionInvalid
   const longPressTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pointerStartPos = useRef<{ x: number; y: number } | null>(null);
   const longPressFiredRef = useRef(false);
+  const dragStartedRef = useRef(false);
 
-  const startLongPress = (e: React.PointerEvent, onLP?: () => void) => {
+  // Long-press "lift": hold the card (not a child card / control) for LONG_PRESS_MS to enter a
+  // grabbed state that primes a fast, smooth drag. A quick grab (native drag before the hold
+  // completes) still works and just skips the lift.
+  const liftCard = () => {
+    longPressFiredRef.current = true;
+    setIsLifted(true);
+    onLongPress?.();
+  };
+
+  const startLongPress = (e: React.PointerEvent) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    if (isDragExcludedTarget(e.target)) return; // pressing a control is "using", not grabbing
+    e.stopPropagation(); // innermost card wins — ancestors don't also arm ("except children")
     longPressFiredRef.current = false;
+    dragStartedRef.current = false;
     pointerStartPos.current = { x: e.clientX, y: e.clientY };
-    if (!onLP) return;
-    longPressTimerRef.current = setTimeout(() => {
-      longPressFiredRef.current = true;
-      onLP();
-    }, LONG_PRESS_MS);
+    if (!isDraggable) return;
+    longPressTimerRef.current = setTimeout(liftCard, LONG_PRESS_MS);
   };
 
   const cancelLongPress = () => {
@@ -52,6 +65,12 @@ export function useCardDrag({ kind, data, locked, isSelected, isSelectionInvalid
       longPressTimerRef.current = null;
     }
     pointerStartPos.current = null;
+  };
+
+  // Native drag clears the lift on dragend/drop; this fires only for a lift released without a drag.
+  const releaseLift = () => {
+    cancelLongPress();
+    if (!dragStartedRef.current) setIsLifted(false);
   };
 
   useEffect(() => {
@@ -66,6 +85,8 @@ export function useCardDrag({ kind, data, locked, isSelected, isSelectionInvalid
   const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
     cancelLongPress();
     if (!isDraggable) return event.preventDefault();
+    dragStartedRef.current = true;
+    setIsLifted(true);
     const ids = isSelected && stage.selectedNodeIds.length > 1 ? stage.selectedNodeIds : [data.id];
     beginCardDrag(event, { id: data.id, ids, kind, create: false }, 'move');
     stage.setDraggingState(true, kind, data.id);
@@ -117,6 +138,8 @@ export function useCardDrag({ kind, data, locked, isSelected, isSelectionInvalid
     event.preventDefault();
     event.stopPropagation();
     setIsDragOver(false);
+    setIsLifted(false);
+    dragStartedRef.current = false;
     autoExpandedIdsRef.current = [];
     stage.setDraggingState(false, null, null);
     setActiveCardDragPayload(null);
@@ -136,6 +159,8 @@ export function useCardDrag({ kind, data, locked, isSelected, isSelectionInvalid
   const handleDragEnd = (event: React.DragEvent<HTMLDivElement>) => {
     event.stopPropagation();
     setIsDragOver(false);
+    setIsLifted(false);
+    dragStartedRef.current = false;
     autoExpandedIdsRef.current = [];
     setActiveCardDragPayload(null);
     stage.setDraggingState(false, null, null);
@@ -160,15 +185,16 @@ export function useCardDrag({ kind, data, locked, isSelected, isSelectionInvalid
   return {
     isDragOver,
     isDraggable,
+    isLifted,
     consumeLongPressClick,
     dragHandlers: { onDragStart: handleDragStart, onDragEnter: handleDragEnter,
       onDragOver: handleDragOver, onDragLeave: handleDragLeave,
       onDrop: handleDrop, onDragEnd: handleDragEnd },
     pointerHandlers: {
-      onPointerDown: (e: React.PointerEvent) => startLongPress(e, onLongPress),
-      onPointerUp: cancelLongPress,
+      onPointerDown: startLongPress,
+      onPointerUp: releaseLift,
       onPointerMove: handlePointerMove,
-      onPointerCancel: cancelLongPress,
+      onPointerCancel: releaseLift,
     },
   };
 }
