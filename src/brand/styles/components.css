@@ -14,11 +14,15 @@ a {
   text-decoration: none;
 }
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
+/* In @layer base so it stays overridable by text-* utilities. Unlayered, this beat
+   @layer utilities and forced every input/textarea to 16px, ignoring its text-dcx-* class. */
+@layer base {
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
 }
 
 .app-shell {
