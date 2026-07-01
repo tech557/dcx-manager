@@ -13,24 +13,22 @@ export function CampaignDetailsGroup({ projectLabel, versionName }: CampaignDeta
   const versionPill = `V${versionName.replace(/^[vV]+/, '').trim().toUpperCase()}`;
 
   return (
-    <div className="flex flex-col text-left justify-center h-full py-0.5 font-sans select-none" id="campaign-details-group">
-      {/* Top micro line: campaign label + version pill */}
-      <div className="flex items-center gap-2 leading-none mb-1">
+    <div className="flex flex-col text-left justify-center font-sans select-none" id="campaign-details-group">
+      {/* Top micro line: campaign label + version pill (h-4 keeps the row aligned with the other labels) */}
+      <div className="flex items-center gap-1.5 leading-none mb-0.5 h-4">
         <span className={ISLAND_LABEL_CLASS}>{displayLabel}</span>
         <span
-          className="inline-flex items-center rounded-full bg-[var(--theme-accent)]/10 border border-[var(--theme-accent)]/25 px-1.5 py-[0.15rem] text-dcx-3xs font-medium tracking-[0.1em] text-[var(--theme-accent)] leading-none"
+          className="inline-flex items-center rounded-full bg-[var(--theme-accent)]/10 border border-[var(--theme-accent)]/25 px-1 text-dcx-4xs font-medium tracking-[0.08em] text-[var(--theme-accent)] leading-none"
           id="metadata-version-pill"
         >
           {versionPill}
         </span>
       </div>
 
-      {/* Title & Editable capsule block */}
-      <div className="flex items-center gap-3 leading-none">
-        <span className="text-dcx-base font-black tracking-tight uppercase text-white leading-none">
-          Ramadan 2026
-        </span>
-      </div>
+      {/* Value row — h-4 + same size as the other fields so all values sit on one line */}
+      <span className="flex items-center h-4 text-dcx-xs font-black tracking-tight uppercase text-white leading-none">
+        Ramadan 2026
+      </span>
     </div>
   );
 }

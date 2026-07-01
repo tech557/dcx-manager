@@ -7,4 +7,4 @@
 // Pinned to Gilroy explicitly: the Tailwind `font-sans` token resolves to Geist in this
 // theme, so `font-[family-name:Gilroy]` is what actually yields Gilroy Light (weight 300).
 export const ISLAND_LABEL_CLASS =
-  'font-[family-name:Gilroy] text-dcx-3xs font-light uppercase tracking-[0.18em] text-neutral-400/70 leading-none';
+  'font-[family-name:Gilroy] text-dcx-4xs font-light uppercase tracking-[0.16em] text-neutral-400/70 leading-none';

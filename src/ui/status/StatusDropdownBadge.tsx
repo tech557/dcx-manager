@@ -88,24 +88,24 @@ export function StatusDropdownBadge({
     <div className="relative" ref={containerRef} id="status-dropdown-container">
       {styleMode === 'minimalist' ? (
         <div className="flex flex-col text-left justify-center select-none">
-          <span className={`${ISLAND_LABEL_CLASS} mb-1 text-left`}>
+          <span className={`${ISLAND_LABEL_CLASS} mb-0.5 text-left flex items-center h-4`}>
             Project Status
           </span>
           <button
             type="button"
             disabled={isLocked}
             onClick={toggleOpen}
-            className={`flex items-center gap-2 outline-none select-none text-left tracking-tight font-bold text-white transition-colors duration-200 uppercase ${
+            className={`flex items-center gap-1.5 h-4 outline-none select-none text-left leading-none tracking-tight font-bold text-white transition-colors duration-200 uppercase ${
               isLocked ? 'cursor-not-allowed opacity-75' : 'cursor-pointer hover:text-[var(--theme-accent)]'
-            } text-dcx-md lg:text-dcx-md-plus`}
+            } text-dcx-xs`}
             aria-label={`Current status: ${status}. Click to change status`}
             title={isLocked ? `Status ${status} is locked` : 'Change version status'}
           >
             <span className="flex items-center shrink-0">
               {isLocked ? (
-                <Lock size={12} className="text-neutral-400" />
+                <Lock size={10} className="text-neutral-400" />
               ) : (
-                <Pencil size={11} className="text-[var(--theme-accent)]" />
+                <Pencil size={10} className="text-[var(--theme-accent)]" />
               )}
             </span>
             <span>{current.label}</span>

@@ -144,7 +144,7 @@ export function MetadataIsland({
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.05 }}
-          className={`glass header-island-pill px-5 flex items-center gap-5 transition-all duration-500 hover:shadow-[0_0_20px_var(--theme-accent-subtle)] ${
+          className={`glass header-island-pill px-4 flex items-center gap-2.5 transition-all duration-500 hover:shadow-[0_0_20px_var(--theme-accent-subtle)] ${
             isDark ? 'glass-dark text-white' : 'glass-light text-black'
           }`}
           id="project-details-island"

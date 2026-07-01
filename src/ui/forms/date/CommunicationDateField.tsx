@@ -70,11 +70,12 @@ export function CommunicationDateField({
     if (!disabled && !longPressedRef.current) toggleOpen();
   };
 
+  const iconSize = triggerStyle === 'minimalist' ? 'w-2.5 h-2.5' : 'w-3.5 h-3.5';
   const icon = value.mode === 'linked'
-    ? <Link2 className="w-3.5 h-3.5 text-[var(--theme-accent)] shrink-0" />
+    ? <Link2 className={`${iconSize} text-[var(--theme-accent)] shrink-0`} />
     : value.mode === 'fixed'
-      ? <CalendarDays className="w-3.5 h-3.5 text-[var(--theme-accent)]/80 shrink-0" />
-      : <HelpCircle className="w-3.5 h-3.5 text-neutral-400/50 shrink-0" />;
+      ? <CalendarDays className={`${iconSize} text-[var(--theme-accent)]/80 shrink-0`} />
+      : <HelpCircle className={`${iconSize} text-neutral-400/50 shrink-0`} />;
 
   const trigger = (
     <button
@@ -87,7 +88,7 @@ export function CommunicationDateField({
       onTouchCancel={cancelPress}
       disabled={disabled}
       className={triggerStyle === 'minimalist'
-        ? 'flex items-center gap-1.5 text-left hover:text-[var(--theme-accent)] disabled:opacity-50'
+        ? 'flex items-center gap-1.5 h-4 text-left text-dcx-xs font-semibold leading-none text-white hover:text-[var(--theme-accent)] disabled:opacity-50'
         : `relative overflow-hidden w-full px-3 py-2.5 rounded-xl text-left text-dcx-sm font-mono border font-bold flex items-center justify-between transition-all disabled:cursor-not-allowed disabled:opacity-45 ${
             isDark
               ? 'bg-white/[0.02] border-[var(--theme-border-subtle)] text-neutral-200 enabled:hover:border-white/15 enabled:hover:bg-white/[0.04]'
@@ -103,7 +104,7 @@ export function CommunicationDateField({
   );
 
   return (
-    <div id="editor-field-comm-date" className="relative flex select-none flex-col gap-1.5 text-left">
+    <div id="editor-field-comm-date" className={`relative flex select-none flex-col text-left ${triggerStyle === 'minimalist' ? 'gap-0.5' : 'gap-1.5'}`}>
       {label && <label className={labelClassName}>{label}</label>}
       {trigger}
       {value.mode === 'linked' && triggerStyle === 'default' && (

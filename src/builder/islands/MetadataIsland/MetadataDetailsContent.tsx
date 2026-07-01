@@ -59,7 +59,7 @@ export function MetadataDetailsContent({
           onChange={(date) => onDateChange(date.mode === 'fixed' ? date.date : '')}
           anchorDateStr={communicatedDate || '2026-07-01'}
           label="Launch Window"
-          labelClassName={`${ISLAND_LABEL_CLASS} mb-1`}
+          labelClassName={`${ISLAND_LABEL_CLASS} flex items-center h-4`}
           showLinkMode={false}
           disabled={isLocked}
           triggerStyle="minimalist"
