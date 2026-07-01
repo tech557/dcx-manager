@@ -11,7 +11,7 @@ HEAD="${2:?usage: classify-change.sh <base> <head>}"
 
 # dogfood/source-probe.txt is an explicit allowlist entry (RG-R7 dogfood fixture) classified as source
 # without touching real product src/**; dogfood/doc-probe.txt is deliberately excluded (non-source).
-SOURCE_PATTERN='^(src/|index\.html$|vite\.config\.ts$|tsconfig.*\.json$|package\.json$|package-lock\.json$|components\.json$|eslint\.config\.js$|\.dependency-cruiser\.cjs$|dogfood/source-probe\.txt$)'
+SOURCE_PATTERN='^(src/|index\.html$|vite\.config\.ts$|tsconfig.*\.json$|package\.json$|package-lock\.json$|components\.json$|eslint\.config\.js$|\.dependency-cruiser\.cjs$|vercel\.json$|dogfood/source-probe\.txt$)'
 
 changed_files="$(git diff --name-only "$BASE" "$HEAD")"
 
