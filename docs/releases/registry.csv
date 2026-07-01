@@ -38,3 +38,4 @@ version,change_class,commit_sha,branch,session_folder,clickup_task,deployment_id
 "v1.0.14.0","source","57386bd8058ea61f1969550236520d8164ebbba3","integration","ci","","","https://dcx-manager-mzpkjpvgw-dot-techs-projects.vercel.app","","","verified","","","","","stamped by version-assign.yml"
 "v1.1.0.0","promotion","57386bd8058ea61f1969550236520d8164ebbba3","integration","promote.sh","","","https://dcx-manager-mzpkjpvgw-dot-techs-projects.vercel.app","https://dcx-manager-gov-staging.vercel.app","","promoted-staging","staging","PO (Mahmoud, tech@dotment.com)","2026-07-01","","promoted from v1.0.14.0 via promote.sh, exact deployment, no rebuild"
 "v1.1.0.1","non-source","40d792aa943661907ed5608c3fae133f8559ae8e","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"
+"v1.1.1.0","source","f93b384348b20b9141da7c74bd53e1c4da17aa7f","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"
