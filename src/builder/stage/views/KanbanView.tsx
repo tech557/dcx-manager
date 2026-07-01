@@ -119,7 +119,7 @@ export function KanbanView({ className }: StageViewRendererProps) {
             </div>
           ) : (
             <div className="kanban-board flex gap-6 shrink-0 h-full max-h-full min-h-0 mx-auto" data-phase-count={phaseNodes.length} id="kanban-board-container">
-              <PhaseDropZone index={0} hoveredPhaseId={hoveredPhaseId} hoverDirection={hoverDirection} />
+              <PhaseDropZone index={0} versionId={versionId} hoveredPhaseId={hoveredPhaseId} hoverDirection={hoverDirection} />
               {phaseNodes.map((phase, idx) => {
                 const isPhaseSelected = selectedNodeIds.includes(phase.id);
                 const isPhaseExpanded = expandedNodeIds.includes(phase.id);
@@ -144,7 +144,7 @@ export function KanbanView({ className }: StageViewRendererProps) {
                     >
                       <PhaseCard phase={phase.data} selected={isPhaseSelected} onSelect={handleSelect} />
                     </section>
-                    <PhaseDropZone index={idx + 1} hoveredPhaseId={hoveredPhaseId} hoverDirection={hoverDirection} />
+                    <PhaseDropZone index={idx + 1} versionId={versionId} hoveredPhaseId={hoveredPhaseId} hoverDirection={hoverDirection} />
                   </Fragment>
                 );
               })}

@@ -8,11 +8,12 @@ import { getCardDragPayload, setActiveCardDragPayload } from '@/builder/cards/ca
 
 interface PhaseDropZoneProps {
   index: number;
+  versionId: string;
   hoveredPhaseId?: string | null;
   hoverDirection?: 'left' | 'right' | null;
 }
 
-export function PhaseDropZone({ index, hoveredPhaseId = null, hoverDirection = null }: PhaseDropZoneProps) {
+export function PhaseDropZone({ index, versionId, hoveredPhaseId = null, hoverDirection = null }: PhaseDropZoneProps) {
   const { isDragging, draggedNodeKind, nodes, setDraggingState } = useStageContext();
   const actions = useBuilderActions();
   const reducedMotion = useReducedMotion();
@@ -67,6 +68,12 @@ export function PhaseDropZone({ index, hoveredPhaseId = null, hoverDirection = n
 
     const payload = getCardDragPayload(e.dataTransfer);
     if (!payload || payload.kind !== 'phase') return;
+    if (payload.create) {
+      // New phase dragged from the creator palette — create it, then move it into this slot.
+      const newPhase = actions.createPhase({ versionId, label: 'New Phase' });
+      actions.movePhase({ id: newPhase.id, toIndex: index });
+      return;
+    }
     actions.movePhases({ ids: payload.ids, toIndex: index });
   };
 
