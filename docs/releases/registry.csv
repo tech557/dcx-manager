@@ -16,3 +16,4 @@ version,change_class,commit_sha,branch,session_folder,clickup_task,deployment_id
 "v0.4.0.6","non-source","ba99cff4b56b1f8a3b2fe3b7dff3429afc833fe8","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"
 "v0.4.0.7","non-source","47473f05a98c65b8296539fb014cf20277f23ef5","integration","ci","","","https://dcx-manager-lfco6fbft-dot-techs-projects.vercel.app","","","verified","","","","","stamped by version-assign.yml"
 "v0.4.1.0","source","b4b5d0b09ed6f64f3cc45d76f9a376788def5707","integration","ci","","","https://dcx-manager-dij3wundt-dot-techs-projects.vercel.app","","","verified","","","","","stamped by version-assign.yml"
+"v0.4.1.1","non-source","17a3b727c381d740dbdc58bf9fede8c330771743","integration","ci","","","","","","verified","","","","","stamped by version-assign.yml"
